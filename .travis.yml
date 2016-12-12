@@ -22,7 +22,7 @@ cache:
 deploy:
   # Staging environment
   - provider: script
-    script: ls
+    script: find .
     on:
       branch: release-staging
   # Staging environment
