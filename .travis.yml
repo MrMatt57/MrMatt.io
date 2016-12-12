@@ -14,10 +14,15 @@ install:
   - sudo pip install s3cmd
 script:
   - npm run build publish 
+cache:
+  bundler: true
+  pip: true
+  directories:
+  - node_modules
 deploy:
   # Staging environment
   - provider: script
-    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://preview.mrmatt57.org/
+    script: ls
     on:
       branch: release-staging
   # Staging environment
