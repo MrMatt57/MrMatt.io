@@ -17,12 +17,12 @@ script:
 deploy:
   # Staging environment
   - provider: script
-    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive ./public/ s3://preview.mrmatt57.org/
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive /home/travis/gopath/src/github.com/MrMatt57/MrMatt57.org/public/ s3://preview.mrmatt57.org/
     on:
       branch: release-staging
   # Staging environment
   - provider: script
-    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive ./public/ s3://mrmatt57.org/
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive /home/travis/gopath/src/github.com/MrMatt57/MrMatt57.org/public/ s3://mrmatt57.org/
     on:
       branch: master
 notifications:
