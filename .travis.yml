@@ -6,9 +6,9 @@ install:
   - go get -v github.com/spf13/hugo
 
   # Node
-  - sudo rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
-  - sudo npm install
-  - sudo npm install -g gulp
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install
+  - npm install -g gulp
 
   # S3 Sync
   - sudo pip install s3cmd
