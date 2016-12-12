@@ -3,7 +3,9 @@ env:
   - TRAVIS_NODE_VERSION="5"
 install:
   # Hugo
-  - go get -v github.com/spf13/hugo
+  - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
+  - sudo dpkg -i hugo*.deb
+  - hugo version
 
   # Node
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
@@ -22,7 +24,7 @@ cache:
 deploy:
   # Staging environment
   - provider: script
-    script: find .
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://mrmatt57.org/
     on:
       branch: release-staging
   # Staging environment
