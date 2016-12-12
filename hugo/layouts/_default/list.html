@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+    {{ range $value := .Site.Pages.GroupByDate "2006" }}
+        {{ .Key }}
+        {{ range .Pages }}
+            {{ .Render "li" }}
+        {{ end }}
+    {{ end }}
+{{ partial "footer.html" . }}

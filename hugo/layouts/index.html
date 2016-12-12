@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+Hi, I'm Matt Walker.
+I'm a Baltimore/DC Metro software engineer, this site is mostly for me to learn.  I enjoy helping others and sharing what I learn but it doesn't always make it to the keyboard. 
+<a href="/about">More about me.</a>
+  <h1>Journal</h1>
+  <ul>
+    {{ range first 3 (where .Data.Pages "Section" "posts") }}
+        {{ .Render "li" }}
+    {{ end }}
+  </ul>
+  <a href="/posts">Archive</a>
+  <h1>Photos</h1>
+  Still working on how I want to to this... have used Flikr rss feed, ligthbox and a few others in the past.
+  <ul>
+    <li><a href="Web Stack">Stack</a> for this site</li>
+    <li><a href="Stuff I Use">Stuff</a> I use</li>
+    <li><a href="Now">Now</a></li>
+  </ul>
+{{ partial "footer.html" . }}
