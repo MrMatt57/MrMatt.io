@@ -1,0 +1,39 @@
+language: node_js
+node_js:
+  - "5"
+install:
+  # Hugo
+  - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
+  - sudo dpkg -i hugo*.deb
+  - hugo version
+
+  # Node
+  - npm install
+  - npm install -g gulp
+
+  # S3 Sync
+  - sudo pip install s3cmd
+script:
+  - npm run build publish 
+cache:
+  bundler: true
+  pip: true
+  directories:
+  - node_modules
+deploy:
+  # Staging environment
+  - provider: script
+    skip_cleanup: true
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://preview.mrmatt57.org/
+    on:
+      branch: release-staging
+  # Staging environment
+  - provider: script
+    skip_cleanup: true
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public s3://mrmatt57.org/
+    on:
+      branch: master
+notifications:
+    email:
+addons:
+  artifacts: true

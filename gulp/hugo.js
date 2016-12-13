@@ -15,6 +15,8 @@ function hugo(drafts) {
         cmd += ' --buildDrafts=true --verbose=true --baseUrl="http://localhost:3000/" ';
     }
 
+    gutil.log(cmd);
+
     var result = exec(cmd, {encoding: 'utf-8'});
     gutil.log('hugo: \n' + result);
 }
