@@ -1,6 +1,6 @@
-language: go
-env: 
-  - TRAVIS_NODE_VERSION="5"
+language: node_js
+node_js:
+  - "5"
 install:
   # Hugo
   - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
@@ -8,7 +8,6 @@ install:
   - hugo version
 
   # Node
-  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
   - npm install
   - npm install -g gulp
 
