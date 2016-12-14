@@ -14,7 +14,7 @@ install:
   # S3 Sync
   - sudo pip install s3cmd
 script:
-  - case "$TRAVIS_BRANCH" in ("master") gulp publish --baseUrl="http://mrmatt57.org/" ;; ("release-staging") gulp publish --baseUrl="http://preview.mrmatt57.org/" ;; (*) gulp publish ;; esac
+  - case "$TRAVIS_BRANCH" in ("master") gulp publish --baseUrl="http://mrmatt57.org/" ;; ("release-staging") gulp publish --baseUrl="http://beta.mrmatt57.org/" ;; (*) gulp publish ;; esac
 cache:
   bundler: true
   pip: true
