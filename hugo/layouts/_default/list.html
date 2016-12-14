@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
+<div class="container">
+  <div class="row">
     {{ range $value := .Site.Pages.GroupByDate "2006" }}
         {{ .Key }}
         {{ range .Pages }}
             {{ .Render "li" }}
         {{ end }}
     {{ end }}
+  </div>
+</div>     
 {{ partial "footer.html" . }}

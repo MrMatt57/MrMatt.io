@@ -1,6 +1,84 @@
 @import "/node_modules/skeleton-css/css/normalize.css";
 @import "/node_modules/skeleton-css/css/skeleton.css";
 
+$font: #090909;
+$link: #1a0dab;
+$visit: #609;
+$hover: #1a0dab;
+$active: #609;
+$divider: #d0d0d0;
+
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    color: $font;
 }  
+
+h1 {
+  margin: 15px 0;
+  a, a:visited {
+    color: $font;
+  }
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  &:visited {
+    color: $visit;
+  }
+  &:hover {
+    color: $hover;   
+    text-decoration: underline;
+  }
+  &:active {
+    color: $active;
+  }
+}
+
+hr {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+
+  hr {
+    margin-bottom: 5rem;
+  }
+}
+
+footer {
+  text-align: center;
+
+  hr {
+    margin-top: 5rem;
+  }
+
+  ul {
+    margin: 2.5rem 0 0;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.40rem 0.625rem 0;
+    border-right: 1px dotted $divider;
+  }
+
+  ul li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.icon {
+  display: inline-block;
+}
+
+.logo {
+
+}

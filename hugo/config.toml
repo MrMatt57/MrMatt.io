@@ -1,3 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-title = "My New Hugo Site"
+baseurl = "http://mrmatt57.org/"
+title = "Matt Walker"
 languageCode = "en-us"
+relativeURLs = true

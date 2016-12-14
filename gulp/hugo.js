@@ -3,6 +3,7 @@ var exec = require('child_process').execSync;
 var gutil = require('gulp-util');
 var path = require('path');
 var del = require('del');
+var argv = require('yargs').argv;
 
 function hugo(drafts) {
     var src = path.join(process.cwd(), 'hugo');
@@ -11,6 +12,12 @@ function hugo(drafts) {
     gutil.log('src: ' + src + ' dst: ' + dst);
 
     var cmd = 'hugo --config=hugo/config.toml -s ' + src + ' -d ' + dst;
+
+    gutil.log(argv.baseUrl);
+
+    if(argv.baseUrl) {
+        cmd += ' --baseUrl="' + argv.baseUrl + '"';
+    }
     if (drafts) {
         cmd += ' --buildDrafts=true --verbose=true --baseUrl="http://localhost:3000/" ';
     }

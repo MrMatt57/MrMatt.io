@@ -11,7 +11,7 @@ aliases = ['/website-update/']
 
 It has been over four years since my last blog post.  It is no coincidence that my oldest son is about to turn four.  Life has been busy and more rewarding than ever.  As time as gone by, my website aged and no longer represented me.  The site was long overdue for an update.  
 
-###New Site:
+### New Site:
 When designing the new site, here were some things I considered.
 
 - **Responsive Web Design** - Has to work on all screen sizes (Mobile First)
@@ -22,7 +22,7 @@ When designing the new site, here were some things I considered.
     - Markdown WYSIWYG
 - **Showcase Content** - I wanted the content to take the stage and be easy to author and maintan.
   
-###Old Site:
+### Old Site:
 My old site served me well, but here are some issues that pushed the update.
 
 - **Wordpress** - At the time this was *the* platform for blogging.  I never was a PHP developer, I developed my own theme and a few plugins, but it was never natural.
@@ -33,7 +33,9 @@ My old site served me well, but here are some issues that pushed the update.
 	- Lifeblog - This was a neat concept and worked while I was active on social networks.
     - Setup (Stuff I Use) - This turned out to be too much to maintain and as a result, never had anything interesting or relavant.
     
-###Homage:
+### Homage:
+
+Need to put a screenshot here.
 
 
 
