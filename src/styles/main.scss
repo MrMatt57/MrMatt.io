@@ -12,6 +12,9 @@ $divider: #d0d0d0;
     font-family: 'Roboto Slab', serif;
     color: $font;
 }  
+body {
+  font-size: 16px;
+}
 
 h1 {
   margin: 15px 0;
@@ -40,10 +43,12 @@ hr {
 }
 
 header {
-  text-align: center;
+  nav {
+    text-align: center;
+  }
 
   hr {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -74,6 +79,22 @@ footer {
     border: 0;
   }
 }
+
+.post {
+  h2 {
+    margin-bottom: 0;
+  }
+  time {
+    margin-bottom: 10px;
+  }
+  .tags {
+    margin: 0;
+    li {
+      margin: 0;
+    }
+  }
+}
+
 
 .icon {
   display: inline-block;

@@ -1,4 +1,3 @@
 baseurl = "http://mrmatt57.org/"
 title = "Matt Walker"
 languageCode = "en-us"
-relativeURLs = true
