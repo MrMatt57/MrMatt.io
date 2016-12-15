@@ -12,19 +12,18 @@ gulp.task('reference:content', ['hugo:draft'], function() {
 });
 
 gulp.task('reference:all', ['hugo:all'], function() {
-    var manifest = gulp.src('public/rev-manifest.json');
-
-    return gulp.src(['public/**/*.html', 'public/**/*.xml', 'public/**/*.css'])
-        .pipe(replace({manifest: manifest, replaceInExtensions: ['.html', '.xml', '.css']}))
-        .pipe(size())
-        .pipe(gulp.dest('public'));
+    updateRef();
 });
 
 gulp.task('reference:publish', ['hugo:live'], function() {
+    updateRef();
+});
+
+var updateRef = function() {
     var manifest = gulp.src('public/rev-manifest.json');
 
     return gulp.src(['public/**/*.html', 'public/**/*.xml', 'public/**/*.css'])
         .pipe(replace({manifest: manifest, replaceInExtensions: ['.html', '.xml', '.css']}))
         .pipe(size())
         .pipe(gulp.dest('public'));
-});
+};
