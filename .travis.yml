@@ -24,7 +24,7 @@ deploy:
   # Staging environment
   - provider: script
     skip_cleanup: true
-    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://preview.mrmatt57.org/
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://beta.mrmatt57.org/
     on:
       branch: release-staging
   # Staging environment
