@@ -95,6 +95,26 @@ footer {
   }
 }
 
+.header-list {
+    margin: .5rem 0 0;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+  li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.40rem 0.625rem 0;
+    border-right: 1px dotted $divider;
+  }
+
+  li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
 
 .icon {
   display: inline-block;
