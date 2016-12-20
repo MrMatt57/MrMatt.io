@@ -31,7 +31,7 @@
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
     "rev-del": "^1.0.5",
-    "skeleton-css": "^2.0.4",
+    "skeleton-sass-official": "^3.0.2",
     "yargs": "^6.5.0"
   }
 }
