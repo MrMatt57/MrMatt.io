@@ -1,45 +1,17 @@
-@import "/node_modules/skeleton-css/css/normalize.css";
-@import "/node_modules/skeleton-css/css/skeleton.css";
+@import "node_modules/normalize-scss/sass/normalize/_import-now.scss";
+@import "node_modules/skeleton-sass-official/skeleton/core/_config.scss";
 
-$font: #090909;
-$link: #1a0dab;
-$visit: #609;
-$hover: #1a0dab;
-$active: #609;
+@import "theme/_vars.scss";
+@import "theme/_base.scss"; 
+@import "theme/_skeleton.scss";
+
 $divider: #d0d0d0;
-
-* {
-    font-family: 'Roboto Slab', serif;
-    color: $font;
-}  
-body {
-  font-size: 16px;
-}
 
 h1 {
   margin: 15px 0;
   a, a:visited {
-    color: $font;
+    color: $font-color;
   }
-}
-
-a {
-  color: $link;
-  text-decoration: none;
-  &:visited {
-    color: $visit;
-  }
-  &:hover {
-    color: $hover;   
-    text-decoration: underline;
-  }
-  &:active {
-    color: $active;
-  }
-}
-
-hr {
-  margin: 0;
 }
 
 header {
@@ -115,11 +87,16 @@ footer {
   }
 }
 
-
 .icon {
   display: inline-block;
 }
 
-.logo {
+.wrapper {
+    max-width: 40em;
+    width: 90%;
+    margin: 0 auto;
+}
 
+.wrapper.full {
+    max-width: 47.5em;
 }
