@@ -5,21 +5,25 @@ date = "2016-12-09T16:11:43-05:00"
 
 Website Optimization Guidelines
 
+- Make it fast!  
 - Fewest number of resource files
 - One network route to all resource files
 
 Development Build Toolchain
 
 - Gulp Task Runner
-- SCASS compiler
-- CSS vender autoprex, cleaned and concat
+- SASS compiler
+- CSS vender autoprefix, cleaned and concat
 - Asset Fingerprinting 
+- Hugo Build
 - BrowserSync
 
 Continuous Integration and Deployment
 
 - Travis CI
+- Gulp Build
 - S3Cmd Sync
+- KeyCDN Cache Expiration
 
 Hosting
 
