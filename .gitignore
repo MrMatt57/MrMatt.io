@@ -1,5 +1,7 @@
 node_modules/*
 public/*
 staging/*
-hugo/static/*
+hugo/static/css/*
+hugo/static/img/*
+hugo/static/rev-manifest.json
 dist/*
