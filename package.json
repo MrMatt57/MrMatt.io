@@ -4,7 +4,8 @@
   "description": "Matt Walker personal website",
   "main": "index.js",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "test": "pa11y-ci --sitemap http://localhost:3000/sitemap.xml"
   },
   "author": "Matt Walker",
   "license": "MIT",
