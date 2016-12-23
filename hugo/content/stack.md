@@ -1,7 +1,38 @@
 +++
 title = "Stack"
+date = "2016-12-09T16:11:43-05:00"
 +++
 
-Website Optimization
+Website Optimization Guidelines
+
+- Make it fast!  
 - Fewest number of resource files
 - One network route to all resource files
+
+Development Build Toolchain
+
+- Gulp Task Runner
+- SASS compiler
+- CSS vender autoprefix, cleaned and concat
+- Asset Fingerprinting 
+- Hugo Build
+- BrowserSync
+
+Continuous Integration and Deployment
+
+- Travis CI
+- Gulp Build
+- S3Cmd Sync
+- KeyCDN Cache Expiration
+
+Hosting
+
+- Google Domains 
+- DNS Made Easy 
+- Amazon S3
+- KeyCDN
+- Let's Encrypt TLS
+
+Special thanks to:
+
+- [hugulp](https://github.com/jbrodriguez/hugulp) for much of gulp workflow I am using.

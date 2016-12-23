@@ -1,9 +1,18 @@
 {{ partial "header.html" . }}
-  <h1>{{ .Title }}</h1>
-  <section>
-  <h2 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h2>
-  </section>  
-  <article>
-      {{ .Content }}
-  </article>
+<article class="wrapper">
+  <header>
+    <h2>{{ .Title }}</h2>
+    {{ if .Params.tags }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
+    {{ $baseurl := .Site.BaseURL }}
+      <ul class="tags">
+        {{ range .Params.tags }}<li><a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+      </ul>    
+    {{ end }}      
+  </header>
+    {{ if .Params.image }}
+      {{ $.Params.banner }}
+    {{ end }}    
+  {{ .Content }}
+</article>
 {{ partial "footer.html" . }}

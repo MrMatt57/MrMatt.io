@@ -1,6 +1,116 @@
-@import "/node_modules/skeleton-css/css/normalize.css";
-@import "/node_modules/skeleton-css/css/skeleton.css";
+@import "node_modules/normalize-scss/sass/normalize/_import-now.scss";
+@import "node_modules/skeleton-sass-official/skeleton/core/_config.scss";
 
-* {
-    font-family: 'Roboto', sans-serif;
-}  
+@import "theme/_vars.scss";
+@import "theme/_base.scss"; 
+@import "theme/_skeleton.scss";
+
+$divider: #d0d0d0;
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/roboto-slab-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+       url('/fonts/roboto-slab-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/roboto-slab-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/roboto-slab-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/roboto-slab-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/roboto-slab-v6-latin-regular.svg#RobotoSlab') format('svg'); /* Legacy iOS */
+}
+
+h1 {
+  margin: 15px 0;
+  a, a:visited {
+    color: $font-color;
+  }
+}
+
+header {
+  nav {
+    text-align: center;
+  }
+
+  hr {
+    margin-bottom: 2.5rem;
+  }
+}
+
+footer {
+  text-align: center;
+
+  hr {
+    margin-top: 5rem;
+  }
+
+  ul {
+    margin: 2.5rem 0 0;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.40rem 0.625rem 0;
+    border-right: 1px dotted $divider;
+  }
+
+  ul li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.post {
+  h2 {
+    margin-bottom: 0;
+  }
+  time {
+    margin-bottom: 10px;
+  }
+  .tags {
+    margin: 0;
+    li {
+      margin: 0;
+    }
+  }
+}
+
+.header-list {
+    margin: .5rem 0 0;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+  li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.40rem 0.625rem 0;
+    border-right: 1px dotted $divider;
+  }
+
+  li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.icon {
+  display: inline-block;
+}
+
+.wrapper {
+    max-width: 40em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper.full {
+    max-width: 47.5em;
+}

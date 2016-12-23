@@ -1,8 +1,15 @@
 {{ partial "header.html" . }}
+<div class="container">
+  <div class="row">
+    <h2>Journal Archive</h2>
     {{ range $value := .Site.Pages.GroupByDate "2006" }}
         {{ .Key }}
         {{ range .Pages }}
+          {{ if eq .Type "posts" }}
             {{ .Render "li" }}
+            {{ end }}
         {{ end }}
     {{ end }}
+  </div>
+</div>    
 {{ partial "footer.html" . }}
