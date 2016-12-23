@@ -8,11 +8,11 @@ tags = ['Photography']
 banner = "/images/2014/12/81YvgexCIeS-_SL1500_.jpg"
 aliases = ['/time-lapse-chdk/']
 +++
-
-
 I don-t know what it is about them, but time lapse videos captivate me. It might be the fact that you can live hours in minutes? Maybe in a strange way it is gratifying to watch life pass by without consequences? Whatever it is, they are a lot of fun to watch- and now create!
 
-<object height="340" width="560"><param name="movie" value="http//www.youtube.com/v/mMORdLGUVNI&rel=0&color1=d6d6d6&color2=f0f0f0&border=0&fs=1&hl=en&autoplay=0&showinfo=0&iv_load_policy=3&showsearch=0&hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed allowfullscreen="true" allowscriptaccess="always" height="340" src="http://www.youtube.com/v/mMORdLGUVNI&&rel=0&color1=d6d6d6&color2=f0f0f0&border=0&fs=1&hl=en&autoplay=0&showinfo=0&iv_load_policy=3&showsearch=0&hd=1" type="application/x-shockwave-flash" width="560"></embed></object>
+<div class="videoWrapper">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/mMORdLGUVNI?rel=0&amp;controls=0" frameborder="0" allowfullscreen title="Time Lapse - Owings Mills, MD"></iframe>
+</div>
 
 When I found out I could use my [Canon A2000is](http://www.amazon.com/gp/product/B001EQ4BZE?ie=UTF8&tag=matwalstecand-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B001EQ4BZE)![](http://www.assoc-amazon.com/e/ir?t=matwalstecand-20&l=as2&o=1&a=B001EQ4BZE) point and shoot to create a time lapse, i was floored. I owe it all to the [Canon Hack Development Kit (CHDK)](http://chdk.wikia.com/wiki/CHDK). With this nifty piece of software, your Canon camera can boot a whole new feature set from an SD card. Most importantly, run [Ultra Intervalometer script](http://chdk.wikia.com/wiki/UBASIC/Scripts:_Ultra_Intervalometer).
 
@@ -25,7 +25,3 @@ Once you get all your images together, you need to [make the video](http://www.y
 It-s hard to believe that my sub $200 [Canon A2000IS](http://www.amazon.com/gp/product/B001EQ4BZE?ie=UTF8&tag=matwalstecand-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B001EQ4BZE)![](http://www.assoc-amazon.com/e/ir?t=matwalstecand-20&l=as2&o=1&a=B001EQ4BZE) camera is capable of such amazing things. Many more to follow, stay tuned.
 
 Just remember- time is relative.
-
-
-
-
