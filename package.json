@@ -4,8 +4,7 @@
   "description": "Matt Walker personal website",
   "main": "index.js",
   "scripts": {
-    "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
   },
   "author": "Matt Walker",
   "license": "MIT",
@@ -27,7 +26,10 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp.spritesmith": "^6.2.1",
+    "http-server": "^0.9.0",
     "jshint": "^2.9.2",
+    "pa11y": "^4.3.0",
+    "pa11y-ci": "^0.5.0",
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
     "rev-del": "^1.0.5",
