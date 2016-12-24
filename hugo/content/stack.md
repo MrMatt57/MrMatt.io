@@ -22,6 +22,7 @@ Continuous Integration and Deployment
 
 - Travis CI
 - Gulp Build
+- Pa11y WCAG 2.0 AA accessibility testing
 - S3Cmd Sync
 - KeyCDN Cache Expiration
 

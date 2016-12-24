@@ -9,12 +9,20 @@ install:
 
   # Node
   - npm install
-  - npm install -g gulp
+  - npm install -g gulp http-server pa11y pa11y-ci
 
   # S3 Sync
   - sudo pip install s3cmd
 script:
-  - case "$TRAVIS_BRANCH" in ("master") gulp publish --baseUrl="http://mrmatt57.org/" ;; ("release-staging") gulp publish --baseUrl="http://beta.mrmatt57.org/" ;; (*) gulp publish ;; esac
+  # Set Base Url based on branch
+  - case "$TRAVIS_BRANCH" in ("master") BASE_URL="http://mrmatt57.org/" ;; ("release-staging") BASE_URL="http://beta.mrmatt57.org/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
+
+  # Build
+  - gulp publish --baseUrl=$BASE_URL
+
+  # Test
+  - http-server ./public --silent &
+  - pa11y-ci --sitemap http://localhost:8080/sitemap.xml --sitemap-find "$BASE_URL" --sitemap-replace "http://localhost:8080/"
 cache:
   bundler: true
   pip: true
@@ -24,16 +32,14 @@ deploy:
   # Staging environment
   - provider: script
     skip_cleanup: true
-    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://beta.mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/$KEYCDN_ZONEID.json\" -u $KEYCDN_APIKEY:"
+    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://beta.mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/49006.json\" -u $KEYCDN_APIKEY:"
     on:
       branch: release-staging
-  # Staging environment
+  # Production environment
   - provider: script
     skip_cleanup: true
-    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public s3://mrmatt57.org/
+    script: s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public s3://mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/50009.json\" -u $KEYCDN_APIKEY:"
     on:
       branch: master
 notifications:
     email:
-addons:
-  artifacts: true

@@ -4,6 +4,10 @@
 [![Code Climate](https://codeclimate.com/github/MrMatt57/MrMatt57.org/badges/gpa.svg)](https://codeclimate.com/github/MrMatt57/MrMatt57.org)
 [![devDependencies Status](https://david-dm.org/mrmatt57/mrmatt57.org/dev-status.svg)](https://david-dm.org/mrmatt57/mrmatt57.org?type=dev)
 
-Development `npm run build`
+Install `npm install`
+
+Build `npm run build`
+
+Test `npm run test`
 
 Publish `npm run build publish`
