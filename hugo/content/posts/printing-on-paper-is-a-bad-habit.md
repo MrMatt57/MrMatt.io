@@ -10,7 +10,7 @@ aliases = ['/printing-on-paper-is-a-bad-habit/']
 +++
 
 
-![College Math Papers](http://static.mrmatt57.org/img/printer_paper.jpg)<span id="credits">  
+![College Math Papers](http://static.mrmatt57.org/img/printer_paper.jpg)<span>  
  Photo by [-sweetpea.loty30?](http://www.flickr.com/photos/loty/326761635/)</span>
 
 Why do we print things on 8.5-11? pieces of amalgamated fibers? It-s a valid question these days. We have trained ourselves over thousands of years to cling to something physical or tangible. I just call it stuff. The digital age has brought about new adaptation challenges and the bad habits that come with them. Printing on paper is just one of them.
@@ -25,7 +25,7 @@ Next time you print something, ask yourself- -do I really need this on a piece o
 
 [Print this page](javascript: alert('lol, Gotcha!'))
 
-![R1064614](http://static.mrmatt57.org/img/printer_shred.jpg)<span id="credits">  
+![R1064614](http://static.mrmatt57.org/img/printer_shred.jpg)<span>  
  Photo by [-yoppy-](http://www.flickr.com/photos/spilt-milk/1968415680/)</span>
 
 

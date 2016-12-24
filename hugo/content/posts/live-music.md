@@ -4,7 +4,7 @@ date = "2007-12-11"
 draft = false
 title = """Live Music Keeps Me Going"""
 slug = "live-music"
-tags = ['Audio']
+tags = ['Music']
 banner = ""
 aliases = ['/live-music/']
 +++
