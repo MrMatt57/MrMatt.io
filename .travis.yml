@@ -43,5 +43,3 @@ deploy:
       branch: master
 notifications:
     email:
-addons:
-  artifacts: true
