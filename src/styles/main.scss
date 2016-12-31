@@ -157,7 +157,7 @@ footer {
       display: none; 
     }
 }
-gallery::after {
+.gallery::after {
     content: "";
     clear: both;
     display: table;
