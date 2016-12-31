@@ -13,15 +13,15 @@
     </ul>
     </div>
   <div class="wrapper small">    
-      <h2>Journal</h2>
-    <ul>
+    <h2>Journal</h2>
+    <ul class="posts">
       {{ range first 3 (where .Data.Pages "Section" "posts") }}
           {{ .Render "li" }}
       {{ end }}
     </ul>
     <a href="/posts/" class="button">Archive</a>
     <h2>Photos</h2>
-    Still working on how I want to do this... have used Flikr rss feed, ligthbox and a few others in the past.
+    Working on PhotoSwipe integration... photos coming soon!
   </div>
 </div>
 {{ partial "footer.html" . }}
