@@ -1,10 +1,10 @@
 {{ partial "header.html" . }}
-<div>
   <div class="wrapper">
     <div>
       <i class="icon icon-MattWalker"></i>
-      Hey, I'm <a href="/about/">Matt Walker</a>.</div>
-      <p>I'm a software engineer in the Baltimore/DC Metro area.  This site is mostly for me to learn and test things out.  It's also an archive for me and maybe something of interest for you.</p>
+      <p>Hey, I'm <a href="/about/">Matt Walker</a>.</p>
+      <p>I'm a software engineer in the Baltimore/DC Metro area.  This site is mostly for me to learn and test things out.  
+        It's also an archive of website, hobby and travel related posts.</p>
       <p>Here is some of the <a href="/stuff/">stuff I use</a> and what I am up to <a href="/now/">now</a>.</p>
       Contact:
       <ul class="header-list">
@@ -14,6 +14,7 @@
         <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank">LinkedIn</a></li>
       </ul>
     </div>
+  </div>
   <div class="wrapper">    
     <h2>Journal</h2>
     <ul class="header-list">
@@ -22,7 +23,8 @@
       <li><a href="/tags/r/c-planes/">R/C Planes</a></li>
       <li><a href="/tags/Photography/">Photography</a></li>
     </ul>
-    <ul class="posts">
+    <h3><del>Recent</del> Posts</h3>
+    <ul class="posts"> 
       {{ range first 3 (where .Data.Pages "Section" "posts") }}
           {{ .Render "li" }}
       {{ end }}
@@ -31,5 +33,4 @@
     <h2>Photos</h2>
     Working on PhotoSwipe integration... photos coming soon!
   </div>
-</div>
 {{ partial "footer.html" . }}
