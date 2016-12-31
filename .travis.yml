@@ -15,7 +15,7 @@ install:
   - sudo pip install s3cmd
 
   # ImageMagick
-  - apt-get install imagemagick
+  #- apt-get install imagemagick # Already Installed on Travis-CI
 
 script:
   # Set Base Url based on branch
