@@ -16,12 +16,14 @@ Development Build Toolchain
 - CSS vender autoprefix, cleaned and concat
 - Asset Fingerprinting 
 - Hugo Build
+- ImagMagick thumbnail creation
+- PhotoSwipe Gallery
 - BrowserSync
 
 Continuous Integration and Deployment
 
 - Travis CI
-- Gulp Build
+- Gulp Tasks
 - Pa11y WCAG 2.0 AA accessibility testing
 - S3Cmd Sync
 - KeyCDN Cache Expiration
@@ -33,6 +35,12 @@ Hosting
 - Amazon S3
 - KeyCDN
 - Let's Encrypt TLS
+
+Operations
+
+- StatusCake Monitoring [Current Site Status](http://status.mrmatt57.org/)
+- Pushbullet Notifications
+- CrashPlan Backups
 
 Special thanks to:
 
