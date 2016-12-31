@@ -4,7 +4,7 @@ date = "2009-03-26"
 draft = false
 title = """Cruising the Caribbean - Freedom of the Seas"""
 slug = "freedom-of-the-seas"
-tags = ['Travel']
+tags = ['Travel', 'Cruise']
 banner = "/images/2014/12/free.jpg"
 aliases = ['/freedom-of-the-seas/']
 +++

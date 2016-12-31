@@ -4,7 +4,7 @@ date = "2007-10-22"
 draft = false
 title = """Peaks of Otter Camping/Hiking"""
 slug = "peaks-of-otter-campinghiking"
-tags = ['Travel']
+tags = ['Travel', 'Camping', 'Hiking']
 banner = ""
 aliases = ['/peaks-of-otter-campinghiking/']
 +++

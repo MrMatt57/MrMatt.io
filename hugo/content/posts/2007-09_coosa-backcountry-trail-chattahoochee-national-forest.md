@@ -4,11 +4,10 @@ date = "2007-09-20"
 draft = false
 title = """Coosa Backcountry Trail, Chattahoochee National Forest"""
 slug = "coosa-backcountry-trail-chattahoochee-national-forest"
-tags = ['Travel']
+tags = ['Travel', 'Camping', 'Hiking']
 banner = ""
 aliases = ['/coosa-backcountry-trail-chattahoochee-national-forest/']
 +++
-
 
 ![Vogal State Park, GA](http://static.mrmatt57.org/img/vogel.jpg)
 

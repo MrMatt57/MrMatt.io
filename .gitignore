@@ -3,5 +3,7 @@ public/*
 staging/*
 hugo/static/css/*
 hugo/static/img/*
+hugo/static/js/*
+hugo/static/photoswipe/*
 hugo/static/rev-manifest.json
 dist/*

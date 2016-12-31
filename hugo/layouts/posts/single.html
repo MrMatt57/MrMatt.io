@@ -6,7 +6,7 @@
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
     {{ $baseurl := .Site.BaseURL }}
       <ul class="tags">
-        {{ range .Params.tags }}<li><a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+        {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
       </ul>    
     {{ end }}      
   </header>

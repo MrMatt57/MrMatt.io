@@ -9,10 +9,9 @@ banner = "/images/2014/12/moo.jpg"
 aliases = ['/business-cards-moo-cards/']
 +++
 
-
 ![MOO Cards](http://static.mrmatt57.org/img/MOO_Cards_banner.jpg)
 
-I know this contradicts my recent [anti-printer/paper post](http://mrmatt57.org/2008/03/29/printing-on-paper-is-a-bad-habit/)- I found myself needing small pieces of paper with my social coordinates on them. I tried offering to beam a vCard. Don-t ask me why- it just isn-t socially acceptable or in most cases even possible. So, I needed some cards.
+I know this contradicts my recent [anti-printer/paper post](/posts/printing-on-paper-is-a-bad-habit/)- I found myself needing small pieces of paper with my social coordinates on them. I tried offering to beam a vCard. Don-t ask me why- it just isn-t socially acceptable or in most cases even possible. So, I needed some cards.
 
 I spent quite a bit of effort researching different styles and formats. There are some [amazing custom cards](http://www.flickr.com/photos/dailypoetics/sets/72057594104389710/) out there. I didn-t want to break the bank or wait six months to have them made. I did want something unique and fun. I found the perfect thing; MOO cards. Apparently they have been all the rage in Europe and among trendy start-ups. I couldn-t help giving them a try.
 

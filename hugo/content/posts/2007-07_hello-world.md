@@ -9,7 +9,7 @@ banner = ""
 aliases = ['/hello-world/']
 +++
 
-![Soarstar](http://static.mrmatt57.org/img/soarstar.jpg)
+![Soarstar](/img/soarstar.jpg)
 
 I had been flying my Soarstar for a couple of months and finally decided to attach my Pentax Optio S6 camera too it. The easiest setup what to just strap it down and record video. Eventually I would like to setup a servo to take pictures. These cameras are not great a shooting video, but here it is:
 

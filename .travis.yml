@@ -13,9 +13,13 @@ install:
 
   # S3 Sync
   - sudo pip install s3cmd
+
+  # ImageMagick
+  - apt-get install imagemagick
+
 script:
   # Set Base Url based on branch
-  - case "$TRAVIS_BRANCH" in ("master") BASE_URL="http://mrmatt57.org/" ;; ("release-staging") BASE_URL="http://beta.mrmatt57.org/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
+  - case "$TRAVIS_BRANCH" in ("master") BASE_URL="http://mrmatt57prod-624d.kxcdn.com/" ;; ("release-staging") BASE_URL="http://beta.mrmatt57.org/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
 
   # Build
   - gulp publish --baseUrl=$BASE_URL
@@ -38,7 +42,7 @@ deploy:
   # Production environment
   - provider: script
     skip_cleanup: true
-    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public s3://mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/50009.json\" -u $KEYCDN_APIKEY:"
+    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/50009.json\" -u $KEYCDN_APIKEY:"
     on:
       branch: master
 notifications:
