@@ -2,19 +2,19 @@ language: node_js
 node_js:
   - "5"
 install:
-  # Hugo
+  # Hugo - https://gohugo.io/overview/installing/
   - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
   - sudo dpkg -i hugo*.deb
   - hugo version
 
-  # Node
+  # Node - https://nodejs.org/en/download/
   - npm install
   - npm install -g gulp http-server pa11y pa11y-ci
 
-  # S3 Sync
+  # S3 Sync - http://s3tools.org/download
   - sudo pip install s3cmd
 
-  # ImageMagick
+  # ImageMagick - https://www.imagemagick.org/script/binary-releases.php
   #- apt-get install imagemagick # Already Installed on Travis-CI
 
 script:
