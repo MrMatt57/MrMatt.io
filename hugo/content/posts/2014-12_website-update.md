@@ -3,7 +3,7 @@
 date = "2014-12-30"
 draft = false
 title = """Website Update"""
-slug = "website-update"
+slug = "website-update-2014"
 tags = []
 banner = "/images/2014/12/road.jpg"
 aliases = ['/website-update/']

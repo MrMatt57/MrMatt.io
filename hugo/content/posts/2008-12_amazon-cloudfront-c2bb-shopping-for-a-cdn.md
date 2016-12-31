@@ -4,11 +4,10 @@ date = "2008-12-03"
 draft = false
 title = """Amazon Cloudfront - Shopping for a CDN?"""
 slug = "amazon-cloudfront-c2bb-shopping-for-a-cdn"
-tags = ['Software Development']
+tags = ['Software Development', 'Website', 'Performance']
 banner = "/images/2014/12/AWS-Logo-Orange3.jpg"
 aliases = ['/amazon-cloudfront-c2bb-shopping-for-a-cdn/']
 +++
-
 
 ![Cloudfront Amazon Data Centers](http://static.mrmatt57.org/img/amazoncloudfront.jpg)<span id="credits">  
  Location of Amazon Data Centers World-wide. Credit [Werner Vogels](http://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)</span>

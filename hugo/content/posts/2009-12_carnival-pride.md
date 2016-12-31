@@ -4,7 +4,7 @@ date = "2009-12-19"
 draft = false
 title = """Cruising the Bahamas - Carnival Pride"""
 slug = "carnival-pride"
-tags = ['Travel']
+tags = ['Travel', 'Cruise']
 banner = "/images/2014/12/Carnival-Pride-Nassau-Lighthouse.jpg"
 aliases = ['/carnival-pride/']
 +++

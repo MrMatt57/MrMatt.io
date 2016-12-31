@@ -4,7 +4,7 @@ date = "2009-08-30"
 draft = false
 title = """Canoe Camping - Penobscot River, Maine"""
 slug = "canoe-camping-penobscot-river-maine"
-tags = ['Camping', 'Travel']
+tags = ['Travel', 'Camping']
 banner = "/images/2014/12/canoe.jpg"
 aliases = ['/canoe-camping-penobscot-river-maine/']
 +++

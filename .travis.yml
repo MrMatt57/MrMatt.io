@@ -13,6 +13,10 @@ install:
 
   # S3 Sync
   - sudo pip install s3cmd
+
+  # ImageMagick
+  - apt-get install imagemagick
+
 script:
   # Set Base Url based on branch
   - case "$TRAVIS_BRANCH" in ("master") BASE_URL="http://mrmatt57prod-624d.kxcdn.com/" ;; ("release-staging") BASE_URL="http://beta.mrmatt57.org/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
