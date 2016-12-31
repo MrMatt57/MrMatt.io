@@ -1,19 +1,25 @@
 {{ partial "header.html" . }}
 <div>
-  <div class="wrapper small">
+  <div class="wrapper">
     <div>Hey, I'm <a href="/about/">Matt Walker</a>.</div>
-    <p>I'm a software engineer in the Baltimore/DC Metro area.  This site is mostly for me to learn and test things out.  It's an archive for me and maybe something of interest for you.</p>
-    <p>Here is some of the <a href="/stuff/">stuff I use</a> and what I am up to <a href="/now/">now</a>.</p>
-    Contact:
-    <ul class="header-list">
-      <li><a href="mailto:matt@mrmatt57.org">matt@mrmatt57.org</a></li>
-      <li><a href="tel:1-443-579-5757">1.443.579.5757</a></li>      
-      <li><a href="https://github.com/MrMatt57" target="_blank">Github</a></li>
-      <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank">LinkedIn</a></li>
-    </ul>
+      <p>I'm a software engineer in the Baltimore/DC Metro area.  This site is mostly for me to learn and test things out.  It's also an archive for me and maybe something of interest for you.</p>
+      <p>Here is some of the <a href="/stuff/">stuff I use</a> and what I am up to <a href="/now/">now</a>.</p>
+      Contact:
+      <ul class="header-list">
+        <li><a href="mailto:matt@mrmatt57.org">matt@mrmatt57.org</a></li>
+        <li><a href="tel:1-443-579-5757">1.443.579.5757</a></li>      
+        <li><a href="https://github.com/MrMatt57" target="_blank">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank">LinkedIn</a></li>
+      </ul>
     </div>
-  <div class="wrapper small">    
+  <div class="wrapper">    
     <h2>Journal</h2>
+    <ul class="header-list">
+      <li><a href="/tags/software-development/">Software Dev</a></li>
+      <li><a href="/tags/travel/">Travel</a></li>
+      <li><a href="/tags/r/c-planes/">R/C Planes</a></li>
+      <li><a href="/tags/Photography/">Photography</a></li>
+    </ul>
     <ul class="posts">
       {{ range first 3 (where .Data.Pages "Section" "posts") }}
           {{ .Render "li" }}

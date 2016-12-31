@@ -2,7 +2,7 @@
 +++
 date = "2014-12-30"
 draft = false
-title = """Website Update"""
+title = """Website Update (Wordpress > Ghost)"""
 slug = "website-update-2014"
 tags = ['Software Development', 'Website']
 banner = "/images/2014/12/road.jpg"
@@ -33,9 +33,13 @@ My old site served me well, but here are some issues that pushed the update.
 	- Lifeblog - This was a neat concept and worked while I was active on social networks.
     - Setup (Stuff I Use) - This turned out to be too much to maintain and as a result, never had anything interesting or relavant.
     
-### Homage:
+### Homage
 
-Need to put a screenshot here.
+{{< gallery >}}
+{{% galleryimage file="/img/MrMatt57org-Wordpress.jpg" thumb="/img/MrMatt57org-Wordpress-thumbnail.jpg" size="1225x1865" caption="MrMatt57.org Ghost Screenshot" %}}
+{{< /gallery >}}
+
+{{% galleryinit %}}
 
 
 

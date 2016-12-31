@@ -8,10 +8,10 @@
     {{ end }}    
   {{ .Content }}
   <section>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
+    Posted: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
     {{ if .Params.tags }}
     {{ $baseurl := .Site.BaseURL }}
-      <ul class="tags">
+      <ul class="tags"> Tags: 
         {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
       </ul>    
     {{ end }}       
