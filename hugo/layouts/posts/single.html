@@ -1,14 +1,14 @@
 {{ partial "header.html" . }}
 <article class="wrapper">
   <header>
-    <h2>{{ .Title }}</h2>   
+    <h2>{{ .Title }}</h2>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
   </header>
     {{ if .Params.image }}
       {{ $.Params.banner }}
     {{ end }}    
   {{ .Content }}
   <section>
-    Posted: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
     {{ if .Params.tags }}
     {{ $baseurl := .Site.BaseURL }}
       <ul class="tags"> Tags: 

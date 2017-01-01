@@ -97,6 +97,19 @@ footer {
   }
 }
 
+article {
+  header {
+    h2 {
+      margin-bottom: 1rem;
+    }
+    time {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+
 .header-list {
     margin: .5rem 0 0;
     float: left;
@@ -115,6 +128,11 @@ footer {
     padding: 0;
     border: 0;
   }
+}
+.header-list::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .icon {
