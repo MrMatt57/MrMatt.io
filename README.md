@@ -13,3 +13,5 @@ Build `npm run build`
 Test `npm run test`
 
 Publish `npm run build publish`
+
+For now, check out the [Stack](https://mrmatt57.org/stack/) page for more details.
