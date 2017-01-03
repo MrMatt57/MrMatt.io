@@ -9,7 +9,7 @@ banner = "/images/2014/12/road.jpg"
 aliases = ['/website-update/']
 +++
 
-It has been over four years since my last blog post.  It is no coincidence that my oldest son is about to turn four.  Life has been busy and more rewarding than ever.  As time as gone by, my website aged and no longer represented me.  The site was long overdue for an update.  
+It has been over four years since my last blog post.  It is no coincidence that my oldest son is about to turn four.  Life has been busy and more rewarding than ever.  As time has gone by, my website aged and no longer represented me.  The site was long overdue for an update.  
 
 ### New Site:
 When designing the new site, here were some things I considered.
