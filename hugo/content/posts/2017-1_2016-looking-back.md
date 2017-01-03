@@ -34,7 +34,7 @@ Looking back on 2016, it was a good year.  Here are some of my highlights.
 {{% galleryimage file="/img/Spiedies.jpg" thumb="/img/Spiedies-thumbnail.jpg" size="4000x2992" caption="Spiedies" %}}
 {{% galleryimage file="/img/GasConversion.jpg" thumb="/img/GasConversion-thumbnail.jpg" size="914x1218" caption="Gas Conversion" %}}
 {{% galleryimage file="/img/GasLine.jpg" thumb="/img/GasLine-thumbnail.jpg" size="4032x3024" caption="Gas Line" %}}
-{{% galleryimage file="/img/Tesla.jpg" thumb="/img/Tesla.jpg" size="3024x4032" caption="Tesla Model 3 Reservation Thank You." %}}
+{{% galleryimage file="/img/Tesla.jpg" thumb="/img/Tesla-thumbnail.jpg" size="3024x4032" caption="Tesla Model 3 Reservation Thank You." %}}
 {{< /gallery >}}
 
 {{% galleryinit %}}    

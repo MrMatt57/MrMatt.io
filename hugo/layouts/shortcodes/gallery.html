@@ -3,19 +3,19 @@
 
 {{ if eq $cols "4" }}
 <div class="wrapper full">
-    <div class="gallery grid4cols" itemscope itemtype="http://schema.org/ImageGallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 213 }} }'>
+    <div class="gallery grid4cols" itemscope itemtype="http://schema.org/ImageGallery" data-colwidth='213'>
     {{ .Inner }}
     </div>
 </div>
 {{ else if eq $cols "3" }}
 <div class="wrapper full">
-    <div class="gallery grid3cols" itemscope itemtype="http://schema.org/ImageGallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 285 }'>
+    <div class="gallery grid3cols" itemscope itemtype="http://schema.org/ImageGallery" data-colwidth='285'>
     {{ .Inner }}
     </div>
 </div>
 {{ else }}
 <div class="wrapper">
-    <div class="gallery grid2cols" itemscope itemtype="http://schema.org/ImageGallery" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 360 }} }'>
+    <div class="gallery grid2cols" itemscope itemtype="http://schema.org/ImageGallery" data-colwidth='360'>
     {{ .Inner }}
     </div>
 </div>

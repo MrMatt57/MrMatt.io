@@ -8,6 +8,7 @@ gulp.task('scripts', function() {
     'node_modules/photoswipe/dist/photoswipe.js', 
     'node_modules/photoswipe/dist/photoswipe-ui-default.js',
     'node_modules/masonry-layout/dist/masonry.pkgd.js',
+    'node_modules/imagesloaded/imagesloaded.pkgd.js',
     'src/scripts/*.js'])  //TODO Move to require file
         .pipe(concat('main.js'))
         .pipe(jshint())

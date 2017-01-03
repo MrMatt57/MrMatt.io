@@ -201,3 +201,20 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
     }
 };
+
+var images = document.querySelectorAll('.galleryimage');
+if(images.length > 0){
+    initPhotoSwipeFromDOM('.gallery');
+    var galleries = document.querySelectorAll('.gallery');
+    imagesLoaded( images, function() {
+        for (var i = 0, len = galleries.length; i < len; i++) {
+            var gallery = galleries[i];
+            var colwidth = Number(gallery.dataset.colwidth);
+            new Masonry( gallery, {
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: colwidth
+            });  
+        }
+    });
+}
