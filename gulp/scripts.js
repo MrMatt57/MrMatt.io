@@ -4,7 +4,11 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 
 gulp.task('scripts', function() {
-    return gulp.src(['node_modules/photoswipe/dist/photoswipe.js', 'node_modules/photoswipe/dist/photoswipe-ui-default.js', 'src/scripts/*.js'])  //TODO Move to require file
+    return gulp.src([
+    'node_modules/photoswipe/dist/photoswipe.js', 
+    'node_modules/photoswipe/dist/photoswipe-ui-default.js',
+    'node_modules/masonry-layout/dist/masonry.pkgd.js',
+    'src/scripts/*.js'])  //TODO Move to require file
         .pipe(concat('main.js'))
         .pipe(jshint())
         .pipe(jshint.reporter("default"))   
