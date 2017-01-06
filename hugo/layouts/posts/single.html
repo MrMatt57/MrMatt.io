@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
 <article>
   <div class="wrapper">
     <header>
@@ -10,7 +11,6 @@
     </section>
     <nav>
       {{ if .Params.tags }}
-      {{ $baseurl := .Site.BaseURL }}
         <h3>Tags:<h3>
         <ul class="tags"> 
           {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
@@ -18,21 +18,8 @@
       {{ end }}       
     <nav>
     <section>
-      <h3>Comments:<h3>
-      <div id="disqus_thread"></div>
-      <script>
-        var disqus_config = function () {
-          this.page.url = {{ .Permalink }};
-          this.page.identifier = {{ .Slug }};
-        };
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//mrmatt57.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>  
+      <h3>Comments:</h3>
+      Disabled for now... Disqus is too heavy, researching serverless solutions.
     </section>
   </div>
 </article>
