@@ -11,15 +11,15 @@
     </section>
     <nav>
       {{ if .Params.tags }}
-        <h3>Tags:<h3>
+        <h3>Tags</h3>
         <ul class="tags"> 
           {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
         </ul>    
       {{ end }}       
     <nav>
     <section>
-      <h3>Comments:</h3>
-      Disabled for now... Disqus is too heavy, researching serverless solutions.
+      {{ partial "comments.html" . }}  
+      {{ partial "comment-form.html" . }}  
     </section>
   </div>
 </article>

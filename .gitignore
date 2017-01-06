@@ -7,3 +7,5 @@ hugo/static/js/*
 hugo/static/photoswipe/*
 hugo/static/rev-manifest.json
 dist/*
+src/disqus-to-yml/comments.xml
+src/disqus-to-yml/comments/*

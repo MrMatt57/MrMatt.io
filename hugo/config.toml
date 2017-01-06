@@ -1,3 +1,9 @@
 baseurl = "http://mrmatt57.org/"
 title = "Matt Walker"
 languageCode = "en-us"
+
+[Params]
+StaticmanEndpoint = "https://api.staticman.net/v2/entry"
+StaticmanUsername = "MrMatt57"
+StaticmanRepo = "MrMatt57.org"
+StaticmanBranch = "master"
