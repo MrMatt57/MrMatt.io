@@ -1,0 +1,6 @@
+id: wp_id=17568
+name: Rykel Lim
+email: ce1b5bcb60bc2a60c9571c7a7709acfb
+date: 2012-01-02T20:13:29Z
+message: | 
+    <p>Hi, I have Tomato firmware running smoothly for a long time, but whenever China apps such as PPTV and PPStream are running elsewhere on the network, my Skype would suffer.</p><p>Is there a simple "Prioritise Skype Over Other Software" GUI manager add-on that can be added to Tomato to auto-prioritise Skype?</p><p>If not, how can I do so from the Tomato webadmin interface?</p><p>Thanks for advice!</p>

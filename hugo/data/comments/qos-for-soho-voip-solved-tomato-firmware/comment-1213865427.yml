@@ -1,0 +1,6 @@
+id: wp_id=91
+name: Matt
+email: 90a842361e583b4fd1809a46495cf7b8
+date: 2008-06-19T03:50:27Z
+message: | 
+    <p>@Dimitrios - It's actually L7, it is an application layer packet classifier.  Basically it's a filter that can determine what application the data/traffic is coming from based on certain identifiers in the packets.  They can be helpful when you don't know or want to specify a specific port or IP address.</p><p>For your office setup; I would always set priority for your VOIP traffic.  If you experience latency with the CRM site you can try to increase the priority on port 80/443 just for the CRM's destination IP.  You can also set the default priority to lowest to ensure the specified business traffic runs smooth.</p><p>Let me know if you are having any specific problems and I'll do my best to help you out.</p>

@@ -1,0 +1,6 @@
+id: wp_id=443
+name: Matt
+email: 9d976d504e53a9e3c42f7a9df70cad69
+date: 2009-01-03T20:13:12Z
+message: | 
+    <p>Very good point NoDadddy.  Many ATA's and Softphones RTP ranges can be configured.  Unfortunately I am using a Linksys SPA 942 and have been unable to dial in the range.  I don't P2P much and don't have any other traffic traveling over these ports, so I haven't ran into any troubles yet.</p><p>I added to the post to try 16384 - 16482 UDP before going going all out and classifying so many ports.  Thanks for the feedback.</p>

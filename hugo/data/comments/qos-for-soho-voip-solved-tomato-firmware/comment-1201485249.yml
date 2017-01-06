@@ -1,0 +1,6 @@
+id: wp_id=33
+name: Matt
+email: 90a842361e583b4fd1809a46495cf7b8
+date: 2008-01-27T20:54:09Z
+message: | 
+    <p>A couple of well noted corrections/aditions to the post thanks to the Tomato Firmware Forum at <a href="http://linksysinfo.org" rel="nofollow noopener">linksysinfo.org</a>:</p><p>&lt;ul&gt;<br>&lt;li&gt;- WRTG54 = WRT54G - What was I thinking?&lt;/li&gt;<br>&lt;li&gt;- the firmware is written by Jonathan Zarate (polar cloud is the host, thanks Johnathan!)&lt;/li&gt;<br>&lt;li&gt;- If you have any other traffic (P2P) on ports 10000-20000, you should try the SIP l7-Filter. &lt;/li&gt;<br>&lt;li&gt;- Another solution is to setup a QOS classification for the IP/Mac addresss of your standalone VoIP phones or adapters if they are connecting to a trunk over the internet&lt;/li&gt;<br>&lt;/ul&gt;</p><p>Thanks guys!</p>

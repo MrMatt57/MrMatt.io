@@ -1,0 +1,6 @@
+id: wp_id=43607
+name: Mohnish
+email: 7f3666c1d5955d344e764337a66d10bf
+date: 2012-12-01T01:02:51Z
+message: | 
+    <p>@KevinLambert The problem with what you suggest is explained in detail in Toastman's QOS explanation. In a nutshell, we do not control the sender. We can gradually ask him to slow down by not sending acknowledgement receipts for his packets, but he'll slow down only when he wishes! So, we try to figure out the bandwidth requirement for an app and then set the QOS accordingly. Use NONE on a class for no sacrifice. I have NONE for www traffic.</p><p>@RykelKim Check the QOS graph to see the Skype port and assign that device/port to HIGHEST class. Skype prioritized over China apps!</p>

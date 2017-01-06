@@ -1,0 +1,6 @@
+id: wp_id=97
+name: Matt
+email: 90a842361e583b4fd1809a46495cf7b8
+date: 2008-07-03T05:05:51Z
+message: | 
+    <p>@jim - You aren't inherently loosing anything by using Tomato.  I have actually seen (seat-of-the-pants) performance improvements over other firmwares.</p><p>A: QOS does not rob bits, it throttles/routes them.  If you lost bits, you would being losing part of your data stream and it would likely corrupt the output.  If you mean rob bandwidth/throughput; there is the potential of loosing some "burst" speeds due to the fixed nature of Tomato's QOS implementation.  For me it was give an take... give a little bit of bandwidth for an uninterrupted phone conversation.</p>

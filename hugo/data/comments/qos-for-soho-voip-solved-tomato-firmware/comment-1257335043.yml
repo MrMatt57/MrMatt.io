@@ -1,0 +1,6 @@
+id: wp_id=5015
+name: Kevin J Lambert
+email: 300be27eba80d997dd034258e4a5f6ca
+date: 2009-11-04T06:44:03Z
+message: | 
+    <p>So many QoS implementations use bandwidth caps.  This is unintuitive and sacrificial.  Can't we just have a basic prioritization without limiting bandwidth of other services during off-peak periods?  For instance, during a phone call I don't care if all other traffic grinds to a halt.  In the same sense I'm perfectly OK with BitTorrent saturating my network while I'm not at home.</p>
