@@ -3,6 +3,11 @@ title = "Matt Walker"
 languageCode = "en-us"
 
 [Params]
+TitleAppendix = " - mrmatt57.org"
+Description = "Personal website of Matt Walker"
+Keywords = "Matt Walker, Matthew, Walker, Maryland, DC"
+TwitterHandle = "mrmatt57"
+FeedUrl = "https://feeds.feedburner.com/MattWalker"
 StaticmanEndpoint = "https://api.staticman.net/v2/entry"
 StaticmanUsername = "MrMatt57"
 StaticmanRepo = "MrMatt57.org"

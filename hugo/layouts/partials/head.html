@@ -1,17 +1,27 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="HandheldFriendly" content="True">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ .Title }}{{ .Site.Params.TitleAppendix }}</title>
+  <meta property="og:title" content="{{ .Title }}{{ .Site.Params.TitleAppendix }}">
+  <meta name="description" content="{{with .Description }}{{.}}{{else}}{{.Site.Params.Description}}{{end}}" />
+  <meta name="keywords" content="{{with .Keywords }}{{.}}{{else}}{{.Site.Params.Keywords}}{{end}}" />
+  <meta property="og:description" content="{{with .Description }}{{.}}{{else}}{{.Site.Params.Description}}{{end}}">
+  <link rel="canonical" href="{{ .Permalink }}"> 
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}"> 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{ .Site.Params.TwitterHandle }}">
+  <meta name="twitter:creator" content="@{{ .Site.Params.TwitterHandle }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}/sitemap.xml">
+  <link href="{{ .Site.Params.FeedUrl }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <meta name="HandheldFriendly" content="True"> 
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cleartype" content="on">
   <meta name="referrer" content="no-referrer">
-  {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}  
-  <title>{{ .Title }} - mrmatt57.org</title>
-  <meta name="description" content="Personal website of Matt Walker">
   <meta name="author" content="Matt Walker">
   <meta name="msapplication-config" content="/icons/browserconfig.xml?v=8jeR9Y4OPp">
   <meta name="theme-color" content="#ffffff">  
-  <link rel="canonical" href="{{ .Permalink }}">
   <link rel="preload" href="/fonts/roboto-slab-v6-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=8jeR9Y4OPp">
   <link rel="icon" type="image/png" href="/icons/favicon-32x32.png?v=8jeR9Y4OPp" sizes="32x32">
@@ -20,5 +30,5 @@
   <link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=8jeR9Y4OPp" color="#5bbad5">
   <link rel="shortcut icon" href="/icons/favicon.ico?v=8jeR9Y4OPp">
   <link rel="stylesheet" href="/css/main.css">
-  {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}  
 </head>
+
