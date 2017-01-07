@@ -28,4 +28,3 @@ for me to work on, reach out. Even if I can't participate, I might know someone 
     <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank"><i class="icon icon-linkedin"></i> LinkedIn</a></li>
     <li><a href="/public-pgp.asc" target="_blank"><i class="icon icon-secure"></i> PGP Public Key</a></li>
 </ul>
-<a href=""></a>
