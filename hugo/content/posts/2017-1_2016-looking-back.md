@@ -3,6 +3,8 @@ date = "2017-01-01"
 draft = false
 title = """Looking Back on 2016"""
 slug = "2016-looking-back"
+description = "Looking back on 2016, it was a good year.  Here are some of my highlights."
+keywords = "2016, year, history"
 tags = []
 +++
 
