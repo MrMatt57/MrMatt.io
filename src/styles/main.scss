@@ -118,7 +118,6 @@ article {
 
 .header-list {
     margin: .5rem 0 0;
-    float: left;
     width: 100%;
     margin-bottom: 1.5rem;
 
@@ -134,11 +133,6 @@ article {
     padding: 0;
     border: 0;
   }
-}
-.header-list::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .icon {
@@ -261,6 +255,13 @@ article {
 
     }
 }
+.home {
+  h2 {
+    margin-bottom: 0; 
+  }
+}
 
-
+#photos {
+  margin-top: 1em;
+}
 
