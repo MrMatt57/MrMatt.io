@@ -19,3 +19,13 @@ I am currently **unavailable** for full-time work.
 
 On occasion I take on side projects. If you have something interesting
 for me to work on, reach out. Even if I can't participate, I might know someone who can.
+
+## Contact
+<ul class="header-list">
+    <li><a href="mailto:matt@mrmatt57.org"><i class="icon icon-email"></i> matt@mrmatt57.org</a></li>
+    <li><a href="tel:1-443-579-5757"><i class="icon icon-phone"></i> 1.443.579.5757</a></li>      
+    <li><a href="https://github.com/MrMatt57" target="_blank"><i class="icon icon-github"></i> Github</a></li>
+    <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank"><i class="icon icon-linkedin"></i> LinkedIn</a></li>
+    <li><a href="/public-pgp.asc" target="_blank"><i class="icon icon-secure"></i> PGP Public Key</a></li>
+</ul>
+<a href=""></a>
