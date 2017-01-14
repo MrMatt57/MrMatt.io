@@ -1,0 +1,6 @@
+id: wp_id=52
+name: Matt
+email: 90a842361e583b4fd1809a46495cf7b8
+date: 2008-02-29T08:45:53Z
+message: | 
+    <p>@Scott - It really confused me too... The way I see it, the Rate represents the transfer speed and the Limit is the maximum speed/rate.  The limit tells the QOS how much to base the percentages on.  If the limit is set above the actual  available bandwidth it changes the scale and won't give you the guaranteed rates needed for VOIP.</p>

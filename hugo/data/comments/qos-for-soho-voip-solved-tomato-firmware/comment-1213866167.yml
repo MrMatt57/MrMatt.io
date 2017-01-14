@@ -1,0 +1,6 @@
+id: wp_id=92
+name: Dimitrios
+email: cfc8c71d534070bc1bae231e8204c7fe
+date: 2008-06-19T04:02:47Z
+message: | 
+    <p>Matt...thanks for the reply!!</p><p>One thing that I am confused about: We run the VOIP with Softphones, so prioritizing the MAC addresses doesn't really help since we have no Adapters.   I assume that if we prioritize port 5060, that is for the VOIP?   And I would do the L7 when setting up that port?  Or do I skip the L7 in this case and just set up port 5060?</p><p>As you can tell I am not an IT guy, just know enough to get myself in trouble running my mortgage company!! :)</p><p>Also my CRM is on a server I own in California and I am in Ohio.   It has been slow recently, the guys who manage my server (they made the CRM), say that it can be any connection from here to there making it slow...that being said, would it help to set up the IP address of my CRM server anyway?</p><p>THANKS!!!</p>

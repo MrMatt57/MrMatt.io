@@ -1,0 +1,6 @@
+id: wp_id=4866
+name: Tim
+email: f5c79cf73b49a07a37cbcb544f697bc1
+date: 2009-10-08T18:50:16Z
+message: | 
+    <p>I have a Vonage box that I moved from outside my WRT54GL/Tomato router to inside because I found the Vonage box was blocking ports.  Moving it inside caused the voice quality to drop significantly.  Just adding the port forwarding seems to have helped significantly, but the QOS modifications really knocked my socks off.  Thanks for this write-up.  It was exactly what I was looking for.</p>

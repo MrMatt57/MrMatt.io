@@ -5,6 +5,8 @@ title = "What I am up to now"
 
 Happy New Year!
 
-Right now, I am enjoying holiday break, working on re-doing my site and learning about some cool web development toolchains.
+Had a wonderful holiday break, enjoyed some needed r&r and worked on this site a bit.  
 
-*This was updated December 31st, 2016*
+I originally brought over Disqus comments, but realized how chatty and bloated they were.  I also really wanted to make the site single orgin with no trackers and nasty scripts.  They also broke numerious WCAG2.0AA rules, so bad I had to disable some checks.   Well... they are gone.  Staticman to the rescue!
+
+*This was updated January 6th, 2017*

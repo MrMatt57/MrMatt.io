@@ -1,34 +1,37 @@
 {{ partial "header.html" . }}
   <div class="wrapper">
-    <div>
-      <i class="icon icon-MattWalker"></i>
-      <p>Hey, I'm <a href="/about/">Matt Walker</a>.</p>
+    <section>
+      <a href="/about/" alt="Matt Walker" id="MattWalker-Logo"><i class="icon icon-MattWalker"><span>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></i></a>
+      <p>Hey, I'm <a href="/about/" alt="Matt Walker">Matt Walker</a>.</p>
       <p>I'm a software engineer in the Baltimore/DC Metro area.  This site is mostly for me to learn and test things out.  
-        It's also an archive of website, hobby and travel related posts.</p>
-      <p>Here is some of the <a href="/stuff/">stuff I use</a> and what I am up to <a href="/now/">now</a>.</p>
-      Contact:
+        It's also an archive of tech, hobby and travel related posts.</p>
+      <p>Here is some of the <a href="/gear/">gear I use</a> and what I am up to <a href="/now/">now</a>.</p>
+    </section>
+    <section class="home">
       <ul class="header-list">
-        <li><a href="mailto:matt@mrmatt57.org">matt@mrmatt57.org</a></li>
-        <li><a href="tel:1-443-579-5757">1.443.579.5757</a></li>      
-        <li><a href="https://github.com/MrMatt57" target="_blank">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:matt@mrmatt57.org"><i class="icon icon-email"></i> matt@mrmatt57.org</a></li>
+        <li><a href="tel:1-443-579-5757"><i class="icon icon-phone"></i> 1.443.579.5757</a></li>      
+        <li><a href="https://github.com/MrMatt57" target="_blank"><i class="icon icon-github"></i> Github</a></li>
+        <li><a href="https://www.linkedin.com/in/mrmatt" target="_blank"><i class="icon icon-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://raw.githubusercontent.com/MrMatt57/MrMatt.io/master/public-pgp.asc" target="_blank"><i class="icon icon-secure"></i> PGP</a></li>
       </ul>
-    </div>
-    <h2>Journal</h2>
-    <ul class="header-list">
-      <li><a href="/tags/software-development/">Software Dev</a></li>
-      <li><a href="/tags/travel/">Travel</a></li>
-      <li><a href="/tags/r/c-planes/">R/C Planes</a></li>
-      <li><a href="/tags/photography/">Photography</a></li>
-    </ul>
-    <h3><del>Recent</del> Posts</h3>
-    <ul class="posts"> 
-      {{ range first 3 (where .Data.Pages "Section" "posts") }}
-          {{ .Render "li" }}
-      {{ end }}
-    </ul>
-    <a href="/posts/" class="button">Archive</a>
-    <h2>Photos</h2>
-    Working on PhotoSwipe integration... photos coming soon!
+    </section>
+    <section id="Journal" class="home">
+      <h2>Journal</h2>
+      <ul class="header-list">
+        <li><a href="/posts/">Everything</a></li>
+        <li><a href="/tags/software-development/">Software Dev</a></li>
+        <li><a href="/tags/travel/">Travel</a></li>
+        <li><a href="/tags/r/c-planes/">R/C Planes</a></li>
+        <li><a href="/tags/photography/">Photography</a></li>
+      </ul>
+      <div>
+      <ul class="posts"> 
+        {{ range first 5 (where .Data.Pages "Section" "posts") }}
+            {{ .Render "li" }}
+        {{ end }}
+      </ul>
+      </div>
+    </section>
   </div>
 {{ partial "footer.html" . }}

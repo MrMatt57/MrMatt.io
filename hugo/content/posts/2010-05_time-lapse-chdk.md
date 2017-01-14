@@ -10,9 +10,11 @@ aliases = ['/time-lapse-chdk/']
 +++
 I don-t know what it is about them, but time lapse videos captivate me. It might be the fact that you can live hours in minutes? Maybe in a strange way it is gratifying to watch life pass by without consequences? Whatever it is, they are a lot of fun to watch- and now create!
 
+{{< widecontent >}}
 <div class="videoWrapper">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/mMORdLGUVNI?rel=0&amp;controls=0" frameborder="0" allowfullscreen title="Time Lapse - Owings Mills, MD"></iframe>
 </div>
+{{< /widecontent >}}
 
 When I found out I could use my [Canon A2000is](http://www.amazon.com/gp/product/B001EQ4BZE?ie=UTF8&tag=matwalstecand-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B001EQ4BZE)![](http://www.assoc-amazon.com/e/ir?t=matwalstecand-20&l=as2&o=1&a=B001EQ4BZE) point and shoot to create a time lapse, i was floored. I owe it all to the [Canon Hack Development Kit (CHDK)](http://chdk.wikia.com/wiki/CHDK). With this nifty piece of software, your Canon camera can boot a whole new feature set from an SD card. Most importantly, run [Ultra Intervalometer script](http://chdk.wikia.com/wiki/UBASIC/Scripts:_Ultra_Intervalometer).
 

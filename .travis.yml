@@ -19,7 +19,7 @@ install:
 
 script:
   # Set Base Url based on branch
-  - case "$TRAVIS_BRANCH" in ("master") BASE_URL="https://mrmatt57.org/" ;; ("release-staging") BASE_URL="https://beta.mrmatt57.org/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
+  - case "$TRAVIS_BRANCH" in ("master") BASE_URL="https://mrmatt.io/" ;; ("release-staging") BASE_URL="https://beta.mrmatt.io/" ;; (*) BASE_URL="http://localhost:8080" ;; esac
 
   # Build
   - gulp publish --baseUrl=$BASE_URL
@@ -36,13 +36,13 @@ deploy:
   # Staging environment
   - provider: script
     skip_cleanup: true
-    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://beta.mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/49006.json\" -u $KEYCDN_APIKEY:"
+    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://beta.mrmatt.io/ && curl \"https://api.keycdn.com/zones/purge/52361.json\" -u $KEYCDN_APIKEY:"
     on:
       branch: release-staging
   # Production environment
   - provider: script
     skip_cleanup: true
-    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://mrmatt57.org/ && curl \"https://api.keycdn.com/zones/purge/50009.json\" -u $KEYCDN_APIKEY:"
+    script: "s3cmd sync --delete-removed --exclude '.git/*' --acl-public --preserve --no-mime-magic --guess-mime-type --recursive public/ s3://mrmatt.io/ && curl \"https://api.keycdn.com/zones/purge/52360.json\" -u $KEYCDN_APIKEY:"
     on:
       branch: master
 notifications:

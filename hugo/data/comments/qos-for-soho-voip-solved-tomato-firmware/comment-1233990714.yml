@@ -1,0 +1,6 @@
+id: wp_id=560
+name: Tom
+email: dba3886fdaa9e1e47d458ad7b324c22a
+date: 2009-02-07T02:11:54Z
+message: | 
+    <p>I set a few QoS rules on the my router running Tomato, but noticed I was still getting unclassfied traffic through, I was wondering how that would be possible as I was pretty sure I had covered everything...(I wanted to be able to limit my flatmates connections as he really doesn't respect any kind of torrenting limitations leading to our bandwidth getting limited by our ISP, and the network slowing a little, although nowhere near as badly on Tomato firmware compared to Linksys stock firmware.)</p><p>The problem being, some traffic still isn't getting classfied, I even deleted all the rules and set just one up so that no IP, protocol, port, or other filter was selected, and whilst the majority of the traffic then fell under this category, some did not. (And it wasn't just the traffic from my PC to the router HTTP gui, which I could understand not getting classfied) but traffic from me and my flatmate to the internet</p><p>Has anyone got any ideas as to why that may happen?</p>

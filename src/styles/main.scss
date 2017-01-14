@@ -118,7 +118,6 @@ article {
 
 .header-list {
     margin: .5rem 0 0;
-    float: left;
     width: 100%;
     margin-bottom: 1.5rem;
 
@@ -134,11 +133,6 @@ article {
     padding: 0;
     border: 0;
   }
-}
-.header-list::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .icon {
@@ -160,6 +154,7 @@ article {
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
+  margin-bottom: 1.5em;
 }
 .videoWrapper iframe {
 	position: absolute;
@@ -214,4 +209,84 @@ article {
 
 .grid2cols {
   .grid-item { width: 350px; }
+}
+
+.contact-form {
+  max-width: 500px;
+  margin-top: 1em;
+
+  input, textarea {
+      width: 100%;
+  }  
+  textarea {
+    height: 6em;
+    line-height: 1.5em;
+  }
+  label {
+    span {
+      font-size: .8em;
+    }
+  }
+}
+
+.comments {
+    margin-top: 1em;
+  
+    article {
+
+      position: relative;
+      margin-bottom: 3em;
+      padding-left: 4.5em;
+        
+      .avatar {
+        position: absolute;
+        width: 3.25em;
+        height: 3.25em;
+        top: 0;
+        left: 0;
+      }
+      .author {
+        display: block;
+        font-weight: 600;
+      }
+      .timestamp {
+        display: block;
+        font-size: .9em;
+      }
+
+    }
+}
+.home {
+  h2 {
+    margin-bottom: 0; 
+    font-size: 2em;
+  }
+}
+
+#photos {
+  margin-top: 1em;
+}
+
+.border {
+  padding: 1%;
+}
+
+.boxshadow {
+    position: relative;
+    box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, .5);
+    background: white;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+
+}
+.boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
 }

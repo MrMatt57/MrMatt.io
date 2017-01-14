@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
-<article class="wrapper">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+<article>
+    <div class="wrapper">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }} 
+    </div>
 </article>
 {{ partial "footer.html" . }}

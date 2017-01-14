@@ -32,13 +32,15 @@ date = "2016-12-09T16:11:43-05:00"
 - Let's Encrypt TLS
 
 ### Operations
+- Staticman - Comment Processing
 - StatusCake Monitoring - [Site Status](http://status.mrmatt57.org/)
 - Pushbullet Notifications
 - GSuite - Email/Calendar/Docs/Drive
-- CrashPlan Backups
+- CrashPlan Workstation Backups
 
-Have suggestions on how I can make the site/stack better? [Let me know](https://github.com/MrMatt57/MrMatt57.org/issues/new).
+Have suggestions on how I can make the site/stack better? [Let me know](https://github.com/MrMatt57/MrMatt.io/issues/new).
 
 Special thanks to:
 
-- [hugulp](https://github.com/jbrodriguez/hugulp) for much of gulp workflow I am using.
+- [hugulp](https://github.com/jbrodriguez/hugulp) project for much of gulp workflow I am using.
+- [Michael Rose](https://mademistakes.com/) for creative inspiration and much of my Staticman implemenation.

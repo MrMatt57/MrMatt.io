@@ -9,6 +9,8 @@ banner = "/images/2014/12/road.jpg"
 aliases = ['/website-update/']
 +++
 
+**12/31/2016: My site is now on Hugo, check out the [update](/posts/website-update-2016/).**
+
 It has been over four years since my last blog post.  It is no coincidence that my oldest son is about to turn four.  Life has been busy and more rewarding than ever.  As time has gone by, my website aged and no longer represented me.  The site was long overdue for an update.  
 
 ### New Site:
