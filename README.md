@@ -1,4 +1,4 @@
-# MrMatt57.org
+# MrMatt.io
 
 [![Build Status](https://travis-ci.org/MrMatt57/MrMatt.io.svg?branch=master)](https://travis-ci.org/MrMatt57/MrMatt.io)
 [![Code Climate](https://codeclimate.com/github/MrMatt57/MrMatt.io/badges/gpa.svg)](https://codeclimate.com/github/MrMatt57/MrMatt.io)
