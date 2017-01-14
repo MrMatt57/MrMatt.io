@@ -35,7 +35,7 @@ date = "2016-12-09T16:11:43-05:00"
 
 ### Operations
 - Staticman - Comment Processing
-- StatusCake Monitoring - [Site Status](http://status.mrmatt57.org/)
+- StatusCake Monitoring - [Site Status](http://status.mrmatt.io/)
 - Pushbullet Notifications
 - GSuite - Email/Calendar/Docs/Drive
 - CrashPlan Workstation Backups
