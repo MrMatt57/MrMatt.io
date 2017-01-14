@@ -38,7 +38,7 @@ date = "2016-12-09T16:11:43-05:00"
 - GSuite - Email/Calendar/Docs/Drive
 - CrashPlan Workstation Backups
 
-Have suggestions on how I can make the site/stack better? [Let me know](https://github.com/MrMatt57/MrMatt57.org/issues/new).
+Have suggestions on how I can make the site/stack better? [Let me know](https://github.com/MrMatt57/MrMatt.io/issues/new).
 
 Special thanks to:
 
