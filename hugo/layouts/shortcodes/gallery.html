@@ -13,6 +13,12 @@
     {{ .Inner }}
     </div>
 </div>
+{{ else if eq $cols "1" }}
+<div class="wrapper">
+    <div class="gallery grid1cols" itemscope itemtype="http://schema.org/ImageGallery" data-colwidth='720'>
+    {{ .Inner }}
+    </div>
+</div>
 {{ else }}
 <div class="wrapper">
     <div class="gallery grid2cols" itemscope itemtype="http://schema.org/ImageGallery" data-colwidth='360'>
