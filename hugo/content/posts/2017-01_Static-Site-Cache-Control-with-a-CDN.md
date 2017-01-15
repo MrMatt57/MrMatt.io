@@ -1,11 +1,11 @@
 +++
 date = "2017-01-14"
 draft = false
-title = """Static Site Cache Control with a CDN"""
+title = """Static Site Caching with a CDN (Hugo, S3 and KeyCDN)"""
 slug = "static-site-content-caching"
 description = ""
 keywords = "static,site,content,caching"
-tags = []
+tags = ['Software Development', 'Website']
 +++
 I am really enjoying the [switch](/posts/website-update-2016/) to a static Hugo site.  One of the main benefits is not having to run a server to host it.  That also means no `.htacess` or `web.config` files to set headers or caching policies.  With a traditional site "static" assets can be safely cached and dynamic content will be served fresh each request.  Now that the the whole site is static, we need to separate how things are cached.
 
