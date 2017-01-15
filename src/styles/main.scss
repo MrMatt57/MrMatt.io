@@ -84,6 +84,17 @@ footer {
   }
 }
 
+pre {
+  margin-top: 0;
+
+}
+
+code {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;  
+}
+
 .posts {
   list-style-type: none;
 
@@ -203,6 +214,12 @@ article {
   margin-right: 20px;
 }
 
+.grid-item {
+  a {
+    border-bottom: 0;
+  }
+}
+
 .grid4cols {
   .grid-item { width: 203px; }
 }
@@ -213,6 +230,10 @@ article {
 
 .grid2cols {
   .grid-item { width: 350px; }
+}
+
+.grid1cols {
+  .grid-item { width: 100%; }
 }
 
 .contact-form {
