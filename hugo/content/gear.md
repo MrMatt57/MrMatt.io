@@ -1,5 +1,5 @@
 +++
-title = "Gear"
+title = "Gear I use"
 date = "2016-12-09T16:11:43-05:00"
 +++
 
@@ -8,7 +8,7 @@ date = "2016-12-09T16:11:43-05:00"
 {{</ widecontent >}}
 
 ### Phone
-Google Pixel XL
+- Google Pixel XL
 
 ### Workstation
 - Microsoft Surface Pro 3
