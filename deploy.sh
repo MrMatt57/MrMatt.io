@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Deploy to S3
 s3cmd sync --delete-removed \
     --exclude '.git/*' \
@@ -12,7 +11,6 @@ s3cmd sync --delete-removed \
     --recursive \    
     public/ \
     s3://$1/ 
-
 s3cmd sync --delete-removed \
     --exclude '*' \
     --rinclude "^(.*\.((html|xml|json)$))*$" \
@@ -26,6 +24,5 @@ s3cmd sync --delete-removed \
     --recursive \
     public/ \
     s3://$1/ 
-
 # Purge CDN Cache
 curl \"https://api.keycdn.com/zones/purge/$2.json\" -u $3:"
