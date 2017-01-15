@@ -90,17 +90,21 @@ p { margin-top: 0; }
 a {
   color: $link-color;
   text-decoration: none;
+  border-bottom: 2px solid $link-underline; 
+  -webkit-transition: color .15s linear, border .15s linear;
+  transition: color .15s linear, border .15s linear;
   &:visited {
     color: $link-visit;
   }
-  &:hover {
+  &:focus, &:hover {
     color: $link-hover;   
-    text-decoration: underline;
+	border-bottom: 2px solid $link-underline-hover
   }
   &:active {
     color: $link-active;
   }
 }
+
 
 /* LISTS
  * ------------------------------------------------ */

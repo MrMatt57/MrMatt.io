@@ -3,6 +3,8 @@ title = "This site's Stack"
 date = "2016-12-09T16:11:43-05:00"
 +++
 
+*Source avaialable on Github: [MrMatt57/MrMatt.io](https://github.com/MrMatt57/MrMatt.io)*
+
 ### Website Optimization Guidelines
 - Make it fast!
 - Fewest number of resource files
@@ -33,7 +35,7 @@ date = "2016-12-09T16:11:43-05:00"
 
 ### Operations
 - Staticman - Comment Processing
-- StatusCake Monitoring - [Site Status](http://status.mrmatt57.org/)
+- StatusCake Monitoring - [Site Status](http://status.mrmatt.io/)
 - Pushbullet Notifications
 - GSuite - Email/Calendar/Docs/Drive
 - CrashPlan Workstation Backups

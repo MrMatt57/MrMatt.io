@@ -9,10 +9,13 @@ $prefix-for-spec:      true !default;
 $is-fluid: false; // Change to true to enable the fluid grid
 $use-global-border-box: false; // Change to true the enable global border-box
 
-$link-color: #1a0dab;
-$link-hover: #1a0dab; 
-$link-visit: #609;
-$link-active: #609;
+$link-color: #090909;
+$link-hover: #090909; 
+$link-visit: #090909;
+$link-active: #090909;
+$link-underline: #b9cadb;
+$link-underline-hover: #4c81b2;
+
 
 $base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count);
 

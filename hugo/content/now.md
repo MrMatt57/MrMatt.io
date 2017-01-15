@@ -3,10 +3,8 @@ date = "2016-12-09T16:11:43-05:00"
 title = "What I am up to now"
 +++
 
-Happy New Year!
+Working towards my Microsoft Azure Solution Architect MCSD.  Just passed the [70-532](https://www.microsoft.com/en-us/learning/exam-70-532.aspx) yesterday, one down two to go!
 
-Had a wonderful holiday break, enjoyed some needed r&r and worked on this site a bit.  
+New domain, moving from mrmatt57.org to mrmatt.io.  Just another piece of modernizing and [updating my site](https://mrmatt.io/posts/website-update-2016/).
 
-I originally brought over Disqus comments, but realized how chatty and bloated they were.  I also really wanted to make the site single orgin with no trackers and nasty scripts.  They also broke numerious WCAG2.0AA rules, so bad I had to disable some checks.   Well... they are gone.  Staticman to the rescue!
-
-*This was updated January 6th, 2017*
+*This was updated January 14th, 2017*
