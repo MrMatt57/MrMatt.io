@@ -36,13 +36,13 @@ deploy:
   # Staging environment
   - provider: script
     skip_cleanup: true
-    script: chmod +x deploy.sh && deploy.sh beta.mrmatt.io 52361 $KEYCDN_APIKEY
+    script: chmod +x ./deploy.sh && ./deploy.sh beta.mrmatt.io 52361 $KEYCDN_APIKEY
     on:
       branch: release-staging
   # Production environment
   - provider: script
     skip_cleanup: true
-    script: chmod +x deploy.sh && deploy.sh mrmatt.io 52360 $KEYCDN_APIKEY
+    script: chmod +x ./deploy.sh && ./deploy.sh mrmatt.io 52360 $KEYCDN_APIKEY
     on:
       branch: master
 notifications:
