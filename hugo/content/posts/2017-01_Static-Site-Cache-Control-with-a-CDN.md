@@ -41,7 +41,7 @@ s3cmd sync --delete-removed \
     public/ \
     s3://BUCKETNAME/   
 ```
-The full source can be found in the [travis-ci config](sdf) and the [deploy.sh](sdfa) script on Github.
+The full source can be found in the [travis-ci config](https://github.com/MrMatt57/MrMatt.io/blob/master/.travis.yml) and the [deploy.sh](https://github.com/MrMatt57/MrMatt.io/blob/master/deploy.sh) script on Github.
 ### CDN settings
 In your CDN set your Expire setting to honor your orgin's servers header.
 
