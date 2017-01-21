@@ -10,7 +10,6 @@ $code-colors: (
 	dark-gray: #707270
 );
 
-
 // base
 code,
 code[class*='language-'],
@@ -30,7 +29,8 @@ pre[class*='language-'] {
 // code blocks
 pre[class*='language-'] {
 	overflow: auto;
-	margin: 1em 0;
+	word-wrap: normal;
+	margin: 0 0 1em 0;
 	padding: 1.2em;
 	border-radius: 5px;
 	font-size: 85%;

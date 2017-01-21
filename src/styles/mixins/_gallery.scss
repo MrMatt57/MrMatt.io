@@ -1,0 +1,54 @@
+.gallery {
+    img { 
+      width: 100%; 
+      height: auto; 
+    }
+    figure { 
+      display: block; 
+      float: left; 
+      margin: 0 10px 3px 0; 
+    }
+    figcaption { 
+      display: none; 
+    }
+}
+.gallery::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.grid-item {
+  a {
+    border-bottom: 0;
+  }
+}
+.grid4cols {
+  .grid-item { width: 203px; }
+}
+.grid3cols {
+  .grid-item { width: 275px; }
+}
+.grid2cols {
+  .grid-item { width: 350px; }
+}
+.grid1cols {
+  .grid-item { width: 100%; }
+}
+.boxshadow {
+    position: relative;
+    box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, .5);
+    background: white;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+}
+.boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}

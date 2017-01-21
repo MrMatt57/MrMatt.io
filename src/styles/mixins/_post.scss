@@ -1,0 +1,28 @@
+.post {
+  h2 {
+    margin-bottom: 0;
+  }
+  time {
+    margin-bottom: 1em;
+  }
+}
+article {
+  header {
+    h2 {
+      margin-bottom: 1rem;
+    }
+    time {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+.tags {
+  list-style: none;
+  margin-top: .5em;
+  li {
+    display: inline;
+    margin: 0 .5em 0 0 ;
+  }
+}

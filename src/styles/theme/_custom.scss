@@ -1,0 +1,92 @@
+.no-underline, .no-underline:hover {
+  border-bottom: 0;   
+}
+
+h1 {
+  margin: 15px 0;
+  a, a:visited, a:hover, a:focus,  {
+    color: $font-color;
+    border-bottom: 0;    
+  }  
+}
+
+h3, h4, h5, h6 {
+  margin-bottom: .25em;
+}
+header {
+  nav {
+    text-align: center;
+  }
+
+  hr {
+    margin-bottom: 2.5rem;
+  }
+}
+
+li {
+  list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1em;
+}
+
+
+.posts {
+  list-style-type: none;
+
+  li {
+    margin-bottom: .5em;
+  }
+}
+
+.header-list {
+    margin: .5rem 0 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+  li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.40rem 0.625rem 0;
+    border-right: 1px dotted $divider;
+  }
+
+  li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.icon {
+  display: inline-block;
+  text-indent: -10000px;
+}
+.wrapper {
+    max-width: 40em;
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper.full {
+    max-width: 47.5em;
+}
+.icon-MattWalker {
+  float: left;
+  margin-right: 20px;
+}
+.home-about {
+  min-height: 216px;
+}
+.home {
+  h2 {
+    margin-bottom: 0; 
+    font-size: 2em;
+  }
+}
+.divider {
+  hr {
+    margin: 1.5em 0 .5em 0;
+  }
+}
+.border {
+  padding: 1%;
+}

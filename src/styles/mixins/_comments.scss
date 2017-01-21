@@ -1,0 +1,44 @@
+.contact-form {
+  max-width: 500px;
+  margin-top: 1em;
+
+  input, textarea {
+      width: 100%;
+  }  
+  textarea {
+    height: 6em;
+    line-height: 1.5em;
+  }
+  label {
+    span {
+      font-size: .8em;
+    }
+  }
+}
+.comments {
+    margin-top: 1em;
+  
+    article {
+
+      position: relative;
+      margin-bottom: 3em;
+      padding-left: 4.5em;
+        
+      .avatar {
+        position: absolute;
+        width: 3.25em;
+        height: 3.25em;
+        top: 0;
+        left: 0;
+      }
+      .author {
+        display: block;
+        font-weight: 600;
+      }
+      .timestamp {
+        display: block;
+        font-size: .9em;
+      }
+
+    }
+}

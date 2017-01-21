@@ -11,6 +11,15 @@ $pswp__assets-path: '/photoswipe/'; // path to skin assets folder (preloader, PN
 @import "theme/_vars.scss";
 @import "theme/_base.scss"; 
 @import "theme/_skeleton.scss";
-@import "theme/prismjs.scss";
-@import "theme/toc.scss";
+
+// Mixins
+@import "mixins/_comments.scss";
+@import "mixins/_fonts.scss";
+@import "mixins/_footer.scss";
+@import "mixins/_gallery.scss";
+@import "mixins/_post.scss";
+@import "mixins/_prismjs.scss";
+@import "mixins/_toc.scss";
+@import "mixins/_video.scss";
+
 @import "theme/custom.scss";

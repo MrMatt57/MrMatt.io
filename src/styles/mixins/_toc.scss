@@ -2,14 +2,12 @@
 	position:absolute;
 	left:-999em
 }
-
 #toc div {
   display:none;
 }
 #toc input:checked ~ div {
   display:block;
 }
-
 #toc label {
   .minus {
       display:none;
