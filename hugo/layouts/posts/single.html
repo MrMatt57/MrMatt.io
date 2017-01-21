@@ -1,26 +1,26 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 <article>
-  <div class="wrapper">
-    <header>
-      <h2>{{ .Title }}</h2>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
-    </header>
-    <section>
+  <header class="wrapper">
+    <h2>{{ .Title }}</h2>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Monday Jan 2, 2006" }}</time>
+  </header>
+  <section id="articlebody">
+    <div class="wrapper">
       {{ .Content }}
-    </section>
-    <nav>
-      {{ if .Params.tags }}
-        <h3>Tags</h3>
-        <ul class="tags"> 
-          {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
-        </ul>    
-      {{ end }}       
-    <nav>
-    <section>
-      {{ partial "comments.html" . }}  
-      {{ partial "comment-form.html" . }}  
-    </section>
-  </div>
+    </div>
+  </section>
+  <nav class="wrapper">
+    {{ if .Params.tags }}
+      <h3>Tags</h3>
+      <ul class="tags"> 
+    {{ range .Params.tags }}<li><a class="button" href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+      </ul>    
+    {{ end }}       
+  </nav>
+  <section class="wrapper">
+    {{ partial "comments.html" . }}  
+    {{ partial "comment-form.html" . }}  
+  </section>
 </article>
 {{ partial "footer.html" . }}

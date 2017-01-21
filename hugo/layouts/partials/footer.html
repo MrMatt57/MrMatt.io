@@ -10,23 +10,8 @@
         <li><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons</a></li>
       </ul>
     </div>
-    <div><a href="https://letsencrypt.org/" target="_blank" alt="lets encrypt" title="Lets Encrypt" class="no-underline"><i class="icon icon-lets-encrypt"></i></a></div>
+    <div><a href="https://letsencrypt.org/" target="_blank" alt="lets encrypt" title="Lets Encrypt" class="no-underline"><span class="icon icon-lets-encrypt"></span></a></div>
 </footer>
 <script type="text/javascript" src="/js/main.js"></script>
-<script>
-  var images = document.querySelectorAll('.galleryimage');
-  if(images.length > 0){
-    initPhotoSwipeFromDOM('.gallery');
-    var elem = document.querySelector('.gallery');
-    imagesLoaded( images, function() {
-      var colwidth = Number(elem.dataset.colwidth);
-      var msnry = new Masonry( elem, {
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: colwidth
-      });  
-    });
-  }
-</script>
 </body>
 </html>

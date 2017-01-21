@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	margin-top: 0;
 	margin-bottom: relative(20px);
+
+	a, a:visited, a:hover, a:focus,  {
+		border-bottom: 0;    
+	}  	
 }
 h1 {
 	font-size: relative(40px);
@@ -77,10 +81,10 @@ h6 {
 @media (min-width: 550px) {
   h1 { font-size: relative(50px); }
   h2 { font-size: relative(42px); }
-  h3 { font-size: relative(24px); }
-  h4 { font-size: relative(22px); }
-  h5 { font-size: relative(20px); }
-  h6 { font-size: relative(16px); }
+  h3 { font-size: relative(32px); }
+  h4 { font-size: relative(26px); }
+  h5 { font-size: relative(22px); }
+  h6 { font-size: relative(18px); }
 }
 
 p { margin-top: 0; }
@@ -131,8 +135,6 @@ code {
 	font-size: 90%;
 	white-space: nowrap;
 	background: #F1F1F1;
-	border: 1px solid #E1E1E1;
-	border-radius: 4px;
 }
 pre > code {
 	display: block;

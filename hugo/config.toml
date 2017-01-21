@@ -2,6 +2,7 @@ baseurl = "https://mrmatt.io/"
 title = "Matt Walker"
 languageCode = "en-us"
 
+
 [Params]
 TitleAppendix = " - mrmatt.io"
 Description = "Personal website of Matt Walker"
@@ -12,3 +13,4 @@ StaticmanEndpoint = "https://api.staticman.net/v2/entry"
 StaticmanUsername = "MrMatt57"
 StaticmanRepo = "MrMatt.io"
 StaticmanBranch = "master"
+PygmentsCodeFences = true

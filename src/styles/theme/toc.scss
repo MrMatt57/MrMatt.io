@@ -1,0 +1,28 @@
+#toc input {
+	position:absolute;
+	left:-999em
+}
+
+#toc div {
+  display:none;
+}
+#toc input:checked ~ div {
+  display:block;
+}
+
+#toc label {
+  .minus {
+      display:none;
+  }
+  .plus {
+    display:inline;
+  }
+}
+#toc input:checked ~ label {
+  .minus {
+      display:inline;
+  }
+  .plus {
+    display:none;
+  }
+}
