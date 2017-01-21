@@ -27,7 +27,6 @@ Looking back on 2016, it was a good year.  Here are some of my highlights.
     - Got my Technician and General class amatuer radio operators licenses.
     - Converted from heating oil to naturual gas at home.
 
-### A few Photos
 {{< gallery cols="3" >}}
 {{% galleryimage file="/img/LibertyBass.jpg" thumb="/img/LibertyBass-thumbnail.jpg" size="2783x2848" caption="Personal Best Liberty Bass" %}}
 {{% galleryimage file="/img/FishingBug.jpg" thumb="/img/FishingBug-thumbnail.jpg" size="3024x4032" caption="He's got the Fishing Bug" %}}
