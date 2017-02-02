@@ -9,7 +9,7 @@ install:
 
   # Node - https://nodejs.org/en/download/
   - npm install
-  - npm install -g gulp http-server pa11y pa11y-ci
+  - npm install -g phantomjs gulp http-server pa11y pa11y-ci
 
   # S3 Sync - http://s3tools.org/download
   - sudo pip install s3cmd
