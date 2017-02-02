@@ -14,6 +14,7 @@ gulp.task('scripts', function() {
     'node_modules/prismjs/components/prism-json.js',
     'node_modules/prismjs/components/prism-html.js',
     'node_modules/prismjs/components/prism-js.js',
+    'node_modules/prismjs/components/prism-groovy.js',
     'src/scripts/*.js',
     'src/scripts/init/*.js'
     ])  //TODO Move to require file

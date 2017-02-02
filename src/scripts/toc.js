@@ -1,6 +1,6 @@
 function TableOfContents() {
     var toc = "";
-    var level = 1;
+    var level = 2;
     var container = document.querySelector('#articlebody');
     var output = '#toc-content';
     container.innerHTML = container.innerHTML.replace(

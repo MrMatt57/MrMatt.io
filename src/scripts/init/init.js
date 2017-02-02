@@ -10,10 +10,10 @@ if (images.length > 0) {
             columnWidth: colwidth
         });
     });
-    var toc = document.querySelectorAll('#toc');
-    if (toc.length > 0) {
-        document.addEventListener('DOMContentLoaded', function() {
-            TableOfContents();
-        });
-    }
+}
+var toc = document.querySelectorAll('#toc');
+if (toc.length > 0) {
+    document.addEventListener('DOMContentLoaded', function() {
+        TableOfContents();
+    });
 }
