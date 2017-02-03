@@ -1,6 +1,16 @@
 language: node_js
 node_js:
   - "5"
+ 
+before_install:
+  # Upgrade PhantomJS to v2.1.1.
+  - "export PHANTOMJS_VERSION=2.1.1"
+  - "export PATH=$PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin:$PATH"
+  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
+  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then wget https://github.com/Medium/phantomjs/releases/download/v$PHANTOMJS_VERSION/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2; fi"
+  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
+  - "phantomjs --version"  
+
 install:
   # Hugo - https://gohugo.io/overview/installing/
   - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
@@ -9,7 +19,7 @@ install:
 
   # Node - https://nodejs.org/en/download/
   - npm install
-  - npm install -g phantomjs gulp http-server pa11y pa11y-ci
+  - npm install -g gulp http-server pa11y pa11y-ci
 
   # S3 Sync - http://s3tools.org/download
   - sudo pip install s3cmd
@@ -32,6 +42,11 @@ cache:
   pip: true
   directories:
   - node_modules
+  - travis_phantomjs
+  - $(npm config get prefix)/bin/gulp
+  - $(npm config get prefix)/bin/http-server
+  - $(npm config get prefix)/bin/pa11y
+  - $(npm config get prefix)/bin/pa11y-ci
 deploy:
   # Staging environment
   - provider: script
