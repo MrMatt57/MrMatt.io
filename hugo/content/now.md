@@ -2,13 +2,10 @@
 date = "2016-12-09T16:11:43-05:00"
 title = "What I am up to now"
 +++
+There is an FT-450AT, G5RV and MFJ-939Y on there way across the country headed for my doorstep!  Finally setting up my first HF rig.
 
-Thinking about a few home automate posts to add to the site.
+Lots of Tiny Whooping, videos to come.
 
-Built my first Tiny Whoop and started flying it with a cobbled together 5.8ghz receiver and OTG video capture and Google Daydream.
+Planning to assimilate the winter Mystery Tackle Box collection and start to get ready for the Liberty Reservoir spring fishing.
 
-Passed my third and final exam for MCSD: Azure Solution Architect!  I can add that to my MCSD: Web Applications and MCSD: Visual Basic 6 :)
-
-New domain, moving from mrmatt57.org to mrmatt.io.  Just another piece of modernizing and [updating my site](https://mrmatt.io/posts/website-update-2016/).
-
-*This was updated February 2nd, 2017*
+*This was updated February 17th 2017*
