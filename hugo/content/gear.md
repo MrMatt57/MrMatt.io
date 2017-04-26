@@ -1,6 +1,6 @@
 +++
 title = "Gear I use"
-date = "2016-12-09T16:11:43-05:00"
+date = "2017-04-26T16:11:43-05:00"
 +++
 
 {{< widecontent >}}
@@ -11,7 +11,7 @@ date = "2016-12-09T16:11:43-05:00"
 - Google Pixel XL
 
 ### Workstation
-- Microsoft Surface Pro 3
+- Microsoft Surface Pro 4
 - Microsoft Arc Touch Bluetooh Mouse
 - Microsoft Surface Dock
 - 2 x Achieva Shimian 27" IPS Monitors w/ Accell B087B-003J DVI-D to miniDisplayPort
@@ -33,5 +33,23 @@ date = "2016-12-09T16:11:43-05:00"
 ### Cameras
 - Nikon 3100 w/ 35mm prime
 - Sony RX100
+
+### Amatuer Radios
+
+### HF
+
+Radio: FT-450
+Recieve-Transmit Interface: DX Engineering RTR-2
+Receive: SDRPlay RSP1
+ATU: MFJ-939
+Feed: 50ft LMR400
+Balun: Balun Designs Model 1161 1:1
+Antenna: G5RV flat-top dipole @ 40ft
+
+### VHF
+
+Radio: FT-2900
+Feed: 50ft LMR400
+Antenna: Diamond X50 Omni
 
 *This was updated January 15th, 2017*
