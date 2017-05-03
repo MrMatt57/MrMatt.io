@@ -34,10 +34,7 @@ date = "2017-04-26T16:11:43-05:00"
 - Nikon 3100 w/ 35mm prime
 - Sony RX100
 
-### Amatuer Radios
-
-### HF
-
+### Amatuer Radio - HF
 - Radio: FT-450
 - Recieve-Transmit Interface: DX Engineering RTR-2
 - Receive: SDRPlay RSP1
@@ -46,10 +43,13 @@ date = "2017-04-26T16:11:43-05:00"
 - Balun: Balun Designs Model 1161 1:1
 - Antenna: G5RV flat-top dipole @ 40ft
 
-### VHF
-
+### Amatuer Radio - VHF
 - Radio: FT-2900
 - Feed: 50ft LMR400
 - Antenna: Diamond X50 Omni
+
+### Amatuer Radio - Mobile
+- BaoFeng BF-F8HP
+- BaoFeng UV-5R 
 
 *This was updated January 15th, 2017*
