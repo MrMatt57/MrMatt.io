@@ -8,7 +8,7 @@ date = "2017-04-26T16:11:43-05:00"
 {{</ widecontent >}}
 
 ### Phone
-- Google Pixel XL
+- Google Pixel XL 2
 
 ### Workstation
 - Microsoft Surface Pro 4
@@ -33,9 +33,10 @@ date = "2017-04-26T16:11:43-05:00"
 ### Cameras
 - Nikon 3100 w/ 35mm prime
 - Sony RX100
+- GoPro Session 4
 
 ### Amatuer Radio - HF
-- Radio: FT-450
+- Radio: Yaesu FT-450
 - Recieve-Transmit Interface: DX Engineering RTR-2
 - Receive: SDRPlay RSP1
 - ATU: MFJ-939
@@ -44,11 +45,15 @@ date = "2017-04-26T16:11:43-05:00"
 - Antenna: G5RV flat-top dipole @ 40ft
 
 ### Amatuer Radio - VHF
-- Radio: FT-2900
+- Radio: Yaesu FT-2900
 - Feed: 50ft LMR400
 - Antenna: Diamond X50 Omni
 
 ### Amatuer Radio - Mobile
+- Radio: Kenwood TM-V71A
+- Antenna: Larsen NMO 2/70
+
+### Amatuer Radio - HT
 - BaoFeng BF-F8HP
 - BaoFeng UV-5R 
 
