@@ -1,4 +1,5 @@
 ---
+version: "2"
 engines:
   csslint:
     enabled: true
@@ -23,6 +24,5 @@ ratings:
   - "**.php"
   - "**.py"
   - "**.rb"
-exclude_paths: []
 exclude_patterns:
 - "src/scripts/initGallery.js"
