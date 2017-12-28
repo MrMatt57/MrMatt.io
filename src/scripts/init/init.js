@@ -11,9 +11,4 @@ if (images.length > 0) {
         });
     });
 }
-var toc = document.querySelectorAll('#toc');
-if (toc.length > 0) {
-    document.addEventListener('DOMContentLoaded', function() {
-        TableOfContents();
-    });
-}
+TableOfContents();
