@@ -27,7 +27,7 @@ aliases = ['/carnival-pride/']
 
 </div>
 
-<img src="http://static.mrmatt57.org/img/Carnival-Pride-Route.jpg" align="right" alt="Carnival Pride - 11/21/2009">**Carnival Pride - 11/21/2009**
+<img src="http://static.mrmatt57.org/img/Carnival-Pride-Route.jpg" alt="Carnival Pride - 11/21/2009">**Carnival Pride - 11/21/2009**
 After our first cruise on the Freedom of the Seas earlier this year, we were itching to go on another one. When my brother in-law and girlfriend wanted to go cruising, it wasn-t hard to convince us. We live 20 minutes from the Port of Baltimore, so we thought we would give it a try. It was awesome to not have to worry about flying an luggage.
 
 We visited Universal Studios in Orlando, the Atlantis Resort in Nassau and Paradise Cove in Freeport. It is hard to choose a highlight of the trip, it was all so much fun!
