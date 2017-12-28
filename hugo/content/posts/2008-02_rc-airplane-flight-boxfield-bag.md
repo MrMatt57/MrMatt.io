@@ -10,8 +10,8 @@ aliases = ['/rc-airplane-flight-boxfield-bag/']
 +++
 
 
-<center>[![Flight Bag 1](http://static.mrmatt57.org/img/flightbag1t.jpg "Flight Bag 1")](http://static.mrmatt57.org/img/flightbag1.jpg) [![Flight Bag 2](http://static.mrmatt57.org/img/flightbag2t.jpg "Flight Bag 2")](http://static.mrmatt57.org/img/flightbag2.jpg) [![Flight Bag 3](http://static.mrmatt57.org/img/flightbag3t.jpg "Flight Bag 3")](http://static.mrmatt57.org/img/flightbag3.jpg)  
-*click images to enlarge -*</center>Field boxes are an essential part of rc flight. As I graduate from backyard flying, the more I realize this. There is nothting worse than getting to the flying field close to sun-down only to realize you forgot something. Having the right tool/band-aid could make the difference of another flight or heading home. Here is a list of things I keep in my flight bag. I restock as items are used and complete a checklist from time to time to make everything is there.
+<div>[![Flight Bag 1](http://static.mrmatt57.org/img/flightbag1t.jpg "Flight Bag 1")](http://static.mrmatt57.org/img/flightbag1.jpg) [![Flight Bag 2](http://static.mrmatt57.org/img/flightbag2t.jpg "Flight Bag 2")](http://static.mrmatt57.org/img/flightbag2.jpg) [![Flight Bag 3](http://static.mrmatt57.org/img/flightbag3t.jpg "Flight Bag 3")](http://static.mrmatt57.org/img/flightbag3.jpg)  
+*click images to enlarge -*</div>Field boxes are an essential part of rc flight. As I graduate from backyard flying, the more I realize this. There is nothting worse than getting to the flying field close to sun-down only to realize you forgot something. Having the right tool/band-aid could make the difference of another flight or heading home. Here is a list of things I keep in my flight bag. I restock as items are used and complete a checklist from time to time to make everything is there.
 
 <script language="Javascript" src="http://mrmatt57.org/flickr/flickrnotes.php?photoid=2260620347"></script>
 

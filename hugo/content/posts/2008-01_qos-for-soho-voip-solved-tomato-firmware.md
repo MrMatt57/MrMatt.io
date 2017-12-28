@@ -48,22 +48,22 @@ With tomato you can classify data by IP or Mac Address, Source/Destination Port 
 - Open the QOS > Basic Settings Menu
 - Check -Enable QOS-
 
-<center>![Enabling QOS](http://static.mrmatt57.org/img/QOS_enabled.gif)  
-*Note: if you use applications that do a lot of ACKnowledgment requests (BitTorrent), you might want to consider turning this option off*</center>  
+<div>![Enabling QOS](http://static.mrmatt57.org/img/QOS_enabled.gif)  
+*Note: if you use applications that do a lot of ACKnowledgment requests (BitTorrent), you might want to consider turning this option off*</div>  
 ### Outbound Rate / Limit
 
 - Max Bandwidth: this is your maximum outbound (upload) bandwidth. You can determine your speed at [DSL Reports](http://www.dslreports.com/stest), [SpeakEasy](http://www.speakeasy.net/speedtest/) or [Speedtest.net](http://www.speedtest.net/). A hack to ensure you have enough overhead is to intentionally low-ball this number. You would only want to do this if absolutely necessary as you would not be fully utilizing your bandwidth.
 
-<center>![QOS Outbound Rate / Limit](http://static.mrmatt57.org/img/QOS_Outbound_Limit.gif)  
+<div>![QOS Outbound Rate / Limit](http://static.mrmatt57.org/img/QOS_Outbound_Limit.gif)  
 *Note: These are the settings that work for me,   
-you will most likely have to tweak them*</center>  
+you will most likely have to tweak them*</div>  
 ### Inbound Limit
 
 - Max Bandwidth: Use the inbound (download) results from your tests above.
 
-<center>![QOS Inbound Limit](http://static.mrmatt57.org/img/QOS_Inbound_limit.gif)  
+<div>![QOS Inbound Limit](http://static.mrmatt57.org/img/QOS_Inbound_limit.gif)  
 *Note: These are the settings that work for me,   
-you will most likely have to tweak them*</center>  
+you will most likely have to tweak them*</div>  
 ### Classifications
 
 - Open the QOS > Classifications Menu
@@ -85,12 +85,12 @@ Now that you have established a baseline for your QOS, it-s time to see if it wo
 
 - Use these graph to determine where your connections are being classified. If you see something out of balance, you can adjust your classifications accordingly.
 
-<center>[![QOS Distribution Graph](http://static.mrmatt57.org/img/QOS_Graph.gif "QOS Distribution Graph")](http://static.mrmatt57.org/img/QOS_Graph_full.gif)</center>  
+<div>[![QOS Distribution Graph](http://static.mrmatt57.org/img/QOS_Graph.gif "QOS Distribution Graph")](http://static.mrmatt57.org/img/QOS_Graph_full.gif)</div>  
 ### Detailed View
 
 - This shows what traffic is currently flowing and how it is being classified. Take a look at each of the connections and make sure it is classified correctly. This report is also useful for determining the source of rouge traffic.
 
-<center>[![QOS Details](http://static.mrmatt57.org/img/QOS_Details.gif "QOS Details")](http://static.mrmatt57.org/img/QOS_Details_full.gif)</center>  
+<div>[![QOS Details](http://static.mrmatt57.org/img/QOS_Details.gif "QOS Details")](http://static.mrmatt57.org/img/QOS_Details_full.gif)</div>  
 
 ## The Downside-
 

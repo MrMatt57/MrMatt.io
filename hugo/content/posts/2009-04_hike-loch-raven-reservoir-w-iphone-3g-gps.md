@@ -28,7 +28,7 @@ Here are some pictures from our hike on the Merryman Trail at the Loch Raven Res
 
 [![Cabbage](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/cabbage.jpg "Cabbage")](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/cabbage_thumb.jpg)
 
-<table width="500"><tr><td align="center" width="50%">[![Tree](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/tree_thumb.jpg "Tree")](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/tree.jpg)</td><td align="center" width="50%">[![Marker](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/marker_thumb.jpg "Marker")](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/marker.jpg)</td></tr></table>More information about the trail can be found [here](http://www.trails.com/tcatalog_trail.aspx?trailid=XMR012-025).
+<table width="500"><tr><td width="50%">[![Tree](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/tree_thumb.jpg "Tree")](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/tree.jpg)</td><td width="50%">[![Marker](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/marker_thumb.jpg "Marker")](http://static.mrmatt57.org/img/Loch-Raven-Reservoir/marker.jpg)</td></tr></table>More information about the trail can be found [here](http://www.trails.com/tcatalog_trail.aspx?trailid=XMR012-025).
 
 
 
