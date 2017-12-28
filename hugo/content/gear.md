@@ -8,7 +8,7 @@ date = "2017-04-26T16:11:43-05:00"
 {{</ widecontent >}}
 
 ### Phone
-- Google Pixel XL
+- Google Pixel 2 XL
 
 ### Workstation
 - Microsoft Surface Pro 4
@@ -49,7 +49,12 @@ date = "2017-04-26T16:11:43-05:00"
 - Antenna: Diamond X50 Omni
 
 ### Amatuer Radio - Mobile
+- Kenwood TM-V71A
+- Larson NMO 2/70
+- Mobilinkd TNC for APRS w/ APRSDroid
+
+### Amatuer Radio - Handheld
 - BaoFeng BF-F8HP
 - BaoFeng UV-5R 
 
-*This was updated January 15th, 2017*
+*This was updated December 28th, 2017*
