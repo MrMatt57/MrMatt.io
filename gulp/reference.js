@@ -11,20 +11,16 @@ gulp.task('reference:content', ['hugo:draft'], function() {
         .pipe(gulp.dest('public'));
 });
 
-gulp.task('reference:all', ['hugo:all'], function() {
-    var manifest = gulp.src('public/rev-manifest.json');
+var referenceTask = function(taskName, hugoTask){
+    gulp.task(taskName, [hugoTask], function() {
+        var manifest = gulp.src('public/rev-manifest.json');
+    
+        return gulp.src(['public/**/*.html', 'public/**/*.xml', 'public/**/*.css'])
+            .pipe(replace({manifest: manifest, replaceInExtensions: ['.html', '.xml', '.css']}))
+            .pipe(size())
+            .pipe(gulp.dest('public'));
+    });
+}
 
-    return gulp.src(['public/**/*.html', 'public/**/*.xml', 'public/**/*.css'])
-        .pipe(replace({manifest: manifest, replaceInExtensions: ['.html', '.xml', '.css']}))
-        .pipe(size())
-        .pipe(gulp.dest('public'));
-});
-
-gulp.task('reference:publish', ['hugo:live'], function() {
-    var manifest = gulp.src('public/rev-manifest.json');
-
-    return gulp.src(['public/**/*.html', 'public/**/*.xml', 'public/**/*.css'])
-        .pipe(replace({manifest: manifest, replaceInExtensions: ['.html', '.xml', '.css']}))
-        .pipe(size())
-        .pipe(gulp.dest('public'));
-});
+referenceTask('reference:all', 'hugo:all');
+referenceTask('reference:publish', 'hugo:live');

@@ -56,7 +56,7 @@ Eibach Sportline Springs
 
 **<span style="font-size: medium">Stereo / Entertainment:</span>**
 
-<center></center>Alpine 3DA-W882  
+ Alpine 3DA-W882  
  PPI A600  
  3 JL Audio 8? W6 Subs in Custom Ported Box  
  DEI 5401  

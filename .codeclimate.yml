@@ -24,3 +24,5 @@ ratings:
   - "**.py"
   - "**.rb"
 exclude_paths: []
+exclude_patterns:
+- "src/scripts/initGallery.js"
