@@ -90,3 +90,8 @@ li {
 .border {
   padding: 1%;
 }
+
+[href^="http"]:not([href*="mrmatt.io"]):not([href*="localhost"])::after {
+  padding: 0 .25em;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTM5jWRgMAAAAUdEVYdENyZWF0aW9uIFRpbWUANi8zLzEwC6nc4QAAAGdJREFUGJWFj7sRgDAMQ5+5rECGgZaUZNi0qVkGhjBNDvIjqPNZ0rNFVenJu/VdiDB1XUCIhzyDKrJvS11pQzyuohEwTbrGggDaoHNTViDDG71b5wLdeyKZTsAC12djLZOl/40JMdQNLzYixzCOBQoAAAAASUVORK5CYII=);
+}
