@@ -25,7 +25,7 @@ function TableOfContents() {
         var output = '#toc-content';
         container.innerHTML = container.innerHTML.replace(
             /<h([\d])(.*)>([^<]+)<\/h([\d])>/gi, function(str, openLevel, id, titleText, closeLevel) {
-                parseMatch(str, openLevel, id, titleText, closeLevel);
+                return parseMatch(str, openLevel, id, titleText, closeLevel);
             });
     
         if (level) {
