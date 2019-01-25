@@ -5,12 +5,10 @@ title = "What I am up to now"
 
 I am enjoying some downtime with family and some "free" time to do some maintnance on this site.  
 
-Fishing: Too cold, getting down into the single digits this week.  
+Fishing: Reservior permit form in the mail.  Getting tackle ready.
 
-Amatuer Radio: Exploring AMSats, still working FT-8, uBitx build in the works.
+Amatuer Radio: G5RV damaged in windstorm... looking into building a replacement, ZS6BKW?
 
-Quads: Mostly flying the tiny whoop around the house.
+Quads: Havn't flown in awhile...
 
-The Arcade cab build is complete, I plan on adding details to the site soon.
-
-*This was updated December 28th 2017*
+*This was updated January 25th 2019*

@@ -1,6 +1,6 @@
 +++
 title = "Gear I use"
-date = "2017-04-26T16:11:43-05:00"
+date = "2019-01-25T18:11:43-05:00"
 +++
 
 {{< widecontent >}}
@@ -8,7 +8,7 @@ date = "2017-04-26T16:11:43-05:00"
 {{</ widecontent >}}
 
 ### Phone
-- Google Pixel 2 XL
+- Google Pixel 3 XL
 
 ### Workstation
 - Microsoft Surface Pro 4
@@ -57,4 +57,4 @@ date = "2017-04-26T16:11:43-05:00"
 - BaoFeng BF-F8HP
 - BaoFeng UV-5R 
 
-*This was updated December 28th, 2017*
+*This was updated January 25th, 2019*
