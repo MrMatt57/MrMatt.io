@@ -1,7 +1,7 @@
 ---
 date: "2008-01-16"
 draft: false
-title: "Funny IT Voicemail, ""That Projector Stinks"
+title: 'Funny IT Voicemail, "That Projector Stinks"'
 slug: "voicemail-funny-it-momment"
 tags: []
 aliases:
