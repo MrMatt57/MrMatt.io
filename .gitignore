@@ -1,12 +1,4 @@
-node_modules/*
-public/*
-staging/*
-hugo/static/css/*
-hugo/static/img/*
-hugo/static/js/*
-hugo/static/photoswipe/*
-hugo/static/rev-manifest.json
-dist/*
-src/disqus-to-yml/comments.xml
-src/disqus-to-yml/comments/*
-hugo.exe
+public/
+resources/
+.hugo_build.lock
+node_modules/
