@@ -7,28 +7,20 @@ paginate = 10
 enableRobotsTXT = true
 
 [params]
-  author = "Matt Walker"
   env = "production"
   defaultTheme = "auto"
+  mainSections = ["posts"]
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   ShowShareButtons = false
   comments = false
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
+  hideAuthor = true
   ShowToc = true
 
-  [params.homeInfoParams]
-    Title = "Matt Walker"
-    Content = "Software engineer in the Baltimore/DC Metro area. Writing about software development, infrastructure, and whatever else I'm into."
-
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/MrMatt57"
-
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/mrmatt"
+  [params.author]
+    name = "Matt Walker"
 
 [[menu.main]]
   name = "Journal"

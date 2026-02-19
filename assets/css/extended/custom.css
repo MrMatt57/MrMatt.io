@@ -1,0 +1,420 @@
+/* ===== Font: Roboto Slab to match old site ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+/* ===== Base typography ===== */
+
+body,
+.footer,
+.footer a,
+.footer-links,
+.post-entry,
+.entry-content,
+.entry-footer,
+.post-meta,
+#menu a,
+.header-list,
+.posts {
+    font-family: "Roboto Slab", serif;
+    color: #090909;
+}
+
+body,
+.list {
+    background: #fff;
+}
+
+[data-theme="dark"] body,
+[data-theme="dark"] .list {
+    background: var(--theme);
+}
+
+/* ===== Headings: light weight, tighter tracking, larger sizes ===== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    color: #090909;
+    letter-spacing: -0.1rem;
+}
+
+h1 { font-size: 4rem; line-height: 1.2; }
+h2 { font-size: 3.6rem; line-height: 1.25; margin-bottom: 0; }
+h3 { font-size: 3rem; line-height: 1.3; margin-bottom: 0.25em; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -0.08rem; margin-bottom: 0.25em; }
+h5 { font-size: 1.8rem; line-height: 1.5; letter-spacing: -0.05rem; margin-bottom: 0.25em; }
+h6 { font-size: 1.5rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em; }
+
+@media (min-width: 550px) {
+    h1 { font-size: 5rem; }
+    h2 { font-size: 4.2rem; }
+    h3 { font-size: 3.2rem; }
+    h4 { font-size: 2.6rem; }
+    h5 { font-size: 2.2rem; }
+    h6 { font-size: 1.8rem; }
+}
+
+/* ===== Layout: match old site's wrapper widths ===== */
+
+.main {
+    --main-width: 40em;
+    min-height: auto;
+    width: 90%;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 40em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper.full {
+    max-width: 47.5em;
+}
+
+/* ===== Header: centered h1, horizontal rule ===== */
+
+.header {
+    position: relative;
+    max-width: 40em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.theme-toggle-wrap {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.theme-toggle-wrap button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    color: var(--secondary);
+}
+
+.theme-toggle-wrap button:hover {
+    color: var(--primary);
+}
+
+.header .nav {
+    justify-content: center;
+    line-height: normal;
+    padding: 15px 0 0;
+}
+
+.header .logo {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .logo a {
+    font-size: inherit;
+    font-weight: inherit;
+    border-bottom: 2px solid #b9cadb;
+}
+
+.header .logo a:hover {
+    border-bottom-color: #4c81b2;
+}
+
+.site-title {
+    font-family: "Roboto Slab", serif;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    margin: 15px 0;
+    text-align: center;
+}
+
+@media (min-width: 550px) {
+    .site-title {
+        font-size: 5rem;
+    }
+}
+
+.header hr {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+/* ===== Homepage: about section with floated photo ===== */
+
+.home-about {
+    min-height: 216px;
+    margin-top: 2rem;
+}
+
+.home-about .avatar {
+    float: left;
+    margin-right: 20px;
+    width: 175px;
+    height: 216px;
+}
+
+.home-about p {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+/* ===== Homepage: journal section ===== */
+
+.home-journal {
+    margin-top: 2.5rem;
+}
+
+.home-journal h2 {
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+/* Category filter list */
+.header-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.header-list li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.4rem 0.625rem 0;
+    border-right: 1px solid #d0d0d0;
+    list-style: none;
+}
+
+.header-list li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Post list */
+.posts {
+    list-style-type: none;
+    padding: 0;
+}
+
+.posts li {
+    list-style: none;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+}
+
+.posts li::before {
+    content: "\25AA";
+    margin-right: 0.5em;
+    color: #090909;
+}
+
+.date {
+    color: var(--secondary);
+}
+
+/* ===== Links: subtle bottom border throughout ===== */
+
+a {
+    color: #090909;
+    text-decoration: none;
+    border-bottom: 2px solid #b9cadb;
+    transition: color 0.15s linear, border 0.15s linear;
+}
+
+a:visited {
+    color: #090909;
+}
+
+a:hover {
+    color: #090909;
+    border-bottom-color: #4c81b2;
+}
+
+/* No border on specific elements */
+.no-underline,
+.no-underline:hover,
+.header .logo a,
+.header .logo a:hover,
+.social-icons a,
+.entry-link,
+.top-link,
+a.entry-link,
+#theme-toggle {
+    border-bottom: none;
+}
+
+/* Heading links: no underline */
+h1 a, h1 a:hover, h1 a:visited,
+h2 a, h2 a:hover, h2 a:visited,
+h3 a, h3 a:hover, h3 a:visited,
+h4 a, h4 a:hover, h4 a:visited,
+h5 a, h5 a:hover, h5 a:visited,
+h6 a, h6 a:hover, h6 a:visited {
+    border-bottom: 0;
+}
+
+/* ===== Consistent base font size: override PaperMod's smaller sizes ===== */
+
+.footer {
+    font-size: 18px;
+}
+
+.entry-content,
+.entry-footer,
+.post-meta,
+.post-description,
+.archive-entry .entry-hint,
+#menu a {
+    font-size: 18px;
+}
+
+/* ===== Footer: centered with inline list ===== */
+
+.site-footer {
+    text-align: center;
+    padding: 0 var(--gap);
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin: 0 auto;
+}
+
+.site-footer hr {
+    margin-top: 5rem;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 2.5rem 0 1.5rem;
+    padding: 0;
+    width: 100%;
+}
+
+.footer-links li {
+    display: inline-block;
+    padding-right: 0.75rem;
+    margin: 0 0.4rem 0.625rem 0;
+    border-right: 1px solid #d0d0d0;
+    list-style: none;
+}
+
+.footer-links li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* ===== Spacing: generous paragraph and block margins ===== */
+
+.post-content p,
+.post-content blockquote,
+.post-content dl,
+.post-content figure,
+.post-content ol,
+.post-content pre,
+.post-content table,
+.post-content ul {
+    margin-bottom: 2.5rem;
+}
+
+/* ===== Lists in posts: square bullets, outside position ===== */
+
+.post-content li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1em;
+}
+
+/* ===== Emphasis & strong ===== */
+
+b, strong {
+    font-weight: 700;
+}
+
+/* ===== Horizontal rules ===== */
+
+hr {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+    background: none;
+    height: 0;
+}
+
+/* ===== Post entry cards on list pages: remove the card style ===== */
+
+.post-entry {
+    border: none;
+    background: none;
+    border-radius: 0;
+    padding: var(--gap) 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.post-entry:active {
+    transform: none;
+}
+
+/* ===== Home page: remove the PaperMod first-entry hero ===== */
+
+.first-entry {
+    min-height: auto;
+    margin: var(--gap) 0;
+}
+
+/* ===== Dark mode adjustments ===== */
+
+[data-theme="dark"] body,
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer a,
+[data-theme="dark"] .footer-links,
+[data-theme="dark"] .post-entry,
+[data-theme="dark"] .entry-content,
+[data-theme="dark"] .entry-footer,
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .header-list,
+[data-theme="dark"] .posts,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--primary);
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] a:visited {
+    color: var(--primary);
+}
+
+[data-theme="dark"] a {
+    border-bottom-color: rgba(185, 202, 219, 0.3);
+}
+
+[data-theme="dark"] a:hover {
+    border-bottom-color: rgba(76, 129, 178, 0.7);
+}
+
+[data-theme="dark"] hr,
+[data-theme="dark"] .header hr,
+[data-theme="dark"] .site-footer hr,
+[data-theme="dark"] .post-entry {
+    border-color: var(--tertiary);
+}
+
+[data-theme="dark"] .header-list li,
+[data-theme="dark"] .footer-links li {
+    border-color: var(--tertiary);
+}
+
+[data-theme="dark"] .posts li::before,
+[data-theme="dark"] .date {
+    color: var(--primary);
+}
