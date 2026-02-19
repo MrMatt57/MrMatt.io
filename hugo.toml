@@ -1,3 +1,64 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://mrmatt.io/"
+languageCode = "en-us"
+title = "Matt Walker"
+theme = "PaperMod"
+paginate = 10
+
+enableRobotsTXT = true
+
+[params]
+  author = "Matt Walker"
+  env = "production"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+  comments = false
+  ShowBreadCrumbs = true
+  ShowToc = true
+
+  [params.homeInfoParams]
+    Title = "Matt Walker"
+    Content = "Software engineer in the Baltimore/DC Metro area. Writing about software development, infrastructure, and whatever else I'm into."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/MrMatt57"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/mrmatt"
+
+[[menu.main]]
+  name = "Journal"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "Now"
+  url = "/now/"
+  weight = 20
+
+[[menu.main]]
+  name = "Gear"
+  url = "/gear/"
+  weight = 30
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    noClasses = false
