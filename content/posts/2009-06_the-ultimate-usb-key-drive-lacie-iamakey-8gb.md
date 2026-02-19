@@ -12,17 +12,15 @@ aliases:
 ---
 I have always been a fan of portable storage. However, most -portable- devices just aren-t well- portable. You think you will carry them around, but end up leaving them behind. When I first saw the Laci IamaKey, I knew it would be different. I tried the ultra secure route with an [IronKey](http://mrmatt57.org/2007/10/07/james-bond-style-usb-key-ironkey/), but it is too bulky and so secure- I ended up locking myself out (don-t ask).
 
-<div class="gallery">
-<a href="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg" title="" class="gallery-image col-2"><img src="http://static.mrmatt57.org/loader.gif" data-echo="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg" title="" alt="Lacie Iamakey USB ThumbDrive" /></a>
+![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg)
 
-<a href="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro2.jpg" title="" class="gallery-image col-2"><img src="http://static.mrmatt57.org/loader.gif" data-echo="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro2.jpg" title="" alt="Lacie Iamakey USB ThumbDrive" /></a>
+![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro2.jpg)
 
-<a href="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro3.jpg" title="" class="gallery-image col-2"><img src="http://static.mrmatt57.org/loader.gif" data-echo="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro3.jpg" title="" alt="Lacie Iamakey USB ThumbDrive" /></a>
+![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro3.jpg)
 
-<a href="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro4.jpg" title="" class="gallery-image col-2"><img src="http://static.mrmatt57.org/loader.gif" data-echo="http://static.mrmatt57.org/img/iamaKey8GB/Lacie-USB-Key-Macro4.jpg" title="" alt="Lacie Iamakey USB ThumbDrive" /></a>
-</div>
+![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro4.jpg)
 <div style="float:right;padding:0 15px 0 15px;">Get one for yourself:  
-<iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://rcm.amazon.com/e/cm?t=matwalstecand-20&o=1&p=8&l=as1&asins=B001V7XPSA&md=10FE9736YVPPT7A0FBG2&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" title="Get one"></iframe></div>Pros:
+<iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://rcm.amazon.com/e/cm?t=matwalstecand-20&o=1&p=8&l=as1&asins=B001V7XPSA&md=10FE9736YVPPT7A0FBG2&fc1=000000&IS2=1&lt1=_top&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" title="Get one"></iframe>Pros:
 
 - Tags along with something I already carry and keep track of, my keys- never leave home without them.
 - Plenty of space to include a live CD and all of the diagnostic utilities you could ever need.

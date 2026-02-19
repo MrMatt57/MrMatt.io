@@ -8,7 +8,7 @@ tags:
 aliases:
   - /live-music/
 ---
-![Particle Live](http://static.mrmatt57.org/img/live-music.jpg)
+![Particle Live](/img/live-music.jpg)
 
 Who doesn-t like live music? To me it is one of the purest forms of art. It used to be the only way you take it in was, well to go to a concert. That is unless you happened to find a mono cassette copy or got really lucky and scored a soundboard recording. Most bands know for their live creativity have an open [taping policy](http://bluestraveler.net/btpolicy.html). This is great for people who only get out a couple times a year to take in a show. With a good stereo or set of headphones, you can enjoy a concert while you relax at home.
 

@@ -15,4 +15,3 @@ I had been flying my Soarstar for a couple of months and finally decided to atta
 
 <div class="videoWrapper">
     <iframe title="Soarstar RC Video (First Attempt) HIRES" width="1280" height="720" src="https://www.youtube.com/embed/GL5vE61UHjs?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-</div>

@@ -7,7 +7,7 @@ tags: []
 aliases:
   - /thank-you-microsoft-vista-sp1-is-nice/
 ---
-![Windows Vista SP1 Complete](http://static.mrmatt57.org/img/vista_sp1.jpg)
+![Windows Vista SP1 Complete](/img/vista_sp1.jpg)
 
 I just installed Windows Vista SP1 and so far have noticed quite a performance improvement. Nothing scientific here- just -click of the mouse- impressions. But everything seems more responsive and smooth. One tangible difference is network file transfers. While moving files, pre-SP1 to a network drive I would get consistently 25mb/sec. Now the same transfer is moving along at 32mb/sec. Again, nothing concrete, but that is a 28% improvement. This is just one of the [notable changes](http://download.microsoft.com/download/f/4/a/f4a35b2b-2f62-4104-a3e6-5f7bc1318e9f/Notable%20changes%20in%20Windows%20Vista%20SP1.pdf) in SP1.
 

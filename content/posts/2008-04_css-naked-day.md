@@ -9,7 +9,7 @@ cover:
 aliases:
   - /css-naked-day/
 ---
-![CSS Nake Day 08](http://static.mrmatt57.org/img/naked-day-08.png)
+![CSS Nake Day 08](/img/naked-day-08.png)
 
 No my site isn-t broken-
 
@@ -17,7 +17,7 @@ Today I am observing [CSS Naked Day](http://naked.dustindiaz.com/) to help promo
 
 The topic of CSS for me always brings up the great debate of [CSS vs tables](http://www.decloak.com/Dev/CSSTables/CSS_Tables_01.aspx). You will notice that I use a mixture on this site. That is because I absolutely hate absolute positioning in css. Another thing (that is gone with no css) are my sprites. They are great to cut down on requests and improve site performance. Here is what you are missing:
 
-![MrMatt57.org Sprites](http://static.mrmatt57.org/img/sprites.png)
+![MrMatt57.org Sprites](/img/sprites.png)
 
 Now that I am looking at my site without css, maybe we should start an **advertising naked day** to show how cool our sites would be without them.
 

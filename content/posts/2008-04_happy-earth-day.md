@@ -9,11 +9,7 @@ cover:
 aliases:
   - /happy-earth-day/
 ---
-<div class="gallery">
-
-<a href="http://static.mrmatt57.org/img/Earth-Day-Hummer-Full.jpg" title="" class="gallery-image col-1"><img src="http://static.mrmatt57.org/loader.gif" data-echo="http://static.mrmatt57.org/img/Earth-Day-Hummer-Full.jpg" title="" alt="Earth Day Hummer" /></a>
-
-</div>
+![Earth Day Hummer](/img/Earth-Day-Hummer-Full.jpg)
 
 I couldn-t help but take this picture at lunch today.
 

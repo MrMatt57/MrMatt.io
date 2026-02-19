@@ -8,11 +8,11 @@ tags:
 aliases:
   - /1994-honda-accord/
 ---
-![](http://static.mrmatt57.org/img/Accord.jpg)
+![](/img/Accord.jpg)
 
 This one is really digging into the archives- Here are some pictures and specs of my first car (not my parent-s station wagon). I learned a lot and have many great memories from this car. I often joked, that I literally turned every bolt on this car. I didn-t have access to air tools either, all old fashion Craftsman hand tools. There where many long cold nights completing mods so that I would be ready to drive to work the next day. I wish I had better pictures, but here they are (Mostly scanned 35mm, if I find the original print/negatives, I will rescan).
 
-[![1994 Honda Accord](http://static.mrmatt57.org/img/accord_engine1_thumb.jpg "1994 Honda Accord")](http://static.mrmatt57.org/img/accord_engine1.jpg) [![1994 Honda Accrod 2](http://static.mrmatt57.org/img/accord_engine2_thumb.jpg "1994 Honda Accrod 2")](http://static.mrmatt57.org/img/accord_engine2.jpg)
+[![1994 Honda Accord](/img/accord_engine1_thumb.jpg "1994 Honda Accord")](/img/accord_engine1.jpg) [![1994 Honda Accrod 2](/img/accord_engine2_thumb.jpg "1994 Honda Accrod 2")](/img/accord_engine2.jpg)
 
 **<span style="font-size: medium">Engine/Performance:</span>**
 
@@ -72,5 +72,5 @@ Check out my very first web-log, [My 1994 Honda Accord Journal](http://mrmatt57.
 
 *Also, check out my Flickr stream for more pictures.*
 
-![](http://static.mrmatt57.org/img/accord2.jpg)
+![](/img/accord2.jpg)
 

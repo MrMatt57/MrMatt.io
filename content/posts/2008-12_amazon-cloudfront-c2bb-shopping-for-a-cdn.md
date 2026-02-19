@@ -12,7 +12,7 @@ cover:
 aliases:
   - /amazon-cloudfront-c2bb-shopping-for-a-cdn/
 ---
-![Cloudfront Amazon Data Centers](http://static.mrmatt57.org/img/amazoncloudfront.jpg)<span id="credits">  
+![Cloudfront Amazon Data Centers](/img/amazoncloudfront.jpg)<span id="credits">  
  Location of Amazon Data Centers World-wide. Credit [Werner Vogels](http://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)</span>
 
 This past month Amazon sent me an early Christmas present, their very own content deliver network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](http://mrmatt57.org/2008/01/16/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
@@ -23,7 +23,7 @@ When it comes to web development, one of my driving forces is performance. I lov
 
 A good tool to analyze network routing, latency and a bunch of other stuff is [pingplotter](http://www.pingplotter.com/). They have a free version and pro version. The free version works great for my purposes. Internet Control Message Protocol (ICMP) Pings are a lightweight and predictable way to provide insight on latency and network conditions. Here is a comparison of my routes between Amazon Cloudfront and my standard web server.
 
-[![Amazon Cloudfront Pingplotter](http://static.mrmatt57.org/img/pingplotter_thumb.jpg "Amazon Cloudfront Pingplotter")](http://static.mrmatt57.org/img/pingplotter.jpg)
+[![Amazon Cloudfront Pingplotter](/img/pingplotter_thumb.jpg "Amazon Cloudfront Pingplotter")](/img/pingplotter.jpg)
 
 As you can see, with Cloudfront I scream right to Amazons Newark, NJ server as apposed to going through McClean, VA, then ATL, and finally to my server in Dallas, TX.
 
@@ -110,7 +110,7 @@ Pingplotter works great to determine *your* route and latency.
 
 </td><td class="s0 "> Johannesburg, South Africa</td><td class="s1 ">304.8</td><td class="s1 ">293.2</td><td class="s2 ">19.3</td><td class="s1 ">274.7</td><td class="s3 dn"></td></tr><tr><td class="hd">.
 
-</td><td class="s4 ">Average (miliseconds)</td><td class="s5 ">144.1</td><td class="s5 ">57.65</td><td class="s5 ">16.98</td><td class="s5 ">59.15</td><td class="dn"></td></tr></table></td></tr></table>[![Amazon Cloudfront](http://static.mrmatt57.org/img/AmazonCloudfront_thumb.png "Amazon Cloudfront")](http://static.mrmatt57.org/img/AmazonCloudfront.png)
+</td><td class="s4 ">Average (miliseconds)</td><td class="s5 ">144.1</td><td class="s5 ">57.65</td><td class="s5 ">16.98</td><td class="s5 ">59.15</td><td class="dn"></td></tr></table></td></tr></table>[![Amazon Cloudfront](/img/AmazonCloudfront_thumb.png "Amazon Cloudfront")](/img/AmazonCloudfront.png)
 
 ### Setting up and configuring Amazon Cloudfront
 

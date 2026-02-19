@@ -8,7 +8,7 @@ tags:
 aliases:
   - /old-technology-meets-new-xbox-hd-dvd-asus-eee/
 ---
-![Asus Eee XP install with external xbox 360 HD-DVD](http://static.mrmatt57.org/img/eee_xboxHDDVD.jpg)
+![Asus Eee XP install with external xbox 360 HD-DVD](/img/eee_xboxHDDVD.jpg)
 
 Just as the news that the Microsoft Xbox 360 external HD DVD drive was declared [extinct](http://www.electronista.com/articles/08/02/23/ms.axes.x360.hd.dvd.drive/), I found a use for it: load up my new Asus Eee with Windows XP. It is hopefully the last OS that has to be loaded from an optical drive and lets not forget about the F6 floppy driver loading routine (thankfully not needed for the Eee).
 

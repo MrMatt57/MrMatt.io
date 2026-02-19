@@ -15,7 +15,7 @@ One of my biggest challenges setting up my Small Office and Home Office (SOHO) V
 
 ## The Solution
 
-<div style="float: right;">[![WRT54G](http://static.mrmatt57.org/img/wrtg_thumb.gif "WRT54G")](http://static.mrmatt57.org/img/wrtg.gif)</div>A couple years ago Linksys went open source on one of their most popular broadband routers firmware, the WRT54G. There have been a number of different firmware releases. I tried everything I could get my hands on. The one that stood out from the pack with both features and usability was [Tomato by Jonathan Zarate](http://www.polarcloud.com/tomato) It has a number of enhancements from the default firmware, the most notable being:
+<div style="float: right;">[![WRT54G](/img/wrtg_thumb.gif "WRT54G")](/img/wrtg.gif)A couple years ago Linksys went open source on one of their most popular broadband routers firmware, the WRT54G. There have been a number of different firmware releases. I tried everything I could get my hands on. The one that stood out from the pack with both features and usability was [Tomato by Jonathan Zarate](http://www.polarcloud.com/tomato) It has a number of enhancements from the default firmware, the most notable being:
 
 - AJAX enabled interface
 - Sweet [bandwidth usage monitor](http://www.polarcloud.com/v/scbwm.htm)
@@ -44,23 +44,20 @@ With tomato you can classify data by IP or Mac Address, Source/Destination Port 
 - Open the QOS > Basic Settings Menu
 - Check -Enable QOS-
 
-<div>![Enabling QOS](http://static.mrmatt57.org/img/QOS_enabled.gif)  
-*Note: if you use applications that do a lot of ACKnowledgment requests (BitTorrent), you might want to consider turning this option off*</div>  
-### Outbound Rate / Limit
+<div>![Enabling QOS](/img/QOS_enabled.gif)  
+*Note: if you use applications that do a lot of ACKnowledgment requests (BitTorrent), you might want to consider turning this option off*### Outbound Rate / Limit
 
 - Max Bandwidth: this is your maximum outbound (upload) bandwidth. You can determine your speed at [DSL Reports](http://www.dslreports.com/stest), [SpeakEasy](http://www.speakeasy.net/speedtest/) or [Speedtest.net](http://www.speedtest.net/). A hack to ensure you have enough overhead is to intentionally low-ball this number. You would only want to do this if absolutely necessary as you would not be fully utilizing your bandwidth.
 
-<div>![QOS Outbound Rate / Limit](http://static.mrmatt57.org/img/QOS_Outbound_Limit.gif)  
+<div>![QOS Outbound Rate / Limit](/img/QOS_Outbound_Limit.gif)  
 *Note: These are the settings that work for me,   
-you will most likely have to tweak them*</div>  
-### Inbound Limit
+you will most likely have to tweak them*### Inbound Limit
 
 - Max Bandwidth: Use the inbound (download) results from your tests above.
 
-<div>![QOS Inbound Limit](http://static.mrmatt57.org/img/QOS_Inbound_limit.gif)  
+<div>![QOS Inbound Limit](/img/QOS_Inbound_limit.gif)  
 *Note: These are the settings that work for me,   
-you will most likely have to tweak them*</div>  
-### Classifications
+you will most likely have to tweak them*### Classifications
 
 - Open the QOS > Classifications Menu
 - Add Entry for Any Address, TCP/UDP, Src or Dst 5060 (your SIP Signaling port), Highest Priority
@@ -70,7 +67,7 @@ you will most likely have to tweak them*</div>
 - *Note: Another solution is to setup a QOS classification for the IP/Mac addresss of your standalone VoIP phones or adapters if they are connecting to a trunk over the internet*
 - *Note: Some phones require a different RTP range for example, my Linksys SPA942?s call for 10,000 - 20,000 UDP. Check with you phone or ATA documentation to determine the actual RTP port range.*
 
-[![QOS Classifications](http://static.mrmatt57.org/img/QOS_Classifications.gif "QOS Classifications")](http://static.mrmatt57.org/img/QOS_Classifications_full.gif)
+[![QOS Classifications](/img/QOS_Classifications.gif "QOS Classifications")](/img/QOS_Classifications_full.gif)
 
 ## Testing, Testing, Testing
 
@@ -80,14 +77,11 @@ Now that you have established a baseline for your QOS, it-s time to see if it wo
 
 - Use these graph to determine where your connections are being classified. If you see something out of balance, you can adjust your classifications accordingly.
 
-<div>[![QOS Distribution Graph](http://static.mrmatt57.org/img/QOS_Graph.gif "QOS Distribution Graph")](http://static.mrmatt57.org/img/QOS_Graph_full.gif)</div>  
-### Detailed View
+<div>[![QOS Distribution Graph](/img/QOS_Graph.gif "QOS Distribution Graph")](/img/QOS_Graph_full.gif)### Detailed View
 
 - This shows what traffic is currently flowing and how it is being classified. Take a look at each of the connections and make sure it is classified correctly. This report is also useful for determining the source of rouge traffic.
 
-<div>[![QOS Details](http://static.mrmatt57.org/img/QOS_Details.gif "QOS Details")](http://static.mrmatt57.org/img/QOS_Details_full.gif)</div>  
-
-## The Downside-
+<div>[![QOS Details](/img/QOS_Details.gif "QOS Details")](/img/QOS_Details_full.gif)## The Downside-
 
 Yea, there is usually a con with every pro. To make this setup work correctly, you are essentially capping your throughput. Some networks offer pooled connections and have -boost- speeds. You will not be able to take advantage of these features. Most of the bandwidth related troubles with SOHO VOIP is outbound, so one workaround is to turn off the Inbound Limits. It is not fool-proof, but in some setups will work just fine.
 

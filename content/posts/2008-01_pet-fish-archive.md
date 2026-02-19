@@ -13,22 +13,20 @@ I have had pet fish on and off ever since I can remember. I don-t currently have
 
 I started these fish in a 20 gallon long aquarium while I was waiting for the biomass to build in the 55 gallon. They were the size of a quarter when I bought them. They eventually outgrew the 55 gallon and I had to return them to the fish store. They were a lot of fun, but also a lot of work.
 
-![Red Belly Piranhas](http://static.mrmatt57.org/img/fish_1.jpg)
+![Red Belly Piranhas](/img/fish_1.jpg)
 
 Here is a short video of them at I think about a year old.  
 <div class="videoWrapper">
     <iframe title="My Red Belly Piranhas" width="1280" height="720" src="https://www.youtube.com/embed/d1pfTSdFcYs?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
 ## First Saltwater Tank
 
 This tank was started with a variety of damsels and later the home for a maroon clown, coral beauty and a crab.
 
-![Fist Saltwater Tank](http://static.mrmatt57.org/img/fish_2.jpg)
+![Fist Saltwater Tank](/img/fish_2.jpg)
 
 ## Scooby the Guppy
 
 This fish was amazing, she lived to be one and a half years old! She started her life as a feeder fish for my red belly piranhas. She found a comfortable hiding spot between one of the logs and a plant and managed to survive for almost a month. She deserved a home of her own. I moved her into a 5 gallon tank where she somehow managed to give birth to 5 babies! This was truely a miracle fish. She ultimately died of natural causes.
 
-![Scooby the Guppy](http://static.mrmatt57.org/img/fish_3.jpg)
+![Scooby the Guppy](/img/fish_3.jpg)
 

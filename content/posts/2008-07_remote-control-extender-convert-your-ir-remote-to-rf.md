@@ -10,7 +10,7 @@ cover:
 aliases:
   - /remote-control-extender-convert-your-ir-remote-to-rf/
 ---
-![](http://static.mrmatt57.org/img/IR_RF_Remote_header.jpg)
+![](/img/IR_RF_Remote_header.jpg)
 
 Are you sick of playing target practice with your remote controls?
 
@@ -18,9 +18,9 @@ I tried several -remote control extenders-. Most of them relayed the infrared si
 
 I am currently using Microsoft-s Media Center [Remote Control](http://www.amazon.com/gp/product/B00066FIO6?ie=UTF8&tag=matwalstecand-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00066FIO6)![](http://www.assoc-amazon.com/e/ir?t=matwalstecand-20&l=as2&o=1&a=B00066FIO6) and [Keyboard](http://www.amazon.com/gp/product/B000AOAAN8?ie=UTF8&tag=matwalstecand-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B000AOAAN8)![](http://www.assoc-amazon.com/e/ir?t=matwalstecand-20&l=as2&o=1&a=B000AOAAN8) with it and that they both work WAY better. I was on the verge or replacing the keyboard because you really had to point it to have fluid mouse movements. Now both remotes work on command and flawless in any room in my house!
 
-<table><tr><td width="190">[![Infrared to RF Converter](http://static.mrmatt57.org/img/IR_RF_Remote1_thumb.jpg "Infrared to RF Converter")](http://static.mrmatt57.org/img/IR_RF_Remote1.jpg)[![Infrared to RF Converter 2](http://static.mrmatt57.org/img/IR_RF_Remote2_thumb.jpg "Infrared to RF Converter 2")](http://static.mrmatt57.org/img/IR_RF_Remote2.jpg)
+<table><tr><td width="190">[![Infrared to RF Converter](/img/IR_RF_Remote1_thumb.jpg "Infrared to RF Converter")](/img/IR_RF_Remote1.jpg)[![Infrared to RF Converter 2](/img/IR_RF_Remote2_thumb.jpg "Infrared to RF Converter 2")](/img/IR_RF_Remote2.jpg)
 
-</td><td valign="top">[![Infrared to RF Converter Details](http://static.mrmatt57.org/img/IR_RF_Remote3_thumb.jpg "Infrared to RF Converter Details")](http://static.mrmatt57.org/img/IR_RF_Remote3.jpg)</td></tr></table>Pros:
+</td><td valign="top">[![Infrared to RF Converter Details](/img/IR_RF_Remote3_thumb.jpg "Infrared to RF Converter Details")](/img/IR_RF_Remote3.jpg)</td></tr></table>Pros:
 
 - Super easy to setup.
 - Works like any RF remote, no direct line of sight required, thought walls - up to 100? away

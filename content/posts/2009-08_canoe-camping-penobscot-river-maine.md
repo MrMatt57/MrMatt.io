@@ -24,14 +24,10 @@ We targeted the upper west branch of the penobscot for it-s remote setting and d
 Here is a map of our course and our camps:  
 <div class="videoWrapper"><iframe frameborder="0" height="300" marginheight="0" marginwidth="0" scrolling="no" src="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=108788543476703129185.0004711c18ab9cbab24a4&ll=45.966425,-69.411621&spn=0.286364,0.700378&t=p&z=10&output=embed" width="720" title="Map"></iframe>  
 <small>View [Maine 2009](http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=108788543476703129185.0004711c18ab9cbab24a4&ll=45.966425,-69.411621&spn=0.286364,0.700378&t=p&z=10&source=embed) in a larger map</small>
-</div>
-
 Fishing was another draw for me. I had a great smallmouth bass day trip on the east branch back in 2003. The west branch is more known for it-s landloc salmon and brook trout. With the water being so high and being late in season, the fishing was less than stellar. I caught several creek chubs, perch and one small brook trout but not a single bass. I have to admit, I didn-t fish that hard, I was too busy enjoying the wilderness.
 
 <div class="videoWrapper">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/xboSdBhuvLo?rel=0&amp;controls=0" frameborder="0" allowfullscreen title="Canoe Camping the Upper WestBranch Penobscot River and Chesuncook Lake, Maine 2009 "></iframe>
-</div>
-
 As you can see the camps were well established and for the most part very clean. Our favorite was the first on Big Island North. What a treat to be able spend the night in such a beautiful place. Jaimie was so relieved to see the well ventilated housed latrine. It was -a busy week- and we saw at most a group or two of people each day. The camps are quite far apart so settling in early is advised.
 
 We had a wonderful trip and would highly recommend it!
