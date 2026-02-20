@@ -22,7 +22,9 @@ The Domain Name System (DNS) is arguably the single most important part of the i
 
 Most of the Internet is run on Berkeley Internet Name Domain (BIND) based servers. There have been a lot of failed attempts to create a BIND alternative (GnuDIP, MooDNS, Dents, OakDNS, CustomDNS and dproxy). A couple of active projects are PowerDNS, NSD, djdns and MaraDNS. All boast better security and performance improvements in different environments. If you are hosting your own DNS, you owe it to yourself/network to [review your options](http://en.wikipedia.org/wiki/Comparison_of_DNS_server_software).
 
-<div style="float: right;">![Anycast](/img/ip_anycast.gif)Another performance and security innovation that is becoming increasing popular across many stateless services on the internet is IP [anycast networks](http://en.wikipedia.org/wiki/Anycast). It is a network addressing and routing scheme where data is routed to the nearest or best destination. It helps provide higher availability and load balancing. Many of the TLD servers name servers are already running on anycast networks. In fact these servers survived the massive [DDOS attack last year](http://blog.icann.org/?p=37). UtraDNS, Netriplex and DNS Made Easy are among the few providers to deliver DNS over an anycast network. I imagine many more fill follow suit.
+![Anycast](/img/ip_anycast.gif)
+
+Another performance and security innovation that is becoming increasing popular across many stateless services on the internet is IP [anycast networks](http://en.wikipedia.org/wiki/Anycast). It is a network addressing and routing scheme where data is routed to the nearest or best destination. It helps provide higher availability and load balancing. Many of the TLD servers name servers are already running on anycast networks. In fact these servers survived the massive [DDOS attack last year](http://blog.icann.org/?p=37). UtraDNS, Netriplex and DNS Made Easy are among the few providers to deliver DNS over an anycast network. I imagine many more fill follow suit.
 
 **Minimizing down-time with TTL**
 
@@ -38,7 +40,9 @@ However, if you don-t have the time/experience to monitor, review logs and maint
 
 The Cadillac of DNS currently is [NeuStar-s UltraDNS](http://www.neustarultraservices.biz/). They have a globally redundant/optimized network with proprietary DNS software powered by Oracle replication. However, they charge by the query, so if you have a busy site, it will get expensive in a hurry. Another high-end service is [Netriplex](http://www.netriplex.com/solutions/critical_dns/). For small to mid size company-s the only way to afford either of these services is to increase unfortunately to your TTL.
 
-<div style="float: right;">[![DNS Made Easy](/img/dns-made-easy-icon.gif)](http://www.dnsmadeeasy.com/u/39743)The best budget priced service with high-end features/support I have found so far is [DNS Made Easy](http://www.dnsmadeeasy.com/u/39743). They have a great feature-set, excellent and knowledgeable staff all at a great price.
+[![DNS Made Easy](/img/dns-made-easy-icon.gif)](http://www.dnsmadeeasy.com/u/39743)
+
+The best budget priced service with high-end features/support I have found so far is [DNS Made Easy](http://www.dnsmadeeasy.com/u/39743). They have a great feature-set, excellent and knowledgeable staff all at a great price.
 
 **Search Engine Optimization (SEO)**
 

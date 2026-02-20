@@ -14,7 +14,7 @@ This one is really digging into the archives- Here are some pictures and specs o
 
 [![1994 Honda Accord](/img/accord_engine1_thumb.jpg "1994 Honda Accord")](/img/accord_engine1.jpg) [![1994 Honda Accrod 2](/img/accord_engine2_thumb.jpg "1994 Honda Accrod 2")](/img/accord_engine2.jpg)
 
-**<span style="font-size: medium">Engine/Performance:</span>**
+**Engine/Performance:**
 
 Port/Polished Cylinder Head (Gude)  
  Bored Throttle Body (Gude)  
@@ -35,7 +35,7 @@ Port/Polished Cylinder Head (Gude)
  Autometer Fuel Pressure Gauge (Full sweep electric 0-100psi)  
  Denso Iridium Spark Plugs
 
-**<span style="font-size: medium">Suspension:</span>**<span style="font-size: 11pt"></span>
+**Suspension:**
 
 Eibach Sportline Springs  
  KYB Gas Struts  
@@ -45,14 +45,14 @@ Eibach Sportline Springs
  Powerstop Cross drilled rotors  
  Axxis Carbon Metallic Pads
 
-**<span style="font-size: medium">Appearance:</span>**
+**Appearance:**
 
 25% Smoke Tint  
  Clear lenses (Marker, Bumper, Tail, Side-marker)  
  Color match painted trim  
  DC Sports Red Billet Oil Cap
 
-**<span style="font-size: medium">Stereo / Entertainment:</span>**
+**Stereo / Entertainment:**
 
  Alpine 3DA-W882  
  PPI A600  
@@ -62,7 +62,9 @@ Eibach Sportline Springs
  Boston Acoustic 6.3 (Pro Series Component Set)  
  Lightning Audio Connections (Fuses, Wires, Etc.)  
  Ligthning Cap 1 Fraud  
- Stinger 1 Fraud Cap<span style="font-size: 11pt"></span>**<span style="font-size: medium">Alarm:</span>**<span style="font-size: 11pt"></span>
+ Stinger 1 Fraud Cap
+
+**Alarm:**
 
 Python 3000HF  
  Proxy/Dual Stage Shock Sensors  

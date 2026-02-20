@@ -9,7 +9,7 @@ tags:
 aliases:
   - /terminal-velocity-pentax-optio-s6/
 ---
-![Lucky Lightning Shot](/img/terminal-velocity.jpg)<span id="credits"></span>
+![Lucky Lightning Shot](/img/terminal-velocity.jpg)
 
 I learned two very valuable lesson today-
 

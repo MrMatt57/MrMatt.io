@@ -7,8 +7,9 @@ tags: []
 aliases:
   - /hello-world-new-server-theme-content-collaboration/
 ---
-![H](/img/hello-world.jpg)<span id="credits">  
- Photo by [-audreyjm529?](http://www.flickr.com/photos/audreyjm529/192646613/)</span>
+![H](/img/hello-world.jpg)
+
+*Photo by [-audreyjm529?](http://www.flickr.com/photos/audreyjm529/192646613/)*
 
 Welcome.
 

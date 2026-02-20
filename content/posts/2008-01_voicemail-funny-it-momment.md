@@ -7,8 +7,9 @@ tags: []
 aliases:
   - /voicemail-funny-it-momment/
 ---
-![Voicemail from the entertainment capitol of the world](/img/voicemail.jpg)<span id="credits">  
- Photo by [-Duchamp-](http://www.flickr.com/photos/duchamp/8155917/)</span>
+![Voicemail from the entertainment capitol of the world](/img/voicemail.jpg)
+
+*Photo by [-Duchamp-](http://www.flickr.com/photos/duchamp/8155917/)*
 
 This is a classic-
 
