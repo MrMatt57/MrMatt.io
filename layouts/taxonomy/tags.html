@@ -1,0 +1,12 @@
+{{- define "main" }}
+<div class="wrapper">
+    <h2>{{ .Title }}</h2>
+    <ul class="posts">
+        {{- range .Pages.ByCount }}
+        <li>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+        </li>
+        {{- end }}
+    </ul>
+</div>
+{{- end }}

@@ -1,0 +1,37 @@
+{{- define "main" }}
+<div class="wrapper">
+    <section class="home-about">
+        <a href="/about/" class="no-underline" id="MattWalker-Logo">
+            <img src="/images/MattWalker.png" alt="Photo of Matt Walker" class="avatar" />
+        </a>
+        <p>Hey, I'm <a href="/about/">Matt Walker</a>.</p>
+        <p>I'm a software engineer in the Baltimore/DC Metro area.
+            This site is mostly for me to learn and test things out.
+            It's also an archive of tech, hobby and travel related journal posts I have collected along the way.</p>
+        <p>Here is some of the <a href="/gear/">gear I use</a> and what I am up to <a href="/now/">now</a>.</p>
+    </section>
+</div>
+<div class="wrapper full">
+    <hr />
+</div>
+<div class="wrapper">
+    <section class="home-journal">
+        <h2>Journal</h2>
+        <ul class="header-list">
+            <li><a href="/posts/">Everything</a></li>
+            <li><a href="/tags/software-development/">Software Dev</a></li>
+            <li><a href="/tags/travel/">Travel</a></li>
+            <li><a href="/tags/r/c-planes/">R/C Planes</a></li>
+            <li><a href="/tags/photography/">Photography</a></li>
+        </ul>
+        <ul class="posts">
+            {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+            {{- range first 5 $pages }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a> - <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+            </li>
+            {{- end }}
+        </ul>
+    </section>
+</div>
+{{- end }}

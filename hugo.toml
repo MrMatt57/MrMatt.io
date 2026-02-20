@@ -1,0 +1,59 @@
+baseURL = "https://mrmatt.io/"
+languageCode = "en-us"
+title = "Matt Walker"
+theme = "PaperMod"
+paginate = 10
+
+enableRobotsTXT = true
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  mainSections = ["posts"]
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+  comments = false
+  ShowBreadCrumbs = false
+  hideAuthor = true
+  ShowToc = true
+
+  [params.author]
+    name = "Matt Walker"
+
+[[menu.main]]
+  name = "Journal"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "Now"
+  url = "/now/"
+  weight = 20
+
+[[menu.main]]
+  name = "Gear"
+  url = "/gear/"
+  weight = 30
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    noClasses = false

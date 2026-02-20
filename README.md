@@ -1,17 +1,40 @@
 # MrMatt.io
 
-[![Build Status](https://travis-ci.org/MrMatt57/MrMatt.io.svg?branch=master)](https://travis-ci.org/MrMatt57/MrMatt.io)
-[![Code Climate](https://codeclimate.com/github/MrMatt57/MrMatt.io/badges/gpa.svg)](https://codeclimate.com/github/MrMatt57/MrMatt.io)
-[![devDependencies Status](https://david-dm.org/mrmatt57/mrmatt.io/dev-status.svg)](https://david-dm.org/mrmatt57/mrmatt.io?type=dev)
+Personal website of Matt Walker — [mrmatt.io](https://mrmatt.io)
 
-Rerference [Travis-ci config file](/.travis.yml) install section for dependencies.
+## Stack
 
-Install `npm install`
+- **SSG:** [Hugo](https://gohugo.io/) (extended) with [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme
+- **CI/CD:** GitHub Actions
+- **Hosting:** Cloudflare Pages
 
-Build `npm run build`
+## Local Development
 
-Test `npm run test`
+```bash
+# Clone with submodules
+git clone --recurse-submodules https://github.com/MrMatt57/MrMatt.io.git
 
-Publish `npm run build publish`
+# Run dev server with drafts
+hugo server -D
 
-For now, check out the [Stack](https://mrmatt.io/stack/) page for more details.
+# Production build
+hugo --minify
+```
+
+## Adding a New Post
+
+```bash
+hugo new content/posts/YYYY-MM_post-slug.md
+```
+
+## Deployment
+
+Pushes to `main` automatically build and deploy via GitHub Actions to Cloudflare Pages.
+
+**Required GitHub secrets:**
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+## License
+
+Content is licensed under [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).
