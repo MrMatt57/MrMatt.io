@@ -14,7 +14,7 @@ aliases:
 
 *Location of Amazon Data Centers World-wide. Credit [Werner Vogels](http://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)*
 
-This past month Amazon sent me an early Christmas present, their very own content deliver network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](http://mrmatt57.org/2008/01/16/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
+This past month Amazon sent me an early Christmas present, their very own content deliver network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](/posts/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
 
 When it comes to web development, one of my driving forces is performance. I love seeking out and shaving milliseconds off page loads and network requests. One of the best ways to do this is to put the content as close to the source as possible. Content Delivery Networks do just that. If my viewers are in Asia, I don-t want my server in New York and vise versa. With a CDN data is cached at several geographically optimized locations as needed. When a request comes in, it is routed to the nearest location.
 

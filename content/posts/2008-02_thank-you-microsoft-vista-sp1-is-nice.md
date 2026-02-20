@@ -15,7 +15,7 @@ I have always enjoyed vista. There are a lot of XP die hards out there, understa
 
 I have to thank Microsoft for this service pack. Yes, I know- they technically fixed something that was -broken-. But, it isn-t often that you see this noticeable of a performance gain without upgrading hardware or bumping your vcore.
 
-Installation was flawless, 32 minutes on [my system](http://mrmatt57.org/2007/12/08/my-rig/). (i twitter-logged it)
+Installation was flawless, 32 minutes on [my system](/posts/my-rig/). (i twitter-logged it)
 
 I [downloaded](http://msdn2.microsoft.com/en-us/windowsvista/bb898842.aspx) the stand-alone update via MSDN. Microsoft is expected to [push the release date](http://www.ecommercetimes.com/story/Microsoft-Bows-to-Business-Pressure-for-Earlier-SP1-Release-61643.html?welcome=1203142244) up to late February as apposed to mid March. If you wait for automatic updates to kick in, you won-t get it until mid April.
 

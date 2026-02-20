@@ -10,7 +10,7 @@ cover:
 aliases:
   - /the-ultimate-usb-key-drive-lacie-iamakey-8gb/
 ---
-I have always been a fan of portable storage. However, most -portable- devices just aren-t well- portable. You think you will carry them around, but end up leaving them behind. When I first saw the Laci IamaKey, I knew it would be different. I tried the ultra secure route with an [IronKey](http://mrmatt57.org/2007/10/07/james-bond-style-usb-key-ironkey/), but it is too bulky and so secure- I ended up locking myself out (don-t ask).
+I have always been a fan of portable storage. However, most -portable- devices just aren-t well- portable. You think you will carry them around, but end up leaving them behind. When I first saw the Laci IamaKey, I knew it would be different. I tried the ultra secure route with an [IronKey](/posts/james-bond-style-usb-key-ironkey/), but it is too bulky and so secure- I ended up locking myself out (don-t ask).
 
 ![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg)
 

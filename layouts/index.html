@@ -28,7 +28,7 @@
             {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
             {{- range first 5 $pages }}
             <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a> - <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a> - <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
             </li>
             {{- end }}
         </ul>

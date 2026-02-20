@@ -4,7 +4,7 @@
     <ul class="posts">
         {{- range .Pages.ByCount }}
         <li>
-            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
         </li>
         {{- end }}
     </ul>
