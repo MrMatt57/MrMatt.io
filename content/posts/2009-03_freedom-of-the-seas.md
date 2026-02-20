@@ -6,8 +6,6 @@ slug: "freedom-of-the-seas"
 tags:
   - "Travel"
   - "Cruise"
-cover:
-  image: "/images/2014/12/free.jpg"
 aliases:
   - /freedom-of-the-seas/
 ---

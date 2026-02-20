@@ -5,8 +5,6 @@ title: "Hike @ Loch Raven Reservoir w/ iPhone 3G GPS"
 slug: "hike-loch-raven-reservoir-w-iphone-3g-gps"
 tags:
   - "Travel"
-cover:
-  image: "/images/2014/12/trail.jpg"
 aliases:
   - /hike-loch-raven-reservoir-w-iphone-3g-gps/
 ---

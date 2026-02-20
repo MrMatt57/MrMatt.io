@@ -4,8 +4,6 @@ draft: false
 title: "CSS Naked Day"
 slug: "css-naked-day"
 tags: []
-cover:
-  image: "/images/2014/12/CSS.jpeg"
 aliases:
   - /css-naked-day/
 ---

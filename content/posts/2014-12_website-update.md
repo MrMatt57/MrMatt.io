@@ -6,8 +6,6 @@ slug: "website-update-2014"
 tags:
   - "Software Development"
   - "Website"
-cover:
-  image: "/images/2014/12/road.jpg"
 aliases:
   - /website-update/
 ---

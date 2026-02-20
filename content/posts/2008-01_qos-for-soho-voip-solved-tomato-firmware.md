@@ -4,8 +4,6 @@ draft: false
 title: "QOS for SOHO VOIP Solved, Tomato Firmware"
 slug: "qos-for-soho-voip-solved-tomato-firmware"
 tags: []
-cover:
-  image: "/images/2014/12/wires-1.jpg"
 aliases:
   - /qos-for-soho-voip-solved-tomato-firmware/
 ---

@@ -5,8 +5,6 @@ title: "Mind Control - Tea in 30 Seconds"
 slug: "mind-control"
 tags:
   - "Time-lapse"
-cover:
-  image: "/images/2014/12/5189051644_c7feb12f84_o.jpg"
 aliases:
   - /mind-control/
 ---

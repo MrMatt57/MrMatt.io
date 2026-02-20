@@ -5,8 +5,6 @@ title: "Business Cards - MOO Cards"
 slug: "business-cards-moo-cards"
 tags:
   - "Social"
-cover:
-  image: "/images/2014/12/moo.jpg"
 aliases:
   - /business-cards-moo-cards/
 ---

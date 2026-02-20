@@ -6,7 +6,7 @@ slug: "the-ultimate-usb-key-drive-lacie-iamakey-8gb"
 tags:
   - "Review"
 cover:
-  image: "/images/2014/12/Lacie-USB-Key-Macro1.jpg"
+  image: "/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg"
 aliases:
   - /the-ultimate-usb-key-drive-lacie-iamakey-8gb/
 ---

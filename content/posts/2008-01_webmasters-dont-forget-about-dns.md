@@ -5,8 +5,6 @@ title: "Webmasters: Don't forget about DNS..."
 slug: "webmasters-dont-forget-about-dns"
 tags:
   - "Software Development"
-cover:
-  image: "/images/2014/12/dns.png"
 aliases:
   - /webmasters-dont-forget-about-dns/
 ---

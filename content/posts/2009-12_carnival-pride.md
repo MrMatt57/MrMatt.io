@@ -7,25 +7,27 @@ tags:
   - "Travel"
   - "Cruise"
 cover:
-  image: "/images/2014/12/Carnival-Pride-Nassau-Lighthouse.jpg"
+  image: "/img/Carnival-Pride-Nassau-Lighthouse.jpg"
 aliases:
   - /carnival-pride/
 ---
 ![Carnival Pride](/img/Carnival-Pride-Banner.jpg)
 
-	![Carnival Pride Nassau Lighthouse](/img/Carnival-Pride-Nassau-Lighthouse.jpg)
-    
-	![Carnival Pride Depart](/img/Carnival-Pride-Depart.jpg)
-    
-    	![Bahamas](/img/Atlantis-Bahamas.jpg)
-        
+![Carnival Pride Nassau Lighthouse](/img/Carnival-Pride-Nassau-Lighthouse.jpg)
+
+![Carnival Pride Depart](/img/Carnival-Pride-Depart.jpg)
+
+![Bahamas](/img/Atlantis-Bahamas.jpg)
+
 ![Carnival Pride Freeport](/img/Carnival-Pride-Freeport.jpg)
 
 ![Carnival Pride Steerage](/img/Carnival-Pride-Steerage.jpg)
 
 ![Carnival Pride Trails](/img/Canrival-Pride-Trails.jpg)
 
-<img src="/img/Carnival-Pride-Route.jpg" alt="Carnival Pride - 11/21/2009">**Carnival Pride - 11/21/2009**
+![Carnival Pride - 11/21/2009](/img/Carnival-Pride-Route.jpg)
+
+**Carnival Pride - 11/21/2009**
 After our first cruise on the Freedom of the Seas earlier this year, we were itching to go on another one. When my brother in-law and girlfriend wanted to go cruising, it wasn-t hard to convince us. We live 20 minutes from the Port of Baltimore, so we thought we would give it a try. It was awesome to not have to worry about flying an luggage.
 
 We visited Universal Studios in Orlando, the Atlantis Resort in Nassau and Paradise Cove in Freeport. It is hard to choose a highlight of the trip, it was all so much fun!

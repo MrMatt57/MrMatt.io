@@ -5,8 +5,6 @@ title: "Honda Slow Window Syndrome (HSWS)"
 slug: "honda-slow-window-syndrome"
 tags:
   - "Tutorial"
-cover:
-  image: "/images/2014/12/window.jpg"
 aliases:
   - /honda-slow-window-syndrome/
 ---

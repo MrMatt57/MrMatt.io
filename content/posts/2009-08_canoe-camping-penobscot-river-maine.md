@@ -6,8 +6,6 @@ slug: "canoe-camping-penobscot-river-maine"
 tags:
   - "Travel"
   - "Camping"
-cover:
-  image: "/images/2014/12/canoe.jpg"
 aliases:
   - /canoe-camping-penobscot-river-maine/
 ---

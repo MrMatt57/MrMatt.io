@@ -5,8 +5,6 @@ title: "Canon A2000is Time Lapse using CHDK"
 slug: "time-lapse-chdk"
 tags:
   - "Photography"
-cover:
-  image: "/images/2014/12/81YvgexCIeS-_SL1500_.jpg"
 aliases:
   - /time-lapse-chdk/
 ---

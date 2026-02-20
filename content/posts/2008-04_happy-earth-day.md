@@ -4,8 +4,6 @@ draft: false
 title: "Happy Earth Day"
 slug: "happy-earth-day"
 tags: []
-cover:
-  image: "/images/2014/12/earth.jpg"
 aliases:
   - /happy-earth-day/
 ---

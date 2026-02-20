@@ -5,8 +5,6 @@ title: "Remote Control Extender, convert your IR remote to RF."
 slug: "remote-control-extender-convert-your-ir-remote-to-rf"
 tags:
   - "Review"
-cover:
-  image: "/images/2014/12/remote-control.jpg"
 aliases:
   - /remote-control-extender-convert-your-ir-remote-to-rf/
 ---

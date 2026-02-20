@@ -7,8 +7,6 @@ tags:
   - "Software Development"
   - "Website"
   - "Performance"
-cover:
-  image: "/images/2014/12/AWS-Logo-Orange3.jpg"
 aliases:
   - /amazon-cloudfront-c2bb-shopping-for-a-cdn/
 ---

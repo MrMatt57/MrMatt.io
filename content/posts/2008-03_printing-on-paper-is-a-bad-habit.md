@@ -5,8 +5,6 @@ title: "Printing on paper is a bad habit"
 slug: "printing-on-paper-is-a-bad-habit"
 tags:
   - "Social"
-cover:
-  image: "/images/2014/12/paper.jpg"
 aliases:
   - /printing-on-paper-is-a-bad-habit/
 ---
