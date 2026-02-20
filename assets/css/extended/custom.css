@@ -138,28 +138,46 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 }
 
 .header hr {
-    margin: 0;
     border: 0;
     border-top: 1px solid #e1e1e1;
+    width: 47.5em;
+    max-width: 90vw;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ===== Homepage: about section with floated photo ===== */
 
 .home-about {
-    min-height: 216px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .home-about .avatar {
-    float: left;
-    margin-right: 20px;
     width: 175px;
-    height: 216px;
+    height: 175px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home-about-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .home-about p {
     margin-top: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.home-about p:last-child {
+    margin-bottom: 0;
 }
 
 /* ===== Homepage: journal section ===== */
