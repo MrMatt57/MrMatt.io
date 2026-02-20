@@ -1,33 +1,141 @@
-# Ship — Phase 5: Merge and Go Live
+---
+allowed-tools: Bash(git *), Bash(gh *), Read, Glob, Grep
+---
 
-Execute the final shipping phase for the MrMatt.io rebuild.
+# /ship — Commit, push, PR, auto-merge, wait, and clean up
 
-## Pre-flight Checklist
+You are shipping a completed feature. Follow these steps precisely.
 
-Before proceeding, verify:
-- [ ] `hugo` builds with no errors
-- [ ] All content pages render (posts, about, now, gear, stack)
-- [ ] `.github/workflows/deploy.yml` exists and is valid YAML
-- [ ] `.gitignore` is in place
-- [ ] `README.md` exists
-- [ ] No legacy files remain (gulp/, src/, .travis.yml, etc.)
-- [ ] PaperMod submodule is properly configured
+## Step 1: Validate
 
-Report the checklist results to the user before proceeding.
+Run `git branch --show-current` to get the current branch.
 
-## Steps
+- **Must** be on a `feature/*` branch. If on `main`, stop and tell the user this command only works from a feature branch.
+- Extract the feature name from the branch (e.g., `feature/new-post` -> `new-post`).
 
-1. **Show the full diff** against master: `git diff master --stat`
-2. **Show the commit log** for the branch: `git log master..HEAD --oneline`
-3. **Ask for confirmation** before merging
+Run `git status` and `git log origin/main..HEAD --oneline` to verify there are either:
+- Uncommitted changes to stage, OR
+- Commits ahead of `origin/main` to push
 
-### On confirmation:
-4. Rename `master` to `main` if requested
-5. Merge the working branch into main
-6. Report next manual steps:
-   - Push to GitHub
-   - Configure GitHub secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID)
-   - Set up Cloudflare Pages project
-   - Verify deployment
-   - Update DNS if needed
-   - Archive old S3 bucket contents
+If there's nothing to ship (no changes, no new commits), stop and tell the user.
+
+## Step 2: Stage and Commit
+
+If there are uncommitted changes:
+
+1. Run `git diff` and `git diff --cached` and `git status` to review all changes
+2. Stage relevant files with `git add <specific-files>` (avoid `git add -A` to prevent accidentally staging sensitive files)
+3. Create a descriptive commit message summarizing all changes. Use this format:
+
+```bash
+git commit -m "$(cat <<'EOF'
+Description of the change
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+EOF
+)"
+```
+
+If all changes are already committed, skip this step.
+
+## Step 3: Push
+
+Push the branch to the remote:
+
+```bash
+git push -u origin feature/{name}
+```
+
+## Step 4: Create PR
+
+Look for a spec file in `.specs/` that matches the branch name. Read it to extract:
+1. **Summary section** — use as the PR summary (convert to bullet points if not already)
+2. **Test Plan section** — copy directly into the PR body, preserving the checked/unchecked state from the spec
+
+The test plan items should already be checked off (`[x]`) from the implementation step. Do not re-write or paraphrase them — use the spec's exact test plan items.
+
+Create the PR using content pulled from the spec:
+
+```bash
+gh pr create --title "Short descriptive title" --body "$(cat <<'EOF'
+## Summary
+{Bullet points derived from the spec's Summary section}
+
+## Test plan
+{Exact test plan checkboxes from the spec, preserving [x] / [ ] state}
+
+Generated with [Claude Code](https://claude.com/claude-code)
+EOF
+)"
+```
+
+Keep the title under 70 characters. Use the body for details.
+
+## Step 5: Auto-merge
+
+Enable auto-merge so the PR merges automatically when CI passes:
+
+```bash
+gh pr merge --squash --auto --delete-branch
+```
+
+## Step 6: Wait for Merge
+
+Tell the user the PR is created and you're waiting for CI, then watch for checks to complete:
+
+```bash
+gh pr checks --watch
+```
+
+Once checks finish, poll until the PR is merged (auto-merge may take a moment after checks pass):
+
+```bash
+# Poll every 10 seconds, up to 2 minutes
+for i in $(seq 1 12); do
+  state=$(gh pr view --json state --jq '.state')
+  if [ "$state" = "MERGED" ]; then break; fi
+  sleep 10
+done
+```
+
+If the PR doesn't merge after polling, inform the user and provide the PR URL.
+
+## Step 7: Clean Up
+
+After the PR is merged:
+
+1. Switch to the main repo directory (`C:\dev\MrMatt.io`)
+2. Pull latest main
+3. Remove the worktree
+
+```bash
+cd C:\dev\MrMatt.io
+git pull origin main
+git worktree remove ../mrmatt-{name}
+```
+
+If the worktree removal fails (e.g., dirty files), inform the user.
+
+## Step 8: Report
+
+Print a clear summary:
+
+```
+Shipped and merged!
+
+  PR:     {PR URL}
+  Branch: feature/{name} (merged and deleted)
+  Worktree: cleaned up
+```
+
+If the PR hasn't merged yet (timeout), instead print:
+
+```
+PR created and auto-merge enabled:
+
+  PR:     {PR URL}
+  Branch: feature/{name}
+  Status: Waiting for CI — will auto-merge when checks pass
+
+Worktree still exists at ../mrmatt-{name} (clean up manually after merge)
+```
