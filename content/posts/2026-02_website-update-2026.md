@@ -42,7 +42,7 @@ The content. All the posts from 2007 through 2017 are still here. The photos, th
 
 This rebuild was pair-programmed with [Claude Code](https://claude.ai/). The entire migration — deleting legacy files, scaffolding the new Hugo structure, converting front matter, fixing broken shortcodes, writing the CI/CD pipeline — was done conversationally in the terminal. I wrote the spec, Claude executed it phase by phase, and we iterated on the details together. It's a genuinely different way to work on a project like this.
 
-I have a spec document with five phases and custom commands (`/setup`, `/feature`, `/ship`) that walk through the rebuild step by step. The whole thing is in the repo if you're curious.
+Going forward, every change to the site is spec-driven. I run `/feature`, which creates a numbered spec in `.specs/`, spins up a git worktree, and implements the change. When it's ready, `/ship` commits, pushes, opens a PR, waits for CI, merges, and cleans up the worktree. Each spec is a self-contained record of what changed and why — the whole history lives in the repo.
 
 ### What's next
 
