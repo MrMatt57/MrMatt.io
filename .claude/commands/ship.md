@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(git *), Bash(gh *), Read, Glob, Grep
+allowed-tools: Bash(git *), Bash(gh *), Bash(rm *), Read, Glob, Grep
 ---
 
 # /ship — Commit, push, PR, auto-merge, wait, and clean up
@@ -73,11 +73,13 @@ Keep the title under 70 characters. Use the body for details.
 
 ## Step 5: Auto-merge
 
-Enable auto-merge so the PR merges automatically when CI passes:
+Try to enable auto-merge (without `--delete-branch` — the worktree holds the local branch):
 
 ```bash
-gh pr merge --squash --auto --delete-branch
+gh pr merge --squash --auto
 ```
+
+If auto-merge is not enabled on the repo, this will fail — that's fine, proceed to step 6.
 
 ## Step 6: Wait for Merge
 
@@ -87,10 +89,18 @@ Tell the user the PR is created and you're waiting for CI, then watch for checks
 gh pr checks --watch
 ```
 
-Once checks finish, poll until the PR is merged (auto-merge may take a moment after checks pass):
+Once checks finish, check if the PR was already merged (by auto-merge). If not, merge it manually (without `--delete-branch`):
 
 ```bash
-# Poll every 10 seconds, up to 2 minutes
+state=$(gh pr view --json state --jq '.state')
+if [ "$state" != "MERGED" ]; then
+  gh pr merge --squash
+fi
+```
+
+If auto-merge was enabled, poll until merged:
+
+```bash
 for i in $(seq 1 12); do
   state=$(gh pr view --json state --jq '.state')
   if [ "$state" = "MERGED" ]; then break; fi
@@ -102,19 +112,22 @@ If the PR doesn't merge after polling, inform the user and provide the PR URL.
 
 ## Step 7: Clean Up
 
-After the PR is merged:
+After the PR is merged, clean up in this order (worktree first, then pull):
 
-1. Switch to the main repo directory (`C:\dev\MrMatt.io`)
-2. Pull latest main
-3. Remove the worktree
+1. Stop any running Hugo dev servers for the worktree
+2. Remove the worktree directory and prune
+3. Remove any untracked spec files for this feature from the main repo (they'll come in with the pull)
+4. Switch to the main repo directory and pull latest main
 
 ```bash
+rm -rf ../mrmatt-{name}
 cd C:\dev\MrMatt.io
+git worktree prune
+rm -f .specs/NNN-{branch-name}.md
 git pull origin main
-git worktree remove ../mrmatt-{name}
 ```
 
-If the worktree removal fails (e.g., dirty files), inform the user.
+If the worktree removal fails (e.g., locked files), inform the user.
 
 ## Step 8: Report
 

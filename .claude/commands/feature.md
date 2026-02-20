@@ -109,9 +109,21 @@ After implementing, verify the test plan items from the spec:
 
 **Check off test plan items in the spec**: As you verify each test plan item, edit the spec file in the worktree to change `- [ ]` to `- [x]` for that item. The spec should reflect the actual verification status — only check off items you've confirmed pass. Leave items unchecked if they genuinely weren't verified.
 
-## Step 9: Report and Offer to Ship
+## Step 9: Start Dev Server
 
-Print a summary of what was implemented, then ask:
+After implementation is complete, initialize the theme submodule and start the Hugo dev server so the user can preview the changes:
+
+```bash
+cd ../mrmatt-{name}
+git submodule update --init --recursive
+hugo server -D
+```
+
+Run the server in the background and provide the user with the localhost URL to verify.
+
+## Step 10: Report and Offer to Ship
+
+Print a summary of what was implemented, provide the localhost URL for review, then ask:
 
 > Done! Want me to `/ship` it?
 
