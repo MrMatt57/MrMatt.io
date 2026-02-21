@@ -231,11 +231,14 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     list-style: none;
     margin-bottom: 0.5em;
     margin-left: 0;
+    padding-left: 1.2em;
+    position: relative;
 }
 
 .posts li::before {
     content: "\25AA";
-    margin-right: 0.5em;
+    position: absolute;
+    left: 0;
     color: #090909;
 }
 
