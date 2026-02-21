@@ -1,49 +1,9 @@
 {{- define "main" }}
 <div class="wrapper">
-    <section class="home-about">
-        <a href="/about/" class="no-underline" id="MattWalker-Logo">
-            <img src="/images/MattWalker-avatar.png" alt="Illustrated avatar of Matt Walker" class="avatar" />
-        </a>
-        <div class="home-about-text">
-            <p>Hey, I'm <a href="/about/">Matt Walker</a>.</p>
-            <p>I'm a software engineer in the Baltimore/DC Metro area.
-                This site is mostly for me to learn and test things out.
-                It's also an archive of tech, hobby and travel related journal posts I have collected along the way.</p>
-            <p>Here is some of the <a href="/gear/">gear I use</a> and what I am up to <a href="/now/">now</a>.</p>
-        </div>
-    </section>
-</div>
-<div class="wrapper full">
-    <hr />
-</div>
-<div class="wrapper">
-    <section class="home-journal">
-        <h2>Journal</h2>
-        <ul class="header-list">
-            <li><a href="/posts/">Everything</a></li>
-            <li><a href="/tags/software-development/">Software Dev</a></li>
-            <li><a href="/tags/travel/">Travel</a></li>
-        </ul>
-        <ul class="posts">
-            {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-            {{- range first 5 $pages }}
-            <li>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a> - <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-            </li>
-            {{- end }}
-        </ul>
-    </section>
-</div>
-{{- $photos := where (where site.RegularPages "Section" "photography") ".Params.draft" "ne" true }}
-{{- if gt (len $photos) 0 }}
-<div class="wrapper full">
-    <hr />
-</div>
-<div class="wrapper">
-    <section class="home-photography">
-        <h2>Photography</h2>
-        <div class="photo-strip">
-            {{- range $photos }}
+    <section class="home-photography" style="margin-top: 2rem;">
+        <h1>{{ .Title }}</h1>
+        <div class="photo-grid">
+            {{- range .Pages }}
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
             <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline" data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
@@ -55,6 +15,7 @@
         </div>
     </section>
 </div>
+{{- if gt (len .Pages) 0 }}
 <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <img class="lightbox-img" src="" alt="" />

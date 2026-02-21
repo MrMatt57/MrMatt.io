@@ -28,6 +28,11 @@ enableRobotsTXT = true
   weight = 10
 
 [[menu.main]]
+  name = "Photography"
+  url = "/photography/"
+  weight = 15
+
+[[menu.main]]
   name = "Now"
   url = "/now/"
   weight = 20
