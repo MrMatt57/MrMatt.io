@@ -494,10 +494,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 }
 
 .lightbox-header-rule {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    margin: 0 auto 1.5rem;
-    flex-shrink: 0;
+    display: none;
 }
 
 .lightbox-img-wrap {
@@ -568,7 +565,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     max-width: 600px;
     line-height: 1.5;
     flex-shrink: 0;
-    margin-bottom: auto;
+    margin-bottom: 0.6rem;
 }
 
 @media (min-width: 550px) {

@@ -47,6 +47,7 @@
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
             <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline"
+               data-slug="{{ .File.ContentBaseName }}"
                data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
                data-title="{{ .Title }}"
                data-description="{{ .Params.description }}">
@@ -112,6 +113,9 @@
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < links.length - 1 ? 'visible' : 'hidden';
         img.onload = syncRuleWidths;
+        if (link.dataset.slug) {
+            history.replaceState(null, '', '#' + link.dataset.slug);
+        }
     }
 
     links.forEach(function(link, i) {
@@ -124,7 +128,8 @@
     });
 
     function closeLightbox() {
-        window.location.href = '/photography/';
+        var slug = currentIndex >= 0 && links[currentIndex] ? links[currentIndex].dataset.slug : '';
+        window.location.href = '/photography/' + (slug ? '#' + slug : '');
     }
 
     navPrev.addEventListener('click', function(e) {

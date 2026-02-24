@@ -4,6 +4,7 @@
     {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
     <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline"
+       data-slug="{{ .File.ContentBaseName }}"
        data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
        data-title="{{ .Title }}"
        data-description="{{ .Params.description }}">
@@ -89,6 +90,13 @@
         headerRuleEl.style.width = w;
     }
 
+    // Build slug-to-index map for deep linking
+    var slugMap = {};
+    allItems.forEach(function(link, i) {
+        var slug = link.dataset.slug;
+        if (slug) slugMap[slug] = i;
+    });
+
     function showPhoto(index) {
         if (index < 0 || index >= allItems.length) return;
         currentIndex = index;
@@ -109,14 +117,22 @@
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < allItems.length - 1 ? 'visible' : 'hidden';
         img.onload = syncRuleWidths;
+        // Update URL hash
+        if (link.dataset.slug) {
+            history.replaceState(null, '', '#' + link.dataset.slug);
+        }
+    }
+
+    function openLightbox(index) {
+        showPhoto(index);
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
     }
 
     allItems.forEach(function(link, i) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            showPhoto(i);
-            overlay.classList.add('active');
-            overlay.setAttribute('aria-hidden', 'false');
+            openLightbox(i);
         });
     });
 
@@ -125,6 +141,15 @@
         overlay.setAttribute('aria-hidden', 'true');
         img.src = '';
         currentIndex = -1;
+        history.replaceState(null, '', window.location.pathname);
+    }
+
+    // Open from hash on page load
+    if (window.location.hash) {
+        var slug = window.location.hash.substring(1);
+        if (slug in slugMap) {
+            openLightbox(slugMap[slug]);
+        }
     }
 
     navPrev.addEventListener('click', function(e) {
