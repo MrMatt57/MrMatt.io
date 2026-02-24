@@ -191,6 +191,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 
 .home-journal {
     margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .home-journal h2 {
@@ -256,29 +257,27 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     font-size: 2em;
 }
 
-/* Horizontal scroll strip */
+/* Photo strip grid (homepage) */
 .photo-strip {
-    display: flex;
-    gap: 0.75rem;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
 }
 
-.photo-strip::-webkit-scrollbar {
-    display: none;
+@media (min-width: 550px) {
+    .photo-strip {
+        gap: 0.75rem;
+    }
 }
 
 .photo-thumb-link {
-    flex-shrink: 0;
     border-bottom: none;
     line-height: 0;
 }
 
 .photo-thumb {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 4px;
     transition: opacity 0.15s linear;
@@ -288,18 +287,124 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     opacity: 0.85;
 }
 
-@media (max-width: 549px) {
-    .photo-thumb {
-        width: 120px;
-        height: 120px;
+/* ===== Photography page: immersive dark layout ===== */
+
+.photography-page {
+    background: #1d1e20;
+    color: #fff;
+}
+
+.photography-page .main {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.photography-page a,
+.photography-page a:visited {
+    color: #fff;
+}
+
+.photography-page .photo-thumb-link,
+.photography-page .photo-thumb-link:hover {
+    border-bottom: none;
+}
+
+/* Photography page header */
+.photo-header {
+    text-align: center;
+    padding: 2rem 1rem 0;
+}
+
+.photo-header-title {
+    font-family: "Roboto Slab", serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    color: #fff;
+    margin: 0 0 0.25rem;
+}
+
+.photo-header-title a,
+.photo-header-title a:visited,
+.photo-header-title a:hover {
+    color: #fff;
+    border-bottom: none;
+}
+
+.photo-header-subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 1rem;
+    letter-spacing: 0.05rem;
+}
+
+.photo-header hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+    .photo-header-title {
+        font-size: 3rem;
     }
 }
 
-/* Photo grid for /photography/ list page */
-.photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+.photo-footer {
+    text-align: center;
+    padding: 2rem 0 3rem;
+}
+
+.photo-footer a {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.3);
+    border-bottom: none;
+    letter-spacing: 0.02rem;
+}
+
+.photo-footer a:hover {
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: none;
+}
+
+/* Responsive photo grid */
+.photo-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.5rem;
+    max-width: 1400px;
+    width: 90%;
+    margin: 1.5rem auto 3rem;
+}
+
+.photo-gallery-grid .photo-thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@media (min-width: 550px) {
+    .photo-gallery-grid {
+        gap: 0.75rem;
+    }
+}
+
+/* Progressive rendering: hidden until revealed */
+.photo-gallery-grid .gallery-item {
+    display: none;
+}
+
+.photo-gallery-grid .gallery-item.visible {
+    display: block;
 }
 
 /* Lightbox overlay */
@@ -310,7 +415,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: #1d1e20;
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -322,9 +427,14 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 
 .lightbox-img {
     max-width: 90vw;
-    max-height: 90vh;
+    max-height: 100%;
     object-fit: contain;
     border-radius: 4px;
+    transition: opacity 0.15s ease;
+}
+
+.lightbox-img.lightbox-img-loading {
+    opacity: 0;
 }
 
 .lightbox-close {
@@ -343,6 +453,171 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 
 .lightbox-close:hover {
     color: #ccc;
+}
+
+/* Enhanced lightbox layout */
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.lightbox-header {
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 2rem 0 0;
+}
+
+.lightbox-img-and-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    width: 100%;
+}
+
+.lightbox-site-title {
+    font-family: "Roboto Slab", serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 0.25rem;
+    border-bottom: none;
+    display: block;
+}
+
+.lightbox-site-title:hover,
+.lightbox-site-title:visited {
+    color: #fff;
+    border-bottom: none;
+}
+
+.lightbox-subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 1rem;
+}
+
+.lightbox-header-rule {
+    display: none;
+}
+
+.lightbox-img-wrap {
+    position: relative;
+    display: flex;
+    line-height: 0;
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 3.5rem;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    z-index: 10000;
+    user-select: none;
+}
+
+.lightbox-nav:hover {
+    opacity: 1;
+}
+
+.lightbox-nav-prev {
+    left: 0;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+}
+
+.lightbox-nav-next {
+    right: 0;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+}
+
+.lightbox-title {
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0.6rem 0;
+    text-align: center;
+    letter-spacing: -0.03rem;
+    flex-shrink: 0;
+}
+
+.lightbox-rule {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 0 0.5rem;
+    flex-shrink: 0;
+}
+
+.lightbox-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Roboto Slab", serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+    flex-shrink: 0;
+    margin-bottom: 0.6rem;
+}
+
+@media (min-width: 550px) {
+    .lightbox-site-title {
+        font-size: 3rem;
+    }
+}
+
+/* Gallery link in photo strip */
+.gallery-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 0 0 0 2px #d0d0d0;
+    color: #090909;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: box-shadow 0.15s linear, color 0.15s linear;
+}
+
+.gallery-link:hover {
+    box-shadow: inset 0 0 0 2px #4c81b2;
+    color: #4c81b2;
+}
+
+[data-theme="dark"] .gallery-link {
+    box-shadow: inset 0 0 0 2px var(--tertiary);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .gallery-link:hover {
+    box-shadow: inset 0 0 0 2px rgba(76, 129, 178, 0.7);
+    color: rgba(76, 129, 178, 0.9);
 }
 
 /* ===== Links: subtle bottom border throughout ===== */

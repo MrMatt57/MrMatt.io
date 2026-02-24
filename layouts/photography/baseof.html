@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="list photography-page" id="top">
+    <script>document.documentElement.dataset.theme = 'dark';</script>
+
+    <header class="photo-header">
+        <h1 class="photo-header-title"><a href="/">Matt Walker</a></h1>
+        <p class="photo-header-subtitle">Photography</p>
+        <hr>
+    </header>
+
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+
+    <footer class="photo-footer">
+        <a href="/">mrmatt.io</a>
+    </footer>
+</body>
+
+</html>

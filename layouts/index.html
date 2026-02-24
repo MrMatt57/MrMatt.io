@@ -39,54 +39,155 @@
 <div class="wrapper full">
     <hr />
 </div>
-<div class="wrapper">
+<div class="wrapper full">
     <section class="home-photography">
         <h2>Photography</h2>
         <div class="photo-strip">
-            {{- range $photos }}
+            {{- range first 7 $photos }}
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
-            <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline" data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+            <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline"
+               data-slug="{{ .File.ContentBaseName }}"
+               data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
+               data-title="{{ .Title }}"
+               data-description="{{ .Params.description }}">
                 {{- $thumb := $img.Fill "300x300 q85" }}
                 <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
             </a>
             {{- end }}
             {{- end }}
+            <a href="/photography/" class="gallery-link no-underline" aria-label="View all photos">
+                <span>Gallery &rarr;</span>
+            </a>
         </div>
     </section>
 </div>
 <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img class="lightbox-img" src="" alt="" />
+    <div class="lightbox-content">
+        <div class="lightbox-header">
+            <a href="/" class="lightbox-site-title">Matt Walker</a>
+            <div class="lightbox-subtitle">Photography</div>
+            <hr class="lightbox-header-rule" />
+        </div>
+        <div class="lightbox-img-and-meta">
+            <div class="lightbox-img-wrap">
+                <img class="lightbox-img" src="" alt="" />
+                <div class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</div>
+                <div class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</div>
+            </div>
+            <div class="lightbox-title"></div>
+            <hr class="lightbox-rule" />
+            <div class="lightbox-description"></div>
+        </div>
+    </div>
 </div>
+{{- $photoJSON := slice }}
+{{- range $photos }}
+{{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+{{- if $img }}
+{{- $entry := dict "src" $img.RelPermalink "slug" .File.ContentBaseName "alt" (default .Title .Params.alt) "title" .Title "description" (default "" .Params.description) }}
+{{- $photoJSON = $photoJSON | append $entry }}
+{{- end }}
+{{- end }}
 <script>
 (function() {
+    var allPhotos = {{ $photoJSON | jsonify | safeJS }};
     var overlay = document.getElementById('lightbox');
     var img = overlay.querySelector('.lightbox-img');
+    var titleEl = overlay.querySelector('.lightbox-title');
+    var descEl = overlay.querySelector('.lightbox-description');
     var closeBtn = overlay.querySelector('.lightbox-close');
+    var navPrev = overlay.querySelector('.lightbox-nav-prev');
+    var navNext = overlay.querySelector('.lightbox-nav-next');
+    var ruleEl = overlay.querySelector('.lightbox-rule');
+    var headerRuleEl = overlay.querySelector('.lightbox-header-rule');
+    var thumbLinks = Array.from(document.querySelectorAll('.photo-thumb-link'));
+    var currentIndex = -1;
+    var showGen = 0;
 
-    document.querySelectorAll('.photo-thumb-link').forEach(function(link) {
+    function syncRuleWidths() {
+        var w = img.offsetWidth + 'px';
+        ruleEl.style.width = w;
+        headerRuleEl.style.width = w;
+    }
+
+    function showPhoto(index) {
+        if (index < 0 || index >= allPhotos.length) return;
+        currentIndex = index;
+        var gen = ++showGen;
+        var photo = allPhotos[index];
+        var hadSrc = !!img.getAttribute('src');
+
+        titleEl.textContent = photo.title || '';
+        descEl.textContent = photo.description || '';
+        titleEl.style.display = photo.title ? '' : 'none';
+        descEl.style.display = photo.description ? '' : 'none';
+        navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
+        navNext.style.visibility = index < allPhotos.length - 1 ? 'visible' : 'hidden';
+        if (photo.slug) {
+            history.replaceState(null, '', '#' + photo.slug);
+        }
+
+        var preload = new Image();
+        preload.onload = function() {
+            if (gen !== showGen) return;
+            function applyImage() {
+                if (gen !== showGen) return;
+                img.src = photo.src;
+                img.alt = photo.alt || '';
+                requestAnimationFrame(function() {
+                    if (gen !== showGen) return;
+                    syncRuleWidths();
+                    img.classList.remove('lightbox-img-loading');
+                });
+            }
+            if (hadSrc) {
+                img.classList.add('lightbox-img-loading');
+                setTimeout(applyImage, 150);
+            } else {
+                img.classList.add('lightbox-img-loading');
+                applyImage();
+            }
+        };
+        preload.src = photo.src;
+    }
+
+    thumbLinks.forEach(function(link, i) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            img.src = this.href;
-            img.alt = this.dataset.alt || '';
+            showPhoto(i);
             overlay.classList.add('active');
             overlay.setAttribute('aria-hidden', 'false');
         });
     });
 
     function closeLightbox() {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
-        img.src = '';
+        window.location.href = '/photography/';
     }
+
+    navPrev.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (currentIndex > 0) showPhoto(currentIndex - 1);
+    });
+
+    navNext.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (currentIndex < allPhotos.length - 1) showPhoto(currentIndex + 1);
+    });
 
     closeBtn.addEventListener('click', closeLightbox);
     overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeLightbox();
+        if (e.target === img) return;
+        if (e.target.closest('.lightbox-nav')) return;
+        if (e.target.closest('.lightbox-site-title')) return;
+        closeLightbox();
     });
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
+        if (e.key === 'ArrowRight' && currentIndex < allPhotos.length - 1) showPhoto(currentIndex + 1);
     });
 })();
 </script>

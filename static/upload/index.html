@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photo Upload — MrMatt.io</title>
+    <link rel="manifest" href="/upload/manifest.json">
+    <meta name="theme-color" content="#090909">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/upload/style.css">
+</head>
+<body>
+    <h1>Photo Upload</h1>
+
+    <div id="status" class="status" style="display:none;"></div>
+
+    <div id="auth-section" class="auth-section">
+        <p style="margin-bottom: 1rem;">Log in with GitHub to upload photos to the gallery.</p>
+        <button id="login-btn" class="btn btn-primary" data-client-id="GITHUB_CLIENT_ID">Log in with GitHub</button>
+    </div>
+
+    <div id="upload-form" class="upload-form">
+        <div id="user-info" class="user-info" style="display:none;"></div>
+        <button id="logout-btn" class="logout-link" style="display:none;">Log out</button>
+
+        <div class="field" style="margin-top: 1rem;">
+            <label for="photo-input">Photo</label>
+            <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp">
+        </div>
+
+        <div id="preview" class="preview">
+            <img id="preview-img" src="" alt="Photo preview">
+        </div>
+
+        <div id="ai-section" class="ai-section" style="display:none;">
+            <div id="ai-status" class="status info" style="display:none;"></div>
+            <div class="ai-results">
+                <div class="ai-field">
+                    <span class="ai-label">Title:</span>
+                    <span id="ai-title"></span>
+                </div>
+                <div class="ai-field">
+                    <span class="ai-label">Alt text:</span>
+                    <span id="ai-alt"></span>
+                </div>
+                <div class="ai-field">
+                    <span class="ai-label">Description:</span>
+                    <span id="ai-description"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="caption-input">Caption (auto-filled by AI, editable)</label>
+            <input type="text" id="caption-input" placeholder="A brief description...">
+        </div>
+
+        <div class="actions">
+            <button id="submit-btn" class="btn btn-primary">Upload</button>
+        </div>
+    </div>
+
+    <script src="/upload/app.js"></script>
+</body>
+</html>
