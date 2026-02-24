@@ -197,18 +197,31 @@
         reader.readAsDataURL(fileOrBlob);
     }
 
-    // --- Login button with state parameter ---
+    // --- Login button: fetch client ID from API, then redirect ---
     loginBtn.addEventListener('click', function() {
-        var clientId = loginBtn.dataset.clientId;
-        var redirectUri = window.location.origin + '/upload/';
-        var state = generateState();
-        sessionStorage.setItem('oauth_state', state);
-        var url = 'https://github.com/login/oauth/authorize' +
-            '?client_id=' + encodeURIComponent(clientId) +
-            '&redirect_uri=' + encodeURIComponent(redirectUri) +
-            '&scope=public_repo' +
-            '&state=' + encodeURIComponent(state);
-        window.location.href = url;
+        loginBtn.disabled = true;
+        showStatus('Connecting to GitHub...', 'info');
+
+        fetch('/api/oauth-client-id')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.error || !data.client_id) {
+                    throw new Error(data.error || 'OAuth not configured');
+                }
+                var redirectUri = window.location.origin + '/upload/';
+                var state = generateState();
+                sessionStorage.setItem('oauth_state', state);
+                var url = 'https://github.com/login/oauth/authorize' +
+                    '?client_id=' + encodeURIComponent(data.client_id) +
+                    '&redirect_uri=' + encodeURIComponent(redirectUri) +
+                    '&scope=public_repo' +
+                    '&state=' + encodeURIComponent(state);
+                window.location.href = url;
+            })
+            .catch(function(err) {
+                showStatus('Login failed: ' + err.message, 'error');
+                loginBtn.disabled = false;
+            });
     });
 
     // --- File input change ---
