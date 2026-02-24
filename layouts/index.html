@@ -65,7 +65,7 @@
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <div class="lightbox-content">
         <div class="lightbox-header">
-            <div class="lightbox-site-title">Matt Walker</div>
+            <a href="/" class="lightbox-site-title">Matt Walker</a>
             <div class="lightbox-subtitle">Photography</div>
         </div>
         <div class="lightbox-img-wrap">
@@ -116,10 +116,7 @@
     });
 
     function closeLightbox() {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
-        img.src = '';
-        currentIndex = -1;
+        window.location.href = '/photography/';
     }
 
     navPrev.addEventListener('click', function(e) {
@@ -134,7 +131,10 @@
 
     closeBtn.addEventListener('click', closeLightbox);
     overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeLightbox();
+        if (e.target === img) return;
+        if (e.target.closest('.lightbox-nav')) return;
+        if (e.target.closest('.lightbox-site-title')) return;
+        closeLightbox();
     });
     document.addEventListener('keydown', function(e) {
         if (!overlay.classList.contains('active')) return;

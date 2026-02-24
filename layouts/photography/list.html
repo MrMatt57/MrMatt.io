@@ -3,7 +3,10 @@
     {{- range .Pages }}
     {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
-    <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline" data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+    <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline"
+       data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
+       data-title="{{ .Title }}"
+       data-description="{{ .Params.description }}">
         {{- $thumb := $img.Fill "300x300 q85" }}
         <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
     </a>
@@ -13,19 +16,53 @@
 {{- if gt (len .Pages) 0 }}
 <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img class="lightbox-img" src="" alt="" />
+    <div class="lightbox-content">
+        <div class="lightbox-header">
+            <a href="/" class="lightbox-site-title">Matt Walker</a>
+            <div class="lightbox-subtitle">Photography</div>
+        </div>
+        <div class="lightbox-img-wrap">
+            <img class="lightbox-img" src="" alt="" />
+            <div class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</div>
+            <div class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</div>
+        </div>
+        <div class="lightbox-title"></div>
+        <hr class="lightbox-rule" />
+        <div class="lightbox-description"></div>
+    </div>
 </div>
 <script>
 (function() {
     var overlay = document.getElementById('lightbox');
     var img = overlay.querySelector('.lightbox-img');
+    var titleEl = overlay.querySelector('.lightbox-title');
+    var descEl = overlay.querySelector('.lightbox-description');
     var closeBtn = overlay.querySelector('.lightbox-close');
+    var navPrev = overlay.querySelector('.lightbox-nav-prev');
+    var navNext = overlay.querySelector('.lightbox-nav-next');
+    var ruleEl = overlay.querySelector('.lightbox-rule');
+    var links = Array.from(document.querySelectorAll('.photo-thumb-link'));
+    var currentIndex = -1;
 
-    document.querySelectorAll('.photo-thumb-link').forEach(function(link) {
+    function showPhoto(index) {
+        if (index < 0 || index >= links.length) return;
+        currentIndex = index;
+        var link = links[index];
+        img.src = link.href;
+        img.alt = link.dataset.alt || '';
+        titleEl.textContent = link.dataset.title || '';
+        descEl.textContent = link.dataset.description || '';
+        titleEl.style.display = link.dataset.title ? '' : 'none';
+        descEl.style.display = link.dataset.description ? '' : 'none';
+        navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
+        navNext.style.visibility = index < links.length - 1 ? 'visible' : 'hidden';
+        img.onload = function() { ruleEl.style.width = img.offsetWidth + 'px'; };
+    }
+
+    links.forEach(function(link, i) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            img.src = this.href;
-            img.alt = this.dataset.alt || '';
+            showPhoto(i);
             overlay.classList.add('active');
             overlay.setAttribute('aria-hidden', 'false');
         });
@@ -35,14 +72,31 @@
         overlay.classList.remove('active');
         overlay.setAttribute('aria-hidden', 'true');
         img.src = '';
+        currentIndex = -1;
     }
+
+    navPrev.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (currentIndex > 0) showPhoto(currentIndex - 1);
+    });
+
+    navNext.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (currentIndex < links.length - 1) showPhoto(currentIndex + 1);
+    });
 
     closeBtn.addEventListener('click', closeLightbox);
     overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeLightbox();
+        if (e.target === img) return;
+        if (e.target.closest('.lightbox-nav')) return;
+        if (e.target.closest('.lightbox-site-title')) return;
+        closeLightbox();
     });
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
+        if (e.key === 'ArrowRight' && currentIndex < links.length - 1) showPhoto(currentIndex + 1);
     });
 })();
 </script>
