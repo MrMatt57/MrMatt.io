@@ -1,19 +1,14 @@
 {{- define "main" }}
-<div class="wrapper">
-    <section class="home-photography" style="margin-top: 2rem;">
-        <h1>{{ .Title }}</h1>
-        <div class="photo-grid">
-            {{- range .Pages }}
-            {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
-            {{- if $img }}
-            <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline" data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-                {{- $thumb := $img.Fill "300x300 q85" }}
-                <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
-            </a>
-            {{- end }}
-            {{- end }}
-        </div>
-    </section>
+<div class="photo-gallery-grid">
+    {{- range .Pages }}
+    {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+    {{- if $img }}
+    <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline" data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+        {{- $thumb := $img.Fill "300x300 q85" }}
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
+    </a>
+    {{- end }}
+    {{- end }}
 </div>
 {{- if gt (len .Pages) 0 }}
 <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
