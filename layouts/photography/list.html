@@ -13,6 +13,7 @@
     {{- end }}
     {{- end }}
 </div>
+<div id="scroll-sentinel"></div>
 {{- if gt (len .Pages) 0 }}
 <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
@@ -33,6 +34,43 @@
 </div>
 <script>
 (function() {
+    // Progressive rendering: show photos in batches as user scrolls
+    var BATCH_SIZE = 16;
+    var allItems = Array.from(document.querySelectorAll('.photo-gallery-grid .photo-thumb-link'));
+    var shown = 0;
+
+    function showBatch() {
+        var end = Math.min(shown + BATCH_SIZE, allItems.length);
+        for (var i = shown; i < end; i++) {
+            allItems[i].classList.add('visible');
+        }
+        shown = end;
+        if (shown >= allItems.length && observer) {
+            observer.disconnect();
+        }
+    }
+
+    // Hide all items initially, then show first batch
+    allItems.forEach(function(item) { item.classList.add('gallery-item'); });
+    showBatch();
+
+    // IntersectionObserver to load more when sentinel is near viewport
+    var sentinel = document.getElementById('scroll-sentinel');
+    var observer = null;
+    if ('IntersectionObserver' in window && shown < allItems.length) {
+        observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                showBatch();
+            }
+        }, { rootMargin: '400px' });
+        observer.observe(sentinel);
+    } else {
+        // Fallback: show everything
+        allItems.forEach(function(item) { item.classList.add('visible'); });
+        shown = allItems.length;
+    }
+
+    // Lightbox
     var overlay = document.getElementById('lightbox');
     var img = overlay.querySelector('.lightbox-img');
     var titleEl = overlay.querySelector('.lightbox-title');
@@ -41,13 +79,19 @@
     var navPrev = overlay.querySelector('.lightbox-nav-prev');
     var navNext = overlay.querySelector('.lightbox-nav-next');
     var ruleEl = overlay.querySelector('.lightbox-rule');
-    var links = Array.from(document.querySelectorAll('.photo-thumb-link'));
     var currentIndex = -1;
 
     function showPhoto(index) {
-        if (index < 0 || index >= links.length) return;
+        if (index < 0 || index >= allItems.length) return;
         currentIndex = index;
-        var link = links[index];
+        var link = allItems[index];
+        // Reveal if not yet visible (navigated past current batch)
+        if (!link.classList.contains('visible')) {
+            for (var i = shown; i <= index; i++) {
+                allItems[i].classList.add('visible');
+            }
+            shown = Math.max(shown, index + 1);
+        }
         img.src = link.href;
         img.alt = link.dataset.alt || '';
         titleEl.textContent = link.dataset.title || '';
@@ -55,11 +99,11 @@
         titleEl.style.display = link.dataset.title ? '' : 'none';
         descEl.style.display = link.dataset.description ? '' : 'none';
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
-        navNext.style.visibility = index < links.length - 1 ? 'visible' : 'hidden';
+        navNext.style.visibility = index < allItems.length - 1 ? 'visible' : 'hidden';
         img.onload = function() { ruleEl.style.width = img.offsetWidth + 'px'; };
     }
 
-    links.forEach(function(link, i) {
+    allItems.forEach(function(link, i) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             showPhoto(i);
@@ -82,7 +126,7 @@
 
     navNext.addEventListener('click', function(e) {
         e.stopPropagation();
-        if (currentIndex < links.length - 1) showPhoto(currentIndex + 1);
+        if (currentIndex < allItems.length - 1) showPhoto(currentIndex + 1);
     });
 
     closeBtn.addEventListener('click', closeLightbox);
@@ -96,7 +140,7 @@
         if (!overlay.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
-        if (e.key === 'ArrowRight' && currentIndex < links.length - 1) showPhoto(currentIndex + 1);
+        if (e.key === 'ArrowRight' && currentIndex < allItems.length - 1) showPhoto(currentIndex + 1);
     });
 })();
 </script>
