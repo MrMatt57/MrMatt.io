@@ -67,6 +67,7 @@
         <div class="lightbox-header">
             <a href="/" class="lightbox-site-title">Matt Walker</a>
             <div class="lightbox-subtitle">Photography</div>
+            <hr class="lightbox-header-rule" />
         </div>
         <div class="lightbox-img-wrap">
             <img class="lightbox-img" src="" alt="" />
@@ -88,8 +89,15 @@
     var navPrev = overlay.querySelector('.lightbox-nav-prev');
     var navNext = overlay.querySelector('.lightbox-nav-next');
     var ruleEl = overlay.querySelector('.lightbox-rule');
+    var headerRuleEl = overlay.querySelector('.lightbox-header-rule');
     var links = Array.from(document.querySelectorAll('.photo-thumb-link'));
     var currentIndex = -1;
+
+    function syncRuleWidths() {
+        var w = img.offsetWidth + 'px';
+        ruleEl.style.width = w;
+        headerRuleEl.style.width = w;
+    }
 
     function showPhoto(index) {
         if (index < 0 || index >= links.length) return;
@@ -103,7 +111,7 @@
         descEl.style.display = link.dataset.description ? '' : 'none';
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < links.length - 1 ? 'visible' : 'hidden';
-        img.onload = function() { ruleEl.style.width = img.offsetWidth + 'px'; };
+        img.onload = syncRuleWidths;
     }
 
     links.forEach(function(link, i) {
