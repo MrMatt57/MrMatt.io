@@ -24,14 +24,16 @@
             <div class="lightbox-subtitle">Photography</div>
             <hr class="lightbox-header-rule" />
         </div>
-        <div class="lightbox-img-wrap">
-            <img class="lightbox-img" src="" alt="" />
-            <div class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</div>
-            <div class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</div>
+        <div class="lightbox-img-and-meta">
+            <div class="lightbox-img-wrap">
+                <img class="lightbox-img" src="" alt="" />
+                <div class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</div>
+                <div class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</div>
+            </div>
+            <div class="lightbox-title"></div>
+            <hr class="lightbox-rule" />
+            <div class="lightbox-description"></div>
         </div>
-        <div class="lightbox-title"></div>
-        <hr class="lightbox-rule" />
-        <div class="lightbox-description"></div>
     </div>
 </div>
 <script>
@@ -83,6 +85,7 @@
     var ruleEl = overlay.querySelector('.lightbox-rule');
     var headerRuleEl = overlay.querySelector('.lightbox-header-rule');
     var currentIndex = -1;
+    var showGen = 0;
 
     function syncRuleWidths() {
         var w = img.offsetWidth + 'px';
@@ -100,7 +103,9 @@
     function showPhoto(index) {
         if (index < 0 || index >= allItems.length) return;
         currentIndex = index;
+        var gen = ++showGen;
         var link = allItems[index];
+        var hadSrc = !!img.getAttribute('src');
         // Reveal if not yet visible (navigated past current batch)
         if (!link.classList.contains('visible')) {
             for (var i = shown; i <= index; i++) {
@@ -108,19 +113,38 @@
             }
             shown = Math.max(shown, index + 1);
         }
-        img.src = link.href;
-        img.alt = link.dataset.alt || '';
         titleEl.textContent = link.dataset.title || '';
         descEl.textContent = link.dataset.description || '';
         titleEl.style.display = link.dataset.title ? '' : 'none';
         descEl.style.display = link.dataset.description ? '' : 'none';
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < allItems.length - 1 ? 'visible' : 'hidden';
-        img.onload = syncRuleWidths;
-        // Update URL hash
         if (link.dataset.slug) {
             history.replaceState(null, '', '#' + link.dataset.slug);
         }
+
+        var preload = new Image();
+        preload.onload = function() {
+            if (gen !== showGen) return;
+            function applyImage() {
+                if (gen !== showGen) return;
+                img.src = link.href;
+                img.alt = link.dataset.alt || '';
+                requestAnimationFrame(function() {
+                    if (gen !== showGen) return;
+                    syncRuleWidths();
+                    img.classList.remove('lightbox-img-loading');
+                });
+            }
+            if (hadSrc) {
+                img.classList.add('lightbox-img-loading');
+                setTimeout(applyImage, 150);
+            } else {
+                img.classList.add('lightbox-img-loading');
+                applyImage();
+            }
+        };
+        preload.src = link.href;
     }
 
     function openLightbox(index) {
