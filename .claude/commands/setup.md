@@ -91,7 +91,7 @@ gh api repos/{owner}/{repo}/branches/main/protection \
     "strict": true,
     "contexts": ["build-and-deploy"]
   },
-  "enforce_admins": false,
+  "enforce_admins": true,
   "required_pull_request_reviews": null,
   "restrictions": null,
   "required_linear_history": true,
