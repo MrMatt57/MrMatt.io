@@ -12,27 +12,11 @@ layout: "single"
 - Custom CSS with [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) typography
 - No npm, no build tools — Hugo's built-in asset pipeline handles everything
 
-### Photo Upload
+### Development
 
-- Vanilla JS progressive web app at [`/upload`](/upload) — no frameworks, no dependencies
-- Android share target — share a photo directly from the camera roll to the site
-- Service Worker with network-first caching and IndexedDB for offline queuing
-- Native EXIF parsing from raw JPEG bytes to extract photo dates — no libraries
-- Client-side image conversion and resizing via Canvas API before sending to AI
-
-### AI-Powered Descriptions
-
-- [Anthropic Claude](https://www.anthropic.com/) Haiku 4.5 vision model generates photo titles, alt text, and descriptions from uploaded images
-- Cloudflare Pages Function proxies requests to the Anthropic API, keeping the API key server-side
-- Feedback loop — review the AI output, provide guidance, and regenerate until it's right
-- Structured JSON output parsed directly into Hugo front matter fields
-
-### Automated Publishing
-
-- GitHub OAuth authentication scoped to the repo owner
-- Upload creates a feature branch (`photo/YYYY-MM-DD-slug`), commits the image and Hugo content file, opens a PR, and enables auto-merge — all from the phone
-- GitHub REST API for branches, blobs, trees, and commits; GraphQL API for the auto-merge mutation
-- Photo goes from camera roll to live on the site with no terminal, no laptop
+- Spec-driven workflow — every feature starts with a numbered spec in `.specs/` before any code is written
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) for interactive development — `/feature` creates a spec + git worktree, `/ship` commits, pushes, opens a PR with auto-merge, and cleans up
+- Git worktree isolation keeps the main checkout clean while features are in progress
 
 ### Serverless Backend
 
@@ -53,11 +37,27 @@ layout: "single"
 - Cloudflare DNS
 - Cloudflare Web Analytics — server-side, no JavaScript tag
 
-### Development
+### Automated Publishing
 
-- Spec-driven workflow — every feature starts with a numbered spec in `.specs/` before any code is written
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) for interactive development — `/feature` creates a spec + git worktree, `/ship` commits, pushes, opens a PR with auto-merge, and cleans up
-- Git worktree isolation keeps the main checkout clean while features are in progress
+- GitHub OAuth authentication scoped to the repo owner
+- Upload creates a feature branch (`photo/YYYY-MM-DD-slug`), commits the image and Hugo content file, opens a PR, and enables auto-merge — all from the phone
+- GitHub REST API for branches, blobs, trees, and commits; GraphQL API for the auto-merge mutation
+- Photo goes from camera roll to live on the site with no terminal, no laptop
+
+### Photo Upload
+
+- Vanilla JS progressive web app at [`/upload`](/upload) — no frameworks, no dependencies
+- Android share target — share a photo directly from the camera roll to the site
+- Service Worker with network-first caching and IndexedDB for offline queuing
+- Native EXIF parsing from raw JPEG bytes to extract photo dates — no libraries
+- Client-side image conversion and resizing via Canvas API before sending to AI
+
+### AI-Powered Descriptions
+
+- [Anthropic Claude](https://www.anthropic.com/) Haiku 4.5 vision model generates photo titles, alt text, and descriptions from uploaded images
+- Cloudflare Pages Function proxies requests to the Anthropic API, keeping the API key server-side
+- Feedback loop — review the AI output, provide guidance, and regenerate until it's right
+- Structured JSON output parsed directly into Hugo front matter fields
 
 ### Design Philosophy
 
