@@ -1,8 +1,9 @@
-var CACHE_NAME = 'photo-upload-v1';
+var CACHE_NAME = 'photo-upload-v2';
 var ASSETS = [
     '/upload/',
     '/upload/style.css',
-    '/upload/app.js'
+    '/upload/app.js',
+    '/upload/manifest.json'
 ];
 
 self.addEventListener('install', function(e) {
