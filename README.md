@@ -24,12 +24,19 @@ Personal website of **Matt Walker** — software engineer, data & AI practitione
 ## Design Philosophy
 
 **Minimal and fast** — no JS frameworks, no bloat, static HTML/CSS.
+
 **Content-first** — the site publishes writing and serves as a professional presence.
+
 **Zero dependencies** — vanilla JS, no npm, no external libraries anywhere.
+
 **Own your stack** — static files you control, no platform lock-in.
+
 **Low maintenance** — no comment systems, no dynamic backends.
+
 **AI as a collaborator** — Claude generates, the human reviews and refines.
+
 **Spec-driven development** — plan before you build, every feature documented.
+
 **Automation where it matters** — AI and APIs handle the tedious parts so publishing stays frictionless.
 
 ## Built With
