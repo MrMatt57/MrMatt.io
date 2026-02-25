@@ -6,6 +6,17 @@ layout: "single"
 
 *Source available on GitHub: [MrMatt57/MrMatt.io](https://github.com/MrMatt57/MrMatt.io)*
 
+### Design Philosophy
+
+- Minimal and fast — no JS frameworks, no bloat, static HTML/CSS
+- Content-first — the site publishes writing and serves as a professional presence
+- Zero dependencies — vanilla JS, no npm, no external libraries anywhere
+- Own your stack — static files you control, no platform lock-in
+- Low maintenance — no comment systems, no dynamic backends
+- AI as a collaborator — Claude generates, the human reviews and refines
+- Spec-driven development — plan before you build, every feature documented
+- Automation where it matters — AI and APIs handle the tedious parts so publishing stays frictionless
+
 ### Static Site
 
 - [Hugo](https://gohugo.io/) (extended) with [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme (git submodule)
@@ -59,9 +70,3 @@ layout: "single"
 - Feedback loop — review the AI output, provide guidance, and regenerate until it's right
 - Structured JSON output parsed directly into Hugo front matter fields
 
-### Design Philosophy
-
-- Minimal and fast — no JS frameworks, no bloat, static HTML/CSS
-- Content-first — the site publishes writing and serves as a professional presence
-- Low maintenance — no comment systems, no dynamic backends
-- Automation where it matters — AI and APIs handle the tedious parts so publishing stays frictionless
