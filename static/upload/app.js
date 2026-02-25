@@ -11,7 +11,6 @@
     var loginBtn = document.getElementById('login-btn');
     var uploadForm = document.getElementById('upload-form');
     var photoInput = document.getElementById('photo-input');
-    var captionInput = document.getElementById('caption-input');
     var previewEl = document.getElementById('preview');
     var previewImg = document.getElementById('preview-img');
     var submitBtn = document.getElementById('submit-btn');
@@ -25,8 +24,6 @@
     var aiFeedback = document.getElementById('ai-feedback');
     var regenerateBtn = document.getElementById('regenerate-btn');
 
-    // AI-generated metadata stored here
-    var aiMeta = { title: '', alt: '', description: '' };
     var currentPhotoFile = null;
 
     function getToken() {
@@ -146,10 +143,6 @@
             previewEl.classList.add('visible');
             window._sharedPhoto = blob;
 
-            if (meta && meta.caption) {
-                captionInput.value = meta.caption;
-            }
-
             caches.delete('shared-photos');
             window.history.replaceState({}, '', '/upload/');
 
@@ -162,11 +155,11 @@
     function describePhoto(fileOrBlob, feedback) {
         currentPhotoFile = fileOrBlob;
         aiSection.style.display = 'block';
-        aiStatus.textContent = 'Generating AI description...';
+        aiStatus.textContent = feedback ? 'Regenerating with your feedback...' : 'Analyzing photo...';
         aiStatus.style.display = 'block';
-        aiTitle.textContent = '';
-        aiAlt.textContent = '';
-        aiDesc.textContent = '';
+        aiTitle.value = '';
+        aiAlt.value = '';
+        aiDesc.value = '';
         regenerateBtn.disabled = true;
 
         var reader = new FileReader();
@@ -187,22 +180,14 @@
             .then(function(r) { return r.json(); })
             .then(function(data) {
                 if (data.error) throw new Error(data.error);
-                aiMeta.title = data.title || '';
-                aiMeta.alt = data.alt || '';
-                aiMeta.description = data.description || '';
                 aiStatus.style.display = 'none';
-                aiTitle.textContent = aiMeta.title;
-                aiAlt.textContent = aiMeta.alt;
-                aiDesc.textContent = aiMeta.description;
+                aiTitle.value = data.title || '';
+                aiAlt.value = data.alt || '';
+                aiDesc.value = data.description || '';
                 regenerateBtn.disabled = false;
-                // Pre-fill caption if empty
-                if (!captionInput.value.trim() && aiMeta.title) {
-                    captionInput.value = aiMeta.title;
-                }
             })
             .catch(function(err) {
                 aiStatus.textContent = 'AI description unavailable: ' + err.message;
-                aiMeta = { title: '', alt: '', description: '' };
                 regenerateBtn.disabled = false;
             });
         };
@@ -278,11 +263,13 @@
         submitBtn.disabled = true;
         showStatus('Uploading photo...', 'info');
 
-        var caption = captionInput.value.trim();
+        var title = aiTitle.value.trim();
+        var alt = aiAlt.value.trim();
+        var description = aiDesc.value.trim();
         var now = new Date();
         var dateStr = now.toISOString().slice(0, 10);
-        var slug = caption
-            ? caption.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40)
+        var slug = title
+            ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40)
             : 'photo-' + now.getTime().toString(36);
         var folderName = dateStr + '-' + slug;
         var basePath = 'content/photography/' + folderName;
@@ -293,15 +280,15 @@
             var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
             var imagePath = basePath + '/photo.' + ext;
 
-            var title = caption || aiMeta.title || 'Photo ' + dateStr;
+            var pageTitle = title || 'Photo ' + dateStr;
             var frontMatter = '---\n' +
-                'title: "' + title.replace(/"/g, '\\"') + '"\n' +
+                'title: "' + pageTitle.replace(/"/g, '\\"') + '"\n' +
                 'date: "' + dateStr + '"\n';
-            if (aiMeta.alt) {
-                frontMatter += 'alt: "' + aiMeta.alt.replace(/"/g, '\\"') + '"\n';
+            if (alt) {
+                frontMatter += 'alt: "' + alt.replace(/"/g, '\\"') + '"\n';
             }
-            if (aiMeta.description) {
-                frontMatter += 'description: "' + aiMeta.description.replace(/"/g, '\\"') + '"\n';
+            if (description) {
+                frontMatter += 'description: "' + description.replace(/"/g, '\\"') + '"\n';
             }
             frontMatter += 'draft: false\n---\n';
 
@@ -314,13 +301,14 @@
                 .then(function() {
                     showStatus('Photo uploaded! It will appear on the site after the next deploy.', 'success');
                     photoInput.value = '';
-                    captionInput.value = '';
                     previewEl.classList.remove('visible');
                     aiSection.style.display = 'none';
                     window._sharedPhoto = null;
                     currentPhotoFile = null;
                     aiFeedback.value = '';
-                    aiMeta = { title: '', alt: '', description: '' };
+                    aiTitle.value = '';
+                    aiAlt.value = '';
+                    aiDesc.value = '';
                 })
                 .catch(function(err) {
                     showStatus('Upload failed: ' + err.message, 'error');

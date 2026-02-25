@@ -38,27 +38,23 @@
             <div id="ai-status" class="status info" style="display:none;"></div>
             <div class="ai-results">
                 <div class="ai-field">
-                    <span class="ai-label">Title:</span>
-                    <span id="ai-title"></span>
+                    <label class="ai-label" for="ai-title">Title</label>
+                    <input type="text" id="ai-title" placeholder="Short title...">
                 </div>
                 <div class="ai-field">
-                    <span class="ai-label">Alt text:</span>
-                    <span id="ai-alt"></span>
+                    <label class="ai-label" for="ai-alt">Alt text</label>
+                    <input type="text" id="ai-alt" placeholder="Descriptive alt text...">
                 </div>
                 <div class="ai-field">
-                    <span class="ai-label">Description:</span>
-                    <span id="ai-description"></span>
+                    <label class="ai-label" for="ai-description">Description</label>
+                    <textarea id="ai-description" rows="2" placeholder="Photo description..."></textarea>
                 </div>
             </div>
             <div class="ai-feedback">
-                <input type="text" id="ai-feedback" placeholder="e.g. &quot;This is a sunrise over the harbor, keep it simple&quot;">
+                <label class="ai-label" for="ai-feedback">Feedback</label>
+                <textarea id="ai-feedback" rows="2" placeholder="e.g. &quot;This is a sunrise over the harbor, keep it simple&quot;"></textarea>
                 <button id="regenerate-btn" class="btn btn-secondary">Regenerate</button>
             </div>
-        </div>
-
-        <div class="field">
-            <label for="caption-input">Caption (auto-filled by AI, editable)</label>
-            <input type="text" id="caption-input" placeholder="A brief description...">
         </div>
 
         <div class="actions">
