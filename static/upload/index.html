@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/upload/style.css">
+    <link rel="stylesheet" href="/upload/style.css?v=5">
 </head>
 <body>
     <h1>Photo Upload</h1>
@@ -17,7 +17,7 @@
     <div id="status" class="status" style="display:none;"></div>
 
     <div id="auth-section" class="auth-section">
-        <p style="margin-bottom: 1rem;">Log in with GitHub to upload photos to the gallery.</p>
+        <p>Log in with GitHub to upload photos to the gallery.</p>
         <button id="login-btn" class="btn btn-primary">Log in with GitHub</button>
     </div>
 
@@ -25,7 +25,7 @@
         <div id="user-info" class="user-info" style="display:none;"></div>
         <button id="logout-btn" class="logout-link" style="display:none;">Log out</button>
 
-        <div class="field" style="margin-top: 1rem;">
+        <div class="field">
             <label for="photo-input">Photo</label>
             <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp">
         </div>
@@ -38,21 +38,20 @@
             <div id="ai-status" class="status info" style="display:none;"></div>
             <div class="ai-results">
                 <div class="ai-field">
-                    <label class="ai-label" for="ai-title">Title</label>
-                    <input type="text" id="ai-title" placeholder="Short title...">
+                    <span class="ai-label">Title</span>
+                    <span id="ai-title" class="ai-value"></span>
                 </div>
                 <div class="ai-field">
-                    <label class="ai-label" for="ai-alt">Alt text</label>
-                    <input type="text" id="ai-alt" placeholder="Descriptive alt text...">
+                    <span class="ai-label">Alt text</span>
+                    <textarea id="ai-alt" class="ai-value" rows="4" readonly></textarea>
                 </div>
                 <div class="ai-field">
-                    <label class="ai-label" for="ai-description">Description</label>
-                    <textarea id="ai-description" rows="2" placeholder="Photo description..."></textarea>
+                    <span class="ai-label">Description</span>
+                    <textarea id="ai-description" class="ai-value" rows="8" readonly></textarea>
                 </div>
             </div>
             <div class="ai-feedback">
-                <label class="ai-label" for="ai-feedback">Feedback</label>
-                <textarea id="ai-feedback" rows="2" placeholder="e.g. &quot;This is a sunrise over the harbor, keep it simple&quot;"></textarea>
+                <textarea id="ai-feedback" rows="4" placeholder="Provide direction, e.g. &quot;this is a sunrise over the harbor, keep it simple&quot;"></textarea>
                 <button id="regenerate-btn" class="btn btn-secondary">Regenerate</button>
             </div>
         </div>
@@ -62,6 +61,6 @@
         </div>
     </div>
 
-    <script src="/upload/app.js"></script>
+    <script src="/upload/app.js?v=5"></script>
 </body>
 </html>

@@ -257,7 +257,7 @@
         aiSection.style.display = 'block';
         aiStatus.textContent = feedback ? 'Regenerating with your feedback...' : 'Analyzing photo...';
         aiStatus.style.display = 'block';
-        aiTitle.value = '';
+        aiTitle.textContent = '';
         aiAlt.value = '';
         aiDesc.value = '';
         regenerateBtn.disabled = true;
@@ -281,7 +281,7 @@
             .then(function(data) {
                 if (data.error) throw new Error(data.error);
                 aiStatus.style.display = 'none';
-                aiTitle.value = data.title || '';
+                aiTitle.textContent = data.title || '';
                 aiAlt.value = data.alt || '';
                 aiDesc.value = data.description || '';
                 regenerateBtn.disabled = false;
@@ -363,7 +363,7 @@
         submitBtn.disabled = true;
         showStatus('Uploading photo...', 'info');
 
-        var title = aiTitle.value.trim();
+        var title = aiTitle.textContent.trim();
         var alt = aiAlt.value.trim();
         var description = aiDesc.value.trim();
 
@@ -408,7 +408,7 @@
                         window._sharedPhoto = null;
                         currentPhotoFile = null;
                         aiFeedback.value = '';
-                        aiTitle.value = '';
+                        aiTitle.textContent = '';
                         aiAlt.value = '';
                         aiDesc.value = '';
                     })

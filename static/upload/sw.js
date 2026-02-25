@@ -1,4 +1,4 @@
-var CACHE_NAME = 'photo-upload-v3';
+var CACHE_NAME = 'photo-upload-v5';
 var ASSETS = [
     '/upload/',
     '/upload/style.css',
