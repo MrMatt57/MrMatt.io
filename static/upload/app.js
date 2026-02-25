@@ -26,6 +26,106 @@
 
     var currentPhotoFile = null;
 
+    // --- Extract EXIF date from JPEG ---
+    function extractExifDate(file) {
+        return new Promise(function(resolve) {
+            if (file.type !== 'image/jpeg' && file.type !== 'image/jpg') {
+                return resolve(null);
+            }
+            var reader = new FileReader();
+            reader.onload = function() {
+                try {
+                    var buf = new DataView(reader.result);
+                    // Check JPEG SOI marker
+                    if (buf.getUint16(0) !== 0xFFD8) return resolve(null);
+
+                    var offset = 2;
+                    while (offset < buf.byteLength - 1) {
+                        var marker = buf.getUint16(offset);
+                        if (marker === 0xFFE1) { // APP1 (EXIF)
+                            var date = parseExifSegment(buf, offset + 4);
+                            return resolve(date);
+                        }
+                        // Skip non-APP1 markers
+                        if ((marker & 0xFF00) !== 0xFF00) return resolve(null);
+                        var segLen = buf.getUint16(offset + 2);
+                        offset += 2 + segLen;
+                    }
+                    resolve(null);
+                } catch (e) {
+                    resolve(null);
+                }
+            };
+            reader.onerror = function() { resolve(null); };
+            // Read first 128KB — enough for EXIF
+            reader.readAsArrayBuffer(file.slice(0, 131072));
+        });
+    }
+
+    function parseExifSegment(buf, tiffStart) {
+        // Verify "Exif\0\0" header
+        if (buf.getUint32(tiffStart) !== 0x45786966 || buf.getUint16(tiffStart + 4) !== 0x0000) {
+            return null;
+        }
+        var base = tiffStart + 6; // Start of TIFF header
+        var endian = buf.getUint16(base);
+        var le = (endian === 0x4949); // II = little-endian, MM = big-endian
+        if (!le && endian !== 0x4D4D) return null;
+
+        var ifdOffset = buf.getUint32(base + 4, le);
+        var dateTime = null;
+        var dateTimeOriginal = readIfdDate(buf, base, base + ifdOffset, le, 0x0132); // DateTime from IFD0
+
+        // Find ExifIFD pointer (tag 0x8769)
+        var exifIfdOffset = readIfdPointer(buf, base, base + ifdOffset, le, 0x8769);
+        if (exifIfdOffset !== null) {
+            var dto = readIfdDate(buf, base, base + exifIfdOffset, le, 0x9003); // DateTimeOriginal
+            if (dto) return dto;
+        }
+
+        return dateTimeOriginal; // Fallback to DateTime
+    }
+
+    function readIfdPointer(buf, base, ifdStart, le, targetTag) {
+        try {
+            var count = buf.getUint16(ifdStart, le);
+            for (var i = 0; i < count; i++) {
+                var entryStart = ifdStart + 2 + (i * 12);
+                var tag = buf.getUint16(entryStart, le);
+                if (tag === targetTag) {
+                    return buf.getUint32(entryStart + 8, le);
+                }
+            }
+        } catch (e) {}
+        return null;
+    }
+
+    function readIfdDate(buf, base, ifdStart, le, targetTag) {
+        try {
+            var count = buf.getUint16(ifdStart, le);
+            for (var i = 0; i < count; i++) {
+                var entryStart = ifdStart + 2 + (i * 12);
+                var tag = buf.getUint16(entryStart, le);
+                if (tag === targetTag) {
+                    var type = buf.getUint16(entryStart + 2, le);
+                    var numValues = buf.getUint32(entryStart + 4, le);
+                    if (type !== 2) continue; // ASCII type
+                    var valOffset = buf.getUint32(entryStart + 8, le);
+                    var str = '';
+                    for (var j = 0; j < numValues - 1; j++) {
+                        str += String.fromCharCode(buf.getUint8(base + valOffset + j));
+                    }
+                    // EXIF date format: "YYYY:MM:DD HH:MM:SS"
+                    var match = str.match(/^(\d{4}):(\d{2}):(\d{2})/);
+                    if (match) {
+                        return match[1] + '-' + match[2] + '-' + match[3];
+                    }
+                }
+            }
+        } catch (e) {}
+        return null;
+    }
+
     function getToken() {
         return localStorage.getItem('gh_token');
     }
@@ -266,58 +366,61 @@
         var title = aiTitle.value.trim();
         var alt = aiAlt.value.trim();
         var description = aiDesc.value.trim();
-        var now = new Date();
-        var dateStr = now.toISOString().slice(0, 10);
-        var slug = title
-            ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40)
-            : 'photo-' + now.getTime().toString(36);
-        var folderName = dateStr + '-' + slug;
-        var basePath = 'content/photography/' + folderName;
 
-        var reader = new FileReader();
-        reader.onload = function() {
-            var base64 = reader.result.split(',')[1];
-            var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
-            var imagePath = basePath + '/photo.' + ext;
+        extractExifDate(file).then(function(exifDate) {
+            var now = new Date();
+            var dateStr = exifDate || now.toISOString().slice(0, 10);
+            var slug = title
+                ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40)
+                : 'photo-' + now.getTime().toString(36);
+            var folderName = dateStr + '-' + slug;
+            var basePath = 'content/photography/' + folderName;
 
-            var pageTitle = title || 'Photo ' + dateStr;
-            var frontMatter = '---\n' +
-                'title: "' + pageTitle.replace(/"/g, '\\"') + '"\n' +
-                'date: "' + dateStr + '"\n';
-            if (alt) {
-                frontMatter += 'alt: "' + alt.replace(/"/g, '\\"') + '"\n';
-            }
-            if (description) {
-                frontMatter += 'description: "' + description.replace(/"/g, '\\"') + '"\n';
-            }
-            frontMatter += 'draft: false\n---\n';
+            var reader = new FileReader();
+            reader.onload = function() {
+                var base64 = reader.result.split(',')[1];
+                var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
+                var imagePath = basePath + '/photo.' + ext;
 
-            var indexPath = basePath + '/index.md';
+                var pageTitle = title || 'Photo ' + dateStr;
+                var frontMatter = '---\n' +
+                    'title: "' + pageTitle.replace(/"/g, '\\"') + '"\n' +
+                    'date: "' + dateStr + '"\n';
+                if (alt) {
+                    frontMatter += 'alt: "' + alt.replace(/"/g, '\\"') + '"\n';
+                }
+                if (description) {
+                    frontMatter += 'description: "' + description.replace(/"/g, '\\"') + '"\n';
+                }
+                frontMatter += 'draft: false\n---\n';
 
-            commitFile(token, imagePath, base64, 'feat: add photo ' + folderName)
-                .then(function() {
-                    return commitFile(token, indexPath, btoa(unescape(encodeURIComponent(frontMatter))), 'feat: add photo metadata ' + folderName);
-                })
-                .then(function() {
-                    showStatus('Photo uploaded! It will appear on the site after the next deploy.', 'success');
-                    photoInput.value = '';
-                    previewEl.classList.remove('visible');
-                    aiSection.style.display = 'none';
-                    window._sharedPhoto = null;
-                    currentPhotoFile = null;
-                    aiFeedback.value = '';
-                    aiTitle.value = '';
-                    aiAlt.value = '';
-                    aiDesc.value = '';
-                })
-                .catch(function(err) {
-                    showStatus('Upload failed: ' + err.message, 'error');
-                })
-                .finally(function() {
-                    submitBtn.disabled = false;
-                });
-        };
-        reader.readAsDataURL(file);
+                var indexPath = basePath + '/index.md';
+
+                commitFile(token, imagePath, base64, 'feat: add photo ' + folderName)
+                    .then(function() {
+                        return commitFile(token, indexPath, btoa(unescape(encodeURIComponent(frontMatter))), 'feat: add photo metadata ' + folderName);
+                    })
+                    .then(function() {
+                        showStatus('Photo uploaded! It will appear on the site after the next deploy.', 'success');
+                        photoInput.value = '';
+                        previewEl.classList.remove('visible');
+                        aiSection.style.display = 'none';
+                        window._sharedPhoto = null;
+                        currentPhotoFile = null;
+                        aiFeedback.value = '';
+                        aiTitle.value = '';
+                        aiAlt.value = '';
+                        aiDesc.value = '';
+                    })
+                    .catch(function(err) {
+                        showStatus('Upload failed: ' + err.message, 'error');
+                    })
+                    .finally(function() {
+                        submitBtn.disabled = false;
+                    });
+            };
+            reader.readAsDataURL(file);
+        });
     });
 
     function commitFile(token, path, contentBase64, message) {

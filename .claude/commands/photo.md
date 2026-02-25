@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(cp *), Bash(mkdir *), Bash(ls *), Read, Write, Glob
+allowed-tools: Bash(cp *), Bash(mkdir *), Bash(ls *), Bash(python3 *), Bash(python *), Read, Write, Glob
 ---
 
 # /photo — Add a photo to the photography gallery
@@ -23,11 +23,38 @@ Look at the image carefully and determine:
 
 Tell the user what you see and confirm the title, alt text, and slug before proceeding. Use `AskUserQuestion` if needed.
 
-## Step 3: Create the Page Bundle
+## Step 3: Extract the Photo Date
 
-1. Create the directory: `content/photography/{slug}/`
-2. Copy the image into the bundle: `content/photography/{slug}/photo.{ext}` (preserve the original file extension)
-3. Create `content/photography/{slug}/index.md` with this front matter:
+Before creating the page bundle, try to extract the original capture date from the image's EXIF metadata.
+
+Run this command to extract the EXIF date (try `python3` first, fall back to `python`):
+
+```bash
+python3 -c "
+from PIL import Image
+from PIL.ExifTags import Base
+img = Image.open('$ARGUMENTS')
+exif = img.getexif()
+dto = exif.get(Base.DateTimeOriginal) or exif.get(Base.DateTime)
+if dto: print(dto[:10].replace(':', '-'))
+" 2>/dev/null || python -c "
+from PIL import Image
+from PIL.ExifTags import Base
+img = Image.open('$ARGUMENTS')
+exif = img.getexif()
+dto = exif.get(Base.DateTimeOriginal) or exif.get(Base.DateTime)
+if dto: print(dto[:10].replace(':', '-'))
+" 2>/dev/null
+```
+
+- If the command outputs a date (e.g., `2025-08-10`), use that as the photo date.
+- If the command fails or outputs nothing (no EXIF data, no Python/Pillow available), fall back to today's date.
+
+## Step 4: Create the Page Bundle
+
+1. Create the directory: `content/photography/{date}-{slug}/` (using the date from Step 3)
+2. Copy the image into the bundle: `content/photography/{date}-{slug}/photo.{ext}` (preserve the original file extension)
+3. Create `content/photography/{date}-{slug}/index.md` with this front matter:
 
 ```yaml
 ---
@@ -38,10 +65,10 @@ draft: false
 ---
 ```
 
-Use today's date for the `date` field.
+Use the date extracted in Step 3 for both the directory name and the `date` field.
 
-## Step 4: Verify
+## Step 5: Verify
 
-- Run `ls content/photography/{slug}/` to confirm both files exist.
+- Run `ls content/photography/{date}-{slug}/` to confirm both files exist.
 - Tell the user the photo has been added and will appear automatically on the home page and at `/photography/`.
 - Remind them to run `hugo server -D` to preview if the server isn't already running.
