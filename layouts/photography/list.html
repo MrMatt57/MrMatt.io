@@ -84,6 +84,7 @@
     var navNext = overlay.querySelector('.lightbox-nav-next');
     var ruleEl = overlay.querySelector('.lightbox-rule');
     var headerRuleEl = overlay.querySelector('.lightbox-header-rule');
+    var imgAndMeta = overlay.querySelector('.lightbox-img-and-meta');
     var currentIndex = -1;
     var showGen = 0;
 
@@ -113,10 +114,6 @@
             }
             shown = Math.max(shown, index + 1);
         }
-        titleEl.textContent = link.dataset.title || '';
-        descEl.textContent = link.dataset.description || '';
-        titleEl.style.display = link.dataset.title ? '' : 'none';
-        descEl.style.display = link.dataset.description ? '' : 'none';
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < allItems.length - 1 ? 'visible' : 'hidden';
         if (link.dataset.slug) {
@@ -126,22 +123,26 @@
         var preload = new Image();
         preload.onload = function() {
             if (gen !== showGen) return;
-            function applyImage() {
+            function applyContent() {
                 if (gen !== showGen) return;
                 img.src = link.href;
                 img.alt = link.dataset.alt || '';
+                titleEl.textContent = link.dataset.title || '';
+                descEl.textContent = link.dataset.description || '';
+                titleEl.style.display = link.dataset.title ? '' : 'none';
+                descEl.style.display = link.dataset.description ? '' : 'none';
                 requestAnimationFrame(function() {
                     if (gen !== showGen) return;
                     syncRuleWidths();
-                    img.classList.remove('lightbox-img-loading');
+                    imgAndMeta.classList.remove('lightbox-transitioning');
                 });
             }
             if (hadSrc) {
-                img.classList.add('lightbox-img-loading');
-                setTimeout(applyImage, 150);
+                imgAndMeta.classList.add('lightbox-transitioning');
+                setTimeout(applyContent, 150);
             } else {
-                img.classList.add('lightbox-img-loading');
-                applyImage();
+                imgAndMeta.classList.add('lightbox-transitioning');
+                applyContent();
             }
         };
         preload.src = link.href;
