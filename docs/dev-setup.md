@@ -1,0 +1,47 @@
+# Development Setup
+
+Developer reference for building, running, and configuring [MrMatt.io](https://mrmatt.io).
+
+## Local Development
+
+```bash
+# Clone with submodules
+git clone --recurse-submodules https://github.com/MrMatt57/MrMatt.io.git
+
+# Run dev server with drafts
+hugo server -D
+
+# Production build
+hugo --minify
+```
+
+## Adding a New Post
+
+```bash
+hugo new content/posts/YYYY-MM_post-slug.md
+```
+
+## Deployment
+
+Pushes to `main` automatically build and deploy via GitHub Actions to Cloudflare Pages.
+
+**Required GitHub secrets:**
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+## Photo Upload PWA
+
+The site includes a Progressive Web App at `/upload/` that lets you share photos directly from your phone to the photography gallery. It authenticates via GitHub OAuth and commits images as Hugo page bundles. Photos are automatically described by Claude AI (title, alt text, and a personalized description).
+
+**Setup:**
+
+1. Create a GitHub OAuth App at https://github.com/settings/developers
+   - **Homepage URL**: `https://mrmatt.io`
+   - **Callback URL**: `https://mrmatt.io/upload/`
+2. In the Cloudflare Pages dashboard, add **encrypted** environment variables (use the "Encrypt" toggle):
+   - `GITHUB_CLIENT_ID` — from the OAuth App
+   - `GITHUB_CLIENT_SECRET` — from the OAuth App (must be encrypted)
+   - `ANTHROPIC_API_KEY` — for AI photo descriptions (must be encrypted)
+3. Update the `data-client-id` attribute in `static/upload/index.html` with your Client ID
+
+**Security:** Only the GitHub user `MrMatt57` can upload. OAuth uses CSRF protection via the `state` parameter. CORS is locked to `https://mrmatt.io`. API keys are never exposed to the client.

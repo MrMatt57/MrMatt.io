@@ -4,63 +4,45 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmrmatt.io&style=flat)](https://mrmatt.io)
 [![Hugo](https://img.shields.io/badge/Hugo-Extended-ff4088?logo=hugo&logoColor=white&style=flat)](https://gohugo.io/)
 [![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-Deployed-f38020?logo=cloudflarepages&logoColor=white&style=flat)](https://pages.cloudflare.com/)
+[![AI Powered](https://img.shields.io/badge/AI%20Powered-Claude-d97706?logo=anthropic&logoColor=white&style=flat)](https://www.anthropic.com/)
+[![PWA](https://img.shields.io/badge/PWA-Enabled-5A0FC8?logo=pwa&logoColor=white&style=flat)](https://mrmatt.io/upload/)
 [![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E8C?logo=dependabot&logoColor=white&style=flat)](https://github.com/MrMatt57/MrMatt.io/blob/main/.github/dependabot.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat)](https://creativecommons.org/licenses/by/4.0/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MrMatt57/MrMatt.io?style=flat)](https://github.com/MrMatt57/MrMatt.io/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/MrMatt57/MrMatt.io?style=flat)](https://github.com/MrMatt57/MrMatt.io)
 
-Personal website of Matt Walker — [mrmatt.io](https://mrmatt.io)
+<p align="center">
+  <a href="https://mrmatt.io">
+    <img src="docs/screenshot.png" alt="MrMatt.io homepage" width="700">
+  </a>
+</p>
 
-## Stack
+Personal website of **Matt Walker** — software engineer, data & AI practitioner, and serial hobbyist in the Baltimore/DC Metro area. This site is a static, zero-framework playground for publishing writing, sharing photography, and experimenting with modern web tech.
 
-- **SSG:** [Hugo](https://gohugo.io/) (extended) with [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme
-- **CI/CD:** GitHub Actions
-- **Hosting:** Cloudflare Pages
+**[mrmatt.io](https://mrmatt.io)**
 
-## Local Development
+## Built With
 
-```bash
-# Clone with submodules
-git clone --recurse-submodules https://github.com/MrMatt57/MrMatt.io.git
+**Static Site** — [Hugo](https://gohugo.io/) extended with [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme. No npm, no build tools, no JS frameworks — just Hugo's built-in asset pipeline and custom CSS.
 
-# Run dev server with drafts
-hugo server -D
+**Photo Upload PWA** — A vanilla JavaScript progressive web app at [`/upload`](https://mrmatt.io/upload/) that works as an Android share target. Snap a photo, share it to the site, and it's published — with offline queuing, EXIF date parsing, and client-side image processing. No libraries, no dependencies.
 
-# Production build
-hugo --minify
-```
+**AI-Powered Descriptions** — Uploaded photos are automatically described by [Claude](https://www.anthropic.com/) Haiku vision model — generating titles, alt text, and personalized descriptions. Review the AI output, tweak it, regenerate, and publish.
 
-## Adding a New Post
+**Serverless Backend** — Three [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/functions/) handle Claude Vision proxying, GitHub OAuth token exchange, and client configuration — all server-side with CORS locked down.
 
-```bash
-hugo new content/posts/YYYY-MM_post-slug.md
-```
+**Automated Publishing** — Photos go from camera roll to live on the site with zero terminal interaction. The PWA creates a feature branch, commits the image and Hugo content file, opens a PR with auto-merge, and GitHub Actions deploys it.
 
-## Deployment
+**CI/CD** — [GitHub Actions](https://github.com/features/actions) builds Hugo, compiles Cloudflare Functions, and deploys on every push to `main`. Concurrency controls cancel in-progress deploys when a new push arrives.
 
-Pushes to `main` automatically build and deploy via GitHub Actions to Cloudflare Pages.
+**Development** — Spec-driven workflow powered by [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Every feature starts with a numbered spec in `.specs/`, gets built in an isolated git worktree, and ships via automated PR with auto-merge.
 
-**Required GitHub secrets:**
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
-
-## Photo Upload PWA
-
-The site includes a Progressive Web App at `/upload/` that lets you share photos directly from your phone to the photography gallery. It authenticates via GitHub OAuth and commits images as Hugo page bundles. Photos are automatically described by Claude AI (title, alt text, and a personalized description).
-
-**Setup:**
-
-1. Create a GitHub OAuth App at https://github.com/settings/developers
-   - **Homepage URL**: `https://mrmatt.io`
-   - **Callback URL**: `https://mrmatt.io/upload/`
-2. In the Cloudflare Pages dashboard, add **encrypted** environment variables (use the "Encrypt" toggle):
-   - `GITHUB_CLIENT_ID` — from the OAuth App
-   - `GITHUB_CLIENT_SECRET` — from the OAuth App (must be encrypted)
-   - `ANTHROPIC_API_KEY` — for AI photo descriptions (must be encrypted)
-3. Update the `data-client-id` attribute in `static/upload/index.html` with your Client ID
-
-**Security:** Only the GitHub user `MrMatt57` can upload. OAuth uses CSRF protection via the `state` parameter. CORS is locked to `https://mrmatt.io`. API keys are never exposed to the client.
+See the full stack breakdown at **[mrmatt.io/stack](https://mrmatt.io/stack)**
 
 ## License
 
 Content is licensed under [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+---
+
+<sub>[Development setup](docs/dev-setup.md)</sub>
