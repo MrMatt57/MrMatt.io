@@ -251,6 +251,40 @@
         });
     }
 
+    // --- Convert any image to JPEG via Canvas ---
+    function toJpegBase64(fileOrBlob) {
+        return new Promise(function(resolve, reject) {
+            var url = URL.createObjectURL(fileOrBlob);
+            var img = new Image();
+            img.onload = function() {
+                var maxDim = 1024;
+                var w = img.width;
+                var h = img.height;
+                if (w > maxDim || h > maxDim) {
+                    if (w > h) {
+                        h = Math.round(h * maxDim / w);
+                        w = maxDim;
+                    } else {
+                        w = Math.round(w * maxDim / h);
+                        h = maxDim;
+                    }
+                }
+                var canvas = document.createElement('canvas');
+                canvas.width = w;
+                canvas.height = h;
+                canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+                var dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+                URL.revokeObjectURL(url);
+                resolve(dataUrl.split(',')[1]);
+            };
+            img.onerror = function() {
+                URL.revokeObjectURL(url);
+                reject(new Error('Could not load image'));
+            };
+            img.src = url;
+        });
+    }
+
     // --- AI photo description ---
     function describePhoto(fileOrBlob, feedback) {
         currentPhotoFile = fileOrBlob;
@@ -262,20 +296,18 @@
         aiDesc.value = '';
         regenerateBtn.disabled = true;
 
-        var reader = new FileReader();
-        reader.onload = function() {
-            var base64 = reader.result.split(',')[1];
-            var mediaType = fileOrBlob.type || 'image/jpeg';
+        toJpegBase64(fileOrBlob)
+            .then(function(base64) {
+                var requestBody = { image: base64, media_type: 'image/jpeg' };
+                if (feedback) {
+                    requestBody.feedback = feedback;
+                }
 
-            var requestBody = { image: base64, media_type: mediaType };
-            if (feedback) {
-                requestBody.feedback = feedback;
-            }
-
-            fetch('/api/describe-photo', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(requestBody)
+                return fetch('/api/describe-photo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestBody)
+                });
             })
             .then(function(r) {
                 if (!r.ok) throw new Error('API error: ' + r.status);
@@ -293,8 +325,6 @@
                 aiStatus.textContent = 'AI description unavailable: ' + err.message;
                 regenerateBtn.disabled = false;
             });
-        };
-        reader.readAsDataURL(fileOrBlob);
     }
 
     // --- Login button: fetch client ID from API, then redirect ---
