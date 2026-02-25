@@ -1,5 +1,14 @@
 # MrMatt.io
 
+[![Deploy to Cloudflare Pages](https://github.com/MrMatt57/MrMatt.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/MrMatt57/MrMatt.io/actions/workflows/deploy.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmrmatt.io&style=flat)](https://mrmatt.io)
+[![Hugo](https://img.shields.io/badge/Hugo-Extended-ff4088?logo=hugo&logoColor=white&style=flat)](https://gohugo.io/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-Deployed-f38020?logo=cloudflarepages&logoColor=white&style=flat)](https://pages.cloudflare.com/)
+[![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E8C?logo=dependabot&logoColor=white&style=flat)](https://github.com/MrMatt57/MrMatt.io/blob/main/.github/dependabot.yml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/MrMatt57/MrMatt.io?style=flat)](https://github.com/MrMatt57/MrMatt.io/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/MrMatt57/MrMatt.io?style=flat)](https://github.com/MrMatt57/MrMatt.io)
+
 Personal website of Matt Walker — [mrmatt.io](https://mrmatt.io)
 
 ## Stack
