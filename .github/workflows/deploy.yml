@@ -14,7 +14,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       deployments: write
     steps:
       - uses: actions/checkout@v6
@@ -55,3 +55,22 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=mrmatt-io --commit-dirty=true
+
+      - name: Create Release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch --tags
+          DATE=$(date -u +%Y.%m.%d)
+          LAST=$(git tag -l "${DATE}.*" | sort -t. -k4 -n | tail -1)
+          if [ -z "$LAST" ]; then
+            VERSION="${DATE}.1"
+          else
+            N=$(echo "$LAST" | awk -F. '{print $NF}')
+            VERSION="${DATE}.$((N + 1))"
+          fi
+          gh release create "$VERSION" \
+            --generate-notes \
+            --title "$VERSION" \
+            --target "$GITHUB_SHA"
