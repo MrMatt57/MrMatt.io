@@ -103,6 +103,7 @@
     var ruleEl = overlay.querySelector('.lightbox-rule');
     var headerRuleEl = overlay.querySelector('.lightbox-header-rule');
     var thumbLinks = Array.from(document.querySelectorAll('.photo-thumb-link'));
+    var imgAndMeta = overlay.querySelector('.lightbox-img-and-meta');
     var currentIndex = -1;
     var showGen = 0;
 
@@ -119,10 +120,6 @@
         var photo = allPhotos[index];
         var hadSrc = !!img.getAttribute('src');
 
-        titleEl.textContent = photo.title || '';
-        descEl.textContent = photo.description || '';
-        titleEl.style.display = photo.title ? '' : 'none';
-        descEl.style.display = photo.description ? '' : 'none';
         navPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
         navNext.style.visibility = index < allPhotos.length - 1 ? 'visible' : 'hidden';
         if (photo.slug) {
@@ -132,22 +129,26 @@
         var preload = new Image();
         preload.onload = function() {
             if (gen !== showGen) return;
-            function applyImage() {
+            function applyContent() {
                 if (gen !== showGen) return;
                 img.src = photo.src;
                 img.alt = photo.alt || '';
+                titleEl.textContent = photo.title || '';
+                descEl.textContent = photo.description || '';
+                titleEl.style.display = photo.title ? '' : 'none';
+                descEl.style.display = photo.description ? '' : 'none';
                 requestAnimationFrame(function() {
                     if (gen !== showGen) return;
                     syncRuleWidths();
-                    img.classList.remove('lightbox-img-loading');
+                    imgAndMeta.classList.remove('lightbox-transitioning');
                 });
             }
             if (hadSrc) {
-                img.classList.add('lightbox-img-loading');
-                setTimeout(applyImage, 150);
+                imgAndMeta.classList.add('lightbox-transitioning');
+                setTimeout(applyContent, 150);
             } else {
-                img.classList.add('lightbox-img-loading');
-                applyImage();
+                imgAndMeta.classList.add('lightbox-transitioning');
+                applyContent();
             }
         };
         preload.src = photo.src;

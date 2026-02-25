@@ -430,11 +430,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     max-height: 100%;
     object-fit: contain;
     border-radius: 4px;
-    transition: opacity 0.15s ease;
-}
-
-.lightbox-img.lightbox-img-loading {
-    opacity: 0;
 }
 
 .lightbox-close {
@@ -480,6 +475,11 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     justify-content: center;
     min-height: 0;
     width: 100%;
+    transition: opacity 0.15s ease;
+}
+
+.lightbox-img-and-meta.lightbox-transitioning {
+    opacity: 0;
 }
 
 .lightbox-site-title {
