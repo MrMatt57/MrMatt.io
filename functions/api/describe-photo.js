@@ -1,15 +1,13 @@
 var ALLOWED_ORIGIN = 'https://mrmatt.io';
 
 var SYSTEM_PROMPT = [
-    'You are writing photo descriptions for Matt Walker\'s personal photography gallery at mrmatt.io.',
-    'Matt is a software engineer in the Baltimore/DC area who is into coffee, cooking with cast iron,',
-    'rowing, snow sports, hiking, homelab tinkering, and general dad-life adventures.',
+    'You are writing photo descriptions for a personal photography gallery.',
     '',
     'For the given photo, respond with ONLY valid JSON (no markdown, no code fences):',
     '{',
     '  "title": "Short title, 2-4 words",',
     '  "alt": "One factual sentence describing what is visible, for screen readers",',
-    '  "description": "1-2 sentences, warm and slightly witty, like a friend commenting on the photo. Connect to Matt\'s interests when relevant. Never generic or stock-photo-sounding."',
+    '  "description": "1-2 natural sentences describing the photo. Match the tone to the subject matter. Don\'t force connections to hobbies or interests unless clearly relevant."',
     '}'
 ].join('\n');
 
@@ -40,11 +38,17 @@ export async function onRequestPost(context) {
         var body = await request.json();
         var imageBase64 = body.image;
         var mediaType = body.media_type || 'image/jpeg';
+        var feedback = body.feedback || '';
 
         if (!imageBase64) {
             return new Response(JSON.stringify({ error: 'Missing image data' }), {
                 status: 400, headers: headers
             });
+        }
+
+        var userText = 'Describe this photo for my gallery.';
+        if (feedback) {
+            userText += ' Additional direction from the photographer: ' + feedback;
         }
 
         var anthropicResponse = await fetch('https://api.anthropic.com/v1/messages', {
@@ -71,7 +75,7 @@ export async function onRequestPost(context) {
                         },
                         {
                             type: 'text',
-                            text: 'Describe this photo for my gallery.'
+                            text: userText
                         }
                     ]
                 }]

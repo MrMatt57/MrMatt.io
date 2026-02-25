@@ -22,9 +22,12 @@
     var aiAlt = document.getElementById('ai-alt');
     var aiDesc = document.getElementById('ai-description');
     var aiSection = document.getElementById('ai-section');
+    var aiFeedback = document.getElementById('ai-feedback');
+    var regenerateBtn = document.getElementById('regenerate-btn');
 
     // AI-generated metadata stored here
     var aiMeta = { title: '', alt: '', description: '' };
+    var currentPhotoFile = null;
 
     function getToken() {
         return localStorage.getItem('gh_token');
@@ -75,8 +78,8 @@
         if (!code) return Promise.resolve(false);
 
         // Verify state parameter
-        var savedState = sessionStorage.getItem('oauth_state');
-        sessionStorage.removeItem('oauth_state');
+        var savedState = localStorage.getItem('oauth_state');
+        localStorage.removeItem('oauth_state');
         if (!savedState || savedState !== returnedState) {
             showStatus('Login failed: invalid state parameter (possible CSRF).', 'error');
             window.history.replaceState({}, '', '/upload/');
@@ -156,23 +159,30 @@
     }
 
     // --- AI photo description ---
-    function describePhoto(fileOrBlob) {
+    function describePhoto(fileOrBlob, feedback) {
+        currentPhotoFile = fileOrBlob;
         aiSection.style.display = 'block';
         aiStatus.textContent = 'Generating AI description...';
         aiStatus.style.display = 'block';
         aiTitle.textContent = '';
         aiAlt.textContent = '';
         aiDesc.textContent = '';
+        regenerateBtn.disabled = true;
 
         var reader = new FileReader();
         reader.onload = function() {
             var base64 = reader.result.split(',')[1];
             var mediaType = fileOrBlob.type || 'image/jpeg';
 
+            var requestBody = { image: base64, media_type: mediaType };
+            if (feedback) {
+                requestBody.feedback = feedback;
+            }
+
             fetch('/api/describe-photo', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ image: base64, media_type: mediaType })
+                body: JSON.stringify(requestBody)
             })
             .then(function(r) { return r.json(); })
             .then(function(data) {
@@ -184,6 +194,7 @@
                 aiTitle.textContent = aiMeta.title;
                 aiAlt.textContent = aiMeta.alt;
                 aiDesc.textContent = aiMeta.description;
+                regenerateBtn.disabled = false;
                 // Pre-fill caption if empty
                 if (!captionInput.value.trim() && aiMeta.title) {
                     captionInput.value = aiMeta.title;
@@ -192,6 +203,7 @@
             .catch(function(err) {
                 aiStatus.textContent = 'AI description unavailable: ' + err.message;
                 aiMeta = { title: '', alt: '', description: '' };
+                regenerateBtn.disabled = false;
             });
         };
         reader.readAsDataURL(fileOrBlob);
@@ -210,7 +222,7 @@
                 }
                 var redirectUri = window.location.origin + '/upload/';
                 var state = generateState();
-                sessionStorage.setItem('oauth_state', state);
+                localStorage.setItem('oauth_state', state);
                 var url = 'https://github.com/login/oauth/authorize' +
                     '?client_id=' + encodeURIComponent(data.client_id) +
                     '&redirect_uri=' + encodeURIComponent(redirectUri) +
@@ -232,7 +244,14 @@
         var url = URL.createObjectURL(file);
         previewImg.src = url;
         previewEl.classList.add('visible');
+        aiFeedback.value = '';
         describePhoto(file);
+    });
+
+    // --- Regenerate AI description with feedback ---
+    regenerateBtn.addEventListener('click', function() {
+        if (!currentPhotoFile) return;
+        describePhoto(currentPhotoFile, aiFeedback.value.trim());
     });
 
     // --- Logout ---
@@ -299,6 +318,8 @@
                     previewEl.classList.remove('visible');
                     aiSection.style.display = 'none';
                     window._sharedPhoto = null;
+                    currentPhotoFile = null;
+                    aiFeedback.value = '';
                     aiMeta = { title: '', alt: '', description: '' };
                 })
                 .catch(function(err) {

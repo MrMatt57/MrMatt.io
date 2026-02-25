@@ -180,3 +180,24 @@ h1 {
 .ai-section .status {
     margin-bottom: 0.5rem;
 }
+
+.ai-feedback {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.ai-feedback input[type="text"] {
+    flex: 1;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.85rem;
+}
+
+.ai-feedback .btn {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+}
