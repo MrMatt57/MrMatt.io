@@ -346,6 +346,87 @@
         hideStatus();
     });
 
+    // --- GitHub API helpers ---
+    var API_BASE = 'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME;
+
+    function getMainSha(token) {
+        return fetch(API_BASE + '/git/ref/heads/' + BRANCH, {
+            headers: { 'Authorization': 'token ' + token }
+        }).then(function(r) {
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return r.json();
+        }).then(function(data) {
+            return data.object.sha;
+        });
+    }
+
+    function createBranch(token, branchName, sha) {
+        return fetch(API_BASE + '/git/refs', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'token ' + token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ref: 'refs/heads/' + branchName,
+                sha: sha
+            })
+        }).then(function(r) {
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return r.json();
+        });
+    }
+
+    function commitFile(token, path, contentBase64, message, branch) {
+        return fetch(API_BASE + '/contents/' + path, {
+            method: 'PUT',
+            headers: {
+                'Authorization': 'token ' + token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: message,
+                content: contentBase64,
+                branch: branch
+            })
+        }).then(function(r) {
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return r.json();
+        });
+    }
+
+    function createPR(token, title, head, base) {
+        return fetch(API_BASE + '/pulls', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'token ' + token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: title,
+                head: head,
+                base: base
+            })
+        }).then(function(r) {
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return r.json();
+        });
+    }
+
+    function enableAutoMerge(token, prNodeId) {
+        return fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'bearer ' + token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                query: 'mutation($id: ID!) { enablePullRequestAutoMerge(input: { pullRequestId: $id, mergeMethod: SQUASH }) { pullRequest { number } } }',
+                variables: { id: prNodeId }
+            })
+        }).then(function(r) { return r.json(); });
+    }
+
     // --- Submit upload ---
     submitBtn.addEventListener('click', function() {
         var file = window._sharedPhoto || (photoInput.files && photoInput.files[0]);
@@ -375,6 +456,7 @@
                 : 'photo-' + now.getTime().toString(36);
             var folderName = dateStr + '-' + slug;
             var basePath = 'content/photography/' + folderName;
+            var branchName = 'photo/' + folderName;
 
             var reader = new FileReader();
             reader.onload = function() {
@@ -396,12 +478,31 @@
 
                 var indexPath = basePath + '/index.md';
 
-                commitFile(token, imagePath, base64, 'feat: add photo ' + folderName)
-                    .then(function() {
-                        return commitFile(token, indexPath, btoa(unescape(encodeURIComponent(frontMatter))), 'feat: add photo metadata ' + folderName);
+                showStatus('Creating branch...', 'info');
+                getMainSha(token)
+                    .then(function(sha) {
+                        return createBranch(token, branchName, sha);
                     })
                     .then(function() {
-                        showStatus('Photo uploaded! It will appear on the site after the next deploy.', 'success');
+                        showStatus('Uploading photo...', 'info');
+                        return commitFile(token, imagePath, base64, 'feat: add photo ' + folderName, branchName);
+                    })
+                    .then(function() {
+                        showStatus('Saving metadata...', 'info');
+                        return commitFile(token, indexPath, btoa(unescape(encodeURIComponent(frontMatter))), 'feat: add photo metadata ' + folderName, branchName);
+                    })
+                    .then(function() {
+                        showStatus('Creating pull request...', 'info');
+                        return createPR(token, 'feat: add photo ' + folderName, branchName, BRANCH);
+                    })
+                    .then(function(pr) {
+                        return enableAutoMerge(token, pr.node_id).then(function() {
+                            return pr;
+                        });
+                    })
+                    .then(function(pr) {
+                        statusEl.innerHTML = 'Photo uploaded! <a href="' + pr.html_url + '" target="_blank" rel="noopener">View PR</a> — it will auto-merge after the build passes.';
+                        statusEl.className = 'status success';
                         photoInput.value = '';
                         previewEl.classList.remove('visible');
                         aiSection.style.display = 'none';
@@ -422,24 +523,6 @@
             reader.readAsDataURL(file);
         });
     });
-
-    function commitFile(token, path, contentBase64, message) {
-        return fetch('https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/contents/' + path, {
-            method: 'PUT',
-            headers: {
-                'Authorization': 'token ' + token,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                message: message,
-                content: contentBase64,
-                branch: BRANCH
-            })
-        }).then(function(r) {
-            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
-            return r.json();
-        });
-    }
 
     // --- Initialize ---
     handleOAuthCallback().then(function(justLoggedIn) {
