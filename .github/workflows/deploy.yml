@@ -40,10 +40,18 @@ jobs:
           command: pages project create mrmatt-io --production-branch=main
         continue-on-error: true
 
+      - name: Build Cloudflare Functions
+        if: github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages functions build --outdir=public
+
       - name: Deploy to Cloudflare Pages
         if: github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=mrmatt-io --functions-directory=functions --commit-dirty=true
+          command: pages deploy public --project-name=mrmatt-io --commit-dirty=true
