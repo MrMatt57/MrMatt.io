@@ -12,7 +12,7 @@ aliases:
 ---
 ![Cloudfront Amazon Data Centers](/img/amazoncloudfront.jpg)
 
-*Location of Amazon Data Centers World-wide. Credit [Werner Vogels](http://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)*
+*Location of Amazon Data Centers World-wide. Credit [Werner Vogels](https://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)*
 
 This past month Amazon sent me an early Christmas present, their very own content deliver network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](/posts/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
 

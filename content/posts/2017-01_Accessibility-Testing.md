@@ -12,11 +12,11 @@ When rebuilding my site I wanted to start as simple as possible, put the sledge 
 
 In the past, reading through accessability standards like [508](https://www.section508.gov/) and [WCAG](https://www.w3.org/WAI/intro/wcag.php) were daunting and felt like red tape. I have always aspired to having semantic markup, mostly from an clean code and Search Engine Optimization standpoint. True web accessability was always on the back-burner. 
 
-In a recent project at work, I was turned onto [HTML Sniffer](http://squizlabs.github.io/HTML_CodeSniffer/) and the tools that suround it, namely [Pa11y](http://pa11y.org/).  They have not only helped me begin to charter the world of web accessability but have given me a greater appreciation for why it is needed.  They had to be fundamental part of my development toolchain.
+In a recent project at work, I was turned onto [HTML Sniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and the tools that suround it, namely [Pa11y](https://pa11y.org/).  They have not only helped me begin to charter the world of web accessability but have given me a greater appreciation for why it is needed.  They had to be fundamental part of my development toolchain.
 
 ### HTML Sniffer bookmarklet
 
-The [bookmarklet](http://squizlabs.github.io/HTML_CodeSniffer/) alone is a great tool for manually testing and learning more about accessiblity standards.  It shows you an interactive view of what needs to be fixed (errors), things to review and possibly resolve (warnings) and helpful guides to get you in the right mindset (notices).
+The [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) alone is a great tool for manually testing and learning more about accessiblity standards.  It shows you an interactive view of what needs to be fixed (errors), things to review and possibly resolve (warnings) and helpful guides to get you in the right mindset (notices).
 
 ![HTML Sniffer Bookmarklet](/img/html-sniffer-bookmarklet.png)
 

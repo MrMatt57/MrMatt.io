@@ -14,15 +14,15 @@ aliases:
 
 -DNS failures account for as much as 29% of system downtime costing companies millions of dollars.-
 
-The Domain Name System (DNS) is arguably the single most important part of the internet. Just think: If websites only had a numerical lookup- our Rolodex-s would be massively confusing. Why don-t webmasters/hosts treat DNS with the same priority? DNS servers carry such a high importance. Without them, no internet. They are often the [target](http://en.wikipedia.org/wiki/DNS_Backbone_DDoS_Attacks) of massive Distributed Denial of Service (DDOS) attacks. Are your DNS records configured properly and secure?
+The Domain Name System (DNS) is arguably the single most important part of the internet. Just think: If websites only had a numerical lookup- our Rolodex-s would be massively confusing. Why don-t webmasters/hosts treat DNS with the same priority? DNS servers carry such a high importance. Without them, no internet. They are often the [target](https://en.wikipedia.org/wiki/DNS_Backbone_DDoS_Attacks) of massive Distributed Denial of Service (DDOS) attacks. Are your DNS records configured properly and secure?
 
 **DNS Performance & Security Enhancements**
 
-Most of the Internet is run on Berkeley Internet Name Domain (BIND) based servers. There have been a lot of failed attempts to create a BIND alternative (GnuDIP, MooDNS, Dents, OakDNS, CustomDNS and dproxy). A couple of active projects are PowerDNS, NSD, djdns and MaraDNS. All boast better security and performance improvements in different environments. If you are hosting your own DNS, you owe it to yourself/network to [review your options](http://en.wikipedia.org/wiki/Comparison_of_DNS_server_software).
+Most of the Internet is run on Berkeley Internet Name Domain (BIND) based servers. There have been a lot of failed attempts to create a BIND alternative (GnuDIP, MooDNS, Dents, OakDNS, CustomDNS and dproxy). A couple of active projects are PowerDNS, NSD, djdns and MaraDNS. All boast better security and performance improvements in different environments. If you are hosting your own DNS, you owe it to yourself/network to [review your options](https://en.wikipedia.org/wiki/Comparison_of_DNS_server_software).
 
 ![Anycast](/img/ip_anycast.gif)
 
-Another performance and security innovation that is becoming increasing popular across many stateless services on the internet is IP [anycast networks](http://en.wikipedia.org/wiki/Anycast). It is a network addressing and routing scheme where data is routed to the nearest or best destination. It helps provide higher availability and load balancing. Many of the TLD servers name servers are already running on anycast networks. In fact these servers survived the massive [DDOS attack last year](http://blog.icann.org/?p=37). UtraDNS, Netriplex and DNS Made Easy are among the few providers to deliver DNS over an anycast network. I imagine many more fill follow suit.
+Another performance and security innovation that is becoming increasing popular across many stateless services on the internet is IP [anycast networks](https://en.wikipedia.org/wiki/Anycast). It is a network addressing and routing scheme where data is routed to the nearest or best destination. It helps provide higher availability and load balancing. Many of the TLD servers name servers are already running on anycast networks. In fact these servers survived the massive [DDOS attack last year](http://blog.icann.org/?p=37). UtraDNS, Netriplex and DNS Made Easy are among the few providers to deliver DNS over an anycast network. I imagine many more fill follow suit.
 
 **Minimizing down-time with TTL**
 
@@ -48,7 +48,7 @@ There have been [reports](http://www.askdavetaylor.com/can_dns_changes_affect_se
 
 **For More Information**
 
-DNS Wiki - [http://en.wikipedia.org/wiki/Domain_name_system](http://en.wikipedia.org/wiki/Domain_name_system)  
+DNS Wiki - [https://en.wikipedia.org/wiki/Domain_name_system](https://en.wikipedia.org/wiki/Domain_name_system)  
  DNS Forum - [http://member.dnsstuff.com/forums/](http://member.dnsstuff.com/forums/)  
  Web-based DNS Tools - [http://www.dnstools.com/](http://www.dnstools.com/)  
  DNS Surveys - [http://www.seoconsultants.com/tools/dns/surveys/](http://www.seoconsultants.com/tools/dns/surveys/)
