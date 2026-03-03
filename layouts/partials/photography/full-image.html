@@ -1,0 +1,7 @@
+{{- $img := . -}}
+{{- $full := $img.Process "resize 1600x webp q85" -}}
+{{- $watermark := resources.Get "images/watermark.png" -}}
+{{- $x := sub $full.Width (add $watermark.Width 15) -}}
+{{- $y := sub $full.Height (add $watermark.Height 15) -}}
+{{- $full = $full.Filter (images.Overlay $watermark $x $y) -}}
+{{- return $full -}}
