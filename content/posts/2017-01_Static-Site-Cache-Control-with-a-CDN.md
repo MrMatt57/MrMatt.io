@@ -3,7 +3,7 @@ date: "2017-01-14"
 draft: false
 title: "Static Site Caching with a CDN (Hugo, S3 and KeyCDN)"
 slug: "static-site-content-caching"
-description: ""
+description: "Setting up cache control headers for a static Hugo site on S3 with KeyCDN — caching static assets while keeping HTML fresh on each deploy."
 tags:
   - "Software Development"
   - "Website"

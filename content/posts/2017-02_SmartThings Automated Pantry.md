@@ -3,7 +3,7 @@ date: "2017-02-02"
 draft: false
 title: "Pantry and Closet Light Automation"
 slug: "pantry-closet-light-automation"
-description: ""
+description: "Automating pantry and closet lights with SmartThings — using a multi-sensor's contact switch and accelerometer to trigger lights on door open and movement."
 tags:
   - "Home Automation"
   - "SmartThings"

@@ -5,6 +5,10 @@ title: "Looking Back on 2016"
 slug: "2016-looking-back"
 description: "Looking back on 2016, it was a good year.  Here are some of my highlights."
 tags: []
+cover:
+  image: "/img/LibertyBass.jpg"
+  alt: "Personal best largemouth bass caught at Liberty Reservoir"
+  hidden: true
 ---
 Looking back on 2016, it was a good year.  Here are some of my highlights.
 

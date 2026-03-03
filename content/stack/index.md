@@ -2,6 +2,7 @@
 title: "Stack"
 date: 2026-02-19
 layout: "single"
+description: "The technology stack behind mrmatt.io — Hugo, PaperMod, Cloudflare Pages, GitHub Actions, and AI-powered photo publishing."
 ---
 
 *Source available on GitHub: [MrMatt57/MrMatt.io](https://github.com/MrMatt57/MrMatt.io)*

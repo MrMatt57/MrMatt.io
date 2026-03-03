@@ -3,6 +3,7 @@ date: "2009-06-01"
 draft: false
 title: "The Ultimate USB *Key* Drive - Lacie iamaKey 8GB"
 slug: "the-ultimate-usb-key-drive-lacie-iamakey-8gb"
+description: "Review of the LaCie iamaKey 8GB — a keychain-sized USB flash drive that goes everywhere your keys go. Durable, convenient, and always on hand."
 tags:
   - "Review"
 cover:

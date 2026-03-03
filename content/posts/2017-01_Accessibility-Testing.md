@@ -3,7 +3,7 @@ date: "2017-01-21"
 draft: false
 title: "Broadening horizons with web accessibility, testing and automation (Hugo, Sitemap.xml and Pa11y)"
 slug: "broadening-horizons-in-web-accessibility"
-description: ""
+description: "Automating web accessibility testing with Pa11y and HTML CodeSniffer — integrating WCAG 2.0 AA checks into a Hugo static site's CI build pipeline."
 tags:
   - "Software Development"
   - "Website"

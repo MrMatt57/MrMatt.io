@@ -3,6 +3,7 @@ date: "2007-12-11"
 draft: false
 title: "Live Music Keeps Me Going"
 slug: "live-music"
+description: "The world of live music recordings — from trading tapes and B&Ps to lossless FLAC archives on archive.org and BitTorrent."
 tags:
   - "Music"
 aliases:

@@ -3,11 +3,16 @@ date: "2014-12-30"
 draft: false
 title: "Website Update (Wordpress > Ghost)"
 slug: "website-update-2014"
+description: "Migrating from WordPress to Ghost — responsive design, modern JavaScript stack, npm and Bower package management, and a content-first approach."
 tags:
   - "Software Development"
   - "Website"
 aliases:
   - /website-update/
+cover:
+  image: "/img/MrMatt57org-Wordpress.jpg"
+  alt: "MrMatt57.org WordPress screenshot"
+  hidden: true
 ---
 **12/31/2016: My site is now on Hugo, check out the [update](/posts/website-update-2016/).**
 

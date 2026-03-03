@@ -1,3 +1,37 @@
 {{- /* Preconnect to Google Fonts for faster font loading (~100-300ms savings) */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{{- /* ImageObject structured data for photography pages */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "page") -}}
+{{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
+{{- if $img -}}
+{{- $full := $img.Process "resize 1600x webp q85" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": "{{ $full.Permalink }}",
+  "caption": "{{ .Title }}",
+  "name": "{{ .Title }}",
+  {{- with .Params.description }}
+  "description": "{{ . }}",
+  {{- end }}
+  {{- with .Params.alt }}
+  "alternateName": "{{ . }}",
+  {{- end }}
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Matt Walker",
+    "url": "https://mrmatt.io/about/"
+  },
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Matt Walker"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+{{- end -}}
+{{- end -}}
