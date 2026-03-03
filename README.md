@@ -6,6 +6,7 @@
 [![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-Deployed-f38020?logo=cloudflarepages&logoColor=white&style=flat)](https://pages.cloudflare.com/)
 [![AI Powered](https://img.shields.io/badge/AI%20Powered-Claude-d97706?logo=anthropic&logoColor=white&style=flat)](https://www.anthropic.com/)
 [![PWA](https://img.shields.io/badge/PWA-Enabled-5A0FC8?logo=pwa&logoColor=white&style=flat)](https://mrmatt.io/upload/)
+[![Mozilla Observatory](https://img.shields.io/badge/Observatory-A+-brightgreen?logo=mozilla&logoColor=white&style=flat)](https://developer.mozilla.org/en-US/observatory/analyze?host=mrmatt.io)
 [![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E8C?logo=dependabot&logoColor=white&style=flat)](https://github.com/MrMatt57/MrMatt.io/blob/main/.github/dependabot.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat)](https://creativecommons.org/licenses/by/4.0/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MrMatt57/MrMatt.io?style=flat)](https://github.com/MrMatt57/MrMatt.io/commits/main)
