@@ -1,0 +1,7 @@
+# Security Policy for mrmatt.io
+# https://securitytxt.org/ — RFC 9116
+
+Contact: https://github.com/MrMatt57/MrMatt.io/security/advisories/new
+Expires: 2027-03-02T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://mrmatt.io/.well-known/security.txt

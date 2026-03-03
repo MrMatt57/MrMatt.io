@@ -48,6 +48,15 @@ layout: "single"
 - Cloudflare DNS
 - Cloudflare Web Analytics — server-side, no JavaScript tag
 
+### Security
+
+- [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) with deny-by-default baseline (`default-src 'none'`) and SHA-256 script hashes — no `'unsafe-inline'` in script-src
+- [HSTS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) with preload, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy
+- CORS locked to `mrmatt.io` on all API endpoints — API keys stay server-side in Cloudflare encrypted environment variables
+- OAuth CSRF protection via cryptographic state parameter, single-user whitelist authorization
+- [CodeQL](https://codeql.github.com/) static analysis on every PR via GitHub Actions
+- [security.txt](https://mrmatt.io/.well-known/security.txt) ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)) for vulnerability disclosure
+
 ### Automated Publishing
 
 - GitHub OAuth authentication scoped to the repo owner
