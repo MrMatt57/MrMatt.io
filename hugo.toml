@@ -8,6 +8,8 @@ enableRobotsTXT = true
 
 [params]
   env = "production"
+  description = "Personal site of Matt Walker — software engineer, photographer, and hobbyist in the Baltimore/DC area."
+  images = ["/images/MattWalker-avatar.png"]
   defaultTheme = "auto"
   mainSections = ["posts"]
   ShowReadingTime = true
