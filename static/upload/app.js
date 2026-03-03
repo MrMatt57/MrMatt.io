@@ -26,6 +26,11 @@
 
     var currentPhotoFile = null;
 
+    // --- Escape a string for use inside YAML double-quoted values ---
+    function escapeYamlString(str) {
+        return str.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+    }
+
     // --- Extract EXIF date from JPEG ---
     function extractExifDate(file) {
         return new Promise(function(resolve) {
@@ -360,7 +365,9 @@
         if (!file) return;
         window._sharedPhoto = null;
         var url = URL.createObjectURL(file);
-        previewImg.src = url;
+        if (url.startsWith('blob:')) {
+            previewImg.src = url;
+        }
         previewEl.classList.add('visible');
         aiFeedback.value = '';
         describePhoto(file);
@@ -499,13 +506,13 @@
 
                 var pageTitle = title || 'Photo ' + dateStr;
                 var frontMatter = '---\n' +
-                    'title: "' + pageTitle.replace(/"/g, '\\"') + '"\n' +
+                    'title: "' + escapeYamlString(pageTitle) + '"\n' +
                     'date: "' + dateStr + '"\n';
                 if (alt) {
-                    frontMatter += 'alt: "' + alt.replace(/"/g, '\\"') + '"\n';
+                    frontMatter += 'alt: "' + escapeYamlString(alt) + '"\n';
                 }
                 if (description) {
-                    frontMatter += 'description: "' + description.replace(/"/g, '\\"') + '"\n';
+                    frontMatter += 'description: "' + escapeYamlString(description) + '"\n';
                 }
                 frontMatter += 'draft: false\n---\n';
 
