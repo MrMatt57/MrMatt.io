@@ -3,10 +3,15 @@ date: "2009-04-25"
 draft: false
 title: "Hike @ Loch Raven Reservoir w/ iPhone 3G GPS"
 slug: "hike-loch-raven-reservoir-w-iphone-3g-gps"
+description: "Hiking the Merryman Trail at Loch Raven Reservoir in Maryland, tracked with an iPhone 3G GPS using the Trails app — photos and route details."
 tags:
   - "Travel"
 aliases:
   - /hike-loch-raven-reservoir-w-iphone-3g-gps/
+cover:
+  image: "/img/Loch-Raven-Reservoir/waterfall.jpg"
+  alt: "Waterfall on the Merryman Trail at Loch Raven Reservoir"
+  hidden: true
 ---
 [![Loch Raven Reservoir Hike In](/img/Loch-Raven-Reservoir/hike-in.jpg)](https://www.everytrail.com/view_trip.php?trip_id=186126)
 

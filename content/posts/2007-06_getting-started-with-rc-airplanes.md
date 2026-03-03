@@ -3,6 +3,7 @@ date: "2007-06-15"
 draft: false
 title: "Getting Started With RC Airplanes"
 slug: "getting-started-with-rc-airplanes"
+description: "How I got into RC airplanes starting with a $30 AirHogs Aero Ace from Walmart — the best toy for the price."
 tags:
   - "R/C Planes"
 aliases:

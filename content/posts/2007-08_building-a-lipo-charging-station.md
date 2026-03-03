@@ -3,6 +3,7 @@ date: "2007-08-03"
 draft: false
 title: "Building a LiPo Charging Station"
 slug: "building-a-lipo-charging-station"
+description: "Building a safe LiPo battery charging station for RC planes using a Honeywell lockbox, Pyrex pan, and charging bag."
 tags:
   - "R/C Planes"
 aliases:

@@ -3,6 +3,7 @@ date: "2008-04-08"
 draft: false
 title: "CSS Naked Day"
 slug: "css-naked-day"
+description: "Observing CSS Naked Day 2008 to promote web standards — what a site looks like without stylesheets, sprites, or positioning."
 tags: []
 aliases:
   - /css-naked-day/

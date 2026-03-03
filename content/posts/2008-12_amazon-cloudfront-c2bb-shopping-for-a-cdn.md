@@ -3,6 +3,7 @@ date: "2008-12-03"
 draft: false
 title: "Amazon Cloudfront - Shopping for a CDN?"
 slug: "amazon-cloudfront-c2bb-shopping-for-a-cdn"
+description: "Comparing Amazon CloudFront against Akamai and LimeLight with latency benchmarks from 35 global locations — setup guide and performance data."
 tags:
   - "Software Development"
   - "Website"

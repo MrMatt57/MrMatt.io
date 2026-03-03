@@ -3,6 +3,7 @@ date: "2009-08-30"
 draft: false
 title: "Canoe Camping - Penobscot River, Maine"
 slug: "canoe-camping-penobscot-river-maine"
+description: "Multi-day canoe camping trip on the upper west branch of the Penobscot River and Chesuncook Lake in Maine — route, camps, fishing, and video."
 tags:
   - "Travel"
   - "Camping"

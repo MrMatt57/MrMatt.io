@@ -5,10 +5,15 @@ theme = "PaperMod"
 paginate = 10
 
 enableRobotsTXT = true
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = [":git", "lastmod", "date"]
 
 [params]
   env = "production"
-  description = "Personal site of Matt Walker — software engineer, photographer, and hobbyist in the Baltimore/DC area."
+  description = "Matt Walker's personal site — writing about software engineering, AI, cloud infrastructure, photography, homelab projects, and hobbies from the Baltimore/DC area."
+  keywords = ["software engineering", "AI", "cloud infrastructure", "photography", "homelab", "Hugo", "Matt Walker"]
   images = ["/images/MattWalker-avatar.png"]
   defaultTheme = "auto"
   mainSections = ["posts"]
@@ -17,12 +22,25 @@ enableRobotsTXT = true
   ShowCodeCopyButtons = true
   ShowShareButtons = false
   comments = false
-  ShowBreadCrumbs = false
-  hideAuthor = true
+  ShowBreadCrumbs = true
+  hideAuthor = false
   ShowToc = true
 
   [params.author]
     name = "Matt Walker"
+
+  [params.schema]
+    publisherType = "Person"
+    sameAs = ["https://github.com/MrMatt57", "https://www.linkedin.com/in/mrmatt"]
+
+  # Search engine verification tags — register at each console, get the HTML
+  # tag verification code, paste the content="" value below, and redeploy.
+  # Google: https://search.google.com/search-console → Add Property → HTML tag
+  # Bing:   https://www.bing.com/webmasters → Add Site → HTML meta tag
+  [params.analytics.google]
+    SiteVerificationTag = ""
+  [params.analytics.bing]
+    SiteVerificationTag = ""
 
 [[menu.main]]
   name = "Journal"

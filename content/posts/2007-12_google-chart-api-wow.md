@@ -3,6 +3,7 @@ date: "2007-12-21"
 draft: false
 title: "Google Chart API, Wow!"
 slug: "google-chart-api-wow"
+description: "First look at Google's Chart API — generating line, bar, and pie charts from a simple URL string with no server-side code."
 tags:
   - "Software Development"
 aliases:

@@ -3,6 +3,7 @@ date: "2007-06-29"
 draft: false
 title: "AirHogs Just Not Enough Anymore"
 slug: "airhogs-just-not-enough-anymore"
+description: "Moving beyond AirHogs to a Spektrum DX6 transmitter, FSOne flight simulator, and building my first real RC plane — a SoarStar."
 tags:
   - "R/C Planes"
 aliases:

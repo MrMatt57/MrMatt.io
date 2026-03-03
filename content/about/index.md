@@ -2,6 +2,7 @@
 title: "About Me"
 date: 2026-02-19
 layout: "single"
+description: "Matt Walker — software engineer, photographer, and serial hobbyist in the Baltimore/DC area. Building data platforms, AI infrastructure, and too many side projects."
 ---
 
 I'm Matt Walker — an engineer, builder, and serial hobbyist based in the Baltimore/DC Metro area. I spend my professional life working at the intersection of data and AI, and the rest of it picking up hobbies faster than I can put them down.

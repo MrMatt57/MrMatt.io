@@ -3,6 +3,7 @@ date: "2007-07-17"
 draft: false
 title: "Soarstar RC Video (First Attempt)"
 slug: "hello-world"
+description: "First attempt at strapping a Pentax Optio S6 camera to my Soarstar RC plane for aerial video footage."
 tags:
   - "R/C Planes"
   - "Video"

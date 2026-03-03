@@ -3,6 +3,7 @@ date: "2007-06-27"
 draft: false
 title: "AirHogs are a blast!"
 slug: "airhogs-are-a-blast"
+description: "Comparing AirHogs AeroAce models and figuring out which backyard RC planes are worth buying and which to avoid."
 tags:
   - "R/C Planes"
 aliases:

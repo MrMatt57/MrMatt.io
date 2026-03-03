@@ -24,6 +24,12 @@
 /safari-pinned-tab.svg
   Cache-Control: public, max-age=31536000, immutable
 
+# Hugo fingerprinted assets — content-hashed, safe to cache forever
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # Legacy blog images — static content, cache for 1 year
 /img/*
   Cache-Control: public, max-age=31536000, immutable

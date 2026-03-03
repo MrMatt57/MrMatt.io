@@ -3,6 +3,7 @@ date: "2008-01-16"
 draft: false
 title: "Hello World; new server, theme, content, collaboration"
 slug: "hello-world-new-server-theme-content-collaboration"
+description: "Site migration complete — moved to Linode hosting, Amazon S3 for static files, and a custom scratch-built WordPress theme."
 tags: []
 aliases:
   - /hello-world-new-server-theme-content-collaboration/

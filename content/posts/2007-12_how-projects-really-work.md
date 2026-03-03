@@ -3,6 +3,7 @@ date: "2007-12-20"
 draft: false
 title: "How Projects Really Work"
 slug: "how-projects-really-work"
+description: "The classic 'How Projects Really Work' cartoon — a timeless take on the gap between what clients want and what gets built."
 tags:
   - "Software Development"
 aliases:

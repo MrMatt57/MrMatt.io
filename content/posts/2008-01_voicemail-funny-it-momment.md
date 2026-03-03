@@ -3,6 +3,7 @@ date: "2008-01-16"
 draft: false
 title: 'Funny IT Voicemail, "That Projector Stinks"'
 slug: "voicemail-funny-it-momment"
+description: "A real voicemail from my IT manager days — a projector that smelled so bad nobody could sit in the same room with it."
 tags: []
 aliases:
   - /voicemail-funny-it-momment/

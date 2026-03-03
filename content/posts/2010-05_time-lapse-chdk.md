@@ -3,6 +3,7 @@ date: "2010-05-21"
 draft: false
 title: "Canon A2000is Time Lapse using CHDK"
 slug: "time-lapse-chdk"
+description: "How to create time-lapse videos with a Canon A2000IS using the CHDK hack — intervalometer script, AC power setup, and video assembly with QuickTime."
 tags:
   - "Photography"
 aliases:

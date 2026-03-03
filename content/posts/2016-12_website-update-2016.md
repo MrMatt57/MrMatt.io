@@ -3,9 +3,14 @@ date: "2016-12-31"
 draft: false
 title: "Another site redo (Ghost > Hugo)"
 slug: "website-update-2016"
+description: "Rebuilding the site from Ghost to Hugo — static files, no jQuery, no Bootstrap, better accessibility standards, and a GitHub + Travis CI devops pipeline."
 tags:
   - "Software Development"
   - "Website"
+cover:
+  image: "/img/MrMatt57org-Ghost.jpg"
+  alt: "MrMatt57.org Ghost blog screenshot"
+  hidden: true
 ---
 It was two years ago since I made my last [website update](/posts/website-update-2014/). I moved the site from a custom hosted Wordpress framework over to Ghost.  I was and still am interested in full stack javascript solutions.  It was no lack of the platform for not keeping things updated, I just didn't have time to post.  I plan to change that this year, with a new an improved [website stack](/stack/) built on Hugo with a solid [open source](https://github.com/MrMatt57/MrMatt57.org) based devops toolchain.
 

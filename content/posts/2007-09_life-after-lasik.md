@@ -3,6 +3,7 @@ date: "2007-09-20"
 draft: false
 title: "Life after Lasik!"
 slug: "life-after-lasik"
+description: "Two weeks after LASIK surgery — vision improving every day and wishing I hadn't waited so long to get it done."
 tags: []
 aliases:
   - /life-after-lasik/

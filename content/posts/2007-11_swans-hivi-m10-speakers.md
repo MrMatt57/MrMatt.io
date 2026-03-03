@@ -3,6 +3,7 @@ date: "2007-11-26"
 draft: false
 title: "Swans HiVi - M10 Speakers"
 slug: "swans-hivi-m10-speakers"
+description: "Review of the Swans HiVi M10 2.1 desktop speakers — studio-quality sound, excellent build quality, and a great option for close-range listening."
 tags:
   - "Review"
 aliases:

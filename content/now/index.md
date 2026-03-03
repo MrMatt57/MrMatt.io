@@ -2,6 +2,7 @@
 title: "Now"
 date: 2026-02-19
 layout: "single"
+description: "What Matt Walker is focused on right now — current work, side projects, and interests. Inspired by nownownow.com."
 ---
 
 This page is a snapshot of what I'm focused on right now. Inspired by [nownownow.com](https://nownownow.com).
