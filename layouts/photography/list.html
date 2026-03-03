@@ -3,7 +3,7 @@
     {{- range .Pages }}
     {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
-    {{- $full := $img.Process "resize 1600x webp q85" }}
+    {{- $full := partial "photography/full-image.html" $img }}
     <a href="{{ $full.RelPermalink }}" class="photo-thumb-link no-underline"
        data-slug="{{ .File.ContentBaseName }}"
        data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
