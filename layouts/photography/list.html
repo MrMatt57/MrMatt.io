@@ -9,7 +9,7 @@
        data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
        data-title="{{ .Title }}"
        data-description="{{ .Params.description }}"
-       data-original="{{ $img.RelPermalink }}">
+       data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
         {{- $thumb := $img.Fill "300x300 webp q80" }}
         <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
     </a>
