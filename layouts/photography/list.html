@@ -66,6 +66,13 @@
         observer = new IntersectionObserver(function(entries) {
             if (entries[0].isIntersecting) {
                 showBatch();
+                // Re-observe to chain-load when sentinel stays in viewport (wide screens)
+                if (shown < allItems.length) {
+                    observer.unobserve(sentinel);
+                    requestAnimationFrame(function() {
+                        observer.observe(sentinel);
+                    });
+                }
             }
         }, { rootMargin: '400px' });
         observer.observe(sentinel);
