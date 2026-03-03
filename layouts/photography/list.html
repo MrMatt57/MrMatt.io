@@ -3,12 +3,13 @@
     {{- range .Pages }}
     {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
-    <a href="{{ $img.RelPermalink }}" class="photo-thumb-link no-underline"
+    {{- $full := $img.Process "resize 1600x webp q85" }}
+    <a href="{{ $full.RelPermalink }}" class="photo-thumb-link no-underline"
        data-slug="{{ .File.ContentBaseName }}"
        data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
        data-title="{{ .Title }}"
        data-description="{{ .Params.description }}">
-        {{- $thumb := $img.Fill "300x300 q85" }}
+        {{- $thumb := $img.Fill "300x300 webp q80" }}
         <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
     </a>
     {{- end }}
