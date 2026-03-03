@@ -9,7 +9,7 @@ aliases:
 ---
 ![H](/img/hello-world.jpg)
 
-*Photo by [-audreyjm529?](http://www.flickr.com/photos/audreyjm529/192646613/)*
+*Photo by [-audreyjm529?](https://www.flickr.com/photos/audreyjm529/192646613/)*
 
 Welcome.
 

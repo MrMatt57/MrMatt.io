@@ -17,7 +17,7 @@ Recently my wife-s -99 Honda Civic-s driver side window just about called it cap
 I took some spray white lithium grease and covered the window tracks and slowly but surely things started to speed up. After about 4 cycles, things were back to what I would consider normal. The new regulator and motor definitely helped, but ultimately the track needed lubrication. It seems like a routine grease application to the window tracks may prevent HSWS. So if your windows are getting slow- start treatment today.
 
 ![Stephen's desk has both white lithium grease and lotion on it. Interesting.](/img/white.lithium.grease.jpg)
- Photo by [-commondream-](http://flickr.com/photos/commondream/2778095180//)
+ Photo by [-commondream-](https://flickr.com/photos/commondream/2778095180//)
 
- Banner Photo by [-ph0rk-](http://flickr.com/photos/ph0rk/2986357207/)
+ Banner Photo by [-ph0rk-](https://flickr.com/photos/ph0rk/2986357207/)
 

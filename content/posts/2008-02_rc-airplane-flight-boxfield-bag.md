@@ -16,7 +16,7 @@ aliases:
 
 Field boxes are an essential part of rc flight. As I graduate from backyard flying, the more I realize this. There is nothting worse than getting to the flying field close to sun-down only to realize you forgot something. Having the right tool/band-aid could make the difference of another flight or heading home. Here is a list of things I keep in my flight bag. I restock as items are used and complete a checklist from time to time to make everything is there.
 
-[![](/img/2260620347.jpg)](http://www.flickr.com/photos/matt-walker/2260620347/)
+[![](/img/2260620347.jpg)](https://www.flickr.com/photos/matt-walker/2260620347/)
 
 - Triton 2 charger
 - eFlight wattmeter

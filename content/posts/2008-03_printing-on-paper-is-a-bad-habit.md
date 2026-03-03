@@ -10,7 +10,7 @@ aliases:
 ---
 ![College Math Papers](/img/printer_paper.jpg)
 
-*Photo by [-sweetpea.loty30?](http://www.flickr.com/photos/loty/326761635/)*
+*Photo by [-sweetpea.loty30?](https://www.flickr.com/photos/loty/326761635/)*
 
 Why do we print things on 8.5-11? pieces of amalgamated fibers? It-s a valid question these days. We have trained ourselves over thousands of years to cling to something physical or tangible. I just call it stuff. The digital age has brought about new adaptation challenges and the bad habits that come with them. Printing on paper is just one of them.
 
@@ -26,5 +26,5 @@ Next time you print something, ask yourself- -do I really need this on a piece o
 
 ![R1064614](/img/printer_shred.jpg)
 
-*Photo by [-yoppy-](http://www.flickr.com/photos/spilt-milk/1968415680/)*
+*Photo by [-yoppy-](https://www.flickr.com/photos/spilt-milk/1968415680/)*
 

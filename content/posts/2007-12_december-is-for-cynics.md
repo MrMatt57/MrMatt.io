@@ -10,7 +10,7 @@ aliases:
 ---
 ![The Matches](/img/match.jpg)
 
-*Photo by [-AMagill-](http://www.flickr.com/photos/amagill/176876227/)*
+*Photo by [-AMagill-](https://www.flickr.com/photos/amagill/176876227/)*
 
 -Tis the season for some of the most awful music. Thanks to The Matches, it's not all bad. This song has been a favorite since the first time i heard it on [radio wazee](http://wazee.org). I was also fortunate to hear them live at the Masquerade in Atlanta, GA.
 
