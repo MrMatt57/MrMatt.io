@@ -207,10 +207,9 @@
         e.stopPropagation();
     });
     overlay.addEventListener('click', function(e) {
-        if (e.target === img) return;
-        if (e.target.closest('.lightbox-nav')) return;
-        if (e.target.closest('.lightbox-site-title')) return;
-        if (e.target.closest('.lightbox-fullsize-link')) return;
+        // Only close when clicking outside the image/metadata content area
+        if (e.target.closest('.lightbox-img-and-meta')) return;
+        if (e.target.closest('.lightbox-close')) return;
         closeLightbox();
     });
     document.addEventListener('keydown', function(e) {
@@ -218,6 +217,29 @@
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft' && currentIndex > 0) showPhoto(currentIndex - 1);
         if (e.key === 'ArrowRight' && currentIndex < allItems.length - 1) showPhoto(currentIndex + 1);
+    });
+
+    // Touch swipe support for mobile navigation
+    var touchStartX = 0;
+    var touchStartY = 0;
+    var touchMoved = false;
+    overlay.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchMoved = false;
+    }, { passive: true });
+    overlay.addEventListener('touchmove', function(e) {
+        touchMoved = true;
+    }, { passive: true });
+    overlay.addEventListener('touchend', function(e) {
+        if (!touchMoved || !overlay.classList.contains('active')) return;
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        var dy = e.changedTouches[0].clientY - touchStartY;
+        // Only trigger if horizontal swipe is dominant and long enough
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+            if (dx < 0 && currentIndex < allItems.length - 1) showPhoto(currentIndex + 1);
+            if (dx > 0 && currentIndex > 0) showPhoto(currentIndex - 1);
+        }
     });
 })();
 </script>
