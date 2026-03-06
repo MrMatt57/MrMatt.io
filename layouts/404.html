@@ -1,0 +1,10 @@
+{{- define "main" }}
+<div class="not-found">
+    {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
+    {{- $avatarWebp := $avatar.Fit "350x350 webp q85" }}
+    <img src="{{ $avatarWebp.RelPermalink }}" alt="Illustrated avatar of Matt Walker" class="not-found-avatar" width="150" height="150" />
+    <div class="not-found-code">404</div>
+    <p class="not-found-message">Nothing's deployed here.</p>
+    <a href="/" class="not-found-home">cd ~</a>
+</div>
+{{- end }}
