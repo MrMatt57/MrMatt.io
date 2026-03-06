@@ -22,7 +22,7 @@ enableGitInfo = true
   ShowCodeCopyButtons = true
   ShowShareButtons = false
   comments = false
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   hideAuthor = false
   ShowToc = true
 
@@ -73,6 +73,17 @@ enableGitInfo = true
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 [markup]
   [markup.goldmark]
