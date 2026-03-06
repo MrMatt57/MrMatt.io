@@ -963,3 +963,73 @@ hr {
 [data-theme="dark"] .related-posts li::before {
     color: var(--primary);
 }
+
+/* ===== 404 page ===== */
+
+.not-found {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+    padding: 5rem 1rem 3rem;
+}
+
+.not-found-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.not-found-code {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: -0.15rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.not-found-message {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.not-found-home {
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #b9cadb;
+    border-radius: 4px;
+    color: #090909;
+    transition: border-color 0.15s linear, color 0.15s linear;
+}
+
+.not-found-home:hover {
+    border-color: #4c81b2;
+    color: #4c81b2;
+}
+
+[data-theme="dark"] .not-found-home {
+    color: var(--primary);
+    border-color: var(--tertiary);
+}
+
+[data-theme="dark"] .not-found-home:hover {
+    border-color: rgba(76, 129, 178, 0.7);
+    color: rgba(76, 129, 178, 0.9);
+}
+
+/* ===== Reduced motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}

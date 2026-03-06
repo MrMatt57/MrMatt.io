@@ -120,6 +120,8 @@
         if (slug) slugMap[slug] = i;
     });
 
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     function showPhoto(index) {
         if (index < 0 || index >= allItems.length) return;
         currentIndex = index;
@@ -157,7 +159,9 @@
                     imgAndMeta.classList.remove('lightbox-transitioning');
                 });
             }
-            if (hadSrc) {
+            if (prefersReducedMotion) {
+                applyContent();
+            } else if (hadSrc) {
                 imgAndMeta.classList.add('lightbox-transitioning');
                 setTimeout(applyContent, 150);
             } else {
