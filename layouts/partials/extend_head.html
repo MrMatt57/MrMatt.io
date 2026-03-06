@@ -1,6 +1,9 @@
-{{- /* Preconnect to Google Fonts for faster font loading (~100-300ms savings) */ -}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{- /* Preload avatar on homepage for faster LCP */ -}}
+{{- if .IsHome }}
+{{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
+{{- $avatarWebp := $avatar.Fit "350x350 webp q85" }}
+<link rel="preload" as="image" href="{{ $avatarWebp.RelPermalink }}" type="image/webp">
+{{- end }}
 
 {{- /* ImageObject structured data for photography pages */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "page") -}}
@@ -33,5 +36,17 @@
   "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 </script>
+{{- end -}}
+{{- end -}}
+
+{{- /* Photography OG image override — use the photo itself instead of default avatar */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "page") -}}
+{{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
+{{- if $img -}}
+{{- $og := $img.Process "resize 1200x webp q85" -}}
+<meta property="og:image" content="{{ $og.Permalink }}" />
+<meta property="og:image:width" content="{{ $og.Width }}" />
+<meta property="og:image:height" content="{{ $og.Height }}" />
+<meta name="twitter:image" content="{{ $og.Permalink }}" />
 {{- end -}}
 {{- end -}}

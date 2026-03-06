@@ -10,16 +10,21 @@
        data-title="{{ .Title }}"
        data-description="{{ .Params.description }}"
        data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
-        {{- $thumb := $img.Fill "300x300 webp q80" }}
-        <img src="{{ $thumb.RelPermalink }}" alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
+        {{- $thumb200 := $img.Fill "200x200 webp q80" }}
+        {{- $thumb300 := $img.Fill "300x300 webp q80" }}
+        {{- $thumb450 := $img.Fill "450x450 webp q80" }}
+        <img src="{{ $thumb300.RelPermalink }}"
+             srcset="{{ $thumb200.RelPermalink }} 200w, {{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
+             sizes="(max-width: 549px) calc(25vw - 0.5rem), 160px"
+             alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" />
     </a>
     {{- end }}
     {{- end }}
 </div>
 <div id="scroll-sentinel"></div>
 {{- if gt (len .Pages) 0 }}
-<div id="lightbox" class="lightbox-overlay" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+<div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Photo lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="lightbox-content">
         <div class="lightbox-header">
             <a href="/" class="lightbox-site-title">Matt Walker</a>
@@ -29,8 +34,8 @@
         <div class="lightbox-img-and-meta">
             <div class="lightbox-img-wrap">
                 <img class="lightbox-img" src="" alt="Photo" />
-                <div class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</div>
-                <div class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</div>
+                <button class="lightbox-nav lightbox-nav-prev" aria-label="Previous photo">&#8249;</button>
+                <button class="lightbox-nav lightbox-nav-next" aria-label="Next photo">&#8250;</button>
             </div>
             <div class="lightbox-title"></div>
             <hr class="lightbox-rule" />
@@ -163,10 +168,28 @@
         preload.src = link.href;
     }
 
+    var previousFocus = null;
+
+    function trapFocus(e) {
+        if (e.key !== 'Tab') return;
+        var focusable = overlay.querySelectorAll('button, a[href]');
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+            if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+            if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+    }
+
     function openLightbox(index) {
+        previousFocus = document.activeElement;
         showPhoto(index);
         overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+        overlay.addEventListener('keydown', trapFocus);
     }
 
     allItems.forEach(function(link, i) {
@@ -179,9 +202,12 @@
     function closeLightbox() {
         overlay.classList.remove('active');
         overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        overlay.removeEventListener('keydown', trapFocus);
         img.src = '';
         currentIndex = -1;
         history.replaceState(null, '', window.location.pathname);
+        if (previousFocus) previousFocus.focus();
     }
 
     // Open from hash on page load

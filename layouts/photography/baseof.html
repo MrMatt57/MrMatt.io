@@ -8,13 +8,14 @@
 <body class="list photography-page" id="top">
     <script>document.documentElement.dataset.theme = 'dark';</script>
 
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header class="photo-header">
         <h1 class="photo-header-title"><a href="/">Matt Walker</a></h1>
         <p class="photo-header-subtitle">Photography</p>
         <hr>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
         {{- block "main" . }}{{ end }}
     </main>
 

@@ -1,6 +1,8 @@
 {{- define "main" }}
 <div class="wrapper">
-    <h2>{{ .Title }}</h2>
+    <header class="page-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+    </header>
     {{- range .Pages.GroupByPublishDate "2006" }}
     {{- if ne .Key "0001" }}
     <h3>{{ .Key }}</h3>
