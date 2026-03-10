@@ -2,6 +2,8 @@
      - Channel <description> uses site.Params.description
      - <content:encoded> includes full post content for feed readers
      - <managingEditor> renders author name even without email
+     - XSL stylesheet for styled browser rendering
+     - <media:content> for post cover/OG images
 */ -}}
 {{- $authorEmail := "" }}
 {{- $authorName := "" }}
@@ -31,7 +33,8 @@
 {{- $pages = $pages | first $limit }}
 {{- end }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+{{ printf "<?xml-stylesheet type=\"text/xsl\" href=\"%s\"?>" ("/rss.xsl" | absURL) | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
@@ -62,8 +65,24 @@
       <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+      <description>{{ with .Description }}{{ . | transform.XMLEscape | safeHTML }}{{ else }}{{ .Summary | plainify | transform.XMLEscape | safeHTML }}{{ end }}</description>
       <content:encoded>{{ .Content | transform.XMLEscape | safeHTML }}</content:encoded>
+      {{- /* Determine media image: cover → photography page resource → site default */ -}}
+      {{- $mediaURL := "" -}}
+      {{- with .Params.cover }}{{ with .image }}{{ $mediaURL = . | absURL }}{{ end }}{{ end -}}
+      {{- if and (not $mediaURL) (eq .Section "photography") -}}
+        {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
+        {{- if $img -}}
+          {{- $thumb := $img.Process "fill 240x240 webp q80" -}}
+          {{- $mediaURL = $thumb.Permalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $mediaURL -}}
+        {{- with site.Params.images }}{{ $mediaURL = index . 0 | absURL }}{{ end -}}
+      {{- end -}}
+      {{- if $mediaURL }}
+      <media:content url="{{ $mediaURL }}" medium="image" />
+      {{- end }}
     </item>
     {{- end }}
   </channel>
