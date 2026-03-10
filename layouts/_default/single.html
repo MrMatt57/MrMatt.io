@@ -1,5 +1,9 @@
 {{- define "main" }}
 
+{{- if eq .Section "posts" }}
+<div class="scroll-progress" aria-hidden="true"></div>
+{{- end }}
+
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
@@ -63,5 +67,21 @@
 </article>
 
 {{- partial "related-posts.html" . }}
+
+{{- if eq .Section "posts" }}
+<script>
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var bar = document.querySelector('.scroll-progress');
+  if (!bar) return;
+  function update() {
+    var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', update, {passive: true});
+  update();
+})();
+</script>
+{{- end }}
 
 {{- end }}{{/* end main */}}

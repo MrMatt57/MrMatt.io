@@ -1026,10 +1026,30 @@ hr {
     color: rgba(76, 129, 178, 0.9);
 }
 
+/* ===== Scroll progress bar (blog posts only) ===== */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #4c81b2;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .scroll-progress {
+    background: rgba(76, 129, 178, 0.8);
+}
+
 /* ===== Reduced motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         transition: none !important;
+    }
+    .scroll-progress {
+        display: none;
     }
 }
