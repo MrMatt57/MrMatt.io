@@ -25,8 +25,16 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.157.0'
           extended: true
+
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources-${{ hashFiles('content/photography/**') }}
+          restore-keys: |
+            hugo-resources-
 
       - name: Build
         run: hugo --minify
