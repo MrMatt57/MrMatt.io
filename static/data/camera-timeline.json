@@ -1,0 +1,2820 @@
+{
+  "summary": {
+    "total_photos": 94507,
+    "assigned_photos": 88024,
+    "exif_photos": 77117,
+    "year_range": [
+      2000,
+      2026
+    ],
+    "scan_date": "2026-03-09"
+  },
+  "cameras": [
+    {
+      "id": 186,
+      "canonical_make": "Kodak",
+      "canonical_model": "EasyShare DX4900",
+      "display_name": "Kodak EasyShare DX4900",
+      "category": "compact",
+      "photo_count": 13,
+      "first_seen": "2000-03",
+      "last_seen": "2003-09",
+      "median_iso": null,
+      "median_aperture": 3.4,
+      "median_focal_length": 8.8,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 4.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 204,
+      "canonical_make": "Casio",
+      "canonical_model": "Exilim EX-S2",
+      "display_name": "Casio Exilim EX-S2",
+      "category": "compact",
+      "photo_count": 1,
+      "first_seen": "2003-01",
+      "last_seen": "2003-01",
+      "median_iso": null,
+      "median_aperture": 3.2,
+      "median_focal_length": 7.5,
+      "median_focal_length_35mm": 36,
+      "min_aperture": 3.2,
+      "max_aperture": 3.2,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 140,
+      "canonical_make": "Sony",
+      "canonical_model": "Cyber-shot DSC-V1",
+      "display_name": "Sony Cyber-shot DSC-V1",
+      "category": "compact",
+      "photo_count": 3845,
+      "first_seen": "2003-07",
+      "last_seen": "2010-04",
+      "median_iso": 100,
+      "median_aperture": 4.0,
+      "median_focal_length": 7.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 180,
+      "canonical_make": "Pentax",
+      "canonical_model": "Optio 30",
+      "display_name": "Pentax Optio 30",
+      "category": "compact",
+      "photo_count": 20,
+      "first_seen": "2004-01",
+      "last_seen": "2004-01",
+      "median_iso": 50,
+      "median_aperture": 3.6,
+      "median_focal_length": 8.4,
+      "median_focal_length_35mm": 55,
+      "min_aperture": 2.9,
+      "max_aperture": 7.1,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 206,
+      "canonical_make": "Pentax",
+      "canonical_model": "Optio S",
+      "display_name": "Pentax Optio S",
+      "category": "compact",
+      "photo_count": 1,
+      "first_seen": "2004-06",
+      "last_seen": "2004-06",
+      "median_iso": null,
+      "median_aperture": 3.9,
+      "median_focal_length": 12.2,
+      "median_focal_length_35mm": 74,
+      "min_aperture": 3.9,
+      "max_aperture": 3.9,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 162,
+      "canonical_make": "Pentax",
+      "canonical_model": "Optio S6",
+      "display_name": "Pentax Optio S6",
+      "category": "compact",
+      "photo_count": 165,
+      "first_seen": "2005-01",
+      "last_seen": "2007-06",
+      "median_iso": 200,
+      "median_aperture": 2.7,
+      "median_focal_length": 6.2,
+      "median_focal_length_35mm": 38,
+      "min_aperture": 2.7,
+      "max_aperture": 8.3,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 175,
+      "canonical_make": "Pentax",
+      "canonical_model": "Optio S5z",
+      "display_name": "Pentax Optio S5z",
+      "category": "compact",
+      "photo_count": 37,
+      "first_seen": "2005-06",
+      "last_seen": "2005-07",
+      "median_iso": 200,
+      "median_aperture": 2.6,
+      "median_focal_length": 5.8,
+      "median_focal_length_35mm": 35,
+      "min_aperture": 2.6,
+      "max_aperture": 4.4,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 205,
+      "canonical_make": "Konica Minolta",
+      "canonical_model": "Maxxum 5D",
+      "display_name": "Konica Minolta Maxxum 5D",
+      "category": "dslr",
+      "photo_count": 1,
+      "first_seen": "2005-12",
+      "last_seen": "2005-12",
+      "median_iso": 100,
+      "median_aperture": 11.0,
+      "median_focal_length": 28.0,
+      "median_focal_length_35mm": 42,
+      "min_aperture": 11.0,
+      "max_aperture": 11.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 155,
+      "canonical_make": "Kodak",
+      "canonical_model": "EasyShare C875",
+      "display_name": "Kodak EasyShare C875",
+      "category": "compact",
+      "photo_count": 279,
+      "first_seen": "2006-01",
+      "last_seen": "2009-11",
+      "median_iso": 80,
+      "median_aperture": 3.6,
+      "median_focal_length": 10.7,
+      "median_focal_length_35mm": 51,
+      "min_aperture": 2.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 151,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SD400",
+      "display_name": "Canon PowerShot SD400",
+      "category": "compact",
+      "photo_count": 481,
+      "first_seen": "2006-02",
+      "last_seen": "2007-08",
+      "median_iso": null,
+      "median_aperture": 2.8,
+      "median_focal_length": 5.8,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 10.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 194,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot A520",
+      "display_name": "Canon PowerShot A520",
+      "category": "compact",
+      "photo_count": 3,
+      "first_seen": "2006-04",
+      "last_seen": "2007-08",
+      "median_iso": null,
+      "median_aperture": 2.6,
+      "median_focal_length": 5.8,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.6,
+      "max_aperture": 2.6,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 195,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot A75",
+      "display_name": "Canon PowerShot A75",
+      "category": "compact",
+      "photo_count": 3,
+      "first_seen": "2006-06",
+      "last_seen": "2006-06",
+      "median_iso": null,
+      "median_aperture": 4.8,
+      "median_focal_length": 16.2,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.5,
+      "max_aperture": 4.8,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 174,
+      "canonical_make": "Canon",
+      "canonical_model": "EOS Rebel XTi",
+      "display_name": "Canon EOS Rebel XTi",
+      "category": "dslr",
+      "photo_count": 37,
+      "first_seen": "2006-12",
+      "last_seen": "2007-01",
+      "median_iso": 400,
+      "median_aperture": 4.0,
+      "median_focal_length": 23.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.5,
+      "max_aperture": 18.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 185,
+      "canonical_make": "Sony",
+      "canonical_model": "Cyber-shot DSC-P100",
+      "display_name": "Sony Cyber-shot DSC-P100",
+      "category": "compact",
+      "photo_count": 14,
+      "first_seen": "2006-12",
+      "last_seen": "2006-12",
+      "median_iso": 320,
+      "median_aperture": 2.8,
+      "median_focal_length": 7.9,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 5.2,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 158,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SD600",
+      "display_name": "Canon PowerShot SD600",
+      "category": "compact",
+      "photo_count": 206,
+      "first_seen": "2007-06",
+      "last_seen": "2008-03",
+      "median_iso": null,
+      "median_aperture": 3.5,
+      "median_focal_length": 8.5,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 4.9,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 165,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SD450",
+      "display_name": "Canon PowerShot SD450",
+      "category": "compact",
+      "photo_count": 114,
+      "first_seen": "2007-07",
+      "last_seen": "2007-08",
+      "median_iso": null,
+      "median_aperture": 3.2,
+      "median_focal_length": 7.1,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 4.9,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 169,
+      "canonical_make": "Sony Ericsson",
+      "canonical_model": "Z750a",
+      "display_name": "Sony Ericsson Z750a",
+      "category": "phone",
+      "photo_count": 81,
+      "first_seen": "2008-07",
+      "last_seen": "2009-05",
+      "median_iso": 200,
+      "median_aperture": 3.0,
+      "median_focal_length": 3.2,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.0,
+      "max_aperture": 3.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 152,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone (1st Gen)",
+      "display_name": "Apple iPhone (1st Gen)",
+      "category": "phone",
+      "photo_count": 480,
+      "first_seen": "2008-07",
+      "last_seen": "2010-09",
+      "median_iso": 800,
+      "median_aperture": 2.8,
+      "median_focal_length": 3.9,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.4,
+      "max_aperture": 2.8,
+      "pct_with_gps": 96.7
+    },
+    {
+      "id": 200,
+      "canonical_make": "Sony",
+      "canonical_model": "Cyber-shot DSC-W150",
+      "display_name": "Sony Cyber-shot DSC-W150",
+      "category": "compact",
+      "photo_count": 2,
+      "first_seen": "2008-07",
+      "last_seen": "2008-07",
+      "median_iso": 400,
+      "median_aperture": 5.2,
+      "median_focal_length": 25.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 5.0,
+      "max_aperture": 5.2,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 179,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SD1000",
+      "display_name": "Canon PowerShot SD1000",
+      "category": "compact",
+      "photo_count": 20,
+      "first_seen": "2008-12",
+      "last_seen": "2009-06",
+      "median_iso": 160,
+      "median_aperture": 3.5,
+      "median_focal_length": 8.5,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 11.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 167,
+      "canonical_make": "Nikon",
+      "canonical_model": "D3000",
+      "display_name": "Nikon D3000",
+      "category": "dslr",
+      "photo_count": 107,
+      "first_seen": "2009-01",
+      "last_seen": "2013-11",
+      "median_iso": 100,
+      "median_aperture": 5.6,
+      "median_focal_length": 18.0,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 5.6,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 198,
+      "canonical_make": "Kodak",
+      "canonical_model": "EasyShare C533",
+      "display_name": "Kodak EasyShare C533",
+      "category": "compact",
+      "photo_count": 2,
+      "first_seen": "2009-03",
+      "last_seen": "2009-03",
+      "median_iso": 80,
+      "median_aperture": 8.0,
+      "median_focal_length": 18.0,
+      "median_focal_length_35mm": 111,
+      "min_aperture": 4.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 191,
+      "canonical_make": "Kodak",
+      "canonical_model": "EasyShare M893",
+      "display_name": "Kodak EasyShare M893",
+      "category": "compact",
+      "photo_count": 4,
+      "first_seen": "2009-03",
+      "last_seen": "2010-07",
+      "median_iso": 80,
+      "median_aperture": 2.9,
+      "median_focal_length": 5.7,
+      "median_focal_length_35mm": 34,
+      "min_aperture": 2.9,
+      "max_aperture": 4.1,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 147,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SX110 IS",
+      "display_name": "Canon PowerShot SX110 IS",
+      "category": "compact",
+      "photo_count": 1158,
+      "first_seen": "2009-07",
+      "last_seen": "2009-08",
+      "median_iso": 80,
+      "median_aperture": 4.0,
+      "median_focal_length": 6.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 182,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 3GS",
+      "display_name": "Apple iPhone 3GS",
+      "category": "phone",
+      "photo_count": 18,
+      "first_seen": "2009-09",
+      "last_seen": "2010-01",
+      "median_iso": 331,
+      "median_aperture": 2.8,
+      "median_focal_length": 3.9,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 2.8,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 159,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 3G",
+      "display_name": "Apple iPhone 3G",
+      "category": "phone",
+      "photo_count": 198,
+      "first_seen": "2009-09",
+      "last_seen": "2011-08",
+      "median_iso": null,
+      "median_aperture": 2.8,
+      "median_focal_length": null,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 2.8,
+      "pct_with_gps": 98.0
+    },
+    {
+      "id": 142,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot A2000 IS",
+      "display_name": "Canon PowerShot A2000 IS",
+      "category": "compact",
+      "photo_count": 1959,
+      "first_seen": "2009-11",
+      "last_seen": "2011-09",
+      "median_iso": 200,
+      "median_aperture": 3.2,
+      "median_focal_length": 6.4,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.2,
+      "max_aperture": 17.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 141,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 4",
+      "display_name": "Apple iPhone 4",
+      "category": "phone",
+      "photo_count": 3035,
+      "first_seen": "2010-09",
+      "last_seen": "2012-09",
+      "median_iso": 160,
+      "median_aperture": 2.8,
+      "median_focal_length": 3.9,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.4,
+      "max_aperture": 2.8,
+      "pct_with_gps": 94.7
+    },
+    {
+      "id": 153,
+      "canonical_make": "Canon",
+      "canonical_model": "PowerShot SX200 IS",
+      "display_name": "Canon PowerShot SX200 IS",
+      "category": "compact",
+      "photo_count": 412,
+      "first_seen": "2010-12",
+      "last_seen": "2011-06",
+      "median_iso": 250,
+      "median_aperture": 3.4,
+      "median_focal_length": 5.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.4,
+      "max_aperture": 5.3,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 138,
+      "canonical_make": "Nikon",
+      "canonical_model": "D3100",
+      "display_name": "Nikon D3100",
+      "category": "dslr",
+      "photo_count": 5729,
+      "first_seen": "2011-01",
+      "last_seen": "2017-07",
+      "median_iso": 100,
+      "median_aperture": 1.8,
+      "median_focal_length": 35.0,
+      "median_focal_length_35mm": 52,
+      "min_aperture": 1.8,
+      "max_aperture": 22.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 171,
+      "canonical_make": "Canon",
+      "canonical_model": "EOS 5D Mark II",
+      "display_name": "Canon EOS 5D Mark II",
+      "category": "dslr",
+      "photo_count": 62,
+      "first_seen": "2011-09",
+      "last_seen": "2014-09",
+      "median_iso": 200,
+      "median_aperture": 3.5,
+      "median_focal_length": 35.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 3.5,
+      "max_aperture": 11.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 183,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 4S",
+      "display_name": "Apple iPhone 4S",
+      "category": "phone",
+      "photo_count": 16,
+      "first_seen": "2012-01",
+      "last_seen": "2015-07",
+      "median_iso": 125,
+      "median_aperture": 2.4,
+      "median_focal_length": 4.3,
+      "median_focal_length_35mm": 35,
+      "min_aperture": 2.4,
+      "max_aperture": 2.4,
+      "pct_with_gps": 68.8
+    },
+    {
+      "id": 133,
+      "canonical_make": "Samsung",
+      "canonical_model": "Galaxy Note II",
+      "display_name": "Samsung Galaxy Note II",
+      "category": "phone",
+      "photo_count": 11039,
+      "first_seen": "2012-10",
+      "last_seen": "2014-12",
+      "median_iso": 125,
+      "median_aperture": 2.6,
+      "median_focal_length": 3.7,
+      "median_focal_length_35mm": null,
+      "min_aperture": 0.6,
+      "max_aperture": 299.1,
+      "pct_with_gps": 16.9
+    },
+    {
+      "id": 150,
+      "canonical_make": "Motorola",
+      "canonical_model": "Moto X (1st Gen)",
+      "display_name": "Motorola Moto X (1st Gen)",
+      "category": "phone",
+      "photo_count": 534,
+      "first_seen": "2013-12",
+      "last_seen": "2014-09",
+      "median_iso": 160,
+      "median_aperture": 2.4,
+      "median_focal_length": 4.5,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 2.4,
+      "max_aperture": 2.4,
+      "pct_with_gps": 20.8
+    },
+    {
+      "id": 145,
+      "canonical_make": "Apple",
+      "canonical_model": "iPad Air",
+      "display_name": "Apple iPad Air",
+      "category": "tablet",
+      "photo_count": 1434,
+      "first_seen": "2014-01",
+      "last_seen": "2015-10",
+      "median_iso": 320,
+      "median_aperture": 2.4,
+      "median_focal_length": 3.3,
+      "median_focal_length_35mm": 33,
+      "min_aperture": 2.4,
+      "max_aperture": 2.4,
+      "pct_with_gps": 67.3
+    },
+    {
+      "id": 173,
+      "canonical_make": "Asus",
+      "canonical_model": "Nexus 7",
+      "display_name": "Asus Nexus 7",
+      "category": "tablet",
+      "photo_count": 38,
+      "first_seen": "2014-06",
+      "last_seen": "2014-08",
+      "median_iso": 504,
+      "median_aperture": null,
+      "median_focal_length": 3.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": null,
+      "max_aperture": null,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 192,
+      "canonical_make": "Nikon",
+      "canonical_model": "D5200",
+      "display_name": "Nikon D5200",
+      "category": "dslr",
+      "photo_count": 4,
+      "first_seen": "2014-09",
+      "last_seen": "2014-09",
+      "median_iso": 800,
+      "median_aperture": 3.5,
+      "median_focal_length": 18.0,
+      "median_focal_length_35mm": 18,
+      "min_aperture": 3.5,
+      "max_aperture": 3.5,
+      "pct_with_gps": 50.0
+    },
+    {
+      "id": 149,
+      "canonical_make": "Motorola",
+      "canonical_model": "Moto X (2nd Gen)",
+      "display_name": "Motorola Moto X (2nd Gen)",
+      "category": "phone",
+      "photo_count": 1018,
+      "first_seen": "2014-09",
+      "last_seen": "2015-04",
+      "median_iso": 320,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.2,
+      "max_aperture": 2.2,
+      "pct_with_gps": 94.8
+    },
+    {
+      "id": 134,
+      "canonical_make": "Samsung",
+      "canonical_model": "Galaxy Note 4",
+      "display_name": "Samsung Galaxy Note 4",
+      "category": "phone",
+      "photo_count": 12704,
+      "first_seen": "2014-10",
+      "last_seen": "2016-07",
+      "median_iso": 160,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.8,
+      "median_focal_length_35mm": 31,
+      "min_aperture": 1.9,
+      "max_aperture": 2.2,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 189,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 5c",
+      "display_name": "Apple iPhone 5c",
+      "category": "phone",
+      "photo_count": 8,
+      "first_seen": "2014-12",
+      "last_seen": "2015-10",
+      "median_iso": 250,
+      "median_aperture": 2.4,
+      "median_focal_length": 4.1,
+      "median_focal_length_35mm": 33,
+      "min_aperture": 2.4,
+      "max_aperture": 2.4,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 144,
+      "canonical_make": "Sony",
+      "canonical_model": "RX100",
+      "display_name": "Sony RX100",
+      "category": "compact",
+      "photo_count": 1682,
+      "first_seen": "2014-12",
+      "last_seen": "2016-07",
+      "median_iso": 200,
+      "median_aperture": 2.0,
+      "median_focal_length": 10.4,
+      "median_focal_length_35mm": 28,
+      "min_aperture": 1.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 178,
+      "canonical_make": "GoPro",
+      "canonical_model": "HERO5 Session",
+      "display_name": "GoPro HERO5 Session",
+      "category": "action",
+      "photo_count": 28,
+      "first_seen": "2015-01",
+      "last_seen": "2017-10",
+      "median_iso": 256,
+      "median_aperture": 2.8,
+      "median_focal_length": 3.0,
+      "median_focal_length_35mm": 15,
+      "min_aperture": 2.8,
+      "max_aperture": 2.8,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 148,
+      "canonical_make": "Samsung",
+      "canonical_model": "Galaxy S6",
+      "display_name": "Samsung Galaxy S6",
+      "category": "phone",
+      "photo_count": 1090,
+      "first_seen": "2015-05",
+      "last_seen": "2015-09",
+      "median_iso": 125,
+      "median_aperture": 1.9,
+      "median_focal_length": 4.3,
+      "median_focal_length_35mm": 28,
+      "min_aperture": 1.9,
+      "max_aperture": 1.9,
+      "pct_with_gps": 90.4
+    },
+    {
+      "id": 160,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 6",
+      "display_name": "Apple iPhone 6",
+      "category": "phone",
+      "photo_count": 193,
+      "first_seen": "2015-06",
+      "last_seen": "2019-07",
+      "median_iso": 50,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 29,
+      "min_aperture": 2.2,
+      "max_aperture": 2.2,
+      "pct_with_gps": 4.7
+    },
+    {
+      "id": 143,
+      "canonical_make": "LG",
+      "canonical_model": "Nexus 5X",
+      "display_name": "LG Nexus 5X",
+      "category": "phone",
+      "photo_count": 1812,
+      "first_seen": "2015-10",
+      "last_seen": "2018-04",
+      "median_iso": 247,
+      "median_aperture": 2.0,
+      "median_focal_length": 4.7,
+      "median_focal_length_35mm": 0,
+      "min_aperture": 2.0,
+      "max_aperture": 2.0,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 164,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 5s",
+      "display_name": "Apple iPhone 5s",
+      "category": "phone",
+      "photo_count": 123,
+      "first_seen": "2015-12",
+      "last_seen": "2018-02",
+      "median_iso": 40,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 29,
+      "min_aperture": 2.2,
+      "max_aperture": 2.4,
+      "pct_with_gps": 89.4
+    },
+    {
+      "id": 168,
+      "canonical_make": "Canon",
+      "canonical_model": "EOS 5D Mark III",
+      "display_name": "Canon EOS 5D Mark III",
+      "category": "dslr",
+      "photo_count": 105,
+      "first_seen": "2015-12",
+      "last_seen": "2015-12",
+      "median_iso": 400,
+      "median_aperture": 3.2,
+      "median_focal_length": 50.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.0,
+      "max_aperture": 4.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 136,
+      "canonical_make": "Huawei",
+      "canonical_model": "Nexus 6P",
+      "display_name": "Huawei Nexus 6P",
+      "category": "phone",
+      "photo_count": 6419,
+      "first_seen": "2016-01",
+      "last_seen": "2017-09",
+      "median_iso": 165,
+      "median_aperture": 2.0,
+      "median_focal_length": 4.7,
+      "median_focal_length_35mm": 0,
+      "min_aperture": 2.0,
+      "max_aperture": 2.4,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 135,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel XL",
+      "display_name": "Google Pixel XL",
+      "category": "phone",
+      "photo_count": 6603,
+      "first_seen": "2016-10",
+      "last_seen": "2018-10",
+      "median_iso": 256,
+      "median_aperture": 2.0,
+      "median_focal_length": 4.7,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 2.0,
+      "max_aperture": 2.4,
+      "pct_with_gps": 99.7
+    },
+    {
+      "id": 187,
+      "canonical_make": "Sony",
+      "canonical_model": "A6000",
+      "display_name": "Sony A6000",
+      "category": "mirrorless",
+      "photo_count": 11,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 100,
+      "median_aperture": 1.8,
+      "median_focal_length": 50.0,
+      "median_focal_length_35mm": 75,
+      "min_aperture": 1.8,
+      "max_aperture": 8.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 184,
+      "canonical_make": "DJI",
+      "canonical_model": "Phantom 4",
+      "display_name": "DJI Phantom 4",
+      "category": "drone",
+      "photo_count": 14,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 100,
+      "median_aperture": 2.8,
+      "median_focal_length": 3.6,
+      "median_focal_length_35mm": 20,
+      "min_aperture": 2.8,
+      "max_aperture": 2.8,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 188,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 6s",
+      "display_name": "Apple iPhone 6s",
+      "category": "phone",
+      "photo_count": 9,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 25,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 61,
+      "min_aperture": 2.2,
+      "max_aperture": 2.2,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 207,
+      "canonical_make": "Samsung",
+      "canonical_model": "Galaxy S7",
+      "display_name": "Samsung Galaxy S7",
+      "category": "phone",
+      "photo_count": 1,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 40,
+      "median_aperture": 1.7,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.7,
+      "max_aperture": 1.7,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 196,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 7",
+      "display_name": "Apple iPhone 7",
+      "category": "phone",
+      "photo_count": 2,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 32,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.0,
+      "median_focal_length_35mm": 41,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 203,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 6s Plus",
+      "display_name": "Apple iPhone 6s Plus",
+      "category": "phone",
+      "photo_count": 1,
+      "first_seen": "2017-07",
+      "last_seen": "2017-07",
+      "median_iso": 25,
+      "median_aperture": 2.2,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 29,
+      "min_aperture": 2.2,
+      "max_aperture": 2.2,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 137,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 2 XL",
+      "display_name": "Google Pixel 2 XL",
+      "category": "phone",
+      "photo_count": 5820,
+      "first_seen": "2017-10",
+      "last_seen": "2021-08",
+      "median_iso": 106,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.5,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 1.8,
+      "max_aperture": 2.4,
+      "pct_with_gps": 85.8
+    },
+    {
+      "id": 139,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 3 XL",
+      "display_name": "Google Pixel 3 XL",
+      "category": "phone",
+      "photo_count": 4897,
+      "first_seen": "2018-10",
+      "last_seen": "2021-10",
+      "median_iso": 70,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.4,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 1.8,
+      "max_aperture": 2.2,
+      "pct_with_gps": 11.1
+    },
+    {
+      "id": 177,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone X",
+      "display_name": "Apple iPhone X",
+      "category": "phone",
+      "photo_count": 29,
+      "first_seen": "2018-12",
+      "last_seen": "2021-06",
+      "median_iso": 40,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.0,
+      "median_focal_length_35mm": 28,
+      "min_aperture": 1.8,
+      "max_aperture": 2.4,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 197,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 8",
+      "display_name": "Apple iPhone 8",
+      "category": "phone",
+      "photo_count": 2,
+      "first_seen": "2019-09",
+      "last_seen": "2019-09",
+      "median_iso": 64,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.0,
+      "median_focal_length_35mm": 28,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 146,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 4 XL",
+      "display_name": "Google Pixel 4 XL",
+      "category": "phone",
+      "photo_count": 1234,
+      "first_seen": "2019-10",
+      "last_seen": "2020-10",
+      "median_iso": 125,
+      "median_aperture": 1.7,
+      "median_focal_length": 4.4,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 1.7,
+      "max_aperture": 2.4,
+      "pct_with_gps": 4.1
+    },
+    {
+      "id": 176,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone XR",
+      "display_name": "Apple iPhone XR",
+      "category": "phone",
+      "photo_count": 36,
+      "first_seen": "2019-11",
+      "last_seen": "2022-04",
+      "median_iso": 320,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 163,
+      "canonical_make": "Canon",
+      "canonical_model": "EOS 5D Mark IV",
+      "display_name": "Canon EOS 5D Mark IV",
+      "category": "dslr",
+      "photo_count": 126,
+      "first_seen": "2019-12",
+      "last_seen": "2019-12",
+      "median_iso": 250,
+      "median_aperture": 3.5,
+      "median_focal_length": 88.0,
+      "median_focal_length_35mm": null,
+      "min_aperture": 2.8,
+      "max_aperture": 5.0,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 181,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 11",
+      "display_name": "Apple iPhone 11",
+      "category": "phone",
+      "photo_count": 18,
+      "first_seen": "2020-01",
+      "last_seen": "2025-04",
+      "median_iso": 125,
+      "median_aperture": 1.8,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 156,
+      "canonical_make": "DJI",
+      "canonical_model": "Mavic Mini",
+      "display_name": "DJI Mavic Mini",
+      "category": "drone",
+      "photo_count": 233,
+      "first_seen": "2020-08",
+      "last_seen": "2022-05",
+      "median_iso": 100,
+      "median_aperture": 2.8,
+      "median_focal_length": 4.5,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 2.8,
+      "max_aperture": 2.8,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 161,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 5",
+      "display_name": "Google Pixel 5",
+      "category": "phone",
+      "photo_count": 1284,
+      "first_seen": "2020-10",
+      "last_seen": "2022-10",
+      "median_iso": 74,
+      "median_aperture": 1.7,
+      "median_focal_length": 4.4,
+      "median_focal_length_35mm": 27,
+      "min_aperture": 1.7,
+      "max_aperture": 2.2,
+      "pct_with_gps": 12.5
+    },
+    {
+      "id": 166,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 6 Pro",
+      "display_name": "Google Pixel 6 Pro",
+      "category": "phone",
+      "photo_count": 2015,
+      "first_seen": "2021-10",
+      "last_seen": "2023-10",
+      "median_iso": 249,
+      "median_aperture": 1.9,
+      "median_focal_length": 6.8,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 1.9,
+      "max_aperture": 3.5,
+      "pct_with_gps": 3.6
+    },
+    {
+      "id": 201,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 12 mini",
+      "display_name": "Apple iPhone 12 mini",
+      "category": "phone",
+      "photo_count": 1,
+      "first_seen": "2022-05",
+      "last_seen": "2022-05",
+      "median_iso": 32,
+      "median_aperture": 1.6,
+      "median_focal_length": 4.2,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.6,
+      "max_aperture": 1.6,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 157,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 6a",
+      "display_name": "Google Pixel 6a",
+      "category": "phone",
+      "photo_count": 3429,
+      "first_seen": "2022-07",
+      "last_seen": "2024-11",
+      "median_iso": 69,
+      "median_aperture": 2.0,
+      "median_focal_length": 2.5,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 1.7,
+      "max_aperture": 2.2,
+      "pct_with_gps": 6.8
+    },
+    {
+      "id": 154,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 8 Pro",
+      "display_name": "Google Pixel 8 Pro",
+      "category": "phone",
+      "photo_count": 2548,
+      "first_seen": "2023-10",
+      "last_seen": "2024-08",
+      "median_iso": 343,
+      "median_aperture": 1.7,
+      "median_focal_length": 6.9,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 1.7,
+      "max_aperture": 2.8,
+      "pct_with_gps": 10.6
+    },
+    {
+      "id": 170,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 9 Pro XL",
+      "display_name": "Google Pixel 9 Pro XL",
+      "category": "phone",
+      "photo_count": 1941,
+      "first_seen": "2024-08",
+      "last_seen": "2025-11",
+      "median_iso": 140,
+      "median_aperture": 1.7,
+      "median_focal_length": 6.9,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 1.7,
+      "max_aperture": 2.8,
+      "pct_with_gps": 4.1
+    },
+    {
+      "id": 172,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 8a",
+      "display_name": "Google Pixel 8a",
+      "category": "phone",
+      "photo_count": 46,
+      "first_seen": "2024-11",
+      "last_seen": "2026-02",
+      "median_iso": 121,
+      "median_aperture": 1.9,
+      "median_focal_length": 5.4,
+      "median_focal_length_35mm": 25,
+      "min_aperture": 1.9,
+      "max_aperture": 2.2,
+      "pct_with_gps": 100.0
+    },
+    {
+      "id": 190,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 16 Pro",
+      "display_name": "Apple iPhone 16 Pro",
+      "category": "phone",
+      "photo_count": 4,
+      "first_seen": "2024-12",
+      "last_seen": "2025-12",
+      "median_iso": 400,
+      "median_aperture": 1.8,
+      "median_focal_length": 6.8,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 25.0
+    },
+    {
+      "id": 199,
+      "canonical_make": "Google",
+      "canonical_model": "Pixel 10 Pro XL",
+      "display_name": "Google Pixel 10 Pro XL",
+      "category": "phone",
+      "photo_count": 981,
+      "first_seen": "2025-08",
+      "last_seen": "2026-03",
+      "median_iso": 3303,
+      "median_aperture": 1.7,
+      "median_focal_length": 6.9,
+      "median_focal_length_35mm": 24,
+      "min_aperture": 1.7,
+      "max_aperture": 1.7,
+      "pct_with_gps": 0.2
+    },
+    {
+      "id": 193,
+      "canonical_make": "Samsung",
+      "canonical_model": "Galaxy S24",
+      "display_name": "Samsung Galaxy S24",
+      "category": "phone",
+      "photo_count": 4,
+      "first_seen": "2025-12",
+      "last_seen": "2025-12",
+      "median_iso": 1000,
+      "median_aperture": 1.8,
+      "median_focal_length": 5.4,
+      "median_focal_length_35mm": 23,
+      "min_aperture": 1.8,
+      "max_aperture": 1.8,
+      "pct_with_gps": 0.0
+    },
+    {
+      "id": 202,
+      "canonical_make": "Apple",
+      "canonical_model": "iPhone 16",
+      "display_name": "Apple iPhone 16",
+      "category": "phone",
+      "photo_count": 1,
+      "first_seen": "2025-12",
+      "last_seen": "2025-12",
+      "median_iso": 64,
+      "median_aperture": 1.6,
+      "median_focal_length": 6.0,
+      "median_focal_length_35mm": 26,
+      "min_aperture": 1.6,
+      "max_aperture": 1.6,
+      "pct_with_gps": 100.0
+    }
+  ],
+  "timeline": {
+    "2003": {
+      "Casio Exilim EX-S2": 1,
+      "Kodak EasyShare DX4900": 1,
+      "Sony Cyber-shot DSC-V1": 434
+    },
+    "2004": {
+      "Pentax Optio 30": 20,
+      "Pentax Optio S": 1,
+      "Sony Cyber-shot DSC-V1": 65
+    },
+    "2005": {
+      "Konica Minolta Maxxum 5D": 1,
+      "Pentax Optio S5z": 37,
+      "Pentax Optio S6": 15,
+      "Sony Cyber-shot DSC-V1": 17
+    },
+    "2006": {
+      "Canon EOS Rebel XTi": 34,
+      "Canon PowerShot A520": 1,
+      "Canon PowerShot A75": 3,
+      "Canon PowerShot SD400": 11,
+      "Kodak EasyShare C875": 237,
+      "Pentax Optio S6": 67,
+      "Sony Cyber-shot DSC-P100": 14,
+      "Sony Cyber-shot DSC-V1": 158
+    },
+    "2007": {
+      "Canon EOS Rebel XTi": 3,
+      "Canon PowerShot A520": 2,
+      "Canon PowerShot SD400": 470,
+      "Canon PowerShot SD450": 114,
+      "Canon PowerShot SD600": 189,
+      "Pentax Optio S6": 83,
+      "Sony Cyber-shot DSC-V1": 1122
+    },
+    "2008": {
+      "Apple iPhone (1st Gen)": 202,
+      "Canon PowerShot SD1000": 7,
+      "Canon PowerShot SD600": 17,
+      "Sony Cyber-shot DSC-V1": 495,
+      "Sony Cyber-shot DSC-W150": 2,
+      "Sony Ericsson Z750a": 39
+    },
+    "2009": {
+      "Apple iPhone (1st Gen)": 221,
+      "Apple iPhone 3G": 57,
+      "Apple iPhone 3GS": 14,
+      "Canon PowerShot A2000 IS": 509,
+      "Canon PowerShot SD1000": 13,
+      "Canon PowerShot SX110 IS": 1158,
+      "Kodak EasyShare C533": 2,
+      "Kodak EasyShare C875": 42,
+      "Kodak EasyShare M893": 3,
+      "Nikon D3000": 9,
+      "Sony Cyber-shot DSC-V1": 1480,
+      "Sony Ericsson Z750a": 42
+    },
+    "2010": {
+      "Apple iPhone (1st Gen)": 57,
+      "Apple iPhone 3G": 140,
+      "Apple iPhone 3GS": 4,
+      "Apple iPhone 4": 62,
+      "Canon PowerShot A2000 IS": 1386,
+      "Canon PowerShot SX200 IS": 17,
+      "Kodak EasyShare M893": 1,
+      "Sony Cyber-shot DSC-V1": 74
+    },
+    "2011": {
+      "Apple iPhone 3G": 1,
+      "Apple iPhone 4": 1599,
+      "Canon EOS 5D Mark II": 2,
+      "Canon PowerShot A2000 IS": 64,
+      "Canon PowerShot SX200 IS": 395,
+      "Nikon D3100": 4458
+    },
+    "2012": {
+      "Apple iPhone 4": 1374,
+      "Apple iPhone 4S": 6,
+      "Nikon D3100": 243,
+      "Samsung Galaxy Note II": 483
+    },
+    "2013": {
+      "Apple iPhone 4S": 3,
+      "Motorola Moto X (1st Gen)": 27,
+      "Nikon D3000": 98,
+      "Nikon D3100": 247,
+      "Samsung Galaxy Note II": 7009
+    },
+    "2014": {
+      "Apple iPad Air": 937,
+      "Apple iPhone 4S": 6,
+      "Apple iPhone 5c": 2,
+      "Asus Nexus 7": 38,
+      "Canon EOS 5D Mark II": 60,
+      "Motorola Moto X (1st Gen)": 507,
+      "Motorola Moto X (2nd Gen)": 363,
+      "Nikon D3100": 299,
+      "Nikon D5200": 4,
+      "Samsung Galaxy Note 4": 1679,
+      "Samsung Galaxy Note II": 3547,
+      "Sony RX100": 123
+    },
+    "2015": {
+      "Apple iPad Air": 497,
+      "Apple iPhone 4S": 1,
+      "Apple iPhone 5c": 6,
+      "Apple iPhone 5s": 3,
+      "Apple iPhone 6": 6,
+      "Canon EOS 5D Mark III": 105,
+      "GoPro HERO5 Session": 27,
+      "LG Nexus 5X": 216,
+      "Motorola Moto X (2nd Gen)": 655,
+      "Nikon D3100": 112,
+      "Samsung Galaxy Note 4": 9512,
+      "Samsung Galaxy S6": 1090,
+      "Sony RX100": 825
+    },
+    "2016": {
+      "Apple iPhone 5s": 23,
+      "Apple iPhone 6": 93,
+      "Google Pixel XL": 671,
+      "Huawei Nexus 6P": 2860,
+      "LG Nexus 5X": 684,
+      "Nikon D3100": 137,
+      "Samsung Galaxy Note 4": 1513,
+      "Sony RX100": 734
+    },
+    "2017": {
+      "Apple iPhone 5s": 72,
+      "Apple iPhone 6": 29,
+      "Apple iPhone 6s": 9,
+      "Apple iPhone 6s Plus": 1,
+      "Apple iPhone 7": 2,
+      "DJI Phantom 4": 14,
+      "GoPro HERO5 Session": 1,
+      "Google Pixel 2 XL": 747,
+      "Google Pixel XL": 1816,
+      "Huawei Nexus 6P": 3557,
+      "LG Nexus 5X": 875,
+      "Nikon D3100": 233,
+      "Samsung Galaxy S7": 1,
+      "Sony A6000": 11
+    },
+    "2018": {
+      "Apple iPhone 5s": 25,
+      "Apple iPhone 6": 63,
+      "Apple iPhone X": 2,
+      "Google Pixel 2 XL": 2379,
+      "Google Pixel 3 XL": 529,
+      "Google Pixel XL": 4114,
+      "LG Nexus 5X": 37
+    },
+    "2019": {
+      "Apple iPhone 6": 2,
+      "Apple iPhone 8": 2,
+      "Apple iPhone X": 16,
+      "Apple iPhone XR": 34,
+      "Canon EOS 5D Mark IV": 126,
+      "Google Pixel 2 XL": 2687,
+      "Google Pixel 3 XL": 2327,
+      "Google Pixel 4 XL": 492
+    },
+    "2020": {
+      "Apple iPhone 11": 2,
+      "DJI Mavic Mini": 129,
+      "Google Pixel 3 XL": 1261,
+      "Google Pixel 4 XL": 742,
+      "Google Pixel 5": 170
+    },
+    "2021": {
+      "Apple iPhone X": 11,
+      "DJI Mavic Mini": 71,
+      "Google Pixel 2 XL": 2,
+      "Google Pixel 3 XL": 780,
+      "Google Pixel 5": 1036,
+      "Google Pixel 6 Pro": 786
+    },
+    "2022": {
+      "Apple iPhone 11": 7,
+      "Apple iPhone 12 mini": 1,
+      "Apple iPhone XR": 2,
+      "DJI Mavic Mini": 33,
+      "Google Pixel 5": 78,
+      "Google Pixel 6 Pro": 1191,
+      "Google Pixel 6a": 1318
+    },
+    "2023": {
+      "Apple iPhone 11": 1,
+      "Google Pixel 6 Pro": 38,
+      "Google Pixel 6a": 2010,
+      "Google Pixel 8 Pro": 544
+    },
+    "2024": {
+      "Apple iPhone 11": 7,
+      "Apple iPhone 16 Pro": 1,
+      "Google Pixel 6a": 101,
+      "Google Pixel 8 Pro": 2004,
+      "Google Pixel 8a": 18,
+      "Google Pixel 9 Pro XL": 704
+    },
+    "2025": {
+      "Apple iPhone 11": 1,
+      "Apple iPhone 16": 1,
+      "Apple iPhone 16 Pro": 3,
+      "Google Pixel 10 Pro XL": 802,
+      "Google Pixel 8a": 26,
+      "Google Pixel 9 Pro XL": 1237,
+      "Samsung Galaxy S24": 4
+    },
+    "2026": {
+      "Google Pixel 10 Pro XL": 179,
+      "Google Pixel 8a": 2
+    }
+  },
+  "monthly": {
+    "2003-01": {
+      "Casio Exilim EX-S2": 1
+    },
+    "2003-07": {
+      "Sony Cyber-shot DSC-V1": 249
+    },
+    "2003-08": {
+      "Sony Cyber-shot DSC-V1": 5
+    },
+    "2003-09": {
+      "Kodak EasyShare DX4900": 1,
+      "Sony Cyber-shot DSC-V1": 180
+    },
+    "2004-01": {
+      "Pentax Optio 30": 20
+    },
+    "2004-06": {
+      "Pentax Optio S": 1
+    },
+    "2004-08": {
+      "Sony Cyber-shot DSC-V1": 1
+    },
+    "2004-10": {
+      "Sony Cyber-shot DSC-V1": 64
+    },
+    "2005-01": {
+      "Pentax Optio S6": 12
+    },
+    "2005-02": {
+      "Pentax Optio S6": 3
+    },
+    "2005-06": {
+      "Pentax Optio S5z": 21
+    },
+    "2005-07": {
+      "Pentax Optio S5z": 16
+    },
+    "2005-08": {
+      "Sony Cyber-shot DSC-V1": 3
+    },
+    "2005-09": {
+      "Sony Cyber-shot DSC-V1": 10
+    },
+    "2005-10": {
+      "Sony Cyber-shot DSC-V1": 1
+    },
+    "2005-12": {
+      "Konica Minolta Maxxum 5D": 1,
+      "Sony Cyber-shot DSC-V1": 3
+    },
+    "2006-01": {
+      "Kodak EasyShare C875": 237,
+      "Sony Cyber-shot DSC-V1": 58
+    },
+    "2006-02": {
+      "Canon PowerShot SD400": 1
+    },
+    "2006-04": {
+      "Canon PowerShot A520": 1,
+      "Sony Cyber-shot DSC-V1": 5
+    },
+    "2006-06": {
+      "Canon PowerShot A75": 3,
+      "Pentax Optio S6": 22
+    },
+    "2006-07": {
+      "Pentax Optio S6": 12
+    },
+    "2006-08": {
+      "Canon PowerShot SD400": 8,
+      "Pentax Optio S6": 8,
+      "Sony Cyber-shot DSC-V1": 45
+    },
+    "2006-10": {
+      "Pentax Optio S6": 25
+    },
+    "2006-11": {
+      "Sony Cyber-shot DSC-V1": 50
+    },
+    "2006-12": {
+      "Canon EOS Rebel XTi": 34,
+      "Canon PowerShot SD400": 2,
+      "Sony Cyber-shot DSC-P100": 14
+    },
+    "2007-01": {
+      "Canon EOS Rebel XTi": 3
+    },
+    "2007-03": {
+      "Sony Cyber-shot DSC-V1": 18
+    },
+    "2007-04": {
+      "Pentax Optio S6": 27
+    },
+    "2007-06": {
+      "Canon PowerShot SD400": 220,
+      "Canon PowerShot SD600": 189,
+      "Pentax Optio S6": 56,
+      "Sony Cyber-shot DSC-V1": 53
+    },
+    "2007-07": {
+      "Canon PowerShot SD400": 201,
+      "Canon PowerShot SD450": 83,
+      "Sony Cyber-shot DSC-V1": 272
+    },
+    "2007-08": {
+      "Canon PowerShot A520": 2,
+      "Canon PowerShot SD400": 49,
+      "Canon PowerShot SD450": 31
+    },
+    "2007-09": {
+      "Sony Cyber-shot DSC-V1": 16
+    },
+    "2007-10": {
+      "Sony Cyber-shot DSC-V1": 330
+    },
+    "2007-11": {
+      "Sony Cyber-shot DSC-V1": 182
+    },
+    "2007-12": {
+      "Sony Cyber-shot DSC-V1": 251
+    },
+    "2008-01": {
+      "Sony Cyber-shot DSC-V1": 36
+    },
+    "2008-02": {
+      "Sony Cyber-shot DSC-V1": 6
+    },
+    "2008-03": {
+      "Canon PowerShot SD600": 17,
+      "Sony Cyber-shot DSC-V1": 35
+    },
+    "2008-04": {
+      "Sony Cyber-shot DSC-V1": 194
+    },
+    "2008-05": {
+      "Sony Cyber-shot DSC-V1": 93
+    },
+    "2008-07": {
+      "Apple iPhone (1st Gen)": 38,
+      "Sony Cyber-shot DSC-V1": 42,
+      "Sony Cyber-shot DSC-W150": 2,
+      "Sony Ericsson Z750a": 9
+    },
+    "2008-08": {
+      "Apple iPhone (1st Gen)": 57,
+      "Sony Cyber-shot DSC-V1": 24,
+      "Sony Ericsson Z750a": 2
+    },
+    "2008-09": {
+      "Apple iPhone (1st Gen)": 17,
+      "Sony Ericsson Z750a": 6
+    },
+    "2008-10": {
+      "Apple iPhone (1st Gen)": 17,
+      "Sony Ericsson Z750a": 9
+    },
+    "2008-11": {
+      "Apple iPhone (1st Gen)": 44,
+      "Sony Cyber-shot DSC-V1": 15,
+      "Sony Ericsson Z750a": 4
+    },
+    "2008-12": {
+      "Apple iPhone (1st Gen)": 29,
+      "Canon PowerShot SD1000": 7,
+      "Sony Cyber-shot DSC-V1": 50,
+      "Sony Ericsson Z750a": 9
+    },
+    "2009-01": {
+      "Apple iPhone (1st Gen)": 22,
+      "Nikon D3000": 9,
+      "Sony Cyber-shot DSC-V1": 60,
+      "Sony Ericsson Z750a": 12
+    },
+    "2009-02": {
+      "Apple iPhone (1st Gen)": 6
+    },
+    "2009-03": {
+      "Apple iPhone (1st Gen)": 22,
+      "Kodak EasyShare C533": 2,
+      "Kodak EasyShare M893": 2,
+      "Sony Cyber-shot DSC-V1": 335,
+      "Sony Ericsson Z750a": 9
+    },
+    "2009-04": {
+      "Apple iPhone (1st Gen)": 28,
+      "Canon PowerShot SD1000": 2,
+      "Sony Cyber-shot DSC-V1": 196,
+      "Sony Ericsson Z750a": 11
+    },
+    "2009-05": {
+      "Apple iPhone (1st Gen)": 18,
+      "Sony Cyber-shot DSC-V1": 235,
+      "Sony Ericsson Z750a": 10
+    },
+    "2009-06": {
+      "Apple iPhone (1st Gen)": 24,
+      "Canon PowerShot SD1000": 11,
+      "Kodak EasyShare M893": 1,
+      "Sony Cyber-shot DSC-V1": 262
+    },
+    "2009-07": {
+      "Apple iPhone (1st Gen)": 21,
+      "Canon PowerShot SX110 IS": 7,
+      "Sony Cyber-shot DSC-V1": 237
+    },
+    "2009-08": {
+      "Apple iPhone (1st Gen)": 66,
+      "Canon PowerShot SX110 IS": 1151,
+      "Sony Cyber-shot DSC-V1": 152
+    },
+    "2009-09": {
+      "Apple iPhone (1st Gen)": 5,
+      "Apple iPhone 3G": 6,
+      "Apple iPhone 3GS": 7,
+      "Sony Cyber-shot DSC-V1": 3
+    },
+    "2009-10": {
+      "Apple iPhone 3G": 6
+    },
+    "2009-11": {
+      "Apple iPhone (1st Gen)": 9,
+      "Apple iPhone 3G": 11,
+      "Canon PowerShot A2000 IS": 401,
+      "Kodak EasyShare C875": 42
+    },
+    "2009-12": {
+      "Apple iPhone 3G": 34,
+      "Apple iPhone 3GS": 7,
+      "Canon PowerShot A2000 IS": 108
+    },
+    "2010-01": {
+      "Apple iPhone 3G": 13,
+      "Apple iPhone 3GS": 4
+    },
+    "2010-02": {
+      "Apple iPhone 3G": 16,
+      "Canon PowerShot A2000 IS": 184
+    },
+    "2010-03": {
+      "Apple iPhone (1st Gen)": 14,
+      "Apple iPhone 3G": 6,
+      "Canon PowerShot A2000 IS": 30
+    },
+    "2010-04": {
+      "Apple iPhone (1st Gen)": 3,
+      "Apple iPhone 3G": 29,
+      "Canon PowerShot A2000 IS": 18,
+      "Sony Cyber-shot DSC-V1": 74
+    },
+    "2010-05": {
+      "Apple iPhone 3G": 73,
+      "Canon PowerShot A2000 IS": 461
+    },
+    "2010-06": {
+      "Apple iPhone 3G": 3,
+      "Canon PowerShot A2000 IS": 276
+    },
+    "2010-07": {
+      "Apple iPhone (1st Gen)": 17,
+      "Canon PowerShot A2000 IS": 51,
+      "Kodak EasyShare M893": 1
+    },
+    "2010-08": {
+      "Apple iPhone (1st Gen)": 20,
+      "Canon PowerShot A2000 IS": 260
+    },
+    "2010-09": {
+      "Apple iPhone (1st Gen)": 3,
+      "Apple iPhone 4": 42
+    },
+    "2010-10": {
+      "Apple iPhone 4": 8
+    },
+    "2010-11": {
+      "Apple iPhone 4": 3,
+      "Canon PowerShot A2000 IS": 106
+    },
+    "2010-12": {
+      "Apple iPhone 4": 9,
+      "Canon PowerShot SX200 IS": 17
+    },
+    "2011-01": {
+      "Apple iPhone 4": 1,
+      "Nikon D3100": 830
+    },
+    "2011-02": {
+      "Apple iPhone 4": 13,
+      "Canon PowerShot SX200 IS": 251,
+      "Nikon D3100": 738
+    },
+    "2011-03": {
+      "Apple iPhone 4": 2,
+      "Nikon D3100": 475
+    },
+    "2011-04": {
+      "Apple iPhone 4": 7,
+      "Canon PowerShot SX200 IS": 99,
+      "Nikon D3100": 182
+    },
+    "2011-05": {
+      "Apple iPhone 4": 13,
+      "Canon PowerShot SX200 IS": 43,
+      "Nikon D3100": 81
+    },
+    "2011-06": {
+      "Apple iPhone 4": 18,
+      "Canon PowerShot SX200 IS": 2
+    },
+    "2011-07": {
+      "Apple iPhone 4": 121,
+      "Nikon D3100": 172
+    },
+    "2011-08": {
+      "Apple iPhone 3G": 1,
+      "Apple iPhone 4": 317,
+      "Nikon D3100": 73
+    },
+    "2011-09": {
+      "Apple iPhone 4": 274,
+      "Canon EOS 5D Mark II": 2,
+      "Canon PowerShot A2000 IS": 64,
+      "Nikon D3100": 321
+    },
+    "2011-10": {
+      "Apple iPhone 4": 246,
+      "Nikon D3100": 629
+    },
+    "2011-11": {
+      "Apple iPhone 4": 310,
+      "Nikon D3100": 711
+    },
+    "2011-12": {
+      "Apple iPhone 4": 277,
+      "Nikon D3100": 246
+    },
+    "2012-01": {
+      "Apple iPhone 4": 171,
+      "Apple iPhone 4S": 4
+    },
+    "2012-02": {
+      "Apple iPhone 4": 265
+    },
+    "2012-03": {
+      "Apple iPhone 4": 263,
+      "Nikon D3100": 49
+    },
+    "2012-04": {
+      "Apple iPhone 4": 328,
+      "Nikon D3100": 150
+    },
+    "2012-05": {
+      "Apple iPhone 4": 246
+    },
+    "2012-06": {
+      "Apple iPhone 4": 15,
+      "Nikon D3100": 16
+    },
+    "2012-07": {
+      "Apple iPhone 4": 12
+    },
+    "2012-08": {
+      "Apple iPhone 4": 18,
+      "Nikon D3100": 14
+    },
+    "2012-09": {
+      "Apple iPhone 4": 56
+    },
+    "2012-10": {
+      "Nikon D3100": 12,
+      "Samsung Galaxy Note II": 65
+    },
+    "2012-11": {
+      "Samsung Galaxy Note II": 203
+    },
+    "2012-12": {
+      "Apple iPhone 4S": 2,
+      "Nikon D3100": 2,
+      "Samsung Galaxy Note II": 215
+    },
+    "2013-01": {
+      "Nikon D3100": 95,
+      "Samsung Galaxy Note II": 90
+    },
+    "2013-02": {
+      "Nikon D3100": 41,
+      "Samsung Galaxy Note II": 160
+    },
+    "2013-03": {
+      "Nikon D3100": 82,
+      "Samsung Galaxy Note II": 217
+    },
+    "2013-04": {
+      "Samsung Galaxy Note II": 242
+    },
+    "2013-05": {
+      "Samsung Galaxy Note II": 548
+    },
+    "2013-06": {
+      "Nikon D3000": 1,
+      "Samsung Galaxy Note II": 407
+    },
+    "2013-07": {
+      "Samsung Galaxy Note II": 1319
+    },
+    "2013-08": {
+      "Samsung Galaxy Note II": 906
+    },
+    "2013-09": {
+      "Samsung Galaxy Note II": 1302
+    },
+    "2013-10": {
+      "Apple iPhone 4S": 2,
+      "Samsung Galaxy Note II": 1044
+    },
+    "2013-11": {
+      "Nikon D3000": 97,
+      "Nikon D3100": 29,
+      "Samsung Galaxy Note II": 636
+    },
+    "2013-12": {
+      "Apple iPhone 4S": 1,
+      "Motorola Moto X (1st Gen)": 27,
+      "Samsung Galaxy Note II": 138
+    },
+    "2014-01": {
+      "Apple iPad Air": 1,
+      "Motorola Moto X (1st Gen)": 39,
+      "Samsung Galaxy Note II": 224
+    },
+    "2014-02": {
+      "Apple iPhone 4S": 1,
+      "Motorola Moto X (1st Gen)": 74,
+      "Samsung Galaxy Note II": 209
+    },
+    "2014-03": {
+      "Apple iPad Air": 191,
+      "Motorola Moto X (1st Gen)": 31,
+      "Samsung Galaxy Note II": 160
+    },
+    "2014-04": {
+      "Apple iPhone 4S": 4,
+      "Motorola Moto X (1st Gen)": 51,
+      "Nikon D3100": 239,
+      "Samsung Galaxy Note II": 478
+    },
+    "2014-05": {
+      "Apple iPhone 4S": 1,
+      "Motorola Moto X (1st Gen)": 50,
+      "Samsung Galaxy Note II": 622
+    },
+    "2014-06": {
+      "Asus Nexus 7": 2,
+      "Motorola Moto X (1st Gen)": 52,
+      "Samsung Galaxy Note II": 585
+    },
+    "2014-07": {
+      "Asus Nexus 7": 30,
+      "Motorola Moto X (1st Gen)": 53,
+      "Samsung Galaxy Note II": 527
+    },
+    "2014-08": {
+      "Asus Nexus 7": 6,
+      "Motorola Moto X (1st Gen)": 97,
+      "Samsung Galaxy Note II": 182
+    },
+    "2014-09": {
+      "Canon EOS 5D Mark II": 60,
+      "Motorola Moto X (1st Gen)": 60,
+      "Motorola Moto X (2nd Gen)": 39,
+      "Nikon D5200": 4,
+      "Samsung Galaxy Note II": 328
+    },
+    "2014-10": {
+      "Apple iPad Air": 20,
+      "Motorola Moto X (2nd Gen)": 244,
+      "Samsung Galaxy Note 4": 195,
+      "Samsung Galaxy Note II": 230
+    },
+    "2014-11": {
+      "Apple iPad Air": 425,
+      "Motorola Moto X (2nd Gen)": 67,
+      "Samsung Galaxy Note 4": 574
+    },
+    "2014-12": {
+      "Apple iPad Air": 300,
+      "Apple iPhone 5c": 2,
+      "Motorola Moto X (2nd Gen)": 13,
+      "Nikon D3100": 60,
+      "Samsung Galaxy Note 4": 910,
+      "Samsung Galaxy Note II": 2,
+      "Sony RX100": 123
+    },
+    "2015-01": {
+      "Apple iPad Air": 205,
+      "GoPro HERO5 Session": 27,
+      "Motorola Moto X (2nd Gen)": 176,
+      "Samsung Galaxy Note 4": 708
+    },
+    "2015-02": {
+      "Apple iPad Air": 5,
+      "Motorola Moto X (2nd Gen)": 40,
+      "Samsung Galaxy Note 4": 461
+    },
+    "2015-03": {
+      "Motorola Moto X (2nd Gen)": 73,
+      "Samsung Galaxy Note 4": 826
+    },
+    "2015-04": {
+      "Apple iPad Air": 56,
+      "Motorola Moto X (2nd Gen)": 366,
+      "Samsung Galaxy Note 4": 941
+    },
+    "2015-05": {
+      "Apple iPad Air": 173,
+      "Samsung Galaxy Note 4": 1193,
+      "Samsung Galaxy S6": 597
+    },
+    "2015-06": {
+      "Apple iPad Air": 34,
+      "Apple iPhone 6": 3,
+      "Samsung Galaxy Note 4": 989,
+      "Samsung Galaxy S6": 184
+    },
+    "2015-07": {
+      "Apple iPhone 4S": 1,
+      "Samsung Galaxy Note 4": 628,
+      "Samsung Galaxy S6": 58
+    },
+    "2015-08": {
+      "Apple iPad Air": 23,
+      "Apple iPhone 5c": 3,
+      "Samsung Galaxy Note 4": 847,
+      "Samsung Galaxy S6": 161
+    },
+    "2015-09": {
+      "Samsung Galaxy Note 4": 919,
+      "Samsung Galaxy S6": 90,
+      "Sony RX100": 1
+    },
+    "2015-10": {
+      "Apple iPad Air": 1,
+      "Apple iPhone 5c": 3,
+      "Apple iPhone 6": 2,
+      "LG Nexus 5X": 34,
+      "Samsung Galaxy Note 4": 1082,
+      "Sony RX100": 530
+    },
+    "2015-11": {
+      "LG Nexus 5X": 164,
+      "Samsung Galaxy Note 4": 645,
+      "Sony RX100": 164
+    },
+    "2015-12": {
+      "Apple iPhone 5s": 3,
+      "Apple iPhone 6": 1,
+      "Canon EOS 5D Mark III": 105,
+      "LG Nexus 5X": 18,
+      "Nikon D3100": 112,
+      "Samsung Galaxy Note 4": 273,
+      "Sony RX100": 130
+    },
+    "2016-01": {
+      "Huawei Nexus 6P": 24,
+      "LG Nexus 5X": 83,
+      "Samsung Galaxy Note 4": 331,
+      "Sony RX100": 53
+    },
+    "2016-02": {
+      "LG Nexus 5X": 8,
+      "Samsung Galaxy Note 4": 165,
+      "Sony RX100": 119
+    },
+    "2016-03": {
+      "Apple iPhone 6": 2,
+      "LG Nexus 5X": 54,
+      "Samsung Galaxy Note 4": 323,
+      "Sony RX100": 240
+    },
+    "2016-04": {
+      "LG Nexus 5X": 64,
+      "Samsung Galaxy Note 4": 231,
+      "Sony RX100": 88
+    },
+    "2016-05": {
+      "LG Nexus 5X": 119,
+      "Samsung Galaxy Note 4": 214,
+      "Sony RX100": 9
+    },
+    "2016-06": {
+      "LG Nexus 5X": 27,
+      "Samsung Galaxy Note 4": 245
+    },
+    "2016-07": {
+      "Apple iPhone 5s": 11,
+      "Apple iPhone 6": 82,
+      "Huawei Nexus 6P": 381,
+      "LG Nexus 5X": 26,
+      "Samsung Galaxy Note 4": 4,
+      "Sony RX100": 225
+    },
+    "2016-08": {
+      "Apple iPhone 5s": 2,
+      "Huawei Nexus 6P": 528,
+      "LG Nexus 5X": 123
+    },
+    "2016-09": {
+      "Huawei Nexus 6P": 525,
+      "LG Nexus 5X": 109
+    },
+    "2016-10": {
+      "Apple iPhone 5s": 2,
+      "Google Pixel XL": 147,
+      "Huawei Nexus 6P": 804,
+      "LG Nexus 5X": 71
+    },
+    "2016-11": {
+      "Apple iPhone 5s": 5,
+      "Apple iPhone 6": 9,
+      "Google Pixel XL": 315,
+      "Huawei Nexus 6P": 304
+    },
+    "2016-12": {
+      "Apple iPhone 5s": 3,
+      "Google Pixel XL": 209,
+      "Huawei Nexus 6P": 294,
+      "Nikon D3100": 137
+    },
+    "2017-01": {
+      "Google Pixel XL": 33,
+      "Huawei Nexus 6P": 233
+    },
+    "2017-02": {
+      "Google Pixel XL": 61,
+      "Huawei Nexus 6P": 522
+    },
+    "2017-03": {
+      "Apple iPhone 5s": 1,
+      "Google Pixel XL": 61,
+      "Huawei Nexus 6P": 301,
+      "Nikon D3100": 2
+    },
+    "2017-04": {
+      "Apple iPhone 5s": 5,
+      "Google Pixel XL": 30,
+      "Huawei Nexus 6P": 461
+    },
+    "2017-05": {
+      "Apple iPhone 6": 1,
+      "Google Pixel XL": 82,
+      "Huawei Nexus 6P": 413,
+      "Nikon D3100": 62
+    },
+    "2017-06": {
+      "Google Pixel XL": 89,
+      "Huawei Nexus 6P": 352
+    },
+    "2017-07": {
+      "Apple iPhone 5s": 60,
+      "Apple iPhone 6": 28,
+      "Apple iPhone 6s": 9,
+      "Apple iPhone 6s Plus": 1,
+      "Apple iPhone 7": 2,
+      "DJI Phantom 4": 14,
+      "Google Pixel XL": 280,
+      "Huawei Nexus 6P": 702,
+      "LG Nexus 5X": 10,
+      "Nikon D3100": 169,
+      "Samsung Galaxy S7": 1,
+      "Sony A6000": 11
+    },
+    "2017-08": {
+      "Google Pixel XL": 155,
+      "Huawei Nexus 6P": 482
+    },
+    "2017-09": {
+      "Google Pixel XL": 17,
+      "Huawei Nexus 6P": 91,
+      "LG Nexus 5X": 246
+    },
+    "2017-10": {
+      "GoPro HERO5 Session": 1,
+      "Google Pixel 2 XL": 521,
+      "Google Pixel XL": 88,
+      "LG Nexus 5X": 404
+    },
+    "2017-11": {
+      "Google Pixel 2 XL": 32,
+      "Google Pixel XL": 467,
+      "LG Nexus 5X": 172
+    },
+    "2017-12": {
+      "Apple iPhone 5s": 6,
+      "Google Pixel 2 XL": 194,
+      "Google Pixel XL": 453,
+      "LG Nexus 5X": 43
+    },
+    "2018-01": {
+      "Google Pixel 2 XL": 479,
+      "Google Pixel XL": 358
+    },
+    "2018-02": {
+      "Apple iPhone 5s": 25,
+      "Apple iPhone 6": 17,
+      "Google Pixel 2 XL": 52,
+      "Google Pixel XL": 482
+    },
+    "2018-03": {
+      "Google Pixel 2 XL": 9,
+      "Google Pixel XL": 304,
+      "LG Nexus 5X": 24
+    },
+    "2018-04": {
+      "Google Pixel 2 XL": 794,
+      "Google Pixel XL": 884,
+      "LG Nexus 5X": 13
+    },
+    "2018-05": {
+      "Google Pixel 2 XL": 68,
+      "Google Pixel XL": 452
+    },
+    "2018-06": {
+      "Google Pixel 2 XL": 35,
+      "Google Pixel XL": 317
+    },
+    "2018-07": {
+      "Google Pixel 2 XL": 118,
+      "Google Pixel XL": 527
+    },
+    "2018-08": {
+      "Google Pixel 2 XL": 43,
+      "Google Pixel XL": 367
+    },
+    "2018-09": {
+      "Google Pixel 2 XL": 184,
+      "Google Pixel XL": 314
+    },
+    "2018-10": {
+      "Apple iPhone 6": 12,
+      "Google Pixel 2 XL": 150,
+      "Google Pixel 3 XL": 264,
+      "Google Pixel XL": 109
+    },
+    "2018-11": {
+      "Google Pixel 2 XL": 176,
+      "Google Pixel 3 XL": 105
+    },
+    "2018-12": {
+      "Apple iPhone 6": 34,
+      "Apple iPhone X": 2,
+      "Google Pixel 2 XL": 271,
+      "Google Pixel 3 XL": 160
+    },
+    "2019-01": {
+      "Google Pixel 2 XL": 532,
+      "Google Pixel 3 XL": 18
+    },
+    "2019-02": {
+      "Google Pixel 2 XL": 173,
+      "Google Pixel 3 XL": 101
+    },
+    "2019-03": {
+      "Google Pixel 2 XL": 202,
+      "Google Pixel 3 XL": 89
+    },
+    "2019-04": {
+      "Google Pixel 2 XL": 239,
+      "Google Pixel 3 XL": 80
+    },
+    "2019-05": {
+      "Google Pixel 2 XL": 284,
+      "Google Pixel 3 XL": 929
+    },
+    "2019-06": {
+      "Google Pixel 2 XL": 245,
+      "Google Pixel 3 XL": 74
+    },
+    "2019-07": {
+      "Apple iPhone 6": 2,
+      "Google Pixel 2 XL": 251,
+      "Google Pixel 3 XL": 411
+    },
+    "2019-08": {
+      "Google Pixel 2 XL": 173,
+      "Google Pixel 3 XL": 93
+    },
+    "2019-09": {
+      "Apple iPhone 8": 2,
+      "Google Pixel 2 XL": 364,
+      "Google Pixel 3 XL": 60
+    },
+    "2019-10": {
+      "Google Pixel 2 XL": 224,
+      "Google Pixel 3 XL": 136,
+      "Google Pixel 4 XL": 74
+    },
+    "2019-11": {
+      "Apple iPhone XR": 2,
+      "Google Pixel 3 XL": 152,
+      "Google Pixel 4 XL": 239
+    },
+    "2019-12": {
+      "Apple iPhone X": 16,
+      "Apple iPhone XR": 32,
+      "Canon EOS 5D Mark IV": 126,
+      "Google Pixel 3 XL": 184,
+      "Google Pixel 4 XL": 179
+    },
+    "2020-01": {
+      "Apple iPhone 11": 2,
+      "Google Pixel 3 XL": 253,
+      "Google Pixel 4 XL": 57
+    },
+    "2020-02": {
+      "Google Pixel 3 XL": 139,
+      "Google Pixel 4 XL": 54
+    },
+    "2020-03": {
+      "Google Pixel 3 XL": 125,
+      "Google Pixel 4 XL": 164
+    },
+    "2020-04": {
+      "Google Pixel 3 XL": 92,
+      "Google Pixel 4 XL": 58
+    },
+    "2020-05": {
+      "Google Pixel 3 XL": 39,
+      "Google Pixel 4 XL": 153
+    },
+    "2020-06": {
+      "Google Pixel 3 XL": 91,
+      "Google Pixel 4 XL": 54
+    },
+    "2020-07": {
+      "Google Pixel 3 XL": 97,
+      "Google Pixel 4 XL": 21
+    },
+    "2020-08": {
+      "DJI Mavic Mini": 10,
+      "Google Pixel 3 XL": 88,
+      "Google Pixel 4 XL": 49
+    },
+    "2020-09": {
+      "DJI Mavic Mini": 51,
+      "Google Pixel 3 XL": 56,
+      "Google Pixel 4 XL": 35
+    },
+    "2020-10": {
+      "DJI Mavic Mini": 57,
+      "Google Pixel 3 XL": 103,
+      "Google Pixel 4 XL": 97,
+      "Google Pixel 5": 45
+    },
+    "2020-11": {
+      "DJI Mavic Mini": 11,
+      "Google Pixel 3 XL": 29,
+      "Google Pixel 5": 86
+    },
+    "2020-12": {
+      "Google Pixel 3 XL": 149,
+      "Google Pixel 5": 39
+    },
+    "2021-01": {
+      "Google Pixel 3 XL": 45,
+      "Google Pixel 5": 19
+    },
+    "2021-02": {
+      "Google Pixel 3 XL": 12,
+      "Google Pixel 5": 27
+    },
+    "2021-03": {
+      "Apple iPhone X": 4,
+      "Google Pixel 3 XL": 23,
+      "Google Pixel 5": 32
+    },
+    "2021-04": {
+      "Google Pixel 2 XL": 1,
+      "Google Pixel 3 XL": 46,
+      "Google Pixel 5": 178
+    },
+    "2021-05": {
+      "Google Pixel 3 XL": 64,
+      "Google Pixel 5": 16
+    },
+    "2021-06": {
+      "Apple iPhone X": 7,
+      "Google Pixel 3 XL": 223,
+      "Google Pixel 5": 344
+    },
+    "2021-07": {
+      "Google Pixel 3 XL": 68,
+      "Google Pixel 5": 220
+    },
+    "2021-08": {
+      "Google Pixel 2 XL": 1,
+      "Google Pixel 3 XL": 39,
+      "Google Pixel 5": 19
+    },
+    "2021-09": {
+      "Google Pixel 3 XL": 94,
+      "Google Pixel 5": 156
+    },
+    "2021-10": {
+      "DJI Mavic Mini": 71,
+      "Google Pixel 3 XL": 166,
+      "Google Pixel 5": 4,
+      "Google Pixel 6 Pro": 200
+    },
+    "2021-11": {
+      "Google Pixel 5": 4,
+      "Google Pixel 6 Pro": 201
+    },
+    "2021-12": {
+      "Google Pixel 5": 17,
+      "Google Pixel 6 Pro": 385
+    },
+    "2022-01": {
+      "Google Pixel 6 Pro": 83
+    },
+    "2022-02": {
+      "Google Pixel 5": 3,
+      "Google Pixel 6 Pro": 113
+    },
+    "2022-03": {
+      "Google Pixel 5": 6,
+      "Google Pixel 6 Pro": 108
+    },
+    "2022-04": {
+      "Apple iPhone XR": 2,
+      "Google Pixel 5": 9,
+      "Google Pixel 6 Pro": 488
+    },
+    "2022-05": {
+      "Apple iPhone 12 mini": 1,
+      "DJI Mavic Mini": 33,
+      "Google Pixel 5": 4,
+      "Google Pixel 6 Pro": 162
+    },
+    "2022-06": {
+      "Google Pixel 5": 13,
+      "Google Pixel 6 Pro": 214
+    },
+    "2022-07": {
+      "Google Pixel 5": 16,
+      "Google Pixel 6 Pro": 2,
+      "Google Pixel 6a": 160
+    },
+    "2022-08": {
+      "Apple iPhone 11": 6,
+      "Google Pixel 5": 21,
+      "Google Pixel 6 Pro": 13,
+      "Google Pixel 6a": 427
+    },
+    "2022-09": {
+      "Google Pixel 5": 5,
+      "Google Pixel 6 Pro": 1,
+      "Google Pixel 6a": 226
+    },
+    "2022-10": {
+      "Apple iPhone 11": 1,
+      "Google Pixel 5": 1,
+      "Google Pixel 6 Pro": 1,
+      "Google Pixel 6a": 120
+    },
+    "2022-11": {
+      "Google Pixel 6 Pro": 4,
+      "Google Pixel 6a": 212
+    },
+    "2022-12": {
+      "Google Pixel 6 Pro": 2,
+      "Google Pixel 6a": 173
+    },
+    "2023-01": {
+      "Google Pixel 6 Pro": 3,
+      "Google Pixel 6a": 107
+    },
+    "2023-02": {
+      "Google Pixel 6 Pro": 1,
+      "Google Pixel 6a": 156
+    },
+    "2023-03": {
+      "Google Pixel 6 Pro": 2,
+      "Google Pixel 6a": 168
+    },
+    "2023-04": {
+      "Google Pixel 6 Pro": 3,
+      "Google Pixel 6a": 225
+    },
+    "2023-05": {
+      "Google Pixel 6 Pro": 1,
+      "Google Pixel 6a": 131
+    },
+    "2023-06": {
+      "Google Pixel 6 Pro": 1,
+      "Google Pixel 6a": 339
+    },
+    "2023-07": {
+      "Apple iPhone 11": 1,
+      "Google Pixel 6a": 188
+    },
+    "2023-08": {
+      "Google Pixel 6 Pro": 25,
+      "Google Pixel 6a": 493
+    },
+    "2023-09": {
+      "Google Pixel 6a": 194
+    },
+    "2023-10": {
+      "Google Pixel 6 Pro": 2,
+      "Google Pixel 6a": 1,
+      "Google Pixel 8 Pro": 310
+    },
+    "2023-11": {
+      "Google Pixel 6a": 1,
+      "Google Pixel 8 Pro": 129
+    },
+    "2023-12": {
+      "Google Pixel 6a": 7,
+      "Google Pixel 8 Pro": 105
+    },
+    "2024-01": {
+      "Google Pixel 6a": 11,
+      "Google Pixel 8 Pro": 138
+    },
+    "2024-02": {
+      "Google Pixel 6a": 5,
+      "Google Pixel 8 Pro": 55
+    },
+    "2024-03": {
+      "Apple iPhone 11": 3,
+      "Google Pixel 6a": 7,
+      "Google Pixel 8 Pro": 141
+    },
+    "2024-04": {
+      "Google Pixel 6a": 29,
+      "Google Pixel 8 Pro": 396
+    },
+    "2024-05": {
+      "Google Pixel 6a": 10,
+      "Google Pixel 8 Pro": 288
+    },
+    "2024-06": {
+      "Google Pixel 6a": 19,
+      "Google Pixel 8 Pro": 771
+    },
+    "2024-07": {
+      "Google Pixel 6a": 12,
+      "Google Pixel 8 Pro": 212
+    },
+    "2024-08": {
+      "Google Pixel 6a": 3,
+      "Google Pixel 8 Pro": 3,
+      "Google Pixel 9 Pro XL": 90
+    },
+    "2024-09": {
+      "Google Pixel 6a": 2,
+      "Google Pixel 9 Pro XL": 112
+    },
+    "2024-10": {
+      "Apple iPhone 11": 4,
+      "Google Pixel 6a": 1,
+      "Google Pixel 9 Pro XL": 149
+    },
+    "2024-11": {
+      "Google Pixel 6a": 2,
+      "Google Pixel 8a": 5,
+      "Google Pixel 9 Pro XL": 147
+    },
+    "2024-12": {
+      "Apple iPhone 16 Pro": 1,
+      "Google Pixel 8a": 13,
+      "Google Pixel 9 Pro XL": 206
+    },
+    "2025-01": {
+      "Google Pixel 8a": 4,
+      "Google Pixel 9 Pro XL": 93
+    },
+    "2025-02": {
+      "Google Pixel 9 Pro XL": 59
+    },
+    "2025-03": {
+      "Google Pixel 8a": 1,
+      "Google Pixel 9 Pro XL": 284
+    },
+    "2025-04": {
+      "Apple iPhone 11": 1,
+      "Google Pixel 8a": 4,
+      "Google Pixel 9 Pro XL": 428
+    },
+    "2025-05": {
+      "Google Pixel 8a": 2,
+      "Google Pixel 9 Pro XL": 170
+    },
+    "2025-06": {
+      "Google Pixel 8a": 1,
+      "Google Pixel 9 Pro XL": 76
+    },
+    "2025-07": {
+      "Google Pixel 8a": 3,
+      "Google Pixel 9 Pro XL": 112
+    },
+    "2025-08": {
+      "Google Pixel 10 Pro XL": 208,
+      "Google Pixel 8a": 3,
+      "Google Pixel 9 Pro XL": 14
+    },
+    "2025-09": {
+      "Google Pixel 10 Pro XL": 81
+    },
+    "2025-10": {
+      "Google Pixel 10 Pro XL": 81,
+      "Google Pixel 8a": 4
+    },
+    "2025-11": {
+      "Google Pixel 10 Pro XL": 162,
+      "Google Pixel 8a": 2,
+      "Google Pixel 9 Pro XL": 1
+    },
+    "2025-12": {
+      "Apple iPhone 16": 1,
+      "Apple iPhone 16 Pro": 3,
+      "Google Pixel 10 Pro XL": 270,
+      "Google Pixel 8a": 2,
+      "Samsung Galaxy S24": 4
+    },
+    "2026-01": {
+      "Google Pixel 10 Pro XL": 45
+    },
+    "2026-02": {
+      "Google Pixel 10 Pro XL": 124,
+      "Google Pixel 8a": 2
+    },
+    "2026-03": {
+      "Google Pixel 10 Pro XL": 10
+    }
+  },
+  "yearly_totals": {
+    "2003": 578,
+    "2004": 86,
+    "2005": 70,
+    "2006": 527,
+    "2007": 2541,
+    "2008": 838,
+    "2009": 3603,
+    "2010": 1743,
+    "2011": 6652,
+    "2012": 2282,
+    "2013": 7769,
+    "2014": 8884,
+    "2015": 13816,
+    "2016": 7010,
+    "2017": 7870,
+    "2018": 7435,
+    "2019": 5959,
+    "2020": 2396,
+    "2021": 2870,
+    "2022": 3085,
+    "2023": 2671,
+    "2024": 2901,
+    "2025": 2163,
+    "2026": 182
+  },
+  "category_by_year": {
+    "2003": {
+      "compact": 436
+    },
+    "2004": {
+      "compact": 86
+    },
+    "2005": {
+      "compact": 69,
+      "dslr": 1
+    },
+    "2006": {
+      "compact": 491,
+      "dslr": 34
+    },
+    "2007": {
+      "compact": 1980,
+      "dslr": 3
+    },
+    "2008": {
+      "compact": 521,
+      "phone": 241
+    },
+    "2009": {
+      "compact": 3207,
+      "dslr": 9,
+      "phone": 334
+    },
+    "2010": {
+      "compact": 1478,
+      "phone": 263
+    },
+    "2011": {
+      "compact": 459,
+      "dslr": 4460,
+      "phone": 1600
+    },
+    "2012": {
+      "dslr": 243,
+      "phone": 1863
+    },
+    "2013": {
+      "dslr": 345,
+      "phone": 7039
+    },
+    "2014": {
+      "compact": 123,
+      "dslr": 363,
+      "phone": 6104,
+      "tablet": 975
+    },
+    "2015": {
+      "action": 27,
+      "compact": 825,
+      "dslr": 217,
+      "phone": 11489,
+      "tablet": 497
+    },
+    "2016": {
+      "compact": 734,
+      "dslr": 137,
+      "phone": 5844
+    },
+    "2017": {
+      "action": 1,
+      "drone": 14,
+      "dslr": 233,
+      "mirrorless": 11,
+      "phone": 7109
+    },
+    "2018": {
+      "phone": 7149
+    },
+    "2019": {
+      "dslr": 126,
+      "phone": 5560
+    },
+    "2020": {
+      "drone": 129,
+      "phone": 2175
+    },
+    "2021": {
+      "drone": 71,
+      "phone": 2615
+    },
+    "2022": {
+      "drone": 33,
+      "phone": 2597
+    },
+    "2023": {
+      "phone": 2593
+    },
+    "2024": {
+      "phone": 2835
+    },
+    "2025": {
+      "phone": 2074
+    },
+    "2026": {
+      "phone": 181
+    }
+  },
+  "iso_by_year": {
+    "2003": 114.0,
+    "2004": 215.0,
+    "2005": 162.0,
+    "2006": 157.0,
+    "2007": 182.0,
+    "2008": 133.0,
+    "2009": 142.0,
+    "2010": 167.0,
+    "2011": 422.0,
+    "2012": 455.0,
+    "2013": 520.0,
+    "2014": 337.0,
+    "2015": 244.0,
+    "2016": 375.0,
+    "2017": 371.0,
+    "2018": 316.0,
+    "2019": 246.0,
+    "2020": 295.0,
+    "2021": 302.0,
+    "2022": 351.0,
+    "2023": 681.0,
+    "2024": 902.0,
+    "2025": 291.0,
+    "2026": 126.0
+  },
+  "resolution_by_year": {
+    "2003": 4.0,
+    "2004": 4.6,
+    "2005": 4.0,
+    "2006": 6.5,
+    "2007": 4.2,
+    "2008": 4.2,
+    "2009": 6.4,
+    "2010": 8.5,
+    "2011": 11.5,
+    "2012": 6.0,
+    "2013": 7.7,
+    "2014": 8.4,
+    "2015": 13.3,
+    "2016": 12.7,
+    "2017": 11.5,
+    "2018": 11.7,
+    "2019": 11.9,
+    "2020": 11.7,
+    "2021": 11.5,
+    "2022": 11.1,
+    "2023": 15.3,
+    "2024": 15.2,
+    "2025": 22.4,
+    "2026": 9.1
+  }
+}
