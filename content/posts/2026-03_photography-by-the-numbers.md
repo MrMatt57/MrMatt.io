@@ -1,6 +1,6 @@
 ---
 date: "2026-03-10"
-draft: true
+draft: false
 title: "94,000 Photos by the Numbers"
 slug: "photography-by-the-numbers"
 description: "What 22 years of EXIF data reveals about when I shoot, what I shoot with, and how photography changed from film-era habits to phone-first instinct."

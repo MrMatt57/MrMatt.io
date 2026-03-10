@@ -1,6 +1,6 @@
 ---
 date: "2026-03-10"
-draft: true
+draft: false
 title: "Every Camera I've Ever Owned"
 slug: "camera-gear-timeline"
 description: "40 cameras, 24 phones, and a Kodak with a floppy disk — 22 years of photography gear traced through 94,000 photos of EXIF data."
