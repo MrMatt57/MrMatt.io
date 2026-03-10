@@ -48,13 +48,16 @@
             {{- range first 7 $photos }}
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
+            {{- $lqip := $img.Fill "20x20 webp q20" }}
             <a href="/photography/#{{ .File.ContentBaseName }}" class="photo-thumb-link no-underline">
                 {{- $thumb200 := $img.Fill "200x200 webp q80" }}
                 {{- $thumb300 := $img.Fill "300x300 webp q80" }}
+                <div class="photo-thumb-wrap" data-lqip="data:image/webp;base64,{{ $lqip.Content | base64Encode }}">
                 <img src="{{ $thumb300.RelPermalink }}"
                      srcset="{{ $thumb200.RelPermalink }} 200w, {{ $thumb300.RelPermalink }} 300w"
                      sizes="(max-width: 549px) calc(25vw - 0.5rem), 10em"
                      alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" loading="lazy" />
+                </div>
             </a>
             {{- end }}
             {{- end }}
@@ -64,5 +67,21 @@
         </div>
     </section>
 </div>
+<script>
+(function() {
+    document.querySelectorAll('.photo-thumb-wrap[data-lqip]').forEach(function(el) {
+        el.style.backgroundImage = 'url(' + el.dataset.lqip + ')';
+    });
+    document.querySelectorAll('.photo-thumb').forEach(function(img) {
+        if (img.complete && img.naturalWidth > 0) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', function() {
+                img.classList.add('loaded');
+            });
+        }
+    });
+})();
+</script>
 {{- end }}
 {{- end }}
