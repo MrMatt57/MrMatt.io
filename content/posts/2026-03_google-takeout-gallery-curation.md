@@ -86,3 +86,11 @@ That pass yielded about 143 candidates. Then one more round of strict review: or
 Each photo gets published through the site's existing [photography pipeline](/posts/building-mrmatt-io-photography/) -- AI-generated title, alt text, and description via Claude Haiku, with a round of human editing before it goes live.
 
 It's a strange feeling to compress two decades of photos down to 51 images. But that's the point. The gallery isn't an archive -- it's a curated collection. And finding 51 genuine keepers in 100,000 candidates feels about right. The ratio tracks with what any photographer will tell you: most of what you shoot isn't good, and that's fine. The pipeline just made it practical to find the ones that are.
+
+### See the gallery
+
+Here's a taste of what made the cut:
+
+[![A selection of photos from the gallery](/images/gallery-preview.jpg)](/photography/)
+
+**[Browse the full photography gallery →](/photography/)**
