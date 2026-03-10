@@ -23,11 +23,10 @@ enableGitInfo = true
   ShowShareButtons = false
   comments = false
   ShowBreadCrumbs = false
-  hideAuthor = false
+  hideAuthor = true
   ShowToc = true
 
-  [params.author]
-    name = "Matt Walker"
+  author = "Matt Walker"
 
   [params.schema]
     publisherType = "Person"
