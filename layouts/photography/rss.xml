@@ -1,0 +1,63 @@
+{{- /* Photography RSS feed — includes <enclosure> and <media:content> for photo thumbnails */ -}}
+{{- $authorEmail := "" }}
+{{- $authorName := "" }}
+{{- with site.Params.author }}
+  {{- if reflect.IsMap . }}
+    {{- with .email }}
+      {{- $authorEmail = . }}
+    {{- end }}
+    {{- with .name }}
+      {{- $authorName = . }}
+    {{- end }}
+  {{- else }}
+    {{- $authorName = . }}
+  {{- end }}
+{{- end }}
+
+{{- $pages := .RegularPages }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Photography on {{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ with .Params.description }}{{ . }}{{ else }}Photography by {{ $authorName }}{{ end }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with $authorEmail }}
+    <managingEditor>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>
+    {{- else }}{{ with $authorName }}
+    <managingEditor>{{ . }}</managingEditor>
+    {{- end }}{{ end }}
+    {{- with .Site.Copyright }}
+    <copyright>{{ . }}</copyright>
+    {{- end }}
+    {{- if not .Date.IsZero }}
+    <lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ with .Params.description }}{{ . | transform.XMLEscape | safeHTML }}{{ else }}{{ .Title | transform.XMLEscape | safeHTML }}{{ end }}</description>
+      {{- if $img }}
+      {{- $thumb := $img.Fill "300x300 webp q80" }}
+      <enclosure url="{{ $thumb.Permalink }}" length="{{ $thumb.Content | len }}" type="image/webp" />
+      <media:content url="{{ $thumb.Permalink }}" medium="image" type="image/webp" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" />
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>
