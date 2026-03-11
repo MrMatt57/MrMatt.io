@@ -3,14 +3,14 @@ date: "2026-03-10"
 draft: false
 title: "Every Camera I've Ever Owned"
 slug: "camera-gear-timeline"
-description: "40 cameras, 24 phones, and a Kodak with a floppy disk — 22 years of photography gear traced through 94,000 photos of EXIF data."
+description: "35 cameras, 22 phones, and a Canon Rebel — 22 years of photography gear traced through 94,000 photos of EXIF data."
 tags:
   - "photography"
   - "software-development"
-summary: "40 cameras, 24 phones, and a Kodak with a floppy disk — 22 years of photography gear traced through 94,000 photos of EXIF data."
+summary: "35 cameras, 22 phones, and a Canon Rebel — 22 years of photography gear traced through 94,000 photos of EXIF data."
 ---
 
-These are all the digital cameras I've ever owned. I took photography in high school and shot plenty of 35mm film, but those rolls live in shoeboxes, not in metadata. Digital photos are different -- every JPEG carries its camera's name, aperture, ISO, and shutter speed quietly in the EXIF header. I scanned the EXIF headers of 94,000 Google Photos and found 75 different cameras spanning 22 years. Some were mine. Some were friends' phones showing up in shared albums. After filtering down to just the cameras I actually owned, the timeline tells a clear story.
+These are all the cameras I've ever owned -- starting with a Canon Rebel 35mm SLR in high school and ending with the latest Pixel. The film rolls live in shoeboxes, not in metadata, but every digital photo carries its camera's name quietly in the EXIF header. I scanned the EXIF headers of 94,000 Google Photos and found 75 different cameras spanning 22 years. Some were mine. Some were friends' phones showing up in shared albums. After filtering down to just the cameras I actually owned, the timeline tells a clear story.
 
 One caveat: this is JPEG only. The pipeline skips raw files -- CR2s from the Canons, NEFs from the Nikons -- because Google Takeout bundles the JPEGs but not always the raws. So the real photo counts for the DSLR era are higher than what's shown here. The raws live on hard drives, not in the cloud.
 
@@ -26,13 +26,13 @@ The pattern is clear: dedicated cameras dominated until around 2013, then phones
 
 ### The eras
 
-The earliest camera in the data is a Kodak EasyShare DX4900 -- a camera that stored photos on a 3.5-inch floppy disk. Thirteen photos survived from it. After that came the Sony Cyber-shot DSC-V1, which became the real workhorse of the compact era: 3,845 photos over seven years. Canon PowerShots, Pentax compacts, more Kodak EasyShares -- a new camera every year or two, each one a modest upgrade. This was the age of carrying a dedicated device in a belt pouch and hoping the batteries held.
+The earliest camera in the data is the Sony Cyber-shot DSC-V1, which became the real workhorse of the compact era: 3,845 photos over seven years. Canon PowerShots, Pentax compacts, more Kodak EasyShares -- a new camera every year or two, each one a modest upgrade. This was the age of carrying a dedicated device in a belt pouch and hoping the batteries held.
 
 The DSLR era was really just one camera: the Nikon D3100. It was the real commitment -- 5,729 photos over six years. It lived in the camera bag for every family trip and holiday. But carrying a body, two lenses, and a charger loses its appeal when the thing in your pocket takes a photo that's good enough.
 
 The phone revolution hit around 2012. The Samsung Galaxy Note II changed everything -- 11,039 photos on a single device. Then the Note 4 pushed even further: 12,704 photos, making it the single most-used camera I've ever owned. The compact cameras and DSLRs were done.
 
-The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 6 Pro, 6a, 8 Pro, 9 Pro XL, 10 Pro XL. Ten Pixels in ten years. The best camera is the one you have with you, and the phone won that argument decisively.
+The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 6 Pro, 8 Pro, 9 Pro XL, 10 Pro XL. Nine Pixels in ten years. The best camera is the one you have with you, and the phone won that argument decisively.
 
 ### Phone vs. dedicated camera
 
@@ -43,6 +43,16 @@ The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 
 The crossover happened around 2013. By 2018, dedicated cameras were effectively zero. Computational photography didn't just match optical quality -- it made the camera you always have with you the best camera.
 
 ### The cameras
+
+<div id="canon-rebel-card" style="padding:1.25rem 0;border-bottom:1px solid rgba(128,128,128,0.2);">
+<div style="display:flex;gap:1.25rem;align-items:flex-start;">
+<img src="/images/camera-timeline/canon-eos-rebel.webp" alt="Canon EOS Rebel" loading="lazy" class="camera-card-img" onerror="this.style.display='none'">
+<div style="min-width:0;flex:1;">
+<strong style="font-size:1.05rem;">Canon EOS Rebel</strong><br>
+<span style="color:var(--secondary);font-size:0.85rem;">~1998 &middot; 35mm film SLR &middot; No EXIF data</span><br>
+<span style="font-size:0.85rem;color:var(--secondary);">The one that started it all. A run-of-the-mill Canon Rebel that I used in high school photography class. The rolls of Kodak Gold and Tri-X are in a shoebox somewhere, but this is where it began.</span>
+</div></div>
+</div>
 
 <div id="camera-cards"></div>
 
@@ -70,9 +80,12 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
         'Canon EOS 5D Mark III', 'Canon EOS 5D Mark IV',
         'Sony A6000', 'DJI Phantom 4',
         'Samsung Galaxy S24', 'Samsung Galaxy Tab S2',
-        'Pentax Optio S5z',
+        'Pentax Optio S5z', 'Pentax Optio 30',
         'Canon PowerShot SD400', 'Canon PowerShot SD450', 'Canon PowerShot SD1000',
-        'Nikon D3000'
+        'Nikon D3000',
+        'Google Pixel 6a', 'Google Pixel 8a',
+        'Sony Cyber-shot DSC-P100',
+        'Kodak EasyShare DX4900', 'Kodak EasyShare C533', 'Kodak EasyShare M893'
     ];
 
     function isOwned(name) {
@@ -210,7 +223,7 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
             html += '<div style="padding:1.25rem 0;border-bottom:1px solid ' + borderColor + ';">';
             html += '<div style="display:flex;gap:1.25rem;align-items:flex-start;">';
             html += '<img src="/images/camera-timeline/' + slug + '.webp" alt="' + cam.display_name + '" loading="lazy" ';
-            html += 'style="width:100px;height:75px;object-fit:contain;flex-shrink:0;filter:grayscale(1) contrast(1.1);opacity:0.85;" ';
+            html += 'class="camera-card-img" ';
             html += 'onerror="this.style.display=\'none\'">';
             html += '<div style="min-width:0;flex:1;">';
             html += '<strong style="font-size:1.05rem;">' + cam.display_name + '</strong><br>';
@@ -218,14 +231,22 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
             if (stats.length) html += '<br><span style="font-size:0.85rem;color:var(--secondary);">' + stats.join(' &middot; ') + '</span>';
             html += '</div></div>';
             /* Sparkline histogram spanning full timeline */
-            html += '<div style="margin-top:0.5rem;height:32px;position:relative;">';
-            html += '<canvas id="' + canvasId + '" style="width:100%;height:100%;display:block;"></canvas>';
+            html += '<div class="camera-sparkline">';
+            html += '<canvas id="' + canvasId + '"></canvas>';
             html += '</div>';
             html += '</div>';
 
             cardIndex++;
         });
         container.innerHTML = html;
+
+        /* Shared tooltip element for sparkline hover */
+        var tip = document.createElement('div');
+        tip.style.cssText = 'position:fixed;padding:3px 7px;font-size:0.75rem;font-family:"Roboto Slab",serif;'
+            + 'border-radius:3px;pointer-events:none;z-index:9999;opacity:0;transition:opacity 0.1s;white-space:nowrap;'
+            + 'background:' + (isDark ? '#1d1e20' : '#fff') + ';color:' + textColor + ';'
+            + 'border:1px solid ' + borderColor + ';';
+        document.body.appendChild(tip);
 
         /* Draw sparkline histograms */
         cardIndex = 0;
@@ -274,6 +295,25 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
                     ctx.fillRect(x, h - barH, barW, barH);
                 }
             }
+
+            /* Hover: show year + count tooltip */
+            (function(cvs, cts, tw) {
+                cvs.addEventListener('mousemove', function(e) {
+                    var cr = cvs.getBoundingClientRect();
+                    var mx = e.clientX - cr.left;
+                    var idx = Math.floor(mx / tw);
+                    if (idx < 0 || idx >= yearSpan) { tip.style.opacity = '0'; return; }
+                    var yr = allYears[idx];
+                    var cnt = cts[idx] || 0;
+                    tip.textContent = yr + (cnt > 0 ? ' \u2014 ' + cnt.toLocaleString() + ' photos' : '');
+                    tip.style.left = (e.clientX + 10) + 'px';
+                    tip.style.top = (e.clientY - 28) + 'px';
+                    tip.style.opacity = '1';
+                });
+                cvs.addEventListener('mouseleave', function() {
+                    tip.style.opacity = '0';
+                });
+            })(canvas, counts, totalBarW);
 
             cardIndex++;
         });
