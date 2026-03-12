@@ -1,3 +1,13 @@
+{{- /* Unique meta descriptions for tag/category term pages */ -}}
+{{- if eq .Kind "term" -}}
+{{- $count := len .Pages -}}
+{{- $sample := slice -}}
+{{- range first 3 .Pages -}}
+  {{- $sample = $sample | append .Title -}}
+{{- end -}}
+<meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
+{{- end -}}
+
 {{- /* Preload avatar on homepage for faster LCP */ -}}
 {{- if .IsHome }}
 {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
