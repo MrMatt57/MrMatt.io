@@ -1,0 +1,41 @@
+{{- /* llms.txt — structured overview for AI crawlers */ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+{{ with site.GetPage "/about" -}}
+> Author: Matt Walker — engineer working at the intersection of data and AI. Based in the Baltimore/DC area.
+{{ end -}}
+
+## Blog Posts
+{{ range (where site.RegularPages "Section" "posts") }}
+{{- if not .Params.searchHidden }}
+- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}
+{{- end -}}
+{{ end }}
+
+## Photography
+
+- [Photography Gallery]({{ (site.GetPage "/photography").Permalink }})
+{{ range (where site.RegularPages "Section" "photography") | first 10 }}
+{{- if not .Params.searchHidden }}
+- [{{ .Title }}]({{ .Permalink }})
+{{- end -}}
+{{ end }}
+
+## Pages
+{{ range site.Sections }}
+{{- if and (ne .Section "posts") (ne .Section "photography") }}
+- [{{ .Title }}]({{ .Permalink }})
+{{- end -}}
+{{ end }}
+{{ range where (where site.Pages "Kind" "page") "Section" "" }}
+{{- if and (not .IsHome) (not .Params.searchHidden) }}
+- [{{ .Title }}]({{ .Permalink }})
+{{- end -}}
+{{ end }}
+
+## Feeds
+
+- [RSS Feed]({{ "index.xml" | absURL }})
+- [Full LLM Context]({{ "llms-full.txt" | absURL }})
