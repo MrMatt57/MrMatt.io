@@ -58,6 +58,29 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=mrmatt-io --commit-dirty=true
 
+      - name: Ping search engines
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Notify Google of updated sitemap
+          curl -s "https://www.google.com/ping?sitemap=https://mrmatt.io/sitemap.xml" > /dev/null
+
+          # Notify search engines via IndexNow (Bing, Yandex, Seznam, Naver)
+          CHANGED_URLS=$(git diff --name-only HEAD~1 HEAD -- content/ \
+            | sed 's|^content/||; s|/index\.md$|/|; s|\.md$|/|; s|_index\.md$||' \
+            | grep -v '^$' \
+            | head -100 \
+            | jq -R -s 'split("\n") | map(select(length > 0) | "https://mrmatt.io/" + .)' \
+          )
+          if [ "$CHANGED_URLS" != "[]" ] && [ -n "$CHANGED_URLS" ]; then
+            curl -s -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"host\": \"mrmatt.io\",
+                \"key\": \"9e1b6b753f2348b1a1cd666a37ef7988\",
+                \"urlList\": $CHANGED_URLS
+              }" > /dev/null || true
+          fi
+
       - name: Create Release
         if: github.ref == 'refs/heads/main'
         env:

@@ -66,8 +66,20 @@ enableGitInfo = true
   url = "/about/"
   weight = 40
 
+[outputFormats.LLMS]
+  baseName = "llms"
+  mediaType = "text/plain"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.LLMSFull]
+  baseName = "llms-full"
+  mediaType = "text/plain"
+  isPlainText = true
+  notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "LLMS", "LLMSFull"]
   section = ["HTML", "RSS"]
 
 [taxonomies]
