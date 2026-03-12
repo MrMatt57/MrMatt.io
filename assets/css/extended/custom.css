@@ -851,7 +851,11 @@ h6 a, h6 a:hover, h6 a:visited {
 .post-content pre,
 .post-content table,
 .post-content ul {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content h3 {
+    margin-top: 2.5rem;
 }
 
 /* ===== Lists in posts: square bullets, outside position ===== */
@@ -1139,6 +1143,31 @@ hr {
         width: 72px;
         height: 54px;
     }
+}
+
+/* ===== Membrane diagram (ink illustration) ===== */
+
+.membrane-diagram {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.membrane-diagram img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.membrane-diagram figcaption {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+}
+
+[data-theme="dark"] .membrane-diagram img {
+    filter: invert(1);
 }
 
 /* ===== Reduced motion ===== */
