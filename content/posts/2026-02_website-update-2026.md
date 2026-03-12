@@ -4,14 +4,14 @@ draft: false
 title: "Version 2026 (Hugo > Hugo, but better)"
 slug: "website-update-2026"
 description: "Nine years later, the site gets a proper rebuild. Same engine, new everything else."
-tags:
-  - "software-development"
-  - "infrastructure"
 summary: "Nine years later, the site gets a proper rebuild. Same engine, new everything else."
 cover:
   image: "/images/mrmatt-io-hugo-v1.png"
   alt: "mrmatt.io Hugo v1 site screenshot from 2016-2026"
   hidden: true
+tags:
+  - "this-site"
+  - "software-development"
 ---
 
 It has been nine years since my last [website update](/posts/website-update-2016/). Nine. Years. In that time my kids have grown up, I've picked up new hobbies, and somehow never got around to writing about any of it. The site has been sitting here since early 2017, faithfully serving its blog posts and fishing photos to the handful of people who stumble across it.

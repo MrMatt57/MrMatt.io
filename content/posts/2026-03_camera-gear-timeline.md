@@ -4,10 +4,9 @@ draft: false
 title: "Every Camera I've Ever Owned"
 slug: "camera-gear-timeline"
 description: "35 cameras, 22 phones, and a Canon Rebel — 22 years of photography gear traced through 94,000 photos of EXIF data."
+summary: "35 cameras, 22 phones, and a Canon Rebel — 22 years of photography gear traced through 94,000 photos of EXIF data."
 tags:
   - "photography"
-  - "software-development"
-summary: "35 cameras, 22 phones, and a Canon Rebel — 22 years of photography gear traced through 94,000 photos of EXIF data."
 ---
 
 These are all the cameras I've ever owned -- starting with a Canon Rebel 35mm SLR in high school and ending with the latest Pixel. The film rolls live in shoeboxes, not in metadata, but every digital photo carries its camera's name quietly in the EXIF header. I scanned the EXIF headers of 94,000 Google Photos and found 75 different cameras spanning 22 years. Some were mine. Some were friends' phones showing up in shared albums. After filtering down to just the cameras I actually owned, the timeline tells a clear story.

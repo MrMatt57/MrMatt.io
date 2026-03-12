@@ -4,8 +4,6 @@ draft: false
 title: "1994 Honda Accord"
 slug: "1994-honda-accord"
 description: "Full mod list and photos of my 1994 Honda Accord — engine work, suspension, stereo, and the car that taught me to turn every bolt."
-tags:
-  - "Cars"
 aliases:
   - /1994-honda-accord/
 ---

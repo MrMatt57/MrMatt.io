@@ -4,10 +4,10 @@ draft: false
 title: "AirHogs Just Not Enough Anymore"
 slug: "airhogs-just-not-enough-anymore"
 description: "Moving beyond AirHogs to a Spektrum DX6 transmitter, FSOne flight simulator, and building my first real RC plane — a SoarStar."
-tags:
-  - "R/C Planes"
 aliases:
   - /airhogs-just-not-enough-anymore/
+tags:
+  - "r/c-planes"
 ---
 I have had alot of fun with them, but I-m just itching for more. My biggest desire is to for control surfaces. You can move the rudder and elevators on the AirHogs, but not in-flight. I have been doing quite a bit of research online and finally committed to the next step. In reading most of the -Beginners Guides- they recommend joining a local flying club and learning with a buddy box (were you can tether your transmitter to an instructors). I am sure this is great way to learn, but this is the digital age right? Yup, they have several RC flight simulators that are very realistic. The most popular is Great Planes Realflight. However, there is a new kid on the block. Horizon Hobbies has built FSOne. Apparently their physics engine is unmatched. You can get the software with a USB transmitter or with a USB adapter for a real transmitter. I decided, why not get a real transmitter and learn on that. So, I went to the LHS (Local Hobby Shop) and picked up a Spektrum DX6 Transmitter and order the flight-sim online. They had a Real-Flight kiosk, but something about all the -add-ons- really didn-t appeal to me.
 

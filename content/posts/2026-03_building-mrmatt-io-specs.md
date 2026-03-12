@@ -4,10 +4,10 @@ draft: false
 title: "Building MrMatt.io: Spec-Driven Development"
 slug: "building-mrmatt-io-specs"
 description: "How plan-as-spec methodology and two commands turned a stale personal site into 44 shipped features."
-tags:
-  - "software-development"
-  - "building-mrmatt-io"
 summary: "How plan-as-spec methodology and two commands turned a stale personal site into 44 shipped features."
+tags:
+  - "this-site"
+  - "software-development"
 ---
 
 > **Building MrMatt.io** — a series on rebuilding this site from scratch.

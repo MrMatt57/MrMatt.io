@@ -4,10 +4,10 @@ draft: false
 title: "Canon A2000is Time Lapse using CHDK"
 slug: "time-lapse-chdk"
 description: "How to create time-lapse videos with a Canon A2000IS using the CHDK hack — intervalometer script, AC power setup, and video assembly with QuickTime."
-tags:
-  - "Photography"
 aliases:
   - /time-lapse-chdk/
+tags:
+  - "photography"
 ---
 I don-t know what it is about them, but time lapse videos captivate me. It might be the fact that you can live hours in minutes? Maybe in a strange way it is gratifying to watch life pass by without consequences? Whatever it is, they are a lot of fun to watch- and now create!
 

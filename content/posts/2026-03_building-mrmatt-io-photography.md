@@ -4,11 +4,11 @@ draft: false
 title: "Building MrMatt.io: The Photography Pipeline"
 slug: "building-mrmatt-io-photography"
 description: "End-to-end from phone camera to published gallery— a PWA upload tool, AI descriptions, and Hugo image processing."
-tags:
-  - "software-development"
-  - "building-mrmatt-io"
-  - "photography"
 summary: "End-to-end from phone camera to published gallery— a PWA upload tool, AI descriptions, and Hugo image processing."
+tags:
+  - "this-site"
+  - "photography"
+  - "software-development"
 ---
 
 > **Building MrMatt.io** — a series on rebuilding this site from scratch.

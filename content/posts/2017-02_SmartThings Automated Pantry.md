@@ -5,8 +5,7 @@ title: "Pantry and Closet Light Automation"
 slug: "pantry-closet-light-automation"
 description: "Automating pantry and closet lights with SmartThings — using a multi-sensor's contact switch and accelerometer to trigger lights on door open and movement."
 tags:
-  - "Home Automation"
-  - "SmartThings"
+  - "software-development"
 ---
 One of the most common home automations is lighting. You need it when you need it and you want to conserve when you don't. One of the main scenerios for my home is my pantry and closets. If you need something from them, it is helpful to have light.   
 

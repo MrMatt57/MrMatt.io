@@ -4,8 +4,6 @@ draft: false
 title: "James Bond Style USB Thumbdrive - IronKey"
 slug: "james-bond-style-usb-key-ironkey"
 description: "Review of the IronKey 4GB encrypted USB drive — hardware encryption, rugged build, and why it might be the most secure thumb drive available."
-tags:
-  - "Review"
 aliases:
   - /james-bond-style-usb-key-ironkey/
 ---

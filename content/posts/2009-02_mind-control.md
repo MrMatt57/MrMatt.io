@@ -4,8 +4,6 @@ draft: false
 title: "Mind Control - Tea in 30 Seconds"
 slug: "mind-control"
 description: "A fun time-lapse video of making tea condensed into 30 seconds."
-tags:
-  - "Time-lapse"
 aliases:
   - /mind-control/
 ---

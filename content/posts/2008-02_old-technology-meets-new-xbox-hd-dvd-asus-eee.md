@@ -4,10 +4,10 @@ draft: false
 title: "Old Technology Meets New (XBox HD DVD > Asus Eee)"
 slug: "old-technology-meets-new-xbox-hd-dvd-asus-eee"
 description: "Using the extinct Xbox 360 HD DVD drive to install a slim Windows XP on the Asus Eee PC — first impressions and early mods."
-tags:
-  - "Review"
 aliases:
   - /old-technology-meets-new-xbox-hd-dvd-asus-eee/
+tags:
+  - "software-development"
 ---
 ![Asus Eee XP install with external xbox 360 HD-DVD](/img/eee_xboxHDDVD.jpg)
 

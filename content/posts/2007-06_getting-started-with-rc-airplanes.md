@@ -4,10 +4,10 @@ draft: false
 title: "Getting Started With RC Airplanes"
 slug: "getting-started-with-rc-airplanes"
 description: "How I got into RC airplanes starting with a $30 AirHogs Aero Ace from Walmart — the best toy for the price."
-tags:
-  - "R/C Planes"
 aliases:
   - /getting-started-with-rc-airplanes/
+tags:
+  - "r/c-planes"
 ---
 I have always been a fan of radio control; cars, robots, computers now planes. As a child I had several RC Cars that were a bunch of fun. At the time airplanes were too expensive and the technology was not all that great. I had left RC altogether for the past 10 years or so.
 

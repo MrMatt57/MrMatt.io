@@ -4,8 +4,6 @@ draft: false
 title: "December is for Cynics"
 slug: "december-is-for-cynics"
 description: "The Matches' 'December Is for Cynics' — a holiday season favorite discovered on Radio Wazee and heard live at the Masquerade in Atlanta."
-tags:
-  - "Music"
 aliases:
   - /december-is-for-cynics/
 ---

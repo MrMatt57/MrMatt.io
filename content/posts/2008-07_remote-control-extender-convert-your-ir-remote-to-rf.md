@@ -4,8 +4,6 @@ draft: false
 title: "Remote Control Extender, convert your IR remote to RF."
 slug: "remote-control-extender-convert-your-ir-remote-to-rf"
 description: "Review of the Next Generation Remote Control Extender — converts any IR remote to RF so it works through walls up to 100 feet away."
-tags:
-  - "Review"
 aliases:
   - /remote-control-extender-convert-your-ir-remote-to-rf/
 ---

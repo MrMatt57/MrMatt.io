@@ -4,8 +4,6 @@ draft: false
 title: "Honda Slow Window Syndrome (HSWS)"
 slug: "honda-slow-window-syndrome"
 description: "How to fix slow power windows on older Hondas — replacing the regulator and motor, then lubricating the window tracks with white lithium grease."
-tags:
-  - "Tutorial"
 aliases:
   - /honda-slow-window-syndrome/
 ---

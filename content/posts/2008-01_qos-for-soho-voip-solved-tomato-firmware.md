@@ -4,9 +4,10 @@ draft: false
 title: "QOS for SOHO VOIP Solved, Tomato Firmware"
 slug: "qos-for-soho-voip-solved-tomato-firmware"
 description: "How to fix VoIP call quality on a home network using Tomato firmware on a WRT54G router with QoS traffic shaping and SIP prioritization."
-tags: []
 aliases:
   - /qos-for-soho-voip-solved-tomato-firmware/
+tags:
+  - "software-development"
 ---
 Whoa, easy on the Acronyms-.
 

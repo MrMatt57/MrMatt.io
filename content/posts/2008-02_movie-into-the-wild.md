@@ -4,9 +4,10 @@ draft: false
 title: "Movie: Into the Wild"
 slug: "movie-into-the-wild"
 description: "Into the Wild is a must-see film — so inspiring it made me sell all my DVDs on half.com. The consumer release drops March 4th."
-tags: []
 aliases:
   - /movie-into-the-wild/
+tags:
+  - "reflections"
 ---
 You have undoubtedly heard about this outstanding book/movie. Well if you haven-t seen the movie yet, the consumer copy is being released on March 4th. This is a must see (and/or physically own if your primitive squirrel instincts are in overdrive).
 

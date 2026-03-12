@@ -5,8 +5,8 @@ title: "Broadening horizons with web accessibility, testing and automation (Hugo
 slug: "broadening-horizons-in-web-accessibility"
 description: "Automating web accessibility testing with Pa11y and HTML CodeSniffer — integrating WCAG 2.0 AA checks into a Hugo static site's CI build pipeline."
 tags:
-  - "Software Development"
-  - "Website"
+  - "this-site"
+  - "software-development"
 ---
 When rebuilding my site I wanted to start as simple as possible, put the sledge hammers away and carefully evaluate each decision as things get built up. Not just with the technology stack, but the content too.
 
