@@ -4,11 +4,10 @@ draft: false
 title: "Building MrMatt.io: Performance & Security"
 slug: "building-mrmatt-io-performance"
 description: "Self-hosted fonts, auto-generated CSP hashes, security headers, accessibility, and the caching strategy for a static site."
-tags:
-  - "software-development"
-  - "building-mrmatt-io"
-  - "infrastructure"
 summary: "Self-hosted fonts, auto-generated CSP hashes, security headers, accessibility, and the caching strategy for a static site."
+tags:
+  - "this-site"
+  - "software-development"
 ---
 
 > **Building MrMatt.io** — a series on rebuilding this site from scratch.

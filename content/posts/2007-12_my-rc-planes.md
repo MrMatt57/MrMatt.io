@@ -4,14 +4,14 @@ draft: false
 title: "RC Plane Hanger"
 slug: "my-rc-planes"
 description: "My RC airplane collection — Soarstar trainer, E-flite Yak 54F with ailerons, and a scratch-built Slowfly foamie."
-tags:
-  - "R/C Planes"
 aliases:
   - /my-rc-planes/
 cover:
   image: "/img/rc-airplane.jpg"
   alt: "RC airplane collection"
   hidden: true
+tags:
+  - "r/c-planes"
 ---
 ![RC Airplanes](/img/rc-airplane.jpg "RC Airplanes")
 

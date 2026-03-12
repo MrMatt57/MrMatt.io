@@ -4,15 +4,15 @@ draft: false
 title: "Terminal Velocity Pentax Optio S6"
 slug: "terminal-velocity-pentax-optio-s6"
 description: "Lessons learned the hard way — my Pentax Optio S6 camera fell off my RC plane mid-dive and was destroyed on impact."
-tags:
-  - "Photography"
-  - "R/C Planes"
 aliases:
   - /terminal-velocity-pentax-optio-s6/
 cover:
   image: "/img/terminal-velocity.jpg"
   alt: "Lucky lightning shot captured before the camera fell from an RC plane"
   hidden: true
+tags:
+  - "r/c-planes"
+  - "photography"
 ---
 ![Lucky Lightning Shot](/img/terminal-velocity.jpg)
 

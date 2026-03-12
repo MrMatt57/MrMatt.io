@@ -4,10 +4,10 @@ draft: false
 title: "Printing on paper is a bad habit"
 slug: "printing-on-paper-is-a-bad-habit"
 description: "Why printing on paper is a bad habit in the digital age — the case for going paperless and breaking our dependence on physical printouts."
-tags:
-  - "Social"
 aliases:
   - /printing-on-paper-is-a-bad-habit/
+tags:
+  - "reflections"
 ---
 ![College Math Papers](/img/printer_paper.jpg)
 

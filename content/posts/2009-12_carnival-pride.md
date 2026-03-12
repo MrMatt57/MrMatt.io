@@ -4,13 +4,12 @@ draft: false
 title: "Cruising the Bahamas - Carnival Pride"
 slug: "carnival-pride"
 description: "Photos and video from our Carnival Pride cruise out of Baltimore — Universal Studios in Orlando, Atlantis in Nassau, and Paradise Cove in Freeport."
-tags:
-  - "Travel"
-  - "Cruise"
 cover:
   image: "/img/Carnival-Pride-Nassau-Lighthouse.jpg"
 aliases:
   - /carnival-pride/
+tags:
+  - "travel"
 ---
 ![Carnival Pride](/img/Carnival-Pride-Banner.jpg)
 

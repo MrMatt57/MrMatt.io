@@ -4,11 +4,10 @@ draft: false
 title: "Building MrMatt.io: The Migration"
 slug: "building-mrmatt-io-migration"
 description: "Replacing seven services and a deprecated npm ecosystem with Hugo, GitHub Actions, and Cloudflare Pages."
-tags:
-  - "software-development"
-  - "building-mrmatt-io"
-  - "infrastructure"
 summary: "Replacing seven services and a deprecated npm ecosystem with Hugo, GitHub Actions, and Cloudflare Pages."
+tags:
+  - "this-site"
+  - "software-development"
 ---
 
 > **Building MrMatt.io** — a series on rebuilding this site from scratch.

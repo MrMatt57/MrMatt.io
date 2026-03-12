@@ -4,10 +4,10 @@ draft: false
 title: "Google Chart API, Wow!"
 slug: "google-chart-api-wow"
 description: "First look at Google's Chart API — generating line, bar, and pie charts from a simple URL string with no server-side code."
-tags:
-  - "Software Development"
 aliases:
   - /google-chart-api-wow/
+tags:
+  - "software-development"
 ---
 I have always been a sucker for statistical eye candy. Last week Google launched their chart APIs. I have always done charts client-side with a java applet or SWF application. Server-side solutions where always kludgey. They required way to much customization and each provider/chart style had a different interface. Thanks to Google, static charts are now super simple. The API currently supports line, bar, pie charts, venn diagrams and scatter plots. Most of the standard Google API rules apply. You are going to see these popping up all over the place. I know I am definitely going to give them a try.  
  this -

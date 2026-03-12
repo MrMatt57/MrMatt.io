@@ -4,11 +4,10 @@ draft: false
 title: "Soarstar RC Video (First Attempt)"
 slug: "hello-world"
 description: "First attempt at strapping a Pentax Optio S6 camera to my Soarstar RC plane for aerial video footage."
-tags:
-  - "R/C Planes"
-  - "Video"
 aliases:
   - /hello-world/
+tags:
+  - "r/c-planes"
 ---
 ![Soarstar](/img/soarstar.jpg)
 

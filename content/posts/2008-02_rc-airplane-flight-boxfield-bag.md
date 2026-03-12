@@ -4,10 +4,10 @@ draft: false
 title: "RC Airplane Flight Box/Field Bag"
 slug: "rc-airplane-flight-boxfield-bag"
 description: "What I pack in my RC airplane field bag — charger, tools, spare props, and a full checklist so nothing gets left behind."
-tags:
-  - "R/C Planes"
 aliases:
   - /rc-airplane-flight-boxfield-bag/
+tags:
+  - "r/c-planes"
 ---
 [![Flight Bag 1](/img/flightbag1t.jpg "Flight Bag 1")](/img/flightbag1.jpg)
 [![Flight Bag 2](/img/flightbag2t.jpg "Flight Bag 2")](/img/flightbag2.jpg)

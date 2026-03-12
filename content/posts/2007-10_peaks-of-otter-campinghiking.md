@@ -4,16 +4,14 @@ draft: false
 title: "Peaks of Otter Camping/Hiking"
 slug: "peaks-of-otter-campinghiking"
 description: "Camping and hiking Sharp Top Mountain at Peaks of Otter on the Blue Ridge Parkway in Virginia — trail photos and tips."
-tags:
-  - "Travel"
-  - "Camping"
-  - "Hiking"
 aliases:
   - /peaks-of-otter-campinghiking/
 cover:
   image: "/img/peaks-hiking.jpg"
   alt: "Peaks of Otter on the Blue Ridge Parkway in Virginia"
   hidden: true
+tags:
+  - "travel"
 ---
 ![Peaks of Otter, VA](/img/peaks-hiking.jpg)
 

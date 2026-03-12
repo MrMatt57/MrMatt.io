@@ -4,7 +4,6 @@ draft: false
 title: "Thank you Microsoft, Vista SP1 is Nice!"
 slug: "thank-you-microsoft-vista-sp1-is-nice"
 description: "Windows Vista SP1 first impressions — noticeable performance gains, 28% faster network file transfers, and a smooth 32-minute install."
-tags: []
 aliases:
   - /thank-you-microsoft-vista-sp1-is-nice/
 ---

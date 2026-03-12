@@ -4,12 +4,10 @@ draft: false
 title: "Coosa Backcountry Trail, Chattahoochee National Forest"
 slug: "coosa-backcountry-trail-chattahoochee-national-forest"
 description: "Photos from hiking the Coosa Backcountry Trail near Vogel State Park in Georgia's Chattahoochee National Forest."
-tags:
-  - "Travel"
-  - "Camping"
-  - "Hiking"
 aliases:
   - /coosa-backcountry-trail-chattahoochee-national-forest/
+tags:
+  - "travel"
 ---
 ![Vogal State Park, GA](/img/vogel.jpg)
 

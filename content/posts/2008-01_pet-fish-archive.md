@@ -4,7 +4,6 @@ draft: false
 title: "Pet Fish Archive"
 slug: "pet-fish-archive"
 description: "A look back at my pet fish over the years — red belly piranhas, a saltwater tank, and Scooby the miracle guppy who survived as a feeder fish."
-tags: []
 aliases:
   - /pet-fish-archive/
 ---

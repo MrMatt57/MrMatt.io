@@ -4,12 +4,12 @@ draft: false
 title: "The Membrane"
 slug: "the-membrane"
 description: "The AI capability boundary is expanding. So is the surface area where humans matter most."
-tags:
-  - "software-development"
-  - "ai"
 summary: "The AI capability boundary is expanding. So is the surface area where humans matter most."
 images:
   - "/images/the-membrane-og.png"
+tags:
+  - "reflections"
+  - "software-development"
 ---
 
 Something fundamental is shifting in how humans and AI work together, and it's moving fast enough to be genuinely disorienting. We're at an inflection point. The transformation is real, it's accelerating, and most people can feel it even if they can't name it. I've been trying to find the right frame for it. The closest model I've found is the membrane.

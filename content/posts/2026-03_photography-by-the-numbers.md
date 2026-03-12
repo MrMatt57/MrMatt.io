@@ -4,10 +4,9 @@ draft: false
 title: "94,000 Photos by the Numbers"
 slug: "photography-by-the-numbers"
 description: "What 22 years of EXIF data reveals about when I shoot, what I shoot with, and how photography changed from film-era habits to phone-first instinct."
+summary: "What 22 years of EXIF data reveals about when I shoot, what I shoot with, and how photography changed from film-era habits to phone-first instinct."
 tags:
   - "photography"
-  - "software-development"
-summary: "What 22 years of EXIF data reveals about when I shoot, what I shoot with, and how photography changed from film-era habits to phone-first instinct."
 ---
 
 In [Every Camera I've Ever Owned](/posts/camera-gear-timeline/), I traced 22 years of gear. This post is about the photos themselves -- 94,000 of them -- and what their metadata reveals.

@@ -4,10 +4,10 @@ draft: false
 title: "Webmasters: Don't forget about DNS..."
 slug: "webmasters-dont-forget-about-dns"
 description: "Why DNS deserves more attention — performance tuning with TTL, anycast networks, outsourcing options, and the SEO impact of DNS changes."
-tags:
-  - "Software Development"
 aliases:
   - /webmasters-dont-forget-about-dns/
+tags:
+  - "software-development"
 ---
 ![DNS Error](/img/dns_error.jpg)
 

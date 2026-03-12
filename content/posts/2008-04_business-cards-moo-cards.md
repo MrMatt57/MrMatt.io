@@ -4,10 +4,10 @@ draft: false
 title: "Business Cards - MOO Cards"
 slug: "business-cards-moo-cards"
 description: "Review of MOO MiniCards — 100 unique business cards for $20, printed from Flickr photos with first-class packaging and quality."
-tags:
-  - "Social"
 aliases:
   - /business-cards-moo-cards/
+tags:
+  - "reflections"
 ---
 ![MOO Cards](/img/MOO_Cards_banner.jpg)
 

@@ -4,11 +4,10 @@ draft: false
 title: "Curating 100K Google Photos with Code and AI"
 slug: "google-takeout-gallery-curation"
 description: "How I used Python, OpenCV, and Claude Code to find 51 gallery-worthy photos in 723GB of Google Takeout data."
-tags:
-  - "software-development"
-  - "photography"
-  - "ai"
 summary: "How I used Python, OpenCV, and Claude Code to find 51 gallery-worthy photos in 723GB of Google Takeout data."
+tags:
+  - "photography"
+  - "software-development"
 ---
 
 I have 22 years of photos in Google Photos. Somewhere in that pile are the shots I'm actually proud of -- landscapes, travel scenes, nature, the odd well-composed hobby photo. The problem is finding them. Google's search is decent for "photos of beaches" but useless for "my best photography that doesn't have people in it." So I built a pipeline to do it.
