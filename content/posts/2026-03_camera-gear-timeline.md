@@ -18,7 +18,7 @@ After [scanning 723GB of Google Takeout data](/posts/google-takeout-gallery-cura
 
 ### The timeline
 
-<div style="position:relative;width:100%;aspect-ratio:1/2;margin:2rem 0;">
+<div style="position:relative;width:100%;aspect-ratio:1/1;margin:2rem 0;">
 <canvas id="timeline-chart"></canvas>
 </div>
 
@@ -36,7 +36,7 @@ The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 
 
 ### Phone vs. dedicated camera
 
-<div style="position:relative;width:100%;aspect-ratio:5/16;margin:2rem 0;">
+<div style="position:relative;width:100%;aspect-ratio:5/6;margin:2rem 0;">
 <canvas id="category-chart"></canvas>
 </div>
 
