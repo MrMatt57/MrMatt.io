@@ -3,7 +3,7 @@ date: "2009-02-13"
 draft: false
 title: "Mind Control - Tea in 30 Seconds"
 slug: "mind-control"
-description: "A fun time-lapse video of making tea condensed into 30 seconds."
+description: "A fun time-lapse video of making a cup of tea condensed into 30 seconds — from boiling the kettle to the first sip, at high speed."
 aliases:
   - /mind-control/
 ---

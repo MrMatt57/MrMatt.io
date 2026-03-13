@@ -3,7 +3,7 @@ date: "2026-03-11"
 draft: false
 title: "The Membrane"
 slug: "the-membrane"
-description: "The AI capability boundary is expanding. So is the surface area where humans matter most."
+description: "The AI capability boundary is expanding — and so is the surface area where humans matter most. A mental model for navigating the human-AI interface."
 summary: "The AI capability boundary is expanding. So is the surface area where humans matter most."
 images:
   - "/images/the-membrane-og.png"

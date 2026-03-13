@@ -3,7 +3,7 @@ date: "2017-01-01"
 draft: false
 title: "Looking Back on 2016"
 slug: "2016-looking-back"
-description: "Looking back on 2016, it was a good year.  Here are some of my highlights."
+description: "A look back at 2016 — homeschooling milestones, a record largemouth bass at Liberty Reservoir, government open-source work with 18F, and more."
 cover:
   image: "/img/LibertyBass.jpg"
   alt: "Personal best largemouth bass caught at Liberty Reservoir"
