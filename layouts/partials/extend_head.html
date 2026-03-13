@@ -49,6 +49,15 @@
 {{- end -}}
 {{- end -}}
 
+{{- /* Auto-generated OG image for blog posts without custom images */ -}}
+{{- if and (eq .Section "posts") (eq .Kind "page") (not .Params.images) (not .Params.cover) -}}
+{{- $ogImg := partial "og-image.html" . -}}
+<meta property="og:image" content="{{ $ogImg.Permalink }}" />
+<meta property="og:image:width" content="{{ $ogImg.Width }}" />
+<meta property="og:image:height" content="{{ $ogImg.Height }}" />
+<meta name="twitter:image" content="{{ $ogImg.Permalink }}" />
+{{- end -}}
+
 {{- /* Photography OG image override — use the photo itself instead of default avatar */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "page") -}}
 {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}

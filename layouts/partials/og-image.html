@@ -1,0 +1,102 @@
+{{- /*
+  og-image.html — Auto-generate Open Graph images for blog posts.
+
+  Renders post title + description on a dark background using Roboto Slab,
+  matching the style of the manually created OG image for "The Membrane."
+
+  Returns: an image resource (1200x630 PNG/WebP)
+  Usage:   {{ $ogImg := partial "og-image.html" . }}
+*/ -}}
+
+{{- $bg := resources.Get "images/og-background.png" -}}
+{{- $fontBold := resources.Get "fonts/RobotoSlab-Bold.ttf" -}}
+{{- $fontRegular := resources.Get "fonts/RobotoSlab-Regular.ttf" -}}
+
+{{- /* Word-wrap title into lines of ~28 chars max */ -}}
+{{- $title := .Title -}}
+{{- $maxChars := 28 -}}
+{{- $words := split $title " " -}}
+{{- $lines := slice -}}
+{{- $currentLine := "" -}}
+{{- range $words -}}
+  {{- $candidate := printf "%s %s" $currentLine . | strings.TrimLeft " " -}}
+  {{- if and (gt (len $currentLine) 0) (gt (len $candidate) $maxChars) -}}
+    {{- $lines = $lines | append $currentLine -}}
+    {{- $currentLine = . -}}
+  {{- else -}}
+    {{- $currentLine = $candidate -}}
+  {{- end -}}
+{{- end -}}
+{{- $lines = $lines | append $currentLine -}}
+{{- $wrappedTitle := delimit $lines "\n" -}}
+
+{{- /* Adjust title font size based on line count */ -}}
+{{- $titleSize := 64 -}}
+{{- $titleY := 200 -}}
+{{- if gt (len $lines) 3 -}}
+  {{- $titleSize = 44 -}}
+  {{- $titleY = 160 -}}
+{{- else if gt (len $lines) 2 -}}
+  {{- $titleSize = 52 -}}
+  {{- $titleY = 170 -}}
+{{- else if gt (len $lines) 1 -}}
+  {{- $titleSize = 58 -}}
+  {{- $titleY = 190 -}}
+{{- end -}}
+
+{{- /* Render title */ -}}
+{{- $img := $bg.Filter
+  (images.Text $wrappedTitle (dict
+    "color" "#e0e0e0"
+    "size" $titleSize
+    "linespacing" 10
+    "x" 80
+    "y" $titleY
+    "font" $fontBold
+  ))
+-}}
+
+{{- /* Render description if present */ -}}
+{{- with .Description -}}
+  {{- /* Word-wrap description at ~60 chars */ -}}
+  {{- $descWords := split . " " -}}
+  {{- $descLines := slice -}}
+  {{- $descCurrent := "" -}}
+  {{- range $descWords -}}
+    {{- $descCandidate := printf "%s %s" $descCurrent . | strings.TrimLeft " " -}}
+    {{- if and (gt (len $descCurrent) 0) (gt (len $descCandidate) 60) -}}
+      {{- $descLines = $descLines | append $descCurrent -}}
+      {{- $descCurrent = . -}}
+    {{- else -}}
+      {{- $descCurrent = $descCandidate -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $descLines = $descLines | append $descCurrent -}}
+  {{- $wrappedDesc := delimit $descLines "\n" -}}
+
+  {{- $descY := add $titleY (mul (len $lines) (add $titleSize 10)) | add 20 -}}
+
+  {{- $img = $img.Filter
+    (images.Text $wrappedDesc (dict
+      "color" "#9b9c9d"
+      "size" 26
+      "linespacing" 8
+      "x" 80
+      "y" $descY
+      "font" $fontRegular
+    ))
+  -}}
+{{- end -}}
+
+{{- /* Render site branding at bottom */ -}}
+{{- $img = $img.Filter
+  (images.Text "mrmatt.io" (dict
+    "color" "#808080"
+    "size" 22
+    "x" 535
+    "y" 570
+    "font" $fontRegular
+  ))
+-}}
+
+{{- return $img -}}
