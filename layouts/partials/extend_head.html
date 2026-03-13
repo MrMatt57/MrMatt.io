@@ -8,6 +8,9 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
+{{- /* Preload Roboto Slab font to reduce CLS from font swap */ -}}
+<link rel="preload" as="font" href="/fonts/roboto-slab-latin.woff2" type="font/woff2" crossorigin>
+
 {{- /* Preload avatar on homepage for faster LCP */ -}}
 {{- if .IsHome }}
 {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
