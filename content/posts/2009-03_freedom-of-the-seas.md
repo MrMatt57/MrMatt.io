@@ -3,7 +3,7 @@ date: "2009-03-26"
 draft: false
 title: "Cruising the Caribbean - Freedom of the Seas"
 slug: "freedom-of-the-seas"
-description: "Video highlights from our Caribbean cruise on Royal Caribbean's Freedom of the Seas in 2009."
+description: "Video highlights from our Caribbean cruise aboard Royal Caribbean's Freedom of the Seas — sun, ports, and ocean views from a week at sea in 2009."
 aliases:
   - /freedom-of-the-seas/
 tags:

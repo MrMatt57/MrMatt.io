@@ -3,7 +3,7 @@ date: "2026-02-19"
 draft: false
 title: "Version 2026 (Hugo > Hugo, but better)"
 slug: "website-update-2026"
-description: "Nine years later, the site gets a proper rebuild. Same engine, new everything else."
+description: "Nine years later, mrmatt.io gets a proper rebuild. Same Hugo engine, but Cloudflare Pages, GitHub Actions, PaperMod theme, and zero npm dependencies."
 summary: "Nine years later, the site gets a proper rebuild. Same engine, new everything else."
 cover:
   image: "/images/mrmatt-io-hugo-v1.png"
