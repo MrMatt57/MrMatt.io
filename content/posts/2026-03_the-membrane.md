@@ -18,14 +18,7 @@ Engineering has a long history of borrowing from biology and finding that the pa
 
 The membrane is one of those rhymes.
 
-<figure class="membrane-diagram">
-  <img
-    src="/images/ai-capability-membrane-model.png"
-    alt="Illustration of an AI cell pushing against a membrane boundary while a human observes from outside, representing the shifting boundary between AI capability and human judgment"
-    loading="lazy"
-  />
-  <figcaption>Conceptual model of the human–AI capability boundary.</figcaption>
-</figure>
+{{< figure src="/images/ai-capability-membrane-model.png" alt="Illustration of an AI cell pushing against a membrane boundary while a human observes from outside, representing the shifting boundary between AI capability and human judgment" caption="Conceptual model of the human–AI capability boundary." >}}
 
 ### The Cell
 
@@ -41,7 +34,9 @@ If you're doing work that's inside the cell, you should be asking why you're not
 
 The position of leverage is the membrane itself. The edge between what AI can do and what it can't. That's where you're orchestrating agents, evaluating outputs, deciding what to delegate and what to own, and recalibrating as the boundary moves.
 
-The skill isn't any single task. The skill is reading the membrane: where is it thin, where is it about to stretch, what just crossed over, what's stubbornly staying outside and why. That requires actually using the tools (you can't read the membrane from a distance), staying current with what agents can do (which changes faster than most people realize), and being honest about which of your tasks have already moved inside while you weren't paying attention.
+A concrete example: any time you find yourself copying and pasting information into or out of an agent, you're doing work that's inside the cell. If you can access the information, more than likely so can the agent with the right permissions (use caution here). The membrane work is wiring the agent to the source directly and deciding what to do with what comes back.
+
+The skill isn't any single task. The skill is reading the membrane: where is it thin, where is it about to stretch, what just crossed over, what's stubbornly staying outside and why. That requires actually using the tools (you can't read the membrane from a distance), staying current with what agents can do (which changes faster than most people realize), and being honest about which of your tasks have quietly moved inside.
 
 The membrane doesn't move once and settle. It moves continuously. You learn a skill today. Maybe it's already inside the cell and you don't know it yet. Maybe it's outside today and inside in six months. The durable skill is navigating that evolution, not mastering either side of it.
 
@@ -59,9 +54,9 @@ As the cell grows, the tasks inside it change hands. But the boundary where huma
 
 We're all trying to read a membrane that's moving faster than we can track. Here are a few things that have helped me stay closer to the edge:
 
-**Use the tools daily.** You cannot develop intuition for where the membrane sits by reading about AI. You have to use it. Push agents into tasks you think they'll fail at. You'll be surprised how often the boundary has moved since you last checked.
+**Use the tools daily.** You cannot develop intuition for where the membrane sits by reading about AI. You have to use it. Every week I throw agents at something I assume they'll fail at. Half the time, the boundary has moved since I last checked. That's the calibration loop — you have to run it constantly or your model of the membrane drifts.
 
-**Audit your own work.** Look at your last week honestly. How much of it was inside the cell? If you're spending hours on tasks that an agent could handle, that's a signal to recalibrate where you're spending your time.
+**Audit your own work.** Look at your last week honestly. How much of it was inside the cell? I started keeping a rough log: tasks I did myself versus tasks I delegated. The ratio shifts every few months, and noticing that shift is how I know where the membrane is stretching.
 
 **Watch for the stretch.** When a new model drops or a new capability emerges, the membrane doesn't move uniformly. It bulges in specific places. Pay attention to where the new pressure is concentrated. Those are the spots where your skills at the boundary matter most.
 
@@ -69,6 +64,6 @@ We're all trying to read a membrane that's moving faster than we can track. Here
 
 ---
 
-*The cell is growing exponentially. The membrane is growing with it. Stay on the wall.*
+*Stay on the wall.*
 
 ---
