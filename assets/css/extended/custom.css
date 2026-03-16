@@ -219,6 +219,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 .home-about-text {
     flex: 1;
     min-width: 0;
+    contain: layout style;
 }
 
 .home-about p {
