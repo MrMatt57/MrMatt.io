@@ -4,7 +4,7 @@
         <a href="/about/" class="no-underline" id="MattWalker-Logo">
             {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
             {{- $avatarWebp := $avatar.Fit "350x350 webp q75" }}
-            <img src="{{ $avatarWebp.RelPermalink }}" alt="Illustrated avatar of Matt Walker" class="avatar" width="175" height="175" fetchpriority="high" decoding="sync" />
+            <img src="{{ $avatarWebp.RelPermalink }}" alt="Illustrated avatar of Matt Walker" class="avatar" width="175" height="175" fetchpriority="high" decoding="async" />
         </a>
         <div class="home-about-text">
             <p>Hey, I'm <a href="/about/">Matt Walker</a>.</p>
