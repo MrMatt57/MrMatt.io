@@ -463,7 +463,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     max-width: 1400px;
     width: 90%;
     margin: 1.5rem auto 3rem;
-    contain: inline-size layout style;
+    contain: layout style;
 }
 
 .photo-gallery-grid .photo-thumb-wrap {
