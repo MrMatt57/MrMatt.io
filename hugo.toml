@@ -5,6 +5,7 @@ theme = "PaperMod"
 paginate = 10
 
 enableRobotsTXT = true
+summaryLength = 40
 disableHugoGeneratorInject = true
 
 [frontmatter]
