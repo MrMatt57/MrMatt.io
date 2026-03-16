@@ -71,14 +71,10 @@
 (function() {
     document.querySelectorAll('.photo-thumb-wrap[data-lqip]').forEach(function(el) {
         el.style.backgroundImage = 'url(' + el.dataset.lqip + ')';
-    });
-    document.querySelectorAll('.photo-thumb').forEach(function(img) {
-        if (img.complete && img.naturalWidth > 0) {
-            img.classList.add('loaded');
-        } else {
-            img.addEventListener('load', function() {
-                img.classList.add('loaded');
-            });
+        var img = el.querySelector('.photo-thumb');
+        if (img) {
+            if (img.complete && img.naturalWidth > 0) { img.classList.add('loaded'); }
+            else { img.addEventListener('load', function() { img.classList.add('loaded'); }); }
         }
     });
 })();
