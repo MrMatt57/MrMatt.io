@@ -1,15 +1,16 @@
 {{- define "main" }}
 <div class="photo-gallery-grid">
-    {{- range .Pages }}
-    {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+    {{- $totalPages := len .Pages }}
+    {{- range $idx, $page := .Pages }}
+    {{- $img := $page.Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
     {{- $full := partial "photography/full-image.html" $img }}
     {{- $lqip := $img.Fill "10x10 webp q10" }}
     <a href="{{ $full.RelPermalink }}" class="photo-thumb-link no-underline"
-       data-slug="{{ .File.ContentBaseName }}"
-       data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
-       data-title="{{ .Title }}"
-       data-description="{{ .Params.description }}"
+       data-slug="{{ $page.File.ContentBaseName }}"
+       data-alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}"
+       data-title="{{ $page.Title }}"
+       data-description="{{ $page.Params.description }}"
        data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
         {{- $thumb300 := $img.Fill "300x300 webp q60" }}
         {{- $thumb450 := $img.Fill "450x450 webp q60" }}
@@ -17,7 +18,7 @@
         <img src="{{ $thumb300.RelPermalink }}"
              srcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
              sizes="(max-width: 549px) 100px, 175px"
-             alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" decoding="async" />
+             alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}" class="photo-thumb" width="300" height="300" {{ if eq $idx 0 }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async" />
         </div>
     </a>
     {{- end }}
