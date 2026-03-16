@@ -6,6 +6,7 @@ paginate = 10
 
 enableRobotsTXT = true
 summaryLength = 40
+timeZone = "America/New_York"
 disableHugoGeneratorInject = true
 
 [frontmatter]
