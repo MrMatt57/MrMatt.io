@@ -25,6 +25,9 @@ enableRobotsTXT = true
   hideAuthor = true
   ShowToc = true
 
+  [params.assets]
+    disableScrollBarStyle = true
+
   author = "Matt Walker"
 
   [params.schema]
