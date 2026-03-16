@@ -1180,6 +1180,11 @@ hr {
 
 /* ===== Content visibility: skip rendering off-screen content ===== */
 
+.site-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 200px;
+}
+
 .photo-gallery-grid .photo-thumb-link {
     content-visibility: auto;
     contain-intrinsic-size: 160px 160px;
