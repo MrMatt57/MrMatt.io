@@ -48,11 +48,9 @@
 {{- end -}}
 
 {{- /* Speculation rules for all pages */ -}}
-{{- if and (ne .IsHome true) (ne .Section "photography") }}
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
-{{- end -}}
 
 {{- /* DNS prefetch for external links */ -}}
 <meta http-equiv="x-dns-prefetch-control" content="on">
