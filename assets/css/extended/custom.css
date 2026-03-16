@@ -1175,7 +1175,7 @@ hr {
 /* ===== Layout containment for main content ===== */
 
 .main {
-    contain: strict;
+    contain: content;
 }
 
 /* ===== Content visibility: skip rendering off-screen content ===== */
