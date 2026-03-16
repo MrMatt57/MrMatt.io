@@ -47,7 +47,7 @@
     <section class="home-photography">
         <h2>Photography</h2>
         <div class="photo-strip">
-            {{- range first 5 $photos }}
+            {{- range first 7 $photos }}
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
             {{- $lqip := $img.Fill "10x10 webp q10" }}
