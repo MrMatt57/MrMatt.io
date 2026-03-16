@@ -68,14 +68,16 @@
     var shown = 0;
 
     function showBatch() {
-        var end = Math.min(shown + BATCH_SIZE, allItems.length);
-        for (var i = shown; i < end; i++) {
-            allItems[i].classList.add('visible');
-        }
-        shown = end;
-        if (shown >= allItems.length && observer) {
-            observer.disconnect();
-        }
+        requestAnimationFrame(function() {
+            var end = Math.min(shown + BATCH_SIZE, allItems.length);
+            for (var i = shown; i < end; i++) {
+                allItems[i].classList.add('visible');
+            }
+            shown = end;
+            if (shown >= allItems.length && observer) {
+                observer.disconnect();
+            }
+        });
     }
 
     // Hide all items initially, then show first batch
