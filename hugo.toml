@@ -25,6 +25,8 @@ enableRobotsTXT = true
   hideAuthor = true
   ShowToc = true
 
+  disableScrollToTop = true
+
   [params.assets]
     disableScrollBarStyle = true
 
