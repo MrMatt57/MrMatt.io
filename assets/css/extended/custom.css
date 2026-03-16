@@ -475,6 +475,13 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     }
 }
 
+/* Scroll sentinel for progressive loading */
+#scroll-sentinel {
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
 /* Progressive rendering: hidden until revealed */
 .photo-gallery-grid .gallery-item {
     display: none;
