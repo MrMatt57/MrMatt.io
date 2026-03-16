@@ -1172,6 +1172,12 @@ hr {
     filter: invert(1);
 }
 
+/* ===== Layout containment for main content ===== */
+
+.main {
+    contain: content;
+}
+
 /* ===== Content visibility: skip rendering off-screen content ===== */
 
 .photo-gallery-grid .photo-thumb-link {
