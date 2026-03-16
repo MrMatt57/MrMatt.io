@@ -329,6 +329,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    contain: layout style paint;
 }
 
 .photo-thumb-wrap::before {
