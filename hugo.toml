@@ -86,7 +86,6 @@ enableRobotsTXT = true
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
 
 [related]
   includeNewer = true
