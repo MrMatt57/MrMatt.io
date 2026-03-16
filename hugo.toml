@@ -99,7 +99,6 @@ enableGitInfo = true
 
 [imaging]
   resampleFilter = "MitchellNetravali"
-  quality = 75
   hint = "photo"
 
 [imaging.exif]
