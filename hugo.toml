@@ -97,6 +97,10 @@ enableGitInfo = true
     name = "date"
     weight = 10
 
+[imaging.exif]
+  disableDate = true
+  disableLatLong = true
+
 [minify]
   disableCSS = false
   disableHTML = false
