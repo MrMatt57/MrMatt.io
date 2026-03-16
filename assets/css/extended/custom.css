@@ -212,6 +212,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     flex-shrink: 0;
     border-radius: 50%;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .home-about-text {
