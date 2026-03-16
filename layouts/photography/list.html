@@ -17,7 +17,7 @@
         <img src="{{ $thumb300.RelPermalink }}"
              srcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
              sizes="(max-width: 549px) 100px, 175px"
-             alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" decoding="async" />
+             alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
     </a>
     {{- end }}
