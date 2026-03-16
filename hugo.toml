@@ -107,7 +107,7 @@ enableGitInfo = true
   [minify.tdewolff]
     [minify.tdewolff.html]
       keepWhitespace = false
-      keepDefaultAttrVals = true
+      keepDefaultAttrVals = false
       keepDocumentTags = true
       keepEndTags = true
       keepQuotes = false
