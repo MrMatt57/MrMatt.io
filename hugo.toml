@@ -90,7 +90,7 @@ enableRobotsTXT = true
 
 [related]
   includeNewer = true
-  threshold = 90
+  threshold = 80
   toLower = true
   [[related.indices]]
     name = "tags"
