@@ -133,6 +133,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     position: absolute;
     top: 2rem;
     right: 0;
+    contain: layout style;
 }
 
 .theme-toggle-wrap button {
