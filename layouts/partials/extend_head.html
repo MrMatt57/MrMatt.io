@@ -8,6 +8,10 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
+{{- /* DNS prefetch for external links */ -}}
+<link rel="dns-prefetch" href="//github.com">
+<link rel="dns-prefetch" href="//www.linkedin.com">
+
 {{- /* Preload avatar on homepage for faster LCP */ -}}
 {{- if .IsHome }}
 {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
