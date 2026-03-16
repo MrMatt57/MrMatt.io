@@ -7,6 +7,9 @@
     {{- $lqip := $img.Fill "10x10 webp q10" }}
     <a href="{{ $full.RelPermalink }}" class="photo-thumb-link no-underline"
        data-slug="{{ .File.ContentBaseName }}"
+       data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
+       data-title="{{ .Title }}"
+       data-description="{{ .Params.description }}"
        data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
         {{- $thumb300 := $img.Fill "300x300 webp q60" }}
         {{- $thumb450 := $img.Fill "450x450 webp q60" }}
@@ -21,9 +24,6 @@
     {{- end }}
 </div>
 <div id="scroll-sentinel"></div>
-<script id="photo-meta" type="application/json">
-[{{- range $i, $p := .Pages }}{{- $img := $p.Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}{{- if $img }}{{ if $i }},{{ end }}{"s":"{{ $p.File.ContentBaseName }}","t":"{{ $p.Title }}","d":"{{ $p.Params.description }}","a":"{{ with $p.Params.alt }}{{ . }}{{ else }}{{ $p.Title }}{{ end }}"}{{- end }}{{- end }}]
-</script>
 {{- if gt (len .Pages) 0 }}
 <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Photo lightbox" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close lightbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
@@ -132,11 +132,6 @@
         headerRuleEl.style.width = w;
     }
 
-    // Load photo metadata from JSON block
-    var photoMeta = JSON.parse(document.getElementById('photo-meta').textContent);
-    var metaBySlug = {};
-    photoMeta.forEach(function(m) { metaBySlug[m.s] = m; });
-
     // Build slug-to-index map for deep linking
     var slugMap = {};
     allItems.forEach(function(link, i) {
@@ -170,13 +165,12 @@
             if (gen !== showGen) return;
             function applyContent() {
                 if (gen !== showGen) return;
-                var meta = metaBySlug[link.dataset.slug] || {};
                 img.src = link.href;
-                img.alt = meta.a || '';
-                titleEl.textContent = meta.t || '';
-                descEl.textContent = meta.d || '';
-                titleEl.style.display = meta.t ? '' : 'none';
-                descEl.style.display = meta.d ? '' : 'none';
+                img.alt = link.dataset.alt || '';
+                titleEl.textContent = link.dataset.title || '';
+                descEl.textContent = link.dataset.description || '';
+                titleEl.style.display = link.dataset.title ? '' : 'none';
+                descEl.style.display = link.dataset.description ? '' : 'none';
                 fullsizeLink.href = link.dataset.original || link.href;
                 requestAnimationFrame(function() {
                     if (gen !== showGen) return;
