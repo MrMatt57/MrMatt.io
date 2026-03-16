@@ -595,6 +595,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     flex-shrink: 0;
     width: 100%;
     padding: 2rem 0 0;
+    contain: layout style;
 }
 
 .lightbox-img-and-meta {
