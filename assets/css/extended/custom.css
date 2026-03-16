@@ -525,9 +525,9 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 /* Lightbox overlay */
 .lightbox-overlay {
     display: none;
-    content-visibility: auto;
     overscroll-behavior: contain;
     isolation: isolate;
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -590,7 +590,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     width: 100%;
     height: 100%;
     padding: 0 1rem;
-    contain: layout style;
 }
 
 .lightbox-header {
@@ -598,7 +597,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     flex-shrink: 0;
     width: 100%;
     padding: 2rem 0 0;
-    contain: layout style;
 }
 
 .lightbox-img-and-meta {
@@ -610,7 +608,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     min-height: 0;
     width: 100%;
     transition: opacity 0.15s ease;
-    contain: layout style;
     will-change: opacity;
 }
 
@@ -655,7 +652,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     line-height: 0;
     flex-shrink: 1;
     min-height: 0;
-    contain: layout style paint;
 }
 
 .lightbox-nav {
