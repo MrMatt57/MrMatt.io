@@ -8,12 +8,6 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
-{{- /* Prefetch likely next pages from about */ -}}
-{{- if eq .RelPermalink "/about/" -}}
-<link rel="prefetch" href="/">
-<link rel="prefetch" href="/photography/">
-{{- end -}}
-
 {{- /* Color scheme hint for faster initial render */ -}}
 <meta name="color-scheme" content="light dark">
 
