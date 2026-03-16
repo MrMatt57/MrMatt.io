@@ -1137,6 +1137,8 @@ hr {
     background: #4c81b2;
     z-index: 9999;
     pointer-events: none;
+    contain: layout style;
+    will-change: width;
 }
 
 [data-theme="dark"] .scroll-progress {
