@@ -8,6 +8,18 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
+{{- /* Critical CSS for above-fold content on photography page */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "section") -}}
+<style>
+.photo-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem;max-width:1400px;width:90%;margin:1.5rem auto 3rem}
+.photo-thumb-wrap{position:relative;overflow:hidden;aspect-ratio:1;background-size:cover;background-position:center}
+.photo-thumb{width:100%;aspect-ratio:1;object-fit:cover;opacity:0}
+.photo-thumb.loaded{opacity:1}
+.gallery-item{display:none}
+.gallery-item.visible{display:block}
+</style>
+{{- end -}}
+
 {{- /* DNS prefetch for external links */ -}}
 <link rel="dns-prefetch" href="//github.com">
 <link rel="dns-prefetch" href="//www.linkedin.com">
