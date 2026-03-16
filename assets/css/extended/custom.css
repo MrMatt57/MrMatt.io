@@ -1207,6 +1207,24 @@ hr {
     contain: content;
 }
 
+/* ===== Containment for post sections ===== */
+
+.post-single {
+    contain: layout style;
+}
+
+.post-content {
+    contain: layout style;
+}
+
+.post-header {
+    contain: layout style;
+}
+
+article {
+    contain: layout style;
+}
+
 /* ===== Content visibility: skip rendering off-screen content ===== */
 
 .site-footer {
