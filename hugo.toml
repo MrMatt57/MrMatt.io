@@ -127,9 +127,6 @@ enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
-    [markup.goldmark.parser]
-      [markup.goldmark.parser.attribute]
-        block = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
