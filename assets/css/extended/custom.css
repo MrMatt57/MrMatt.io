@@ -910,6 +910,7 @@ hr {
     border-radius: 0;
     padding: var(--gap) 0;
     border-bottom: 1px solid #e1e1e1;
+    contain: layout style;
 }
 
 .post-entry:active {
