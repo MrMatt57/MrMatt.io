@@ -326,6 +326,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 .photo-thumb-link {
     border-bottom: none;
     line-height: 0;
+    contain: layout style paint;
 }
 
 /* Blur-up placeholder wrapper */
