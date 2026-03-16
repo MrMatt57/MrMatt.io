@@ -28,6 +28,11 @@
 </style>
 {{- end -}}
 
+{{- /* Speculative prerender for likely navigation targets */ -}}
+{{- if .IsHome -}}
+<link rel="prerender" href="/photography/">
+{{- end -}}
+
 {{- /* DNS prefetch for external links */ -}}
 <link rel="dns-prefetch" href="//github.com">
 <link rel="dns-prefetch" href="//www.linkedin.com">
