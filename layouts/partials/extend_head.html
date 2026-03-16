@@ -8,6 +8,9 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
+{{- /* Color scheme hint for faster initial render */ -}}
+<meta name="color-scheme" content="light dark">
+
 {{- /* Critical CSS for above-fold content on photography page */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "section") -}}
 <style>
