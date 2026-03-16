@@ -78,7 +78,7 @@ enableRobotsTXT = true
   notAlternative = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "LLMS", "LLMSFull"]
+  home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
 
 [taxonomies]
