@@ -5,6 +5,7 @@ theme = "PaperMod"
 paginate = 10
 
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
 
 [frontmatter]
   lastmod = [":git", "lastmod", "date"]
