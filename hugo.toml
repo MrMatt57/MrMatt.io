@@ -5,7 +5,6 @@ theme = "PaperMod"
 paginate = 10
 
 enableRobotsTXT = true
-enableGitInfo = true
 
 [frontmatter]
   lastmod = [":git", "lastmod", "date"]
