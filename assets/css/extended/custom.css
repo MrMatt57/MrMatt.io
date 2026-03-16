@@ -1197,6 +1197,8 @@ hr {
     flex-shrink: 0;
     filter: grayscale(1) contrast(1.1);
     opacity: 0.85;
+    contain: layout style;
+    aspect-ratio: 4/3;
 }
 
 @media (max-width: 549px) {
