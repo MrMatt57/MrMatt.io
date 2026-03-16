@@ -11,9 +11,9 @@
        data-title="{{ .Title }}"
        data-description="{{ .Params.description }}"
        data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
-        {{- $thumb200 := $img.Fill "200x200 webp q80" }}
-        {{- $thumb300 := $img.Fill "300x300 webp q80" }}
-        {{- $thumb450 := $img.Fill "450x450 webp q80" }}
+        {{- $thumb200 := $img.Fill "200x200 webp q70" }}
+        {{- $thumb300 := $img.Fill "300x300 webp q70" }}
+        {{- $thumb450 := $img.Fill "450x450 webp q70" }}
         <div class="photo-thumb-wrap" data-lqip="data:image/webp;base64,{{ $lqip.Content | base64Encode }}">
         <img src="{{ $thumb300.RelPermalink }}"
              srcset="{{ $thumb200.RelPermalink }} 200w, {{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
