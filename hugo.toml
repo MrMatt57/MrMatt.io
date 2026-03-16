@@ -97,6 +97,28 @@ enableGitInfo = true
     name = "date"
     weight = 10
 
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+      keepDefaultAttrVals = true
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.js]
+      precision = 0
+      keepVarNames = false
+      version = 2022
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
