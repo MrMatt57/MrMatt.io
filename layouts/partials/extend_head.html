@@ -65,7 +65,8 @@
 {{- $img := $firstPhoto.Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
 {{- if $img -}}
 {{- $thumb300 := $img.Fill "300x300 webp q60" -}}
-<link rel="preload" as="image" href="{{ $thumb300.RelPermalink }}" type="image/webp">
+{{- $thumb450 := $img.Fill "450x450 webp q60" -}}
+<link rel="preload" as="image" imagesrcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w" imagesizes="(max-width: 549px) 100px, 175px">
 {{- end -}}
 {{- end -}}
 {{- end -}}
