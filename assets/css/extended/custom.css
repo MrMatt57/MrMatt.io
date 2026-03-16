@@ -1195,6 +1195,12 @@ hr {
     contain-intrinsic-size: auto 200px;
 }
 
+/* ===== Layout containment for header ===== */
+
+.header {
+    contain: layout style;
+}
+
 /* ===== Layout containment for main content ===== */
 
 .main {
