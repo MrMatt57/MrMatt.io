@@ -50,7 +50,7 @@
             {{- range first 7 $photos }}
             {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
             {{- if $img }}
-            {{- $lqip := $img.Fill "20x20 webp q20" }}
+            {{- $lqip := $img.Fill "10x10 webp q10" }}
             <a href="/photography/#{{ .File.ContentBaseName }}" class="photo-thumb-link no-underline">
                 {{- $thumb200 := $img.Fill "200x200 webp q80" }}
                 {{- $thumb300 := $img.Fill "300x300 webp q80" }}
