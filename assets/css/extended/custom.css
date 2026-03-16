@@ -307,6 +307,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
+    contain: layout style;
 }
 
 @media (min-width: 550px) {
