@@ -44,6 +44,9 @@
 </script>
 {{- end -}}
 
+{{- /* Low-priority font prefetch (not preload - avoids blocking images) */ -}}
+<link rel="prefetch" href="/fonts/roboto-slab-latin.woff2" as="font" type="font/woff2" crossorigin>
+
 {{- /* DNS prefetch for external links */ -}}
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//github.com">
