@@ -1,3 +1,6 @@
+/* ===== CSS Layer declaration for parse performance ===== */
+@layer base, components, utilities;
+
 /* ===== Font: Roboto Slab (self-hosted) ===== */
 
 @font-face {
