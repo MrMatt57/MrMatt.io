@@ -20,6 +20,14 @@
 </style>
 {{- end -}}
 
+{{- /* Critical CSS for homepage above-fold content */ -}}
+{{- if .IsHome -}}
+<style>
+.home-about{display:flex;align-items:flex-start;gap:20px;margin-top:2rem;margin-bottom:2rem}
+.avatar{width:175px;height:175px;flex-shrink:0;border-radius:50%;object-fit:cover}
+</style>
+{{- end -}}
+
 {{- /* DNS prefetch for external links */ -}}
 <link rel="dns-prefetch" href="//github.com">
 <link rel="dns-prefetch" href="//www.linkedin.com">
