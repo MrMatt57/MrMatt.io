@@ -1172,14 +1172,6 @@ hr {
     filter: invert(1);
 }
 
-/* ===== Containment hints for rendering performance ===== */
-
-.home-journal,
-.home-photography {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 500px;
-}
-
 /* ===== Content visibility: skip rendering off-screen content ===== */
 
 .photo-gallery-grid .photo-thumb-link {
