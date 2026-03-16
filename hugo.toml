@@ -82,7 +82,7 @@ enableRobotsTXT = true
 
 [outputs]
   home = ["HTML", "RSS"]
-  section = ["HTML"]
+  section = ["HTML", "RSS"]
 
 [taxonomies]
   tag = "tags"
