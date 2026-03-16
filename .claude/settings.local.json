@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Skill(feature)",
-      "Bash(git reset --hard*)"
+      "Bash(git reset --hard*)",
+      "Bash(*git reset --hard*)"
     ]
   }
 }

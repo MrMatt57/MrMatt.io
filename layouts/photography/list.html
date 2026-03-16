@@ -111,7 +111,8 @@
         shown = allItems.length;
     }
 
-    // Lightbox
+    // Defer lightbox setup until browser is idle
+    var initLightbox = function() {
     var overlay = document.getElementById('lightbox');
     var img = overlay.querySelector('.lightbox-img');
     var titleEl = overlay.querySelector('.lightbox-title');
@@ -290,6 +291,12 @@
             if (dx > 0 && currentIndex > 0) showPhoto(currentIndex - 1);
         }
     });
+    };
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initLightbox);
+    } else {
+        setTimeout(initLightbox, 1);
+    }
 })();
 </script>
 {{- end }}
