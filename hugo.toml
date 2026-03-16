@@ -9,6 +9,7 @@ summaryLength = 40
 timeZone = "America/New_York"
 enableEmoji = false
 enableInlineShortcodes = true
+hasCJKLanguage = false
 disableHugoGeneratorInject = true
 
 [frontmatter]
