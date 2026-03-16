@@ -15,11 +15,10 @@
 <link rel="preload" as="image" href="{{ $avatarWebp.RelPermalink }}" type="image/webp">
 {{- end }}
 
-{{- /* Preload first gallery thumbnail on photography list for faster LCP */ -}}
+{{- /* Preload first gallery thumbnails on photography list for faster LCP */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "section") -}}
-{{- $firstPhoto := index .Pages 0 -}}
-{{- if $firstPhoto -}}
-{{- $img := $firstPhoto.Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
+{{- range first 3 .Pages -}}
+{{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
 {{- if $img -}}
 {{- $thumb300 := $img.Fill "300x300 webp q60" -}}
 <link rel="preload" as="image" href="{{ $thumb300.RelPermalink }}" type="image/webp">
