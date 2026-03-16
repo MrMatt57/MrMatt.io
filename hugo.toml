@@ -107,7 +107,7 @@ disableHugoGeneratorInject = true
   disableCSS = false
   disableHTML = false
   disableJS = false
-  disableJSON = false
+  disableJSON = true
   disableSVG = false
   disableXML = false
   [minify.tdewolff]
