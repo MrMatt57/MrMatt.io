@@ -552,6 +552,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     height: 2rem;
     padding: 0;
     z-index: 10000;
+    touch-action: manipulation;
 }
 
 .lightbox-close svg {
@@ -660,6 +661,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     background: none;
     border: none;
     padding: 0;
+    touch-action: manipulation;
 }
 
 .lightbox-nav:hover,
