@@ -150,6 +150,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     justify-content: center;
     line-height: normal;
     padding: 2rem 0;
+    contain: layout style;
 }
 
 .header .logo {
