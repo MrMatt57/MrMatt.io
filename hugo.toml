@@ -109,7 +109,7 @@ enableGitInfo = true
       keepWhitespace = false
       keepDefaultAttrVals = true
       keepDocumentTags = true
-      keepEndTags = true
+      keepEndTags = false
       keepQuotes = false
     [minify.tdewolff.css]
       keepCSS2 = true
