@@ -353,6 +353,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     filter: blur(20px);
     z-index: 0;
     contain: layout style paint;
+    pointer-events: none;
 }
 
 .photo-thumb {
