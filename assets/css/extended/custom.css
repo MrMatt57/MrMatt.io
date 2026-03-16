@@ -852,6 +852,7 @@ h6 a, h6 a:hover, h6 a:visited {
     margin: 2.5rem 0 1.5rem;
     padding: 0;
     width: 100%;
+    contain: layout style;
 }
 
 .footer-links li {
