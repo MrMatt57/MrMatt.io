@@ -105,7 +105,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     max-width: 47.5em;
     width: 90%;
     padding: 0;
-    isolation: isolate;
 }
 
 .wrapper {
@@ -331,7 +330,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     border-bottom: none;
     line-height: 0;
     contain: layout style paint;
-    touch-action: manipulation;
 }
 
 /* Blur-up placeholder wrapper */
@@ -354,7 +352,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     filter: blur(20px);
     z-index: 0;
     contain: layout style paint;
-    pointer-events: none;
 }
 
 .photo-thumb {
@@ -366,7 +363,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     z-index: 1;
     opacity: 0;
     transition: opacity 0.4s ease;
-    contain: layout style;
 }
 
 .photo-thumb.loaded {
@@ -382,7 +378,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 .photography-page {
     background: #1d1e20;
     color: #fff;
-    overscroll-behavior-y: none;
 }
 
 .photography-page .main {
@@ -479,7 +474,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     margin: 1.5rem auto 3rem;
     contain: layout style;
     isolation: isolate;
-    touch-action: pan-y;
 }
 
 .photo-gallery-grid .photo-thumb-wrap {
@@ -521,7 +515,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     display: none;
     content-visibility: auto;
     overscroll-behavior: contain;
-    isolation: isolate;
     position: fixed;
     top: 0;
     left: 0;
@@ -543,7 +536,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     object-fit: contain;
     border-radius: 4px;
     aspect-ratio: auto;
-    backface-visibility: hidden;
 }
 
 .lightbox-close {
@@ -558,7 +550,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     height: 2rem;
     padding: 0;
     z-index: 10000;
-    touch-action: manipulation;
 }
 
 .lightbox-close svg {
@@ -604,7 +595,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     width: 100%;
     transition: opacity 0.15s ease;
     contain: layout style;
-    will-change: opacity;
 }
 
 .lightbox-img-and-meta.lightbox-transitioning {
@@ -668,7 +658,6 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     background: none;
     border: none;
     padding: 0;
-    touch-action: manipulation;
 }
 
 .lightbox-nav:hover,
@@ -858,7 +847,6 @@ h6 a, h6 a:hover, h6 a:visited {
     padding: 0 var(--gap);
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin: 0 auto;
-    contain: layout style;
 }
 
 .site-footer hr {
@@ -1245,12 +1233,6 @@ hr {
 
 .main {
     contain: content;
-}
-
-/* ===== Tag and post navigation containment ===== */
-
-.post-tags {
-    contain: layout style;
 }
 
 /* ===== TOC containment ===== */

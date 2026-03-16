@@ -1,5 +1,6 @@
 {{- define "main" }}
 <div class="photo-gallery-grid">
+    {{- $totalPages := len .Pages }}
     {{- range $idx, $page := .Pages }}
     {{- $img := $page.Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}

@@ -15,18 +15,16 @@
 <meta name="view-transition" content="same-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 {{- /* Critical CSS for above-fold content on photography page */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "section") -}}
 <style>
-.photography-page{background:#1d1e20;color:#fff;color-scheme:dark}
+.photography-page{background:#1d1e20;color:#fff}
 .photography-page .main{max-width:none;width:100%;padding:0}
 .photo-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem;max-width:1400px;width:90%;margin:1.5rem auto 3rem}
-.photo-thumb-wrap{position:relative;overflow:hidden;aspect-ratio:1;background-size:cover;background-position:center;contain:layout style paint}
+.photo-thumb-wrap{position:relative;overflow:hidden;aspect-ratio:1;background-size:cover;background-position:center}
 .photo-thumb{position:relative;width:100%;aspect-ratio:1;object-fit:cover;z-index:1;opacity:0;transition:opacity .4s ease}
 .photo-thumb.loaded{opacity:1}
-.photo-gallery-grid .photo-thumb-link{content-visibility:auto;contain-intrinsic-size:160px 160px;contain:layout style paint}
 .gallery-item{display:none}
 .gallery-item.visible{display:block}
 .photo-header{text-align:center;padding:2rem 1rem 0}
@@ -50,9 +48,11 @@
 {{- end -}}
 
 {{- /* Speculation rules for all pages */ -}}
+{{- if and (ne .IsHome true) (ne .Section "photography") }}
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+{{- end -}}
 
 {{- /* DNS prefetch for external links */ -}}
 <meta http-equiv="x-dns-prefetch-control" content="on">
