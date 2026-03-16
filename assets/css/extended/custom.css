@@ -715,6 +715,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    contain: layout style;
     color: rgba(255, 255, 255, 0.35);
     font-family: "Roboto Slab", serif;
     font-size: 0.75rem;
