@@ -12,7 +12,6 @@
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="format-detection" content="telephone=no">
-<meta name="view-transition" content="same-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="robots" content="max-image-preview:large">
@@ -48,21 +47,10 @@
 </style>
 {{- end -}}
 
-{{- /* Speculative prerender for likely navigation targets */ -}}
-{{- if .IsHome -}}
-<link rel="prerender" href="/photography/">
-<link rel="prerender" href="/posts/">
-<script type="speculationrules">
-{"prerender":[{"urls":["/photography/","/posts/","/about/"]}]}
-</script>
-{{- end -}}
-
-{{- /* Speculation rules for all pages */ -}}
-{{- if and (ne .IsHome true) (ne .Section "photography") }}
+{{- /* Speculative prefetch for likely navigation targets */ -}}
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
-{{- end -}}
 
 {{- /* DNS prefetch for external links */ -}}
 <meta http-equiv="x-dns-prefetch-control" content="on">
