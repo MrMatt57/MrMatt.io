@@ -8,6 +8,7 @@ enableRobotsTXT = true
 summaryLength = 40
 timeZone = "America/New_York"
 enableEmoji = false
+enableInlineShortcodes = true
 disableHugoGeneratorInject = true
 
 [frontmatter]
