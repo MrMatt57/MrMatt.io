@@ -16,6 +16,11 @@
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
+{{- /* Theme color for photography page dark mode */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "section") -}}
+<meta name="theme-color" content="#1d1e20">
+{{- end -}}
+
 {{- /* Critical CSS for above-fold content on photography page */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "section") -}}
 <style>
