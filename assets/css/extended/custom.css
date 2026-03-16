@@ -1123,6 +1123,7 @@ hr {
     align-items: center;
     vertical-align: middle;
     margin-left: 0.35rem;
+    contain: layout style;
     color: rgba(255, 255, 255, 0.35);
     border-bottom: none;
     transition: color 0.15s linear;
