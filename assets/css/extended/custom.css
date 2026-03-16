@@ -111,6 +111,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     max-width: 40em;
     width: 90%;
     margin: 0 auto;
+    contain: layout style;
 }
 
 .wrapper.full {
