@@ -1208,6 +1208,12 @@ hr {
     contain: content;
 }
 
+/* ===== TOC containment ===== */
+
+.toc {
+    contain: layout style;
+}
+
 /* ===== Containment for post sections ===== */
 
 .post-single {
