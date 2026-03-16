@@ -2,7 +2,7 @@ baseURL = "https://mrmatt.io/"
 languageCode = "en-us"
 title = "Matt Walker"
 theme = "PaperMod"
-paginate = 10
+paginate = 5
 
 enableRobotsTXT = true
 
