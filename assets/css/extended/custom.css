@@ -238,6 +238,8 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     contain: layout style;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
 }
 
 .home-journal h2 {
@@ -297,6 +299,8 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 .home-photography {
     margin-top: 2.5rem;
     contain: layout style paint;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 400px;
 }
 
 .home-photography h2 {
