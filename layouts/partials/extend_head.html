@@ -24,7 +24,7 @@
 {{- if $firstPhoto -}}
 {{- $img := $firstPhoto.Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
 {{- if $img -}}
-{{- $thumb300 := $img.Fill "300x300 webp q80" -}}
+{{- $thumb300 := $img.Fill "300x300 webp q60" -}}
 <link rel="preload" as="image" href="{{ $thumb300.RelPermalink }}" type="image/webp">
 {{- end -}}
 {{- end -}}
