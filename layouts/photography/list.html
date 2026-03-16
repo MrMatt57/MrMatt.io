@@ -16,7 +16,7 @@
         <div class="photo-thumb-wrap" data-lqip="data:image/webp;base64,{{ $lqip.Content | base64Encode }}">
         <img src="{{ $thumb300.RelPermalink }}"
              srcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
-             sizes="(max-width: 549px) 100px, 160px"
+             sizes="(max-width: 549px) 100px, 175px"
              alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" decoding="async" />
         </div>
     </a>
