@@ -997,6 +997,7 @@ hr {
 .related-posts {
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+    contain: layout style;
 }
 
 .related-posts h3 {
