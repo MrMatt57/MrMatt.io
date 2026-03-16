@@ -51,11 +51,9 @@
 </div>
 <script>
 (function() {
-    // Apply LQIP blur-up placeholders from data attributes (after first paint)
-    requestAnimationFrame(function() {
-        document.querySelectorAll('.photo-thumb-wrap[data-lqip]').forEach(function(el) {
-            el.style.backgroundImage = 'url(' + el.dataset.lqip + ')';
-        });
+    // Apply LQIP blur-up placeholders from data attributes
+    document.querySelectorAll('.photo-thumb-wrap[data-lqip]').forEach(function(el) {
+        el.style.backgroundImage = 'url(' + el.dataset.lqip + ')';
     });
 
     // Mark images as loaded for blur-up fade transition
