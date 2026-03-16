@@ -1176,7 +1176,7 @@ hr {
 
 .photo-gallery-grid .photo-thumb-link {
     content-visibility: auto;
-    contain-intrinsic-size: auto 100px;
+    contain-intrinsic-size: 160px 160px;
     contain: layout style paint;
 }
 
