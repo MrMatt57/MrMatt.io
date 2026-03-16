@@ -18,7 +18,7 @@
         <img src="{{ $thumb300.RelPermalink }}"
              srcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
              sizes="(max-width: 549px) 100px, 175px"
-             alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}" class="photo-thumb" width="300" height="300" {{ if eq $idx 0 }}loading="eager" fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async" />
+             alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}" class="photo-thumb" width="300" height="300" {{ if eq $idx 0 }}loading="eager"{{ else }}loading="lazy"{{ end }} decoding="async" />
         </div>
     </a>
     {{- end }}
