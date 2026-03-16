@@ -99,6 +99,10 @@ enableRobotsTXT = true
     name = "date"
     weight = 10
 
+[build]
+  noJSConfigInAssets = true
+  useResourceCacheWhen = "fallback"
+
 [minify]
   disableCSS = false
   disableHTML = false
