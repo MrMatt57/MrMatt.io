@@ -35,7 +35,7 @@
 {{- /* Preload avatar on homepage for faster LCP */ -}}
 {{- if .IsHome }}
 {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
-{{- $avatarWebp := $avatar.Fit "350x350 webp q85" }}
+{{- $avatarWebp := $avatar.Fit "350x350 webp q75" }}
 <link rel="preload" as="image" href="{{ $avatarWebp.RelPermalink }}" type="image/webp">
 {{- end }}
 
