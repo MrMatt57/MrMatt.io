@@ -521,6 +521,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     display: none;
     content-visibility: auto;
     overscroll-behavior: contain;
+    isolation: isolate;
     position: fixed;
     top: 0;
     left: 0;
