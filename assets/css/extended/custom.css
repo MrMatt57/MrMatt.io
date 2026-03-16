@@ -378,6 +378,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 .photography-page {
     background: #1d1e20;
     color: #fff;
+    overscroll-behavior-y: none;
 }
 
 .photography-page .main {
