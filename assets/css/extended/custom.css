@@ -858,6 +858,7 @@ h6 a, h6 a:hover, h6 a:visited {
     padding: 0 var(--gap);
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin: 0 auto;
+    contain: layout style;
 }
 
 .site-footer hr {
