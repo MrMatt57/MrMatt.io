@@ -295,6 +295,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 
 .home-photography {
     margin-top: 2.5rem;
+    contain: layout style paint;
 }
 
 .home-photography h2 {
