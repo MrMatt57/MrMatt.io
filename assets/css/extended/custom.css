@@ -1028,6 +1028,7 @@ hr {
 
 .not-found {
     position: static;
+    contain: layout style;
     display: flex;
     flex-direction: column;
     align-items: center;
