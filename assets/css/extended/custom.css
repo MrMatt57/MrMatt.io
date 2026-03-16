@@ -1167,6 +1167,7 @@ hr {
     height: 20px;
     position: relative;
     overflow: hidden;
+    contain: layout style paint;
 }
 
 .camera-sparkline canvas {
@@ -1204,6 +1205,7 @@ hr {
 .membrane-diagram {
     margin: 2rem auto;
     text-align: center;
+    contain: layout style;
 }
 
 .membrane-diagram img {
