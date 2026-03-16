@@ -34,6 +34,9 @@
 {{- /* Speculative prerender for likely navigation targets */ -}}
 {{- if .IsHome -}}
 <link rel="prerender" href="/photography/">
+<script type="speculationrules">
+{"prerender":[{"urls":["/photography/","/posts/","/about/"]}]}
+</script>
 {{- end -}}
 
 {{- /* DNS prefetch for external links */ -}}
