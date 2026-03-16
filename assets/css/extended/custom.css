@@ -604,6 +604,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     width: 100%;
     transition: opacity 0.15s ease;
     contain: layout style;
+    will-change: opacity;
 }
 
 .lightbox-img-and-meta.lightbox-transitioning {
