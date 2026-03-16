@@ -1247,6 +1247,12 @@ hr {
     contain: content;
 }
 
+/* ===== Tag and post navigation containment ===== */
+
+.post-tags {
+    contain: layout style;
+}
+
 /* ===== TOC containment ===== */
 
 .toc {
