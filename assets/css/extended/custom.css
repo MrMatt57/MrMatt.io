@@ -1172,6 +1172,13 @@ hr {
     filter: invert(1);
 }
 
+/* ===== Content visibility: skip rendering off-screen content ===== */
+
+.photo-gallery-grid .photo-thumb-link {
+    content-visibility: auto;
+    contain-intrinsic-size: 160px 160px;
+}
+
 /* ===== Reduced motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
