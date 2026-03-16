@@ -769,6 +769,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
 /* Gallery link in photo strip */
 .gallery-link {
     display: flex;
+    contain: layout style;
     align-items: center;
     justify-content: center;
     aspect-ratio: 1;
