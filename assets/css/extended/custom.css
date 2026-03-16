@@ -1172,6 +1172,18 @@ hr {
     filter: invert(1);
 }
 
+/* ===== Content visibility for blog post sections ===== */
+
+.post-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 100px;
+}
+
+.related-posts {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 200px;
+}
+
 /* ===== Layout containment for main content ===== */
 
 .main {
