@@ -97,14 +97,6 @@ enableGitInfo = true
     name = "date"
     weight = 10
 
-[imaging]
-  resampleFilter = "MitchellNetravali"
-  hint = "photo"
-
-[imaging.exif]
-  disableDate = true
-  disableLatLong = true
-
 [minify]
   disableCSS = false
   disableHTML = false
