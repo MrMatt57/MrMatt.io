@@ -8,15 +8,74 @@
 <meta name="description" content="Browse {{ $count }} post{{ if ne $count 1 }}s{{ end }} tagged &quot;{{ .Title }}&quot; on {{ site.Title }}'s site{{ with $sample }}, including {{ delimit . ", " }}{{ end }}." />
 {{- end -}}
 
-{{- /* Preload Roboto Slab font to reduce CLS from font swap */ -}}
-<link rel="preload" as="font" href="/fonts/roboto-slab-latin.woff2" type="font/woff2" crossorigin>
+{{- /* Color scheme hint for faster initial render */ -}}
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="robots" content="max-image-preview:large">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+{{- /* Theme color for photography page dark mode */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "section") -}}
+<meta name="theme-color" content="#1d1e20">
+{{- end -}}
+
+{{- /* Critical CSS for above-fold content on photography page */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "section") -}}
+<style>
+.photography-page{background:#1d1e20;color:#fff;color-scheme:dark}
+.photography-page .main{max-width:none;width:100%;padding:0}
+.photo-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem;max-width:1400px;width:90%;margin:1.5rem auto 3rem}
+.photo-thumb-wrap{position:relative;overflow:hidden;aspect-ratio:1;background-size:cover;background-position:center}
+.photo-thumb{position:relative;width:100%;aspect-ratio:1;object-fit:cover;z-index:1;opacity:0;transition:opacity .4s ease}
+.photo-thumb.loaded{opacity:1}
+.photo-gallery-grid .photo-thumb-link{content-visibility:auto;contain-intrinsic-size:160px 160px;contain:layout style paint}
+.gallery-item{display:none}
+.gallery-item.visible{display:block}
+.photo-header{text-align:center;padding:2rem 1rem 0}
+</style>
+{{- end -}}
+
+{{- /* Critical CSS for homepage above-fold content */ -}}
+{{- if .IsHome -}}
+<style>
+.home-about{display:flex;align-items:flex-start;gap:20px;margin-top:2rem;margin-bottom:2rem}
+.avatar{width:175px;height:175px;flex-shrink:0;border-radius:50%;object-fit:cover}
+</style>
+{{- end -}}
+
+{{- /* Speculative prefetch for likely navigation targets */ -}}
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+
+{{- /* DNS prefetch for external links */ -}}
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//github.com">
+<link rel="dns-prefetch" href="//www.linkedin.com">
+<link rel="dns-prefetch" href="//creativecommons.org">
 
 {{- /* Preload avatar on homepage for faster LCP */ -}}
 {{- if .IsHome }}
 {{- $avatar := resources.Get "images/MattWalker-avatar.png" }}
-{{- $avatarWebp := $avatar.Fit "350x350 webp q85" }}
+{{- $avatarWebp := $avatar.Fit "350x350 webp q75" }}
 <link rel="preload" as="image" href="{{ $avatarWebp.RelPermalink }}" type="image/webp">
 {{- end }}
+
+{{- /* Preload first gallery thumbnail on photography list for faster LCP */ -}}
+{{- if and (eq .Section "photography") (eq .Kind "section") -}}
+{{- $firstPhoto := index .Pages 0 -}}
+{{- if $firstPhoto -}}
+{{- $img := $firstPhoto.Resources.GetMatch "*.{jpg,jpeg,png,webp}" -}}
+{{- if $img -}}
+{{- $thumb300 := $img.Fill "300x300 webp q60" -}}
+<link rel="preload" as="image" href="{{ $thumb300.RelPermalink }}" type="image/webp">
+{{- end -}}
+{{- end -}}
+{{- end -}}
 
 {{- /* ImageObject structured data for photography pages */ -}}
 {{- if and (eq .Section "photography") (eq .Kind "page") -}}

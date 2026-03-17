@@ -72,14 +72,17 @@
 <script>
 (function() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var bar = document.querySelector('.scroll-progress');
-  if (!bar) return;
-  function update() {
-    var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
-  }
-  window.addEventListener('scroll', update, {passive: true});
-  update();
+  var init = function() {
+    var bar = document.querySelector('.scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+    }
+    window.addEventListener('scroll', update, {passive: true});
+    update();
+  };
+  if ('requestIdleCallback' in window) { requestIdleCallback(init); } else { setTimeout(init, 1); }
 })();
 </script>
 {{- end }}

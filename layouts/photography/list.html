@@ -1,24 +1,24 @@
 {{- define "main" }}
 <div class="photo-gallery-grid">
-    {{- range .Pages }}
-    {{- $img := .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+    {{- $totalPages := len .Pages }}
+    {{- range $idx, $page := .Pages }}
+    {{- $img := $page.Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
     {{- if $img }}
     {{- $full := partial "photography/full-image.html" $img }}
-    {{- $lqip := $img.Fill "20x20 webp q20" }}
+    {{- $lqip := $img.Fill "10x10 webp q10" }}
     <a href="{{ $full.RelPermalink }}" class="photo-thumb-link no-underline"
-       data-slug="{{ .File.ContentBaseName }}"
-       data-alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}"
-       data-title="{{ .Title }}"
-       data-description="{{ .Params.description }}"
+       data-slug="{{ $page.File.ContentBaseName }}"
+       data-alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}"
+       data-title="{{ $page.Title }}"
+       data-description="{{ $page.Params.description }}"
        data-original="{{ (partial "photography/fullres-image.html" $img).RelPermalink }}">
-        {{- $thumb200 := $img.Fill "200x200 webp q80" }}
-        {{- $thumb300 := $img.Fill "300x300 webp q80" }}
-        {{- $thumb450 := $img.Fill "450x450 webp q80" }}
+        {{- $thumb300 := $img.Fill "300x300 webp q60" }}
+        {{- $thumb450 := $img.Fill "450x450 webp q60" }}
         <div class="photo-thumb-wrap" data-lqip="data:image/webp;base64,{{ $lqip.Content | base64Encode }}">
         <img src="{{ $thumb300.RelPermalink }}"
-             srcset="{{ $thumb200.RelPermalink }} 200w, {{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
-             sizes="(max-width: 549px) calc(25vw - 0.5rem), 160px"
-             alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Title }}{{ end }}" class="photo-thumb" width="300" height="300" loading="lazy" />
+             srcset="{{ $thumb300.RelPermalink }} 300w, {{ $thumb450.RelPermalink }} 450w"
+             sizes="(max-width: 549px) 100px, 175px"
+             alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}" class="photo-thumb" width="300" height="300" {{ if eq $idx 0 }}loading="eager"{{ else }}loading="lazy"{{ end }} decoding="async" />
         </div>
     </a>
     {{- end }}
@@ -52,19 +52,13 @@
 </div>
 <script>
 (function() {
-    // Apply LQIP blur-up placeholders from data attributes
+    // Apply LQIP placeholders and mark loaded images in single traversal
     document.querySelectorAll('.photo-thumb-wrap[data-lqip]').forEach(function(el) {
         el.style.backgroundImage = 'url(' + el.dataset.lqip + ')';
-    });
-
-    // Mark images as loaded for blur-up fade transition
-    document.querySelectorAll('.photo-thumb').forEach(function(img) {
-        if (img.complete && img.naturalWidth > 0) {
-            img.classList.add('loaded');
-        } else {
-            img.addEventListener('load', function() {
-                img.classList.add('loaded');
-            });
+        var img = el.querySelector('.photo-thumb');
+        if (img) {
+            if (img.complete && img.naturalWidth > 0) { img.classList.add('loaded'); }
+            else { img.addEventListener('load', function() { img.classList.add('loaded'); }); }
         }
     });
 
@@ -74,14 +68,16 @@
     var shown = 0;
 
     function showBatch() {
-        var end = Math.min(shown + BATCH_SIZE, allItems.length);
-        for (var i = shown; i < end; i++) {
-            allItems[i].classList.add('visible');
-        }
-        shown = end;
-        if (shown >= allItems.length && observer) {
-            observer.disconnect();
-        }
+        requestAnimationFrame(function() {
+            var end = Math.min(shown + BATCH_SIZE, allItems.length);
+            for (var i = shown; i < end; i++) {
+                allItems[i].classList.add('visible');
+            }
+            shown = end;
+            if (shown >= allItems.length && observer) {
+                observer.disconnect();
+            }
+        });
     }
 
     // Hide all items initially, then show first batch
@@ -111,7 +107,8 @@
         shown = allItems.length;
     }
 
-    // Lightbox
+    // Defer lightbox setup until browser is idle
+    var initLightbox = function() {
     var overlay = document.getElementById('lightbox');
     var img = overlay.querySelector('.lightbox-img');
     var titleEl = overlay.querySelector('.lightbox-title');
@@ -129,7 +126,6 @@
     function syncRuleWidths() {
         var w = img.offsetWidth + 'px';
         ruleEl.style.width = w;
-        headerRuleEl.style.width = w;
     }
 
     // Build slug-to-index map for deep linking
@@ -290,6 +286,15 @@
             if (dx > 0 && currentIndex > 0) showPhoto(currentIndex - 1);
         }
     });
+    };
+    if (window.location.hash) {
+        // Hash present — init immediately so lightbox opens without flash
+        initLightbox();
+    } else if ('requestIdleCallback' in window) {
+        requestIdleCallback(initLightbox);
+    } else {
+        setTimeout(initLightbox, 1);
+    }
 })();
 </script>
 {{- end }}
