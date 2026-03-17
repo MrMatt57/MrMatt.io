@@ -1242,7 +1242,7 @@ hr {
 /* ===== Layout containment for main content ===== */
 
 .main {
-    contain: content;
+    contain: style;
 }
 
 /* ===== TOC containment ===== */
