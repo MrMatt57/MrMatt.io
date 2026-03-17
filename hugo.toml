@@ -5,7 +5,12 @@ theme = "PaperMod"
 paginate = 10
 
 enableRobotsTXT = true
-enableGitInfo = true
+summaryLength = 40
+timeZone = "America/New_York"
+enableEmoji = false
+enableInlineShortcodes = true
+hasCJKLanguage = false
+disableHugoGeneratorInject = true
 
 [frontmatter]
   lastmod = [":git", "lastmod", "date"]
@@ -25,6 +30,9 @@ enableGitInfo = true
   ShowBreadCrumbs = false
   hideAuthor = true
   ShowToc = true
+
+  [params.assets]
+    disableScrollBarStyle = true
 
   author = "Matt Walker"
 
@@ -79,12 +87,11 @@ enableGitInfo = true
   notAlternative = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "LLMS", "LLMSFull"]
+  home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
 
 [related]
   includeNewer = true
@@ -96,6 +103,32 @@ enableGitInfo = true
   [[related.indices]]
     name = "date"
     weight = 10
+
+[build]
+  noJSConfigInAssets = true
+  useResourceCacheWhen = "fallback"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+      keepDefaultAttrVals = false
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.js]
+      precision = 0
+      keepVarNames = false
+      version = 2022
 
 [markup]
   [markup.goldmark]
