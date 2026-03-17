@@ -671,7 +671,10 @@ The full experiment log, evaluation harness, and agent instructions are [on GitH
         });
     }
 
-    renderCharts();
+    /* Defer to next frame so CSS aspect-ratio is computed before Chart.js reads container height */
+    requestAnimationFrame(function() {
+        renderCharts();
+    });
     new MutationObserver(function() { location.reload(); })
         .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();

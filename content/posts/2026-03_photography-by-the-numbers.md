@@ -104,7 +104,10 @@ See the full gear timeline in [Every Camera I've Ever Owned](/posts/camera-gear-
 (function() {
     fetch('/data/photo-stats.json')
         .then(function(r) { return r.json(); })
-        .then(function(data) { renderCharts(data); });
+        .then(function(data) {
+            /* Defer to next frame so CSS aspect-ratio is computed before Chart.js reads container height */
+            requestAnimationFrame(function() { renderCharts(data); });
+        });
 
     function renderCharts(data) {
         var isDark = document.documentElement.getAttribute('data-theme') === 'dark';

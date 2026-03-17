@@ -66,7 +66,10 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
 (function() {
     fetch('/data/camera-timeline.json')
         .then(function(r) { return r.json(); })
-        .then(function(data) { renderCharts(data); });
+        .then(function(data) {
+            /* Defer to next frame so CSS aspect-ratio is computed before Chart.js reads container height */
+            requestAnimationFrame(function() { renderCharts(data); });
+        });
 
     /* Cameras I actually owned (exclude friends' shared photos) */
     var NOT_OWNED = [
