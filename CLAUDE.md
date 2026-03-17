@@ -50,6 +50,11 @@ hugo.toml
 - Branch: `v2026` is the working branch for the rebuild
 - Base/main branch: `master` (will rename to `main` at ship time)
 
+## Style Guides
+
+- **Writing style:** See `WRITING-STYLE.md` — Matt's voice, tone, punctuation habits, and post structure patterns. Reference this when drafting or editing any blog post.
+- **Illustration style:** See `ILLUSTRATION-STYLE.md` — monochrome pen-and-ink editorial illustration style. Reference this when creating hero images or conceptual diagrams.
+
 ## Content Notes
 
 - Old content uses `+++` TOML front matter — migrate to `---` YAML front matter for PaperMod
