@@ -1,0 +1,21 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $img := resources.Get $src -}}
+{{- if $img -}}
+{{- $webp := $img.Process "resize 1536x webp q80" -}}
+<figure class="post-figure">
+  <img
+    src="{{ $webp.RelPermalink }}"
+    alt="{{ $alt }}"
+    width="{{ $webp.Width }}"
+    height="{{ $webp.Height }}"
+    loading="{{ $loading }}"
+    decoding="async"
+  />
+  {{- with $caption }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
+{{- end -}}
