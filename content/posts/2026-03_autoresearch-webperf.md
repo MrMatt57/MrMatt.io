@@ -10,6 +10,17 @@ tags:
   - "infrastructure"
 ---
 
+<figure class="post-figure">
+  <img
+    src="/images/ai-experiment-rig.png"
+    alt="Illustration of an autonomous AI experiment loop modifying, building, measuring, and evaluating website performance under human-defined constraints"
+    loading="lazy"
+  />
+  <figcaption>
+    Human strategy. Autonomous execution. Measured results.
+  </figcaption>
+</figure>
+
 Andrej Karpathy released [autoresearch](https://github.com/karpathy/autoresearch) in March 2026 -- a pattern for letting an AI agent autonomously run ML experiments in a loop. The human writes strategy in `program.md`, the agent handles all code changes and evaluation. Modify → train → check loss → keep or discard → repeat.
 
 I adapted this to web performance. Instead of training a neural network, the agent modifies Hugo templates and CSS, builds the site, runs Lighthouse with mobile throttling, and keeps or discards each change based on whether Largest Contentful Paint improved. The hard constraint: **zero visual changes** -- enforced by a structural DOM hash that auto-rejects any experiment that alters the page structure.
