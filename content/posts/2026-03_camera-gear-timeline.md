@@ -17,8 +17,8 @@ After [scanning 723GB of Google Takeout data](/posts/google-takeout-gallery-cura
 
 ### The timeline
 
-<div style="position:relative;width:100%;aspect-ratio:1/1;margin:2rem 0;">
-<canvas id="timeline-chart"></canvas>
+<div style="position:relative;width:100%;padding-bottom:100%;margin:2rem 0;">
+<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="timeline-chart"></canvas>
 </div>
 
 The pattern is clear: dedicated cameras dominated until around 2013, then phones took over completely. The transition wasn't gradual -- it was a cliff. Once the Samsung Galaxy Note II arrived, the Canon PowerShots and Nikon DSLRs collected dust.
@@ -35,8 +35,8 @@ The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 
 
 ### Phone vs. dedicated camera
 
-<div style="position:relative;width:100%;aspect-ratio:5/6;margin:2rem 0;">
-<canvas id="category-chart"></canvas>
+<div style="position:relative;width:100%;padding-bottom:120%;margin:2rem 0;">
+<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="category-chart"></canvas>
 </div>
 
 The crossover happened around 2013. By 2018, dedicated cameras were effectively zero. Computational photography didn't just match optical quality -- it made the camera you always have with you the best camera.
@@ -66,19 +66,7 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
 (function() {
     fetch('/data/camera-timeline.json')
         .then(function(r) { return r.json(); })
-        .then(function(data) {
-            /* Set explicit pixel heights on chart containers — CSS aspect-ratio alone
-               is unreliable when Chart.js reads dimensions on the deployed site */
-            document.querySelectorAll('canvas[id]').forEach(function(c) {
-                var p = c.parentNode;
-                var ar = p.style.aspectRatio || getComputedStyle(p).aspectRatio;
-                if (ar && ar !== 'auto') {
-                    var parts = ar.split('/');
-                    p.style.height = Math.round(p.offsetWidth * parseInt(parts[1]) / parseInt(parts[0])) + 'px';
-                }
-            });
-            renderCharts(data);
-        });
+        .then(function(data) { renderCharts(data); });
 
     /* Cameras I actually owned (exclude friends' shared photos) */
     var NOT_OWNED = [
