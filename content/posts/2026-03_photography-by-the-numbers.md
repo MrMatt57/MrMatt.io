@@ -15,7 +15,7 @@ I scanned the EXIF headers of every JPEG across 15 Google Takeout zip files. Her
 
 ### Volume over time
 
-<div style="position:relative; width:100%; aspect-ratio:5/2; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
 <canvas id="yearly-chart"></canvas>
 </div>
 
@@ -24,10 +24,10 @@ The yearly photo count forms a bell curve peaking at 2015 with 13,816 photos. Th
 ### When I shoot
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0;">
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="hourly-chart"></canvas>
 </div>
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="dow-chart"></canvas>
 </div>
 </div>
@@ -36,7 +36,7 @@ Saturday at 10am is my golden hour. Weekends get twice the shooting volume of mi
 
 ### The heatmap
 
-<div style="position:relative; width:100%; aspect-ratio:5/2; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
 <canvas id="heatmap-chart"></canvas>
 </div>
 
@@ -44,7 +44,7 @@ The pattern is clear: weekend mornings and afternoons are when I reach for the c
 
 ### People in photos
 
-<div style="position:relative; width:100%; aspect-ratio:5/2; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
 <canvas id="people-chart"></canvas>
 </div>
 
@@ -52,7 +52,7 @@ The percentage of photos containing people dropped from 70% in 2016 to under 2% 
 
 ### Where in the world
 
-<div style="position:relative; width:100%; aspect-ratio:5/2; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
 <canvas id="gps-chart"></canvas>
 </div>
 
@@ -61,13 +61,13 @@ GPS data went from 0% in the pre-smartphone era to 91% in 2017, then drifted bac
 ### The lens settings
 
 <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin:2rem 0;">
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="aperture-chart"></canvas>
 </div>
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="focal-chart"></canvas>
 </div>
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="iso-time-chart"></canvas>
 </div>
 </div>
@@ -77,10 +77,10 @@ f/2.0 at 27mm. That's the phone sweet spot -- a moderately wide angle with a fas
 ### Resolution and exposure
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0;">
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="resolution-chart"></canvas>
 </div>
-<div style="position:relative; width:100%; aspect-ratio:4/3;">
+<div style="position:relative; width:100%; aspect-ratio:1/1;">
 <canvas id="exposure-chart"></canvas>
 </div>
 </div>
@@ -89,7 +89,7 @@ Resolution plateaued after the megapixel race ended. The jump from 4MP in 2003 t
 
 ### The full heartbeat
 
-<div style="position:relative; width:100%; aspect-ratio:5/2; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
 <canvas id="monthly-chart"></canvas>
 </div>
 
