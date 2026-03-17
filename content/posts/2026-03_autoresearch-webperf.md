@@ -42,7 +42,7 @@ The agent was allowed to modify eight files: `extend_head.html` (resource hints)
 
 ### LCP over 200 experiments
 
-<div style="position:relative; width:100%; aspect-ratio:4/3; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:3/2; margin:2rem 0;">
 <canvas id="lcp-timeline"></canvas>
 </div>
 
@@ -77,7 +77,7 @@ Image quality reduction (q80 → q60 on thumbnails) and matching the preload to 
 
 ### The surprise: preloads can hurt
 
-<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:3/2; margin:2rem 0;">
 <canvas id="preload-chart"></canvas>
 </div>
 
@@ -87,7 +87,7 @@ On a throttled 4G connection, every preload competes for the same limited bandwi
 
 ### Build size vs. LCP
 
-<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:3/2; margin:2rem 0;">
 <canvas id="size-chart"></canvas>
 </div>
 
@@ -95,7 +95,7 @@ Build size and LCP had almost no correlation. The site grew from ~700MB to ~949M
 
 ### The noise problem
 
-<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:3/2; margin:2rem 0;">
 <canvas id="noise-chart"></canvas>
 </div>
 
