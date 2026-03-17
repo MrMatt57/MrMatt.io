@@ -29,7 +29,7 @@ jobs:
           extended: true
 
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: resources
           key: hugo-resources-${{ hashFiles('content/photography/**') }}
