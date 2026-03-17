@@ -588,7 +588,7 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     text-align: center;
     flex-shrink: 0;
     width: 100%;
-    padding: 2rem 0 0;
+    padding: 2rem 1rem 0;
 }
 
 .lightbox-img-and-meta {
@@ -611,11 +611,9 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     font-size: 2.4rem;
     font-weight: 300;
     letter-spacing: -0.1rem;
-    line-height: 1.2;
     color: #fff;
     margin: 0 0 0.25rem;
     border-bottom: none;
-    display: inline-block;
 }
 
 .lightbox-site-title:hover,
@@ -628,13 +626,17 @@ h6 { font-size: 1rem; line-height: 1.6; letter-spacing: 0; margin-bottom: 0.25em
     font-family: "Roboto Slab", serif;
     font-size: 1.1rem;
     font-weight: 300;
-    letter-spacing: 0.05rem;
     color: rgba(255, 255, 255, 0.6);
     margin: 0 0 1rem;
+    letter-spacing: 0.05rem;
 }
 
 .lightbox-header-rule {
-    display: none;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .lightbox-img-wrap {

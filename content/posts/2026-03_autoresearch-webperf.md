@@ -50,7 +50,7 @@ Baseline was 2,638ms. The agent got it to a stable 2,109ms -- a **20% reduction*
 </div>
 </div>
 
-Of 200 experiments, 62% were kept and 33% discarded. Four crashed the build entirely (usually by invalidating Hugo's image cache, triggering a rebuild timeout). The keep rate is deceptively high -- many "kept" changes were neutral on LCP but improved secondary metrics like FCP or build size. Only about 15 experiments delivered a measurable LCP improvement.
+Of 200 experiments, 147 were kept (74%) and 47 discarded (23%). Four crashed the build entirely (usually by invalidating Hugo's image cache, triggering a rebuild timeout). The keep rate is deceptively high -- many "kept" changes were neutral on LCP but improved secondary metrics like FCP or build size, and about 70 were quick-mode CSS commits that skipped the full Lighthouse evaluation entirely. Only about 15 experiments delivered a measurable LCP improvement.
 
 ### What actually moved the needle
 
@@ -58,11 +58,11 @@ Of 200 experiments, 62% were kept and 33% discarded. Four crashed the build enti
 <canvas id="top-wins"></canvas>
 </div>
 
-The biggest single improvement was also the most counterintuitive: **removing a font preload** saved 146ms. The font `<link rel="preload">` was competing with the LCP image for bandwidth on simulated 4G. Without it, the browser loaded the font just fine via the CSS `@font-face` -- slightly later, but freeing up the critical path for the image that actually determined LCP.
+The biggest single improvement was **adding `content-visibility: auto`** to gallery thumbnails (-222ms). This told the browser to skip rendering off-screen images entirely, which freed up main-thread time during the initial paint.
 
-The second-biggest win was **adding `content-visibility: auto`** to gallery thumbnails. This told the browser to skip rendering off-screen images entirely, which freed up main-thread time during the initial paint.
+The most *surprising* win was **removing a font preload** (-146ms). The font `<link rel="preload">` was competing with the LCP image for bandwidth on simulated 4G. Without it, the browser loaded the font just fine via the CSS `@font-face` -- slightly later, but freeing up the critical path for the image that actually determined LCP.
 
-Image quality reduction (q80 → q60 on thumbnails) delivered the third-largest improvement by shrinking the LCP image's byte size.
+Image quality reduction (q80 → q60 on thumbnails) and matching the preload to the new quality level delivered another -76ms by shrinking the LCP image's byte size.
 
 ### The surprise: preloads can hurt
 
@@ -70,7 +70,7 @@ Image quality reduction (q80 → q60 on thumbnails) delivered the third-largest 
 <canvas id="preload-chart"></canvas>
 </div>
 
-Resource preloading was the most volatile optimization category. The agent discovered that **removing** the font preload saved 146ms, while **removing** the gallery image preload cost 527ms. Preloading three thumbnails instead of one caused contention and added 72ms. Adding `fetchpriority=high` to the font preload added 295ms.
+Resource preloading was the most volatile optimization category. The agent discovered that **removing** the font preload saved 146ms, while **removing** the gallery image preload cost 527ms. Preloading three thumbnails instead of one caused contention and added 72ms. Adding `fetchpriority=high` to the font preload added 149ms.
 
 On a throttled 4G connection, every preload competes for the same limited bandwidth. The optimal strategy turned out to be: preload exactly one critical image, preload zero fonts, and let the browser's native priority system handle everything else.
 
@@ -80,7 +80,7 @@ On a throttled 4G connection, every preload competes for the same limited bandwi
 <canvas id="size-chart"></canvas>
 </div>
 
-Build size and LCP had almost no correlation. The site grew from 716MB to 971MB (from accumulated experimental CSS and config), then dropped to 705MB after a clean rebuild -- with no effect on LCP. Most of the size is in processed images, which Hugo caches aggressively. The LCP improvements came entirely from resource loading strategy and rendering hints, not from reducing bytes.
+Build size and LCP had almost no correlation. The site grew from ~700MB to ~949MB (from accumulated experimental CSS and config), then dropped to ~689MB after a clean rebuild -- with no effect on LCP. Most of the size is in processed images, which Hugo caches aggressively. The LCP improvements came entirely from resource loading strategy and rendering hints, not from reducing bytes.
 
 ### The noise problem
 
@@ -88,7 +88,7 @@ Build size and LCP had almost no correlation. The site grew from 716MB to 971MB 
 <canvas id="noise-chart"></canvas>
 </div>
 
-Lighthouse scores on localhost are noisy. The same unchanged site can swing ±150ms between runs. The agent dealt with this by noting when results seemed noisy (e.g., "1961/2333 noisy") and sometimes running a second evaluation to confirm. Several experiments were kept or discarded on what was likely noise.
+Lighthouse scores on localhost are noisy. The same unchanged site can swing up to ±370ms between runs. The agent dealt with this by noting when results seemed noisy (e.g., "1961/2333 noisy") and sometimes running a second evaluation to confirm. Several experiments were kept or discarded on what was likely noise.
 
 This is the same problem ML researchers face with `val_bpb` -- the signal-to-noise ratio drops as you approach the optimum. Late in the run, the difference between a "keep" and a "discard" was often within the measurement error. The chart above shows pairs of back-to-back evaluations on the same commit, demonstrating the typical variance.
 
@@ -100,13 +100,14 @@ This is the long tail of web performance -- dozens of tiny optimizations that ar
 
 ### The structural hash saved the day
 
-The DOM hash caught seven experiments that would have changed the site's appearance:
+The DOM hash caught six experiments that would have changed the site's appearance:
 
 - `keepEndTags=false` -- removed closing tags, breaking structure
 - Photography template script removal -- altered the page layout
 - `scroll-to-top` disabled -- removed a DOM element
 - Code copy button disable -- changed the about page structure
 - Photo count changes on homepage -- altered the grid structure
+- JSON metadata block -- added a new script element
 
 Without the hash, these changes would have been kept (some improved LCP) and the site would have silently broken. The hash acts as an automated visual regression test -- crude but effective.
 
@@ -127,13 +128,13 @@ Without the hash, these changes would have been kept (some improved LCP) and the
 | Metric | Before | After | Change |
 |--------|--------|-------|--------|
 | Worst LCP (mobile 4G) | 2,638ms | 2,109ms | -20% |
-| Lighthouse perf score | 97 | 99 | +2 |
-| Homepage FCP | ~1,200ms | 904ms | -25% |
+| Lighthouse perf score | - | 99 | - |
+| Homepage FCP | - | 904ms | - |
 | Experiments run | - | 200 | - |
-| Experiments kept | - | 124 | 62% |
-| Experiments discarded | - | 67 | 33% |
+| Experiments kept | - | 147 | 74% |
+| Experiments discarded | - | 47 | 23% |
 | Build crashes | - | 4 | 2% |
-| Structure hash violations | - | 7 | 3.5% |
+| Structure hash violations | - | 6 | 3% |
 
 The full experiment log, evaluation harness, and agent instructions are [on GitHub](https://github.com/MrMatt-io/mrmatt.io).
 
@@ -269,12 +270,8 @@ The full experiment log, evaluation harness, and agent instructions are [on GitH
         {n:200,lcp:2109,size:705419.5,status:'keep',desc:'mobile web app meta tags'}
     ];
 
-    /* ── Computed datasets ── */
-    var keptCount = 0, discardCount = 0, crashCount = 4, revertCount = 1;
-    experiments.forEach(function(e) {
-        if (e.status === 'keep' || e.status === 'baseline') keptCount++;
-        else if (e.status === 'discard') discardCount++;
-    });
+    /* ── Computed datasets (hardcoded from full results.tsv, not just Lighthouse subset) ── */
+    var keptCount = 147, discardCount = 47, crashCount = 4, revertCount = 1;
 
     /* Best LCP progression (kept experiments only) */
     var bestLcp = 9999;
@@ -328,28 +325,28 @@ The full experiment log, evaluation harness, and agent instructions are [on GitH
         {label: 'Exp 8\n(batch)', a: 2332, b: 2707}
     ];
 
-    /* Preload impact data */
+    /* Preload impact data (delta from best LCP at time of experiment) */
     var preloadData = [
-        {label: 'Remove font\npreload', delta: -146, color: '#4c81b2'},
-        {label: 'Preload 1st\nthumbnail', delta: +148, color: '#c0392b'},
-        {label: 'Remove gallery\npreload', delta: +527, color: '#c0392b'},
-        {label: 'Preload 3\nthumbnails', delta: +72, color: '#c0392b'},
-        {label: 'fetchpriority=high\non font', delta: +295, color: '#c0392b'},
-        {label: 'fetchpriority=high\non gallery', delta: +75, color: '#c0392b'},
-        {label: 'Font prefetch', delta: +450, color: '#c0392b'},
-        {label: 'Reorder preloads\nbefore CSS', delta: +751, color: '#c0392b'}
+        {label: 'Remove font\npreload', delta: -146},
+        {label: 'Preload 1st\nthumbnail', delta: +146},
+        {label: 'Remove gallery\npreload', delta: +527},
+        {label: 'Preload 3\nthumbnails', delta: +72},
+        {label: 'fetchpriority=high\non font', delta: +149},
+        {label: 'fetchpriority=high\non gallery', delta: +75},
+        {label: 'Font prefetch', delta: +453},
+        {label: 'Reorder preloads\nbefore CSS', delta: +751}
     ];
 
-    /* Top wins (biggest LCP improvements from previous best) */
+    /* Top wins (biggest LCP improvements from previous best, verified against results.tsv) */
     var topWins = [
-        {label: 'Remove font\npreload', delta: -146},
         {label: 'content-visibility\non gallery', delta: -222},
+        {label: 'Remove font\npreload', delta: -146},
         {label: 'Preload quality\nmatched q60', delta: -76},
         {label: 'fetchpriority=high\non avatar', delta: -75},
-        {label: 'Thumbnail\nq80→q70', delta: -72},
-        {label: 'Remove JSON\noutput', delta: -76},
         {label: 'Disable\ngitInfo', delta: -73},
-        {label: 'Inline critical\nCSS', delta: -74}
+        {label: 'Thumbnail\nq80→q70', delta: -72},
+        {label: 'contain layout\nstyle paint', delta: -7},
+        {label: 'Thumbnail\nq70→q60', delta: -2}
     ].sort(function(a,b) { return a.delta - b.delta; });
 
     /* ── Render ── */
