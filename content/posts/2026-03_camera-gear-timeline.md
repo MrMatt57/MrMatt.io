@@ -67,8 +67,17 @@ For the deep dive into what all that EXIF data reveals about shooting patterns, 
     fetch('/data/camera-timeline.json')
         .then(function(r) { return r.json(); })
         .then(function(data) {
-            /* Defer to next frame so CSS aspect-ratio is computed before Chart.js reads container height */
-            requestAnimationFrame(function() { renderCharts(data); });
+            /* Set explicit pixel heights on chart containers — CSS aspect-ratio alone
+               is unreliable when Chart.js reads dimensions on the deployed site */
+            document.querySelectorAll('canvas[id]').forEach(function(c) {
+                var p = c.parentNode;
+                var ar = p.style.aspectRatio || getComputedStyle(p).aspectRatio;
+                if (ar && ar !== 'auto') {
+                    var parts = ar.split('/');
+                    p.style.height = Math.round(p.offsetWidth * parseInt(parts[1]) / parseInt(parts[0])) + 'px';
+                }
+            });
+            renderCharts(data);
         });
 
     /* Cameras I actually owned (exclude friends' shared photos) */

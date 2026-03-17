@@ -671,10 +671,17 @@ The full experiment log, evaluation harness, and agent instructions are [on GitH
         });
     }
 
-    /* Defer to next frame so CSS aspect-ratio is computed before Chart.js reads container height */
-    requestAnimationFrame(function() {
-        renderCharts();
+    /* Set explicit pixel heights on chart containers — CSS aspect-ratio alone
+       is unreliable when Chart.js reads dimensions on the deployed site */
+    document.querySelectorAll('canvas[id]').forEach(function(c) {
+        var p = c.parentNode;
+        var ar = p.style.aspectRatio || getComputedStyle(p).aspectRatio;
+        if (ar && ar !== 'auto') {
+            var parts = ar.split('/');
+            p.style.height = Math.round(p.offsetWidth * parseInt(parts[1]) / parseInt(parts[0])) + 'px';
+        }
     });
+    renderCharts();
     new MutationObserver(function() { location.reload(); })
         .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();
