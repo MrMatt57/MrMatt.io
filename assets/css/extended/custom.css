@@ -65,7 +65,6 @@ body,
 body,
 .list {
     background: #fff;
-    contain: layout style;
 }
 
 [data-theme="dark"] body,
