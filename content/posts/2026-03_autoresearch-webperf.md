@@ -42,7 +42,7 @@ The agent was allowed to modify eight files: `extend_head.html` (resource hints)
 
 ### LCP over 200 experiments
 
-<div style="position:relative; width:100%; aspect-ratio:16/9; margin:2rem 0;">
+<div style="position:relative; width:100%; aspect-ratio:4/3; margin:2rem 0;">
 <canvas id="lcp-timeline"></canvas>
 </div>
 
