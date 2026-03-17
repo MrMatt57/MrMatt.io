@@ -1,13 +1,13 @@
 ---
 date: "2026-03-16"
-draft: true
+draft: false
 title: "Autoresearch for Web Performance: 20% Faster Overnight"
 slug: "autoresearch-webperf"
 description: "Adapting Karpathy's autoresearch pattern to web performance: an autonomous AI agent ran 200 Lighthouse experiments on my Hugo site, reducing worst-page LCP by 20%."
 summary: "Adapting Karpathy's autoresearch pattern to web performance. An autonomous AI agent ran 200 Lighthouse experiments overnight, cutting my worst-page LCP from 2,638ms to 2,109ms."
 tags:
   - "software-development"
-  - "infrastructure"
+  - "this-site"
 ---
 
 <figure class="post-figure">
