@@ -16,7 +16,7 @@ I scanned the EXIF headers of every JPEG across 15 Google Takeout zip files. Her
 ### Volume over time
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="yearly-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="yearly-chart"></canvas></div>
 </div>
 
 The yearly photo count forms a bell curve peaking at 2015 with 13,816 photos. The ramp tracks predictable life events -- kids born, vacations, new cameras arriving every year or two. At the peak, I had five cameras active in a single year: phones, compacts, and a DSLR all competing for pocket space. The decline after 2015 is equally clear: one phone replaced everything, and the volume settled to a sustainable rhythm. The 2020 dip is exactly what you'd expect from a year spent mostly indoors.
@@ -25,10 +25,10 @@ The yearly photo count forms a bell curve peaking at 2015 with 13,816 photos. Th
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0;">
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="hourly-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="hourly-chart"></canvas></div>
 </div>
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="dow-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="dow-chart"></canvas></div>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ Saturday at 10am is my golden hour. Weekends get twice the shooting volume of mi
 ### The heatmap
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="heatmap-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="heatmap-chart"></canvas></div>
 </div>
 
 The pattern is clear: weekend mornings and afternoons are when I reach for the camera. The weekday rows are dim and uniform. Saturday and Sunday light up from mid-morning through late afternoon, with the strongest signal clustered around 9am to 3pm.
@@ -45,7 +45,7 @@ The pattern is clear: weekend mornings and afternoons are when I reach for the c
 ### People in photos
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="people-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="people-chart"></canvas></div>
 </div>
 
 The percentage of photos containing people dropped from 70% in 2016 to under 2% after 2020. This could reflect Google's face detection metadata changing over time, or a genuine shift toward landscape and nature photography. Probably both. The early years are noisy because the sample sizes are small -- a few hundred photos per year makes each face detection hit or miss count for a lot.
@@ -53,7 +53,7 @@ The percentage of photos containing people dropped from 70% in 2016 to under 2% 
 ### Where in the world
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="gps-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="gps-chart"></canvas></div>
 </div>
 
 GPS data went from 0% in the pre-smartphone era to 91% in 2017, then drifted back down. The rise tracks smartphone adoption perfectly -- phones embed GPS coordinates by default, dedicated cameras don't. The decline after 2017 likely reflects tightening privacy settings and location permissions being turned off, plus occasional use of cameras without GPS radios.
@@ -62,13 +62,13 @@ GPS data went from 0% in the pre-smartphone era to 91% in 2017, then drifted bac
 
 <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin:2rem 0;">
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="aperture-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="aperture-chart"></canvas></div>
 </div>
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="focal-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="focal-chart"></canvas></div>
 </div>
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="iso-time-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="iso-time-chart"></canvas></div>
 </div>
 </div>
 
@@ -78,10 +78,10 @@ f/2.0 at 27mm. That's the phone sweet spot -- a moderately wide angle with a fas
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0;">
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="resolution-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="resolution-chart"></canvas></div>
 </div>
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="exposure-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="exposure-chart"></canvas></div>
 </div>
 </div>
 
@@ -90,7 +90,7 @@ Resolution plateaued after the megapixel race ended. The jump from 4MP in 2003 t
 ### The full heartbeat
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="monthly-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="monthly-chart"></canvas></div>
 </div>
 
 Zoom out from yearly averages and the real rhythm appears. Every spike is a trip, a holiday, a new baby, a Saturday morning at the park. The three busiest months -- May 2015, April 2018, April 2015 -- each cracked 1,700 photos. That's 55 to 65 photos a day, every day, for a month straight. The quiet valleys are just as telling: the gaps where life got busy, or the camera stayed in the drawer, or a global pandemic kept everyone indoors.

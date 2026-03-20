@@ -43,7 +43,7 @@ The agent was allowed to modify eight files: `extend_head.html` (resource hints)
 ### LCP over 200 experiments
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="lcp-timeline"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="lcp-timeline"></canvas></div>
 </div>
 
 The trajectory tells the story. The first few experiments delivered the biggest gains, then returns diminished. The downward staircase pattern is characteristic of optimization -- early wins are large and obvious, later wins are marginal and noisy. The spikes are failed experiments that got discarded.
@@ -54,10 +54,10 @@ Baseline was 2,638ms. The agent got it to a stable 2,109ms -- a **20% reduction*
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0;">
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="outcomes-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="outcomes-chart"></canvas></div>
 </div>
 <div style="position:relative; width:100%; padding-bottom:100%;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="category-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="category-chart"></canvas></div>
 </div>
 </div>
 
@@ -66,7 +66,7 @@ Of 200 experiments, 147 were kept (74%) and 47 discarded (23%). Four crashed the
 ### What actually moved the needle
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="top-wins"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="top-wins"></canvas></div>
 </div>
 
 The biggest single improvement was **adding `content-visibility: auto`** to gallery thumbnails (-222ms). This told the browser to skip rendering off-screen images entirely, which freed up main-thread time during the initial paint.
@@ -78,7 +78,7 @@ Image quality reduction (q80 → q60 on thumbnails) and matching the preload to 
 ### The surprise: preloads can hurt
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="preload-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="preload-chart"></canvas></div>
 </div>
 
 Resource preloading was the most volatile optimization category. The agent discovered that **removing** the font preload saved 146ms, while **removing** the gallery image preload cost 527ms. Preloading three thumbnails instead of one caused contention and added 72ms. Adding `fetchpriority=high` to the font preload added 149ms.
@@ -88,7 +88,7 @@ On a throttled 4G connection, every preload competes for the same limited bandwi
 ### Build size vs. LCP
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="size-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="size-chart"></canvas></div>
 </div>
 
 Build size and LCP had almost no correlation. The site grew from ~700MB to ~949MB (from accumulated experimental CSS and config), then dropped to ~689MB after a clean rebuild -- with no effect on LCP. Most of the size is in processed images, which Hugo caches aggressively. The LCP improvements came entirely from resource loading strategy and rendering hints, not from reducing bytes.
@@ -96,7 +96,7 @@ Build size and LCP had almost no correlation. The site grew from ~700MB to ~949M
 ### The noise problem
 
 <div style="position:relative; width:100%; padding-bottom:66.67%; margin:2rem 0;">
-<canvas style="position:absolute; inset:0; width:100%; height:100%;" id="noise-chart"></canvas>
+<div style="position:absolute; inset:0;"><canvas id="noise-chart"></canvas></div>
 </div>
 
 Lighthouse scores on localhost are noisy. The same unchanged site can swing up to ±370ms between runs. The agent dealt with this by noting when results seemed noisy (e.g., "1961/2333 noisy") and sometimes running a second evaluation to confirm. Several experiments were kept or discarded on what was likely noise.
