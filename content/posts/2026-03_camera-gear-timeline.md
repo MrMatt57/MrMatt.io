@@ -17,8 +17,8 @@ After [scanning 723GB of Google Takeout data](/posts/google-takeout-gallery-cura
 
 ### The timeline
 
-<div style="position:relative;width:100%;padding-bottom:100%;margin:2rem 0;">
-<div style="position:absolute; inset:0;"><canvas id="timeline-chart"></canvas></div>
+<div style="position:relative;width:100%;aspect-ratio:1/1;margin:2rem 0;">
+<canvas id="timeline-chart"></canvas>
 </div>
 
 The pattern is clear: dedicated cameras dominated until around 2013, then phones took over completely. The transition wasn't gradual -- it was a cliff. Once the Samsung Galaxy Note II arrived, the Canon PowerShots and Nikon DSLRs collected dust.
@@ -35,8 +35,8 @@ The Pixel years run from 2016 to present. Google Pixel XL, 2 XL, 3 XL, 4 XL, 5, 
 
 ### Phone vs. dedicated camera
 
-<div style="position:relative;width:100%;padding-bottom:120%;margin:2rem 0;">
-<div style="position:absolute; inset:0;"><canvas id="category-chart"></canvas></div>
+<div style="position:relative;width:100%;aspect-ratio:5/6;margin:2rem 0;">
+<canvas id="category-chart"></canvas>
 </div>
 
 The crossover happened around 2013. By 2018, dedicated cameras were effectively zero. Computational photography didn't just match optical quality -- it made the camera you always have with you the best camera.

@@ -60,14 +60,8 @@ if (!template.includes('{{SCRIPT_HASHES}}')) {
   console.error('ERROR: _headers.template is missing {{SCRIPT_HASHES}} placeholder');
   process.exit(1);
 }
-if (!template.includes('{{STYLE_HASHES}}')) {
-  console.error('ERROR: _headers.template is missing {{STYLE_HASHES}} placeholder');
-  process.exit(1);
-}
-
 const output = template
-  .replace('{{SCRIPT_HASHES}}', scriptHashList)
-  .replace('{{STYLE_HASHES}}', styleHashList);
+  .replace('{{SCRIPT_HASHES}}', scriptHashList);
 fs.writeFileSync(OUTPUT, output, 'utf8');
 
 console.log('Generated public/_headers with ' + scriptHashes.size + ' script hashes and ' + styleHashes.size + ' style hashes');
