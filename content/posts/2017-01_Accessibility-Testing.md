@@ -10,21 +10,21 @@ tags:
 ---
 When rebuilding my site I wanted to start as simple as possible, put the sledge hammers away and carefully evaluate each decision as things get built up. Not just with the technology stack, but the content too.
 
-In the past, reading through accessability standards like [508](https://www.section508.gov/) and [WCAG](https://www.w3.org/WAI/intro/wcag.php) were daunting and felt like red tape. I have always aspired to having semantic markup, mostly from an clean code and Search Engine Optimization standpoint. True web accessability was always on the back-burner. 
+In the past, reading through accessibility standards like [508](https://www.section508.gov/) and [WCAG](https://www.w3.org/WAI/intro/wcag.php) were daunting and felt like red tape. I have always aspired to having semantic markup, mostly from a clean code and Search Engine Optimization standpoint. True web accessibility was always on the back-burner.
 
-In a recent project at work, I was turned onto [HTML Sniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and the tools that suround it, namely [Pa11y](https://pa11y.org/).  They have not only helped me begin to charter the world of web accessability but have given me a greater appreciation for why it is needed.  They had to be fundamental part of my development toolchain.
+In a recent project at work, I was turned onto [HTML Sniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and the tools that surround it, namely [Pa11y](https://pa11y.org/).  They have not only helped me begin to charter the world of web accessibility but have given me a greater appreciation for why it is needed.  They had to be a fundamental part of my development toolchain.
 
 ### HTML Sniffer bookmarklet
 
-The [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) alone is a great tool for manually testing and learning more about accessiblity standards.  It shows you an interactive view of what needs to be fixed (errors), things to review and possibly resolve (warnings) and helpful guides to get you in the right mindset (notices).
+The [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) alone is a great tool for manually testing and learning more about accessibility standards.  It shows you an interactive view of what needs to be fixed (errors), things to review and possibly resolve (warnings) and helpful guides to get you in the right mindset (notices).
 
 ![HTML Sniffer Bookmarklet](/img/html-sniffer-bookmarklet.png)
 
 ### Automating testing with Pa11y-ci
 
-For every post or change to the website it isn't feasible to regression test every page.  This is where Pa11y comes in.  It provides a command-line interface and some reporting tools on top of html sniffer.
+For every post or change to the website it isn't feasible to regression test every page.  This is where Pa11y comes in.  It provides a command-line interface and some reporting tools on top of HTML Sniffer.
 
-I evaluated Pa11y dashboard, but in the theme of a static site I didn't want to host it somewhere (runs on Node.js/MongoDb).  I also interested to see what the [Pa11y Sidekick](https://github.com/pa11y/sidekick) project does.  In the meantime, I decided to integrate it into my own build process.
+I evaluated Pa11y dashboard, but in the theme of a static site I didn't want to host it somewhere (runs on Node.js/MongoDb).  I was also interested to see what the [Pa11y Sidekick](https://github.com/pa11y/sidekick) project does.  In the meantime, I decided to integrate it into my own build process.
 
 Here is how it works.
 
@@ -32,7 +32,7 @@ Here is how it works.
 2. Hugo generates static content along with sitemap.xml of all the pages in the site.
 3. Starts up lightweight server with http-server
 4. Runs pa11y-ci command pointed at locally hosted sitemap.xml, replacing normal host with localhost.
-5. Pa11y executes a headless PhantomJS browswer against all pages in the sitemap and reports any errors.
+5. Pa11y executes a headless PhantomJS browser against all pages in the sitemap and reports any errors.
 6. If the command exits with an error, the build fails and no harm, no foul is done to the site.
 
 #### Commands
@@ -56,7 +56,7 @@ pa11y-ci --sitemap http://localhost:8080/sitemap.xml \
 Here is an example of what it looks like when an error is thrown.
 ![Pa11y-ci error output](/img/pa11y-ci.jpg)
 #### Configuration
-There are many configuration options outsite of what is available through the pa11y-ci command line.  A
+There are many configuration options outside of what is available through the pa11y-ci command line.  A
 `.pa11yci` can serve as a proxy to the underlying pa11y configuration.  Mine is pretty basic, setting a page timeout limit of 10 seconds and the target standard. I chose WCAG2AA as a strict but good balance for testing rules.  
 ```json
 {

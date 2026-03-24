@@ -205,19 +205,30 @@ h1 {
     color: #090909;
 }
 
+input.ai-value,
 textarea.ai-value {
     width: 100%;
-    background: transparent;
-    border: none;
-    resize: none;
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
     font-family: "Roboto Slab", serif;
-    padding: 0;
+    padding: 0.5rem 0.75rem;
     outline: none;
 }
 
-.ai-value:empty::after {
-    content: "\2014";
-    color: #ccc;
+input.ai-value:focus,
+textarea.ai-value:focus {
+    border-color: #999;
+}
+
+input.ai-value::placeholder,
+textarea.ai-value::placeholder {
+    color: #8a8a8a;
+}
+
+textarea.ai-value {
+    resize: vertical;
+    min-height: 4.5rem;
 }
 
 /* Feedback and regenerate */

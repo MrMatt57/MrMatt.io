@@ -34,3 +34,4 @@ We visited Universal Studios in Orlando, the Atlantis Resort in Nassau and Parad
 
 <div class="videoWrapper">
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/bHKuOSuwk7U?rel=0&amp;controls=0" frameborder="0" allowfullscreen title="Carnival Pride - Cruise Nov 2009"></iframe>
+</div>

@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preload" as="font" href="/fonts/roboto-slab-latin.woff2" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/upload/style.css?v=9">
+    <link rel="stylesheet" href="/upload/style.css?v=10">
 </head>
 <body>
     <h1>Photo Upload</h1>
@@ -38,16 +38,16 @@
             <div id="ai-status" class="status info" style="display:none;"></div>
             <div class="ai-results">
                 <div class="ai-field">
-                    <span class="ai-label">Title</span>
-                    <span id="ai-title" class="ai-value"></span>
+                    <label class="ai-label" for="ai-title">Title</label>
+                    <input type="text" id="ai-title" class="ai-value ai-input" placeholder="Add a short title" spellcheck="true">
                 </div>
                 <div class="ai-field">
-                    <span class="ai-label">Alt text</span>
-                    <textarea id="ai-alt" class="ai-value" rows="2" readonly></textarea>
+                    <label class="ai-label" for="ai-alt">Alt text</label>
+                    <textarea id="ai-alt" class="ai-value" rows="2" placeholder="Describe what is visible for screen readers" spellcheck="true"></textarea>
                 </div>
                 <div class="ai-field">
-                    <span class="ai-label">Description</span>
-                    <textarea id="ai-description" class="ai-value" rows="3" readonly></textarea>
+                    <label class="ai-label" for="ai-description">Description</label>
+                    <textarea id="ai-description" class="ai-value" rows="3" placeholder="Add context for the lightbox description" spellcheck="true"></textarea>
                 </div>
             </div>
             <div class="ai-feedback">
@@ -61,6 +61,6 @@
         </div>
     </div>
 
-    <script src="/upload/app.js?v=9"></script>
+    <script src="/upload/app.js?v=10"></script>
 </body>
 </html>

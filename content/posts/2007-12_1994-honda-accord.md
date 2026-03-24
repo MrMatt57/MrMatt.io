@@ -1,4 +1,4 @@
----
+﻿---
 date: "2007-12-04"
 draft: false
 title: "1994 Honda Accord"
@@ -9,9 +9,9 @@ aliases:
 ---
 ![](/img/Accord.jpg)
 
-This one is really digging into the archives- Here are some pictures and specs of my first car (not my parent-s station wagon). I learned a lot and have many great memories from this car. I often joked, that I literally turned every bolt on this car. I didn-t have access to air tools either, all old fashion Craftsman hand tools. There where many long cold nights completing mods so that I would be ready to drive to work the next day. I wish I had better pictures, but here they are (Mostly scanned 35mm, if I find the original print/negatives, I will rescan).
+This one is really digging into the archives- Here are some pictures and specs of my first car (not my parent's station wagon). I learned a lot and have many great memories from this car. I often joked, that I literally turned every bolt on this car. I didn't have access to air tools either, all old-fashioned Craftsman hand tools. There were many long cold nights completing mods so that I would be ready to drive to work the next day. I wish I had better pictures, but here they are (Mostly scanned 35mm, if I find the original print/negatives, I will rescan).
 
-[![1994 Honda Accord](/img/accord_engine1_thumb.jpg "1994 Honda Accord")](/img/accord_engine1.jpg) [![1994 Honda Accrod 2](/img/accord_engine2_thumb.jpg "1994 Honda Accrod 2")](/img/accord_engine2.jpg)
+[![1994 Honda Accord](/img/accord_engine1_thumb.jpg "1994 Honda Accord")](/img/accord_engine1.jpg) [![1994 Honda Accord 2](/img/accord_engine2_thumb.jpg "1994 Honda Accord 2")](/img/accord_engine2.jpg)
 
 **Engine/Performance:**
 
@@ -38,7 +38,7 @@ Port/Polished Cylinder Head (Gude)
 
 Eibach Sportline Springs  
  KYB Gas Struts  
- Ingall-s Camber Correction Kit  
+ Ingalls Camber Correction Kit<br>
  Axis Wheel Site Mesh 17-7  
  BF Goodrich Euro T/A Tires 205-40-17  
  Powerstop Cross drilled rotors  
@@ -55,13 +55,13 @@ Eibach Sportline Springs
 
  Alpine 3DA-W882  
  PPI A600  
- 3 JL Audio 8? W6 Subs in Custom Ported Box  
+ 3 JL Audio 8" W6 Subs in Custom Ported Box<br>
  DEI 5401  
- Boston Acoustic 6-9?  
+ Boston Acoustic 6-9"<br>
  Boston Acoustic 6.3 (Pro Series Component Set)  
  Lightning Audio Connections (Fuses, Wires, Etc.)  
- Ligthning Cap 1 Fraud  
- Stinger 1 Fraud Cap
+ Lightning Cap 1 Farad<br>
+ Stinger 1 Farad Cap
 
 **Alarm:**
 
@@ -74,4 +74,3 @@ Check out my very first web-log, [My 1994 Honda Accord Journal](http://mrmatt57.
 *Also, check out my Flickr stream for more pictures.*
 
 ![](/img/accord2.jpg)
-
