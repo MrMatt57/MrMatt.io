@@ -7,22 +7,22 @@ description: "Automating pantry and closet lights with SmartThings — using a m
 tags:
   - "software-development"
 ---
-One of the most common home automations is lighting. You need it when you need it and you want to conserve when you don't. One of the main scenerios for my home is my pantry and closets. If you need something from them, it is helpful to have light.   
+One of the most common home automations is lighting. You need it when you need it and you want to conserve when you don't. One of the main scenarios for my home is my pantry and closets. If you need something from them, it is helpful to have light.
 
 ### The Problem
 
-I started with a basic contact switch which works well if you always close the door. I don't know if you house is like mine, but that doesn't always happen. When the door opens, the light turns on, when it closes, the light turns off. You could also add an allowance to turn the light off after it has been on for a certian period of time. But what happens when you come back and the light is off? Open and close the door? Toggle the switch?  
+I started with a basic contact switch which works well if you always close the door. I don't know if your house is like mine, but that doesn't always happen. When the door opens, the light turns on, when it closes, the light turns off. You could also add an allowance to turn the light off after it has been on for a certain period of time. But what happens when you come back and the light is off? Open and close the door? Toggle the switch?
 
 ### The Solution
 
-Enter SmartThings multi-sensor. They also have an accelerometer. This means if we mount the base on the door, we can use the doors motion to trigger the light too.  So in the scenerio above, if the light is off and the door is open, a simple or most cases necassary movement of the door will turn the light back on!  
+Enter SmartThings multi-sensor. They also have an accelerometer. This means if we mount the base on the door, we can use the door's motion to trigger the light too.  So in the scenario above, if the light is off and the door is open, a simple or in most cases necessary movement of the door will turn the light back on!
 
 Ok, so now how to put this all together.  We want the light to:
 
 1. Turn on when the door is open
-3. Turn on when the door moves
-4. Turn off when the door is closed
-5. Turn off after n-minutes of inactivity
+2. Turn on when the door moves
+3. Turn off when the door is closed
+4. Turn off after n-minutes of inactivity
 
 <img src="/img/AutomatePantryClosetFlow.png" alt="Automated Pantry and Closet Flow" class="boxshadow">
 
@@ -30,7 +30,7 @@ Ok, so now how to put this all together.  We want the light to:
 
 1. [SmartThings](https://www.amazon.com/gp/product/B010NZV0GE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B010NZV0GE&linkCode=as2&tag=matwalstecand-20&linkId=f418d2a528302c5933143b9dcf651585) (obviously)
 2. [SmartThings MultiSensor](https://www.amazon.com/gp/product/B0118RQW3W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0118RQW3W&linkCode=as2&tag=matwalstecand-20&linkId=f93d0b890c3fe6c55d0206ac8781d58f)
-3. Switch or Bulb.  I am using the [Cree Connected](https://www.amazon.com/gp/product/B01701DL7A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01701DL7A&linkCode=as2&tag=matwalstecand-20&linkId=9367f338ac2e61c8fd29758c1f02c137) bulbs. They work well becuase this solution doesn't require a physical switch and the bulb can be always powered.
+3. Switch or Bulb.  I am using the [Cree Connected](https://www.amazon.com/gp/product/B01701DL7A/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01701DL7A&linkCode=as2&tag=matwalstecand-20&linkId=9367f338ac2e61c8fd29758c1f02c137) bulbs. They work well because this solution doesn't require a physical switch and the bulb can be always powered.
 
 ### SmartApp
 
@@ -71,7 +71,7 @@ definition(
     iconX3Url: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience@2x.png")
 
 preferences {
-  section("When these sensor are activated...") {
+  section("When these sensors are activated...") {
     input name: "contactSensor", type: "capability.contactSensor", title: "Contact Sensor", multiple: true
     input name: "knockSensor", type: "capability.accelerationSensor", title: "Movement Sensor", required: false, multiple: true
   }

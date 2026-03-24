@@ -9,11 +9,11 @@ aliases:
 ---
 ![IronKey](/img/ironkey.jpg "IronKey")
 
-I have been looking around for a good secure USB key/Software solution for quite awhile. I have used TrueCrypt for years and it works great for what it does. But I wanted more. One watch of the IronKey demo and believe me, you will want one.
+I have been looking around for a good secure USB key/software solution for quite awhile. I have used TrueCrypt for years and it works great for what it does. But I wanted more. One watch of the IronKey demo and believe me, you will want one.
 
 Boo. IronKey took the video down!
 
-They are quite pricey at $149 ($37.25/Gig) for the 4 gig model, so I did a bit of research before I took the plunge. Everything I read for the most part was good. Now that I have the device I must agree, it is a great solution to many peoples problems. My only gripe is that you can-t add shortcuts to the management interface. Not a big deal, but makes the interface pretty useless besides manageing the device, backups, etc. If you are looking for a USB drive to carry on your keychain everywhere you go- this might currently be your best solution. Here are some pictures of the drive.
+They are quite pricey at $149 ($37.25/Gig) for the 4 gig model, so I did a bit of research before I took the plunge. Everything I read for the most part was good. Now that I have the device I must agree, it is a great solution to many peoples problems. My only gripe is that you can't add shortcuts to the management interface. Not a big deal, but makes the interface pretty useless besides managing the device, backups, etc. If you are looking for a USB drive to carry on your keychain everywhere you go, this might currently be your best solution. Here are some pictures of the drive.
 
 [![IronKey](/img/ironkey/ironkey1_thumb.jpg "IronKey")](/img/ironkey/ironkey1.jpg)
 [![IronKey](/img/ironkey/ironkey3_thumb.jpg "IronKey")](/img/ironkey/ironkey2.jpg)

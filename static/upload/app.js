@@ -31,6 +31,18 @@
         return str.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
     }
 
+    function slugify(str) {
+        return (str || '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/(^-|-$)/g, '')
+            .slice(0, 40);
+    }
+
+    function getFileStem(name) {
+        return (name || '').replace(/\.[^.]+$/, '');
+    }
+
     // --- Extract EXIF date from JPEG ---
     function extractExifDate(file) {
         return new Promise(function(resolve) {
@@ -296,7 +308,7 @@
         aiSection.style.display = 'block';
         aiStatus.textContent = feedback ? 'Regenerating with your feedback...' : 'Analyzing photo...';
         aiStatus.style.display = 'block';
-        aiTitle.textContent = '';
+        aiTitle.value = '';
         aiAlt.value = '';
         aiDesc.value = '';
         regenerateBtn.disabled = true;
@@ -321,7 +333,7 @@
             .then(function(data) {
                 if (data.error) throw new Error(data.error);
                 aiStatus.style.display = 'none';
-                aiTitle.textContent = data.title || '';
+                aiTitle.value = data.title || '';
                 aiAlt.value = data.alt || '';
                 aiDesc.value = data.description || '';
                 regenerateBtn.disabled = false;
@@ -417,6 +429,60 @@
         });
     }
 
+    function resourceExists(token, path) {
+        return fetch(API_BASE + '/' + path, {
+            headers: { 'Authorization': 'token ' + token }
+        }).then(function(r) {
+            if (r.status === 404) return false;
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return true;
+        });
+    }
+
+    function branchExists(token, branchName) {
+        return resourceExists(token, 'git/ref/heads/' + branchName);
+    }
+
+    function contentPathExists(token, path, branch) {
+        return fetch(API_BASE + '/contents/' + path + '?ref=' + encodeURIComponent(branch), {
+            headers: { 'Authorization': 'token ' + token }
+        }).then(function(r) {
+            if (r.status === 404) return false;
+            if (!r.ok) return r.json().then(function(d) { throw new Error(d.message); });
+            return true;
+        });
+    }
+
+    function findAvailableUploadTarget(token, dateStr, slugBase) {
+        var attempt = 1;
+
+        function candidateForAttempt(n) {
+            var suffix = n === 1 ? '' : '-' + n;
+            var folderName = dateStr + '-' + slugBase + suffix;
+            return {
+                folderName: folderName,
+                basePath: 'content/photography/' + folderName,
+                branchName: 'photo/' + folderName
+            };
+        }
+
+        function checkNext() {
+            var candidate = candidateForAttempt(attempt);
+            return Promise.all([
+                contentPathExists(token, candidate.basePath + '/index.md', BRANCH),
+                branchExists(token, candidate.branchName)
+            ]).then(function(results) {
+                if (!results[0] && !results[1]) {
+                    return candidate;
+                }
+                attempt += 1;
+                return checkNext();
+            });
+        }
+
+        return checkNext();
+    }
+
     function commitFile(token, path, contentBase64, message, branch) {
         return fetch(API_BASE + '/contents/' + path, {
             method: 'PUT',
@@ -484,26 +550,19 @@
         submitBtn.disabled = true;
         showStatus('Uploading photo...', 'info');
 
-        var title = aiTitle.textContent.trim();
+        var title = aiTitle.value.trim();
         var alt = aiAlt.value.trim();
         var description = aiDesc.value.trim();
 
         extractExifDate(file).then(function(exifDate) {
             var now = new Date();
             var dateStr = exifDate || now.toISOString().slice(0, 10);
-            var slug = title
-                ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 40)
-                : 'photo-' + now.getTime().toString(36);
-            var folderName = dateStr + '-' + slug;
-            var basePath = 'content/photography/' + folderName;
-            var branchName = 'photo/' + folderName;
+            var slug = slugify(title) || slugify(getFileStem(file.name)) || 'photo';
 
             var reader = new FileReader();
             reader.onload = function() {
                 var base64 = reader.result.split(',')[1];
                 var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
-                var imagePath = basePath + '/photo.' + ext;
-
                 var pageTitle = title || 'Photo ' + dateStr;
                 var frontMatter = '---\n' +
                     'title: "' + escapeYamlString(pageTitle) + '"\n' +
@@ -516,24 +575,45 @@
                 }
                 frontMatter += 'draft: false\n---\n';
 
-                var indexPath = basePath + '/index.md';
-
                 showStatus('Creating branch...', 'info');
-                getMainSha(token)
-                    .then(function(sha) {
-                        return createBranch(token, branchName, sha);
+                Promise.all([
+                    getMainSha(token),
+                    findAvailableUploadTarget(token, dateStr, slug)
+                ])
+                    .then(function(results) {
+                        var sha = results[0];
+                        var target = results[1];
+                        return createBranch(token, target.branchName, sha).then(function() {
+                            return target;
+                        });
                     })
-                    .then(function() {
+                    .then(function(target) {
                         showStatus('Uploading photo...', 'info');
-                        return commitFile(token, imagePath, base64, 'feat: add photo ' + folderName, branchName);
+                        return commitFile(
+                            token,
+                            target.basePath + '/photo.' + ext,
+                            base64,
+                            'feat: add photo ' + target.folderName,
+                            target.branchName
+                        ).then(function() {
+                            return target;
+                        });
                     })
-                    .then(function() {
+                    .then(function(target) {
                         showStatus('Saving metadata...', 'info');
-                        return commitFile(token, indexPath, btoa(unescape(encodeURIComponent(frontMatter))), 'feat: add photo metadata ' + folderName, branchName);
+                        return commitFile(
+                            token,
+                            target.basePath + '/index.md',
+                            btoa(unescape(encodeURIComponent(frontMatter))),
+                            'feat: add photo metadata ' + target.folderName,
+                            target.branchName
+                        ).then(function() {
+                            return target;
+                        });
                     })
-                    .then(function() {
+                    .then(function(target) {
                         showStatus('Creating pull request...', 'info');
-                        return createPR(token, 'feat: add photo ' + folderName, branchName, BRANCH);
+                        return createPR(token, 'feat: add photo ' + target.folderName, target.branchName, BRANCH);
                     })
                     .then(function(pr) {
                         return enableAutoMerge(token, pr.node_id).then(function() {
@@ -549,7 +629,7 @@
                         window._sharedPhoto = null;
                         currentPhotoFile = null;
                         aiFeedback.value = '';
-                        aiTitle.textContent = '';
+                        aiTitle.value = '';
                         aiAlt.value = '';
                         aiDesc.value = '';
                     })

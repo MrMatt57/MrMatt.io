@@ -43,7 +43,7 @@ jobs:
         run: node scripts/generate-headers.js
 
       - name: Build Cloudflare Functions
-        if: github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

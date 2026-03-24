@@ -7,7 +7,7 @@ description: "A look back at my pet fish over the years — red belly piranhas, 
 aliases:
   - /pet-fish-archive/
 ---
-I have had pet fish on and off ever since I can remember. I don-t currently have fish, but can-t wait to setup another tank. Here are some of my recent tanks.
+I have had pet fish on and off ever since I can remember. I don't currently have fish, but can't wait to set up another tank. Here are some of my recent tanks.
 
 ## Three Red Belly Piranhas
 
@@ -15,9 +15,10 @@ I started these fish in a 20 gallon long aquarium while I was waiting for the bi
 
 ![Red Belly Piranhas](/img/fish_1.jpg)
 
-Here is a short video of them at I think about a year old.  
+Here is a short video of them at I think about a year old.
 <div class="videoWrapper">
     <iframe title="My Red Belly Piranhas" width="1280" height="720" src="https://www.youtube.com/embed/d1pfTSdFcYs?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+</div>
 ## First Saltwater Tank
 
 This tank was started with a variety of damsels and later the home for a maroon clown, coral beauty and a crab.
@@ -26,7 +27,7 @@ This tank was started with a variety of damsels and later the home for a maroon 
 
 ## Scooby the Guppy
 
-This fish was amazing, she lived to be one and a half years old! She started her life as a feeder fish for my red belly piranhas. She found a comfortable hiding spot between one of the logs and a plant and managed to survive for almost a month. She deserved a home of her own. I moved her into a 5 gallon tank where she somehow managed to give birth to 5 babies! This was truely a miracle fish. She ultimately died of natural causes.
+This fish was amazing, she lived to be one and a half years old! She started her life as a feeder fish for my red belly piranhas. She found a comfortable hiding spot between one of the logs and a plant and managed to survive for almost a month. She deserved a home of her own. I moved her into a 5 gallon tank where she somehow managed to give birth to 5 babies! This was truly a miracle fish. She ultimately died of natural causes.
 
 ![Scooby the Guppy](/img/fish_3.jpg)
 

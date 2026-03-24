@@ -1,4 +1,4 @@
----
+﻿---
 date: "2009-06-01"
 draft: false
 title: "The Ultimate USB *Key* Drive - Lacie iamaKey 8GB"
@@ -9,7 +9,7 @@ cover:
 aliases:
   - /the-ultimate-usb-key-drive-lacie-iamakey-8gb/
 ---
-I have always been a fan of portable storage. However, most -portable- devices just aren-t well- portable. You think you will carry them around, but end up leaving them behind. When I first saw the Laci IamaKey, I knew it would be different. I tried the ultra secure route with an [IronKey](/posts/james-bond-style-usb-key-ironkey/), but it is too bulky and so secure- I ended up locking myself out (don-t ask).
+I have always been a fan of portable storage. However, most -portable- devices just aren't well- portable. You think you will carry them around, but end up leaving them behind. When I first saw the LaCie iamaKey, I knew it would be different. I tried the ultra secure route with an [IronKey](/posts/james-bond-style-usb-key-ironkey/), but it is too bulky and so secure- I ended up locking myself out (don't ask).
 
 ![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro1.jpg)
 
@@ -20,7 +20,7 @@ I have always been a fan of portable storage. However, most -portable- devices j
 ![Lacie Iamakey USB ThumbDrive](/img/iamaKey8GB/Lacie-USB-Key-Macro4.jpg)
 Pros:
 
-- Tags along with something I already carry and keep track of, my keys- never leave home without them.
+- Tags along with something I already carry and keep track of, my keys - never leave home without them.
 - Plenty of space to include a live CD and all of the diagnostic utilities you could ever need.
 - Reasonably Priced for such a unique flash drive.
 - So far the construction and materials seems very durable.
@@ -28,9 +28,8 @@ Pros:
 Cons:
 
 - Not the fastest flash drive at 26 mb/s Read and 16 mb/s Write
-- Doesn-t have hardware level encryption (wishful thinking), but nothing TrueCrypt can-t take care of.
+- Doesn't have hardware level encryption (wishful thinking), but nothing TrueCrypt can't take care of.
 
 Conclusion:
 
-I would highly recommend this to anyone that wants to have a flash drive with them all the time. I have been carrying the drive for about two weeks now and it-s been great. I have actually found that I am using flash storage more because it is so convenient. Stay tuned for what I loaded it up with-
-
+I would highly recommend this to anyone that wants to have a flash drive with them all the time. I have been carrying the drive for about two weeks now and it's been great. I have actually found that I am using flash storage more because it is so convenient. Stay tuned for what I loaded it up with.

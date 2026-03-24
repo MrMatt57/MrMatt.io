@@ -1,4 +1,4 @@
----
+﻿---
 date: "2008-01-16"
 draft: false
 title: 'Funny IT Voicemail, "That Projector Stinks"'
@@ -11,9 +11,8 @@ aliases:
 
 *Photo by [-Duchamp-](https://www.flickr.com/photos/duchamp/8155917/)*
 
-This is a classic-
+This is a classic:
 
--Matt, Hi it-s Rob. I wanted to give you an update on the power point projector that we loaned out. We haven-t used it yet, and there is a reason. Um- Before, we were going to use it for a client presentation, we had a supplier come in and borrow it to present some of his own things to us- and the stink in the room was so bad, we thought it was the guy. Today we tried the power point- lcd projector again and it is the projector. Matt, I don-t know what it is, but the- ventilation of this projector is blowing out a stink like BO like you would not believe. We can-t even sit in same room with it. So I just wanted to give you a heads up. I don-t know what is wrong with it, but I can-t see anyone being able to use it- for a presentation. You might want to look into maybe cleaning the filter or something on that thing. That was it, thanks bye.-
+-Matt, hi, it's Rob. I wanted to give you an update on the power point projector that we loaned out. We haven't used it yet, and there is a reason. Um - before, we were going to use it for a client presentation, we had a supplier come in and borrow it to present some of his own things to us - and the stink in the room was so bad, we thought it was the guy. Today we tried the power point LCD projector again and it is the projector. Matt, I don't know what it is, but the ventilation of this projector is blowing out a stink like BO like you would not believe. We can't even sit in same room with it. So I just wanted to give you a heads up. I don't know what is wrong with it, but I can't see anyone being able to use it for a presentation. You might want to look into maybe cleaning the filter or something on that thing. That was it, thanks, bye."
 
 This is a real voice mail I received a couple of years ago when I was an IT Manager for a media buying company.
-

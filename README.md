@@ -52,7 +52,7 @@ Personal website of **Matt Walker** — software engineer, data & AI practitione
 
 **Automated Publishing** — Photos go from camera roll to live on the site with zero terminal interaction. The PWA creates a feature branch, commits the image and Hugo content file, opens a PR with auto-merge, and GitHub Actions deploys it.
 
-**Photo Upload PWA** — A vanilla JavaScript progressive web app at [`/upload`](https://mrmatt.io/upload/) that works as an Android share target. Snap a photo, share it to the site, and it's published — with offline queuing, EXIF date parsing, and client-side image processing. No libraries, no dependencies.
+**Photo Upload PWA** — A vanilla JavaScript progressive web app at [`/upload`](https://mrmatt.io/upload/) that works as an Android share target. Snap a photo, share it to the site, and it's published — with cached share-target handoff, EXIF date parsing, and client-side image processing. No libraries, no dependencies.
 
 **AI-Powered Descriptions** — Uploaded photos are automatically described by [Claude](https://www.anthropic.com/) Haiku vision model — generating titles, alt text, and personalized descriptions. Review the AI output, tweak it, regenerate, and publish.
 

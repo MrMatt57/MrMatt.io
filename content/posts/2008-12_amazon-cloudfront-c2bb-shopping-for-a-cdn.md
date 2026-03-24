@@ -1,4 +1,4 @@
----
+﻿---
 date: "2008-12-03"
 draft: false
 title: "Amazon Cloudfront - Shopping for a CDN?"
@@ -14,9 +14,9 @@ tags:
 
 *Location of Amazon Data Centers World-wide. Credit [Werner Vogels](https://www.allthingsdistributed.com/2008/11/amazon_cloudfront.html)*
 
-This past month Amazon sent me an early Christmas present, their very own content deliver network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](/posts/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
+This past month Amazon sent me an early Christmas present, their very own content delivery network (CDN). Adding to their already robust line of -cloud- offerings, Amazon Cloudfront brings edge server routing to the mix. I have been using Amazon S3 for static content delivery since my most recent [hello world](/posts/hello-world-new-server-theme-content-collaboration/). Cloudfront takes the highly scalable and redundant S3 and puts it closer to the end user, thus distributing throughput and reducing latency.
 
-When it comes to web development, one of my driving forces is performance. I love seeking out and shaving milliseconds off page loads and network requests. One of the best ways to do this is to put the content as close to the source as possible. Content Delivery Networks do just that. If my viewers are in Asia, I don-t want my server in New York and vise versa. With a CDN data is cached at several geographically optimized locations as needed. When a request comes in, it is routed to the nearest location.
+When it comes to web development, one of my driving forces is performance. I love seeking out and shaving milliseconds off page loads and network requests. One of the best ways to do this is to put the content as close to the source as possible. Content Delivery Networks do just that. If my viewers are in Asia, I don't want my server in New York and vice versa. With a CDN data is cached at several geographically optimized locations as needed. When a request comes in, it is routed to the nearest location.
 
 ### The quickest route to the Jungle
 
@@ -24,7 +24,7 @@ A good tool to analyze network routing, latency and a bunch of other stuff is [p
 
 [![Amazon Cloudfront Pingplotter](/img/pingplotter_thumb.jpg "Amazon Cloudfront Pingplotter")](/img/pingplotter.jpg)
 
-As you can see, with Cloudfront I scream right to Amazons Newark, NJ server as apposed to going through McClean, VA, then ATL, and finally to my server in Dallas, TX.
+As you can see, with Cloudfront I scream right to Amazon's Newark, NJ server as opposed to going through McLean, VA, then ATL, and finally to my server in Dallas, TX.
 
 ### How Cloudfront performs in the CDN storm
 
@@ -78,4 +78,3 @@ Pingplotter works great to determine *your* route and latency.
 ### Setting up and configuring Amazon Cloudfront
 
 Setup was [super easy](http://www.labnol.org/internet/setup-content-delivery-network-with-amazon-s3-cloudfront/5446/) with the latest S3 Organizer Firefox Add-on. You can also complete the setup with a [Curl Script](http://docs.amazonwebservices.com/AmazonCloudFront/latest/GettingStartedGuide/index.html?ToolsYouNeed.html).
-

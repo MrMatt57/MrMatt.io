@@ -40,8 +40,8 @@ description: "The technology stack behind mrmatt.io — Hugo, PaperMod, Cloudfla
 ### CI/CD
 
 - [GitHub Actions](https://github.com/features/actions) — builds Hugo with submodules, compiles Cloudflare Functions, and deploys on every push to main
+- Pull requests run build checks before merge, including Pages Functions validation
 - Concurrency controls cancel in-progress deploys when a new push arrives
-- Branch deploys for PR previews
 
 ### Hosting & DNS
 
@@ -69,7 +69,7 @@ description: "The technology stack behind mrmatt.io — Hugo, PaperMod, Cloudfla
 
 - Vanilla JS progressive web app at [`/upload`](/upload) — no frameworks, no dependencies
 - Android share target — share a photo directly from the camera roll to the site
-- Service Worker with network-first caching and IndexedDB for offline queuing
+- Service Worker with network-first caching and cached share-target handoff between the browser and upload page
 - Native EXIF parsing from raw JPEG bytes to extract photo dates — no libraries
 - Client-side image conversion and resizing via Canvas API before sending to AI
 

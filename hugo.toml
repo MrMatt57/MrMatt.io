@@ -123,7 +123,7 @@ disableHugoGeneratorInject = true
       keepEndTags = true
       keepQuotes = false
     [minify.tdewolff.css]
-      keepCSS2 = true
+      version = 2
       precision = 0
     [minify.tdewolff.js]
       precision = 0
