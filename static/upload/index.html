@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preload" as="font" href="/fonts/roboto-slab-latin.woff2" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/upload/style.css?v=10">
+    <link rel="stylesheet" href="/upload/style.css?v=11">
 </head>
 <body>
     <h1>Photo Upload</h1>
@@ -42,6 +42,11 @@
                     <input type="text" id="ai-title" class="ai-value ai-input" placeholder="Add a short title" spellcheck="true">
                 </div>
                 <div class="ai-field">
+                    <label class="ai-label" for="publish-date">Publish date</label>
+                    <input type="date" id="publish-date" class="ai-value ai-input">
+                    <p id="publish-date-status" class="field-help">Publish date uses America/New_York. Future dates are rejected because Cloudflare Pages does not auto-publish at midnight.</p>
+                </div>
+                <div class="ai-field">
                     <label class="ai-label" for="ai-alt">Alt text</label>
                     <textarea id="ai-alt" class="ai-value" rows="2" placeholder="Describe what is visible for screen readers" spellcheck="true"></textarea>
                 </div>
@@ -61,6 +66,6 @@
         </div>
     </div>
 
-    <script src="/upload/app.js?v=10"></script>
+    <script src="/upload/app.js?v=11"></script>
 </body>
 </html>
