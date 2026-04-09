@@ -128,6 +128,11 @@ h1 {
     font-size: 0.9rem;
 }
 
+.field-help {
+    font-size: 0.85rem;
+    color: #666;
+}
+
 .preview {
     margin-bottom: 1.5rem;
     display: none;
@@ -221,6 +226,11 @@ textarea.ai-value:focus {
     border-color: #999;
 }
 
+input.ai-value.invalid,
+textarea.ai-value.invalid {
+    border-color: #b94a48;
+}
+
 input.ai-value::placeholder,
 textarea.ai-value::placeholder {
     color: #8a8a8a;
@@ -259,4 +269,16 @@ textarea.ai-value {
 .ai-feedback .btn {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+}
+
+#publish-date-status {
+    margin-top: 0.25rem;
+}
+
+#publish-date-status.error {
+    color: #922b21;
+}
+
+#publish-date-status.info {
+    color: #555;
 }

@@ -5,6 +5,13 @@
     var REPO_NAME = 'MrMatt.io';
     var BRANCH = 'main';
     var ALLOWED_USER = 'MrMatt57';
+    var SITE_TIME_ZONE = 'America/New_York';
+    var SITE_DATE_FORMATTER = new Intl.DateTimeFormat('en-US', {
+        timeZone: SITE_TIME_ZONE,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    });
 
     var statusEl = document.getElementById('status');
     var authSection = document.getElementById('auth-section');
@@ -18,6 +25,8 @@
     var userInfo = document.getElementById('user-info');
     var aiStatus = document.getElementById('ai-status');
     var aiTitle = document.getElementById('ai-title');
+    var publishDateInput = document.getElementById('publish-date');
+    var publishDateStatus = document.getElementById('publish-date-status');
     var aiAlt = document.getElementById('ai-alt');
     var aiDesc = document.getElementById('ai-description');
     var aiSection = document.getElementById('ai-section');
@@ -25,6 +34,7 @@
     var regenerateBtn = document.getElementById('regenerate-btn');
 
     var currentPhotoFile = null;
+    var publishDateRequestId = 0;
 
     // --- Escape a string for use inside YAML double-quoted values ---
     function escapeYamlString(str) {
@@ -41,6 +51,97 @@
 
     function getFileStem(name) {
         return (name || '').replace(/\.[^.]+$/, '');
+    }
+
+    function getSiteLocalDateString(date) {
+        var parts = SITE_DATE_FORMATTER.formatToParts(date);
+        var year = '';
+        var month = '';
+        var day = '';
+
+        parts.forEach(function(part) {
+            if (part.type === 'year') {
+                year = part.value;
+            } else if (part.type === 'month') {
+                month = part.value;
+            } else if (part.type === 'day') {
+                day = part.value;
+            }
+        });
+
+        return year + '-' + month + '-' + day;
+    }
+
+    function setPublishDateStatus(message, type) {
+        publishDateStatus.textContent = message;
+        publishDateStatus.className = 'field-help' + (type ? ' ' + type : '');
+    }
+
+    function setPublishDateValue(dateStr, source) {
+        publishDateInput.value = dateStr;
+        publishDateInput.dataset.source = source || 'manual';
+        validatePublishDate();
+    }
+
+    function validatePublishDate() {
+        var siteToday = getSiteLocalDateString(new Date());
+        var dateStr = publishDateInput.value;
+        var source = publishDateInput.dataset.source || 'manual';
+        var message = '';
+
+        publishDateInput.max = siteToday;
+
+        if (!dateStr) {
+            publishDateInput.classList.add('invalid');
+            setPublishDateStatus('Choose a publish date in ' + SITE_TIME_ZONE + ' before uploading.', 'error');
+            return { valid: false, dateStr: '' };
+        }
+
+        if (dateStr > siteToday) {
+            publishDateInput.classList.add('invalid');
+            setPublishDateStatus('This date is in the future for ' + SITE_TIME_ZONE + ' and Hugo would skip it during deploy. Pick today or earlier.', 'error');
+            return { valid: false, dateStr: dateStr };
+        }
+
+        publishDateInput.classList.remove('invalid');
+        if (source === 'exif') {
+            message = 'Using EXIF date ' + dateStr + ' in ' + SITE_TIME_ZONE + '.';
+        } else if (source === 'site-local') {
+            message = 'Using the site-local date ' + dateStr + ' in ' + SITE_TIME_ZONE + '.';
+        } else {
+            message = 'Publish date will be saved as ' + dateStr + ' in ' + SITE_TIME_ZONE + '.';
+        }
+        setPublishDateStatus(message + ' Future dates are rejected because Cloudflare Pages does not auto-publish at midnight.', 'info');
+
+        return { valid: true, dateStr: dateStr };
+    }
+
+    function prefillPublishDate(fileOrBlob) {
+        var requestId = ++publishDateRequestId;
+        publishDateInput.max = getSiteLocalDateString(new Date());
+        return extractExifDate(fileOrBlob).then(function(exifDate) {
+            if (requestId !== publishDateRequestId) {
+                return;
+            }
+            setPublishDateValue(exifDate || getSiteLocalDateString(new Date()), exifDate ? 'exif' : 'site-local');
+        });
+    }
+
+    function clearUploadForm() {
+        publishDateRequestId += 1;
+        photoInput.value = '';
+        previewEl.classList.remove('visible');
+        aiSection.style.display = 'none';
+        window._sharedPhoto = null;
+        currentPhotoFile = null;
+        aiFeedback.value = '';
+        aiTitle.value = '';
+        publishDateInput.value = '';
+        publishDateInput.dataset.source = 'manual';
+        publishDateInput.classList.remove('invalid');
+        setPublishDateStatus('Publish date uses ' + SITE_TIME_ZONE + '. Future dates are rejected because Cloudflare Pages does not auto-publish at midnight.', 'info');
+        aiAlt.value = '';
+        aiDesc.value = '';
     }
 
     // --- Extract EXIF date from JPEG ---
@@ -263,7 +364,7 @@
             caches.delete('shared-photos');
             window.history.replaceState({}, '', '/upload/');
 
-            // Auto-describe shared photo
+            prefillPublishDate(blob);
             describePhoto(blob);
         });
     }
@@ -382,7 +483,13 @@
         }
         previewEl.classList.add('visible');
         aiFeedback.value = '';
+        prefillPublishDate(file);
         describePhoto(file);
+    });
+
+    publishDateInput.addEventListener('input', function() {
+        publishDateInput.dataset.source = 'manual';
+        validatePublishDate();
     });
 
     // --- Regenerate AI description with feedback ---
@@ -396,6 +503,7 @@
         clearToken();
         showLoginForm();
         hideStatus();
+        clearUploadForm();
     });
 
     // --- GitHub API helpers ---
@@ -541,6 +649,12 @@
             return;
         }
 
+        var publishDate = validatePublishDate();
+        if (!publishDate.valid) {
+            showStatus('Pick a publish date that is today or earlier in ' + SITE_TIME_ZONE + '.', 'error');
+            return;
+        }
+
         var token = getToken();
         if (!token) {
             showStatus('Please log in first.', 'error');
@@ -553,85 +667,74 @@
         var title = aiTitle.value.trim();
         var alt = aiAlt.value.trim();
         var description = aiDesc.value.trim();
+        var dateStr = publishDate.dateStr;
+        var slug = slugify(title) || slugify(getFileStem(file.name)) || 'photo';
 
-        extractExifDate(file).then(function(exifDate) {
-            var now = new Date();
-            var dateStr = exifDate || now.toISOString().slice(0, 10);
-            var slug = slugify(title) || slugify(getFileStem(file.name)) || 'photo';
+        var reader = new FileReader();
+        reader.onload = function() {
+            var base64 = reader.result.split(',')[1];
+            var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
+            var pageTitle = title || 'Photo ' + dateStr;
+            var frontMatter = '---\n' +
+                'title: "' + escapeYamlString(pageTitle) + '"\n' +
+                'date: "' + dateStr + '"\n';
+            if (alt) {
+                frontMatter += 'alt: "' + escapeYamlString(alt) + '"\n';
+            }
+            if (description) {
+                frontMatter += 'description: "' + escapeYamlString(description) + '"\n';
+            }
+            frontMatter += 'draft: false\n---\n';
 
-            var reader = new FileReader();
-            reader.onload = function() {
-                var base64 = reader.result.split(',')[1];
-                var ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
-                var pageTitle = title || 'Photo ' + dateStr;
-                var frontMatter = '---\n' +
-                    'title: "' + escapeYamlString(pageTitle) + '"\n' +
-                    'date: "' + dateStr + '"\n';
-                if (alt) {
-                    frontMatter += 'alt: "' + escapeYamlString(alt) + '"\n';
-                }
-                if (description) {
-                    frontMatter += 'description: "' + escapeYamlString(description) + '"\n';
-                }
-                frontMatter += 'draft: false\n---\n';
-
-                showStatus('Creating branch...', 'info');
-                Promise.all([
-                    getMainSha(token),
-                    findAvailableUploadTarget(token, dateStr, slug)
-                ])
-                    .then(function(results) {
-                        var sha = results[0];
-                        var target = results[1];
-                        return createBranch(token, target.branchName, sha).then(function() {
-                            return target;
-                        });
-                    })
-                    .then(function(target) {
-                        showStatus('Uploading photo...', 'info');
-                        return commitFile(
-                            token,
-                            target.basePath + '/photo.' + ext,
-                            base64,
-                            'feat: add photo ' + target.folderName,
-                            target.branchName
-                        ).then(function() {
-                            return target;
-                        });
-                    })
-                    .then(function(target) {
-                        showStatus('Saving metadata...', 'info');
-                        return commitFile(
-                            token,
-                            target.basePath + '/index.md',
-                            btoa(unescape(encodeURIComponent(frontMatter))),
-                            'feat: add photo metadata ' + target.folderName,
-                            target.branchName
-                        ).then(function() {
-                            return target;
-                        });
-                    })
-                    .then(function(target) {
-                        showStatus('Creating pull request...', 'info');
-                        return createPR(token, 'feat: add photo ' + target.folderName, target.branchName, BRANCH);
-                    })
-                    .then(function(pr) {
-                        return enableAutoMerge(token, pr.node_id).then(function() {
-                            return pr;
-                        });
-                    })
+            showStatus('Creating branch...', 'info');
+            Promise.all([
+                getMainSha(token),
+                findAvailableUploadTarget(token, dateStr, slug)
+            ])
+                .then(function(results) {
+                    var sha = results[0];
+                    var target = results[1];
+                    return createBranch(token, target.branchName, sha).then(function() {
+                        return target;
+                    });
+                })
+                .then(function(target) {
+                    showStatus('Uploading photo...', 'info');
+                    return commitFile(
+                        token,
+                        target.basePath + '/photo.' + ext,
+                        base64,
+                        'feat: add photo ' + target.folderName,
+                        target.branchName
+                    ).then(function() {
+                        return target;
+                    });
+                })
+                .then(function(target) {
+                    showStatus('Saving metadata...', 'info');
+                    return commitFile(
+                        token,
+                        target.basePath + '/index.md',
+                        btoa(unescape(encodeURIComponent(frontMatter))),
+                        'feat: add photo metadata ' + target.folderName,
+                        target.branchName
+                    ).then(function() {
+                        return target;
+                    });
+                })
+                .then(function(target) {
+                    showStatus('Creating pull request...', 'info');
+                    return createPR(token, 'feat: add photo ' + target.folderName, target.branchName, BRANCH);
+                })
+                .then(function(pr) {
+                    return enableAutoMerge(token, pr.node_id).then(function() {
+                        return pr;
+                    });
+                })
                     .then(function(pr) {
                         statusEl.innerHTML = 'Photo uploaded! <a href="' + pr.html_url + '" target="_blank" rel="noopener">View PR</a> — it will auto-merge after the build passes.';
                         statusEl.className = 'status success';
-                        photoInput.value = '';
-                        previewEl.classList.remove('visible');
-                        aiSection.style.display = 'none';
-                        window._sharedPhoto = null;
-                        currentPhotoFile = null;
-                        aiFeedback.value = '';
-                        aiTitle.value = '';
-                        aiAlt.value = '';
-                        aiDesc.value = '';
+                        clearUploadForm();
                     })
                     .catch(function(err) {
                         showStatus('Upload failed: ' + err.message, 'error');
@@ -639,10 +742,12 @@
                     .finally(function() {
                         submitBtn.disabled = false;
                     });
-            };
-            reader.readAsDataURL(file);
-        });
+        };
+        reader.readAsDataURL(file);
     });
+
+    publishDateInput.max = getSiteLocalDateString(new Date());
+    publishDateInput.dataset.source = 'manual';
 
     // --- Initialize ---
     handleOAuthCallback().then(function(justLoggedIn) {

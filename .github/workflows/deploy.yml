@@ -28,6 +28,9 @@ jobs:
           hugo-version: '0.157.0'
           extended: true
 
+      - name: Guard against future-dated published content
+        run: bash scripts/check-future-content.sh
+
       - name: Cache Hugo resources
         uses: actions/cache@v5
         with:

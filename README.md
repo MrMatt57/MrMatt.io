@@ -56,6 +56,8 @@ Personal website of **Matt Walker** — software engineer, data & AI practitione
 
 **AI-Powered Descriptions** — Uploaded photos are automatically described by [Claude](https://www.anthropic.com/) Haiku vision model — generating titles, alt text, and personalized descriptions. Review the AI output, tweak it, regenerate, and publish.
 
+**Publish Date Guardrails** - The upload flow writes publish dates in `America/New_York`, and deploy CI fails if published content is still in the future because Cloudflare Pages will not auto-publish it at midnight.
+
 See the full stack breakdown at **[mrmatt.io/stack](https://mrmatt.io/stack)**
 
 ## License
